@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9DC22FB5-DB67-42BE-A17F-68EEDA89AFA9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MLocati.MediaData</RootNamespace>
+    <AssemblyName>MediaData</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>MLocati.MediaData.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GMap.NET.Core, Version=1.7.0.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=1.7.0.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClipboardMonitor.cs" />
+    <Compile Include="ctxShowProcessingOutputOptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctxShowProcessingOutputOptions.Designer.cs">
+      <DependentUpon>ctxShowProcessingOutputOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOptions.Designer.cs">
+      <DependentUpon>frmOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPickDateTimeWithAlternatives.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPickDateTimeWithAlternatives.Designer.cs">
+      <DependentUpon>frmPickDateTimeWithAlternatives.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPosition.Designer.cs">
+      <DependentUpon>frmPosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTool.Designer.cs">
+      <DependentUpon>frmTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="i18n.it.Designer.cs">
+      <DependentUpon>i18n.it.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Localizer.cs" />
+    <Compile Include="MapProvider.cs" />
+    <Compile Include="MyIO.cs" />
+    <Compile Include="Position.cs" />
+    <Compile Include="MediaInfo.cs" />
+    <Compile Include="Processor.cs" />
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPickDateTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPickDateTime.Designer.cs">
+      <DependentUpon>frmPickDateTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Processor\ImageProcessor.cs" />
+    <Compile Include="Processor\ImageProcessor\ExivImageProcessor.cs" />
+    <Compile Include="Processor\FailedProcessor.cs" />
+    <Compile Include="Processor\UnhandledFileTypeProcessor.cs" />
+    <Compile Include="Processor\VideoProcessor.cs" />
+    <Compile Include="Processor\VideoProcessor\FFmpegVideoProcessor.cs" />
+    <Compile Include="Processor\VideoProcessor\ffprobe.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="i18n.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>i18n.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowProcessingOutput.cs" />
+    <Compile Include="TimeZoneHandler.cs" />
+    <Compile Include="Tool.cs" />
+    <Content Include="tools\avcodec-57.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tools\avdevice-57.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tools\avfilter-6.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tools\avformat-57.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tools\avutil-55.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tools\exiv2.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tools\ffmpeg.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tools\ffprobe.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tools\libexpat.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tools\postproc-54.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tools\swresample-2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tools\swscale-4.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="ctxShowProcessingOutputOptions.it.resx">
+      <DependentUpon>ctxShowProcessingOutputOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctxShowProcessingOutputOptions.resx">
+      <DependentUpon>ctxShowProcessingOutputOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.it.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOptions.it.resx">
+      <DependentUpon>frmOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOptions.resx">
+      <DependentUpon>frmOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPickDateTime.it.resx">
+      <DependentUpon>frmPickDateTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPickDateTime.resx">
+      <DependentUpon>frmPickDateTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPickDateTimeWithAlternatives.it.resx">
+      <DependentUpon>frmPickDateTimeWithAlternatives.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPickDateTimeWithAlternatives.resx">
+      <DependentUpon>frmPickDateTimeWithAlternatives.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPosition.it.resx">
+      <DependentUpon>frmPosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPosition.resx">
+      <DependentUpon>frmPosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTool.it.resx">
+      <DependentUpon>frmTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTool.resx">
+      <DependentUpon>frmTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="i18n.it.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>i18n.it.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="i18n.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>i18n.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <Content Include="icon.ico" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="GMap.NET.Core.dll" />
+    <Content Include="GMap.NET.Core.xml" />
+    <Content Include="GMap.NET.WindowsForms.dll" />
+    <Content Include="GMap.NET.WindowsForms.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

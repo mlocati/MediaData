@@ -1,0 +1,48 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MLocati.MediaData.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="VideoNormalization" Type="MLocati.MediaData.VideoProcessor.NormalizeCase" Scope="User">
+      <Value Profile="(Default)">Never</Value>
+    </Setting>
+    <Setting Name="LastMediaDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ToolWordWrap" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ShowProgessingOutput_Images" Type="System.String" Scope="User">
+      <Value Profile="(Default)">a</Value>
+    </Setting>
+    <Setting Name="ShowProgessingOutput_Videos" Type="System.String" Scope="User">
+      <Value Profile="(Default)">5MBa</Value>
+    </Setting>
+    <Setting Name="ShowProgessingOutput_VideosTranscoding" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-1a</Value>
+    </Setting>
+    <Setting Name="DeleteToTrash" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Maps_EnableCache" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Maps_LastPosition" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Maps_LastProvider" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="GoogleAPI_Elevation" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Maps_DisabledProviders" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ArcGIS_DarbAE_Q2_2011_NAVTQ_Eng_V5_MapProvider|ArcGIS_ShadedRelief_World_2D_Map|ArcGIS_World_Physical_Map|CloudMade, Demo|GoogleChinaSatelliteMap|GoogleKoreaHybridMap|GoogleKoreaMap|GoogleKoreaSatelliteMap|GoogleSatelliteMap|LatviaMap|Lithuania 2.5d Map|LithuaniaHybridMap|LithuaniaHybridMapOld|LithuaniaOrtoFotoMap|LithuaniaTOP50|MapBender, WMS demo|NearHybridMap|NearMap|NearSatelliteMap|None|SpainMap|YahooHybridMap|YahooMap|YahooSatelliteMap</Value>
+    </Setting>
+    <Setting Name="SetFileDates" Type="MLocati.MediaData.Processor.SetFileDates" Scope="User">
+      <Value Profile="(Default)">Never</Value>
+    </Setting>
+    <Setting Name="AppCulture" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

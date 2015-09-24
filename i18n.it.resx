@@ -1,0 +1,529 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="GlobalTag_X" xml:space="preserve">
+    <value>Tag globale {0}</value>
+  </data>
+  <data name="GPS_date_without_time" xml:space="preserve">
+    <value>Data GPS senza ora GPS.</value>
+  </data>
+  <data name="GPS_tag" xml:space="preserve">
+    <value>Tag GPS</value>
+  </data>
+  <data name="GPS_time_without_date" xml:space="preserve">
+    <value>Ora GPS senza data GPS.</value>
+  </data>
+  <data name="Invalid_tag_X_value_V" xml:space="preserve">
+    <value>Il tag "{0}" contiene un valore non valido ("{1}").</value>
+  </data>
+  <data name="Missing_latitude" xml:space="preserve">
+    <value>Manca la latitudine.</value>
+  </data>
+  <data name="Missing_latituderef" xml:space="preserve">
+    <value>Manca il riferimento della latitudine.</value>
+  </data>
+  <data name="Missing_longitude" xml:space="preserve">
+    <value>Manca la longitudine.</value>
+  </data>
+  <data name="Missing_longituderef" xml:space="preserve">
+    <value>Manca il riferimento della longitudine.</value>
+  </data>
+  <data name="Multiple_GPS_positions_found" xml:space="preserve">
+    <value>Sono state trovate più posizioni GPS.</value>
+  </data>
+  <data name="Multiple_tags_found" xml:space="preserve">
+    <value>Sono stati trovati più tag "{0}".</value>
+  </data>
+  <data name="No_video_audio" xml:space="preserve">
+    <value>Non è stata trovata alcuna traccia video o audio.</value>
+  </data>
+  <data name="StreamTag_X" xml:space="preserve">
+    <value>Tag del flusso {0}</value>
+  </data>
+  <data name="Tag_X" xml:space="preserve">
+    <value>Tag {0}</value>
+  </data>
+  <data name="Unsupported_stream_type_X" xml:space="preserve">
+    <value>Tipo di flusso non supportato: "{0}".</value>
+  </data>
+  <data name="Failed_process_file_X" xml:space="preserve">
+    <value>Non è stato possibile processare il file "{0}".</value>
+  </data>
+  <data name="Unsupported_file_type_X" xml:space="preserve">
+    <value>Non è stato trovato alcun processore per i file di tipo "{0}".</value>
+  </data>
+  <data name="Confirm_video_normalization" xml:space="preserve">
+    <value>Normalizzare il video?</value>
+  </data>
+  <data name="Following_error_occurred_X" xml:space="preserve">
+    <value>Si è verificato il seguente errore:
+{0}</value>
+  </data>
+  <data name="NormalizeCase_Always" xml:space="preserve">
+    <value>Sempre</value>
+  </data>
+  <data name="NormalizeCase_AlwaysAsk" xml:space="preserve">
+    <value>Chiedi sempre</value>
+  </data>
+  <data name="NormalizeCase_AlwaysOnError" xml:space="preserve">
+    <value>Sempre se si verifica un errore</value>
+  </data>
+  <data name="NormalizeCase_AskOnError" xml:space="preserve">
+    <value>Chiedi se si verifica un errore</value>
+  </data>
+  <data name="NormalizeCase_Never" xml:space="preserve">
+    <value>Mai</value>
+  </data>
+  <data name="Confirm_new_metadata_timestamp" xml:space="preserve">
+    <value>Modificare la data dei metadati in  {0}?</value>
+  </data>
+  <data name="File_not_found_X" xml:space="preserve">
+    <value>Non è stato possibile trovare il file
+{0}</value>
+  </data>
+  <data name="Parsing_folder_X" xml:space="preserve">
+    <value>Analisi della cartella {0}...</value>
+  </data>
+  <data name="Processing_file_X" xml:space="preserve">
+    <value>Elaborazione del file {0}...</value>
+  </data>
+  <data name="Select_media_source_dir" xml:space="preserve">
+    <value>Selezionare la cartella che contiene i file multimediali</value>
+  </data>
+  <data name="Images" xml:space="preserve">
+    <value>Immagini</value>
+  </data>
+  <data name="Retrieved_elevation_wrong" xml:space="preserve">
+    <value>L'elevazione recuperata è errata.</value>
+  </data>
+  <data name="Select_at_least_one_map_provider" xml:space="preserve">
+    <value>Selezionare almeno un fornitore di mappe.</value>
+  </data>
+  <data name="Size_bytes_X" xml:space="preserve">
+    <value>{0} B</value>
+  </data>
+  <data name="Size_GB_X" xml:space="preserve">
+    <value>{0} GB</value>
+  </data>
+  <data name="Size_KB_X" xml:space="preserve">
+    <value>{0} KB</value>
+  </data>
+  <data name="Size_MB_X" xml:space="preserve">
+    <value>{0} MB</value>
+  </data>
+  <data name="Size_TB_X" xml:space="preserve">
+    <value>{0} TB</value>
+  </data>
+  <data name="This_Google_Elevation_API_Key_good" xml:space="preserve">
+    <value>Questa chiave delle API di Google Elevation è valida.</value>
+  </data>
+  <data name="Videos" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="Videos_when_transcoding" xml:space="preserve">
+    <value>Video (con transcodifica)</value>
+  </data>
+  <data name="_cache_size_X_" xml:space="preserve">
+    <value> (dimensione cache: {0})</value>
+  </data>
+  <data name="Confirm_remove_timestamp" xml:space="preserve">
+    <value>Rimuovere la data/ora?</value>
+  </data>
+  <data name="Confirm_remove_position" xml:space="preserve">
+    <value>Rimuovere la posizione?</value>
+  </data>
+  <data name="Filetype_dont_support_altitude" xml:space="preserve">
+    <value>L'altezza
+non è supportata
+da questo tipo di file</value>
+  </data>
+  <data name="Missing_Google_Elevation_API_Key_Ask_open_options" xml:space="preserve">
+    <value>Questa fuzione richiede che nelle opzioni sia impostata una chiave delle API di Google.
+Aprire la finestra delle opzioni adesso?</value>
+  </data>
+  <data name="_precision_is_X" xml:space="preserve">
+    <value>(precisione: {0})</value>
+  </data>
+  <data name="_precision_not_available" xml:space="preserve">
+    <value>(precisione non disponibile)</value>
+  </data>
+  <data name="Async_operation_already_running" xml:space="preserve">
+    <value>L'operazione asincrona è già in esecuzione.</value>
+  </data>
+  <data name="Missing_tool_message" xml:space="preserve">
+    <value>Manca lo strumento {0}.
+Scaricarlo adesso?
+
+PS: va salvato qui:
+{1}</value>
+  </data>
+  <data name="Program_failed_with_returncode" xml:space="preserve">
+    <value>Il programma è fallito ed ha ritornato il codice {0:N0}</value>
+  </data>
+  <data name="System_function_X_failed" xml:space="preserve">
+    <value>La funzione di sistema "{0}" è fallita.</value>
+  </data>
+  <data name="GoogleElevationRequest_denied" xml:space="preserve">
+    <value>La richiesta alle API di Google Elevation non è stata completata (assicurarsi di aver specificato una chiave delle API valida).</value>
+  </data>
+  <data name="GoogleElevationRequest_malformed" xml:space="preserve">
+    <value>La richiesta alle API di Google Elevation API non è corretta.</value>
+  </data>
+  <data name="GoogleElevationRequest_overquota" xml:space="preserve">
+    <value>È stato raggiunto il limite di richieste alle API di Google Elevation.</value>
+  </data>
+  <data name="Invalid_Google_Elevation_API_Key" xml:space="preserve">
+    <value>La chiave API di Google Elevation non è valida.</value>
+  </data>
+  <data name="Invalid_response_missing_node_X" xml:space="preserve">
+    <value>Risposta non valida: manca il nodo "{0}".</value>
+  </data>
+  <data name="Invalid_response_node_X_bad_value_Y" xml:space="preserve">
+    <value>Risposta non valida: valore errato del nodo "{0}" ("{1}").</value>
+  </data>
+  <data name="Invalid_response_too_many_X_nodes" xml:space="preserve">
+    <value>Risposta non valida: troppi nodi "{0}".</value>
+  </data>
+  <data name="Missing_Google_Elevation_API_Key" xml:space="preserve">
+    <value>Non è stata specificata la chiave delle API di Google Elevation.</value>
+  </data>
+  <data name="No_server_response" xml:space="preserve">
+    <value>Nessuna risposta dal server.</value>
+  </data>
+  <data name="Unable_to_unserialize_position_from_X" xml:space="preserve">
+    <value>Non è stato possibile convertire "{0}" in una posizione.</value>
+  </data>
+  <data name="GMapProvider_ArcGIS_DarbAE_Q2_2011_NAVTQ_Eng_V5_MapProvider" xml:space="preserve">
+    <value>ArcGIS - DarbAE Q2 2011 NAVTQ_ ng V5</value>
+  </data>
+  <data name="GMapProvider_ArcGIS_Imagery_World_2D_Map" xml:space="preserve">
+    <value>ArcGIS - Immagini del mondo in 2D</value>
+  </data>
+  <data name="GMapProvider_ArcGIS_ShadedRelief_World_2D_Map" xml:space="preserve">
+    <value>ArcGIS - Rilievo ombreggiato del mondo in 2D</value>
+  </data>
+  <data name="GMapProvider_ArcGIS_StreetMap_World_2D_Map" xml:space="preserve">
+    <value>ArcGIS - Strade del mondo in 2D</value>
+  </data>
+  <data name="GMapProvider_ArcGIS_Topo_US_2D_Map" xml:space="preserve">
+    <value>ArcGIS - Topo USA in 2D</value>
+  </data>
+  <data name="GMapProvider_ArcGIS_World_Physical_Map" xml:space="preserve">
+    <value>ArcGIS - Mondo fisico</value>
+  </data>
+  <data name="GMapProvider_ArcGIS_World_Shaded_Relief_Map" xml:space="preserve">
+    <value>ArcGIS - Rilievo ombreggiato del mondo</value>
+  </data>
+  <data name="GMapProvider_ArcGIS_World_Street_Map" xml:space="preserve">
+    <value>ArcGIS - Strade del mondo</value>
+  </data>
+  <data name="GMapProvider_ArcGIS_World_Terrain_Base_Map" xml:space="preserve">
+    <value>ArcGIS - Terreno del mondo</value>
+  </data>
+  <data name="GMapProvider_ArcGIS_World_Topo_Map" xml:space="preserve">
+    <value>ArcGIS - Topografia del mondo</value>
+  </data>
+  <data name="GMapProvider_BingHybridMap" xml:space="preserve">
+    <value>Bing - Ibrida</value>
+  </data>
+  <data name="GMapProvider_BingMap" xml:space="preserve">
+    <value>Bing</value>
+  </data>
+  <data name="GMapProvider_BingSatelliteMap" xml:space="preserve">
+    <value>Bing - Satellite</value>
+  </data>
+  <data name="GMapProvider_CloudMade_Demo" xml:space="preserve">
+    <value>CloudMade - Demo</value>
+  </data>
+  <data name="GMapProvider_CzechHistoryMap" xml:space="preserve">
+    <value>Repubblica Ceca - Storica</value>
+  </data>
+  <data name="GMapProvider_CzechHybridMap" xml:space="preserve">
+    <value>Repubblica Ceca - Ibrida</value>
+  </data>
+  <data name="GMapProvider_CzechMap" xml:space="preserve">
+    <value>Repubblica Ceca</value>
+  </data>
+  <data name="GMapProvider_CzechSatelliteMap" xml:space="preserve">
+    <value>Repubblica Ceca - Satellite</value>
+  </data>
+  <data name="GMapProvider_CzechTuristMap" xml:space="preserve">
+    <value>Repubblica Ceca- Turistica</value>
+  </data>
+  <data name="GMapProvider_GoogleChinaHybridMap" xml:space="preserve">
+    <value>Google Cina - Ibrida</value>
+  </data>
+  <data name="GMapProvider_GoogleChinaMap" xml:space="preserve">
+    <value>Google Cina</value>
+  </data>
+  <data name="GMapProvider_GoogleChinaSatelliteMap" xml:space="preserve">
+    <value>Google Cina - Satellite</value>
+  </data>
+  <data name="GMapProvider_GoogleChinaTerrainMap" xml:space="preserve">
+    <value>Google Cina - Terreno</value>
+  </data>
+  <data name="GMapProvider_GoogleHybridMap" xml:space="preserve">
+    <value>Google - Ibrida</value>
+  </data>
+  <data name="GMapProvider_GoogleKoreaHybridMap" xml:space="preserve">
+    <value>Google Korea - Ibrida</value>
+  </data>
+  <data name="GMapProvider_GoogleKoreaMap" xml:space="preserve">
+    <value>Google Korea</value>
+  </data>
+  <data name="GMapProvider_GoogleKoreaSatelliteMap" xml:space="preserve">
+    <value>Google Korea - Satellite</value>
+  </data>
+  <data name="GMapProvider_GoogleMap" xml:space="preserve">
+    <value>Google</value>
+  </data>
+  <data name="GMapProvider_GoogleSatelliteMap" xml:space="preserve">
+    <value>Google - Satellite</value>
+  </data>
+  <data name="GMapProvider_GoogleTerrainMap" xml:space="preserve">
+    <value>Google - Terreno</value>
+  </data>
+  <data name="GMapProvider_LatviaMap" xml:space="preserve">
+    <value>Lettonia</value>
+  </data>
+  <data name="GMapProvider_LithuaniaHybridMap" xml:space="preserve">
+    <value>Lituania - Ibrida</value>
+  </data>
+  <data name="GMapProvider_LithuaniaHybridMapOld" xml:space="preserve">
+    <value>Lituania - Ibrida (vecchia)</value>
+  </data>
+  <data name="GMapProvider_LithuaniaMap" xml:space="preserve">
+    <value>Lituania</value>
+  </data>
+  <data name="GMapProvider_LithuaniaOrtoFotoMap" xml:space="preserve">
+    <value>Lituania - Ortofoto</value>
+  </data>
+  <data name="GMapProvider_LithuaniaOrtoFotoMapOld" xml:space="preserve">
+    <value>Lituania - Ortofoto (vecchia)</value>
+  </data>
+  <data name="GMapProvider_LithuaniaTOP50" xml:space="preserve">
+    <value>Lituania - TOP50</value>
+  </data>
+  <data name="GMapProvider_Lithuania_2_5d_Map" xml:space="preserve">
+    <value>Lituania - 2.5D</value>
+  </data>
+  <data name="GMapProvider_MapBender_WMS_demo" xml:space="preserve">
+    <value>MapBender - Demo WMS</value>
+  </data>
+  <data name="GMapProvider_NearHybridMap" xml:space="preserve">
+    <value>Near - Ibrida</value>
+  </data>
+  <data name="GMapProvider_NearMap" xml:space="preserve">
+    <value>Near</value>
+  </data>
+  <data name="GMapProvider_NearSatelliteMap" xml:space="preserve">
+    <value>Near - Satellite</value>
+  </data>
+  <data name="GMapProvider_None" xml:space="preserve">
+    <value>(nessuna)</value>
+  </data>
+  <data name="GMapProvider_OpenCycleLandscapeMap" xml:space="preserve">
+    <value>OpenCycle - Paesaggio</value>
+  </data>
+  <data name="GMapProvider_OpenCycleMap" xml:space="preserve">
+    <value>OpenCycle</value>
+  </data>
+  <data name="GMapProvider_OpenCycleTransportMap" xml:space="preserve">
+    <value>OpenCycle - Trasporti</value>
+  </data>
+  <data name="GMapProvider_OpenSeaMapHybrid" xml:space="preserve">
+    <value>OpenSea - Ibrida</value>
+  </data>
+  <data name="GMapProvider_OpenStreet4UMap" xml:space="preserve">
+    <value>OpenStreetMap 4U</value>
+  </data>
+  <data name="GMapProvider_OpenStreetMap" xml:space="preserve">
+    <value>OpenStreetMap</value>
+  </data>
+  <data name="GMapProvider_OpenStreetMapQuest" xml:space="preserve">
+    <value>OpenStreetMap Quest</value>
+  </data>
+  <data name="GMapProvider_OpenStreetMapQuestHybrid" xml:space="preserve">
+    <value>OpenStreetMap Quest - Ibrida</value>
+  </data>
+  <data name="GMapProvider_OpenStreetMapQuestSattelite" xml:space="preserve">
+    <value>OpenStreetMap Quest - Satellite</value>
+  </data>
+  <data name="GMapProvider_OviHybridMap" xml:space="preserve">
+    <value>Ovi - Ibrida</value>
+  </data>
+  <data name="GMapProvider_OviMap" xml:space="preserve">
+    <value>Ovi</value>
+  </data>
+  <data name="GMapProvider_OviSatelliteMap" xml:space="preserve">
+    <value>Ovi - Satellite</value>
+  </data>
+  <data name="GMapProvider_OviTerrainMap" xml:space="preserve">
+    <value>Ovi - Terreno</value>
+  </data>
+  <data name="GMapProvider_SpainMap" xml:space="preserve">
+    <value>Spagna</value>
+  </data>
+  <data name="GMapProvider_TurkeyMap" xml:space="preserve">
+    <value>Turchia</value>
+  </data>
+  <data name="GMapProvider_WikiMapiaMap" xml:space="preserve">
+    <value>WikiMapia</value>
+  </data>
+  <data name="GMapProvider_YahooHybridMap" xml:space="preserve">
+    <value>Yahoo - Ibrida</value>
+  </data>
+  <data name="GMapProvider_YahooMap" xml:space="preserve">
+    <value>Yahoo</value>
+  </data>
+  <data name="GMapProvider_YahooSatelliteMap" xml:space="preserve">
+    <value>Yahoo - Satellite</value>
+  </data>
+  <data name="GMapProvider_YandexHybridMap" xml:space="preserve">
+    <value>Yandex - Ibrida</value>
+  </data>
+  <data name="GMapProvider_YandexMap" xml:space="preserve">
+    <value>Yandex</value>
+  </data>
+  <data name="GMapProvider_YandexSatelliteMap" xml:space="preserve">
+    <value>Yandex - Satellite</value>
+  </data>
+  <data name="Ask_remove_readonly_file_X" xml:space="preserve">
+    <value>Il file {0} è protetto da scrittura.
+Impostarlo come scrivibile?</value>
+  </data>
+  <data name="FFprobe_part_of_FFmpeg" xml:space="preserve">
+    <value>FFprobe (fa parte di FFmpeg)</value>
+  </data>
+  <data name="SetFileDates_Never" xml:space="preserve">
+    <value>Mai</value>
+  </data>
+  <data name="SetFileDates_ReadingWriting" xml:space="preserve">
+    <value>Leggendo i file e scrivendo i metadati</value>
+  </data>
+  <data name="SetFileDates_Writing" xml:space="preserve">
+    <value>Quando si scrivono i metadati</value>
+  </data>
+  <data name="Unable_to_set_new_metadata" xml:space="preserve">
+    <value>Non è stato possibile impostare i nuovi metadati.</value>
+  </data>
+  <data name="AutomaticallyChooseLanguage_X" xml:space="preserve">
+    <value>Automatica ({0})</value>
+  </data>
+</root>
