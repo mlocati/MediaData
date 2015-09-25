@@ -70,6 +70,15 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a &lt;error&gt;.
+        /// </summary>
+        internal static string _error_ {
+            get {
+                return ResourceManager.GetString("_error_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a (precision: {0}).
         /// </summary>
         internal static string _precision_is_X {
@@ -84,6 +93,15 @@ namespace MLocati.MediaData {
         internal static string _precision_not_available {
             get {
                 return ResourceManager.GetString("_precision_not_available", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a &lt;unsupported type&gt;.
+        /// </summary>
+        internal static string _unsupported_type_ {
+            get {
+                return ResourceManager.GetString("_unsupported_type_", resourceCulture);
             }
         }
         

@@ -378,7 +378,15 @@ namespace MLocati.MediaData
                     MessageBox.Show(string.Format(i18n.File_not_found_X, processor.FullFilename), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            else if (!(processor is UnhandledFileTypeProcessor))
+            else if (processor is UnhandledFileTypeProcessor)
+            {
+                MessageBox.Show(string.Format(i18n.Unsupported_file_type_X, Path.GetExtension(processor.Filename).ToLowerInvariant()), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (processor is FailedProcessor)
+            {
+                MessageBox.Show(((FailedProcessor)processor).Error.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
             {
                 if (e.ColumnIndex == this.colFilenameDatetime.DisplayIndex)
                 {

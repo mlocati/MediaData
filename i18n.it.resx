@@ -526,4 +526,10 @@ Impostarlo come scrivibile?</value>
   <data name="AutomaticallyChooseLanguage_X" xml:space="preserve">
     <value>Automatica ({0})</value>
   </data>
+  <data name="_error_" xml:space="preserve">
+    <value>&lt;errore&gt;</value>
+  </data>
+  <data name="_unsupported_type_" xml:space="preserve">
+    <value>&lt;tipo non supportato&gt;</value>
+  </data>
 </root>

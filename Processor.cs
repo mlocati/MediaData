@@ -93,7 +93,7 @@ namespace MLocati.MediaData
             }
         }
 
-        public string MetadataTimestampStr
+        public virtual string MetadataTimestampStr
         {
             get
             {
@@ -478,7 +478,7 @@ namespace MLocati.MediaData
                     {
                         if (error == null)
                         {
-                            error = x;
+                            error = (x is TargetInvocationException && x.InnerException != null && !string.IsNullOrEmpty(x.InnerException.Message)) ? x.InnerException : x;
                         }
                     }
                 }

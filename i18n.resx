@@ -525,4 +525,10 @@ Do you want to set it as writable?</value>
   <data name="AutomaticallyChooseLanguage_X" xml:space="preserve">
     <value>Automatic ({0})</value>
   </data>
+  <data name="_error_" xml:space="preserve">
+    <value>&lt;error&gt;</value>
+  </data>
+  <data name="_unsupported_type_" xml:space="preserve">
+    <value>&lt;unsupported type&gt;</value>
+  </data>
 </root>

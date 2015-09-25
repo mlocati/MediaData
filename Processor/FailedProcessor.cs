@@ -10,6 +10,14 @@ namespace MLocati.MediaData
 
         public readonly Exception Error;
 
+        public override string MetadataTimestampStr
+        {
+            get
+            {
+                return i18n._error_;
+            }
+        }
+
         #endregion
 
 

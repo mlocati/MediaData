@@ -7,6 +7,19 @@ namespace MLocati.MediaData
     public class UnhandledFileTypeProcessor : Processor
     {
 
+        #region Instance properties
+
+        public override string MetadataTimestampStr
+        {
+            get
+            {
+                return i18n._unsupported_type_;
+            }
+        }
+
+        #endregion
+
+
         #region Constructors
 
         public UnhandledFileTypeProcessor(string fullFilename)
@@ -25,7 +38,7 @@ namespace MLocati.MediaData
 
         protected override void SetNewMetadata(MediaInfo newInfo, IWin32Window parentWindow)
         {
-            throw new Exception(string.Format(i18n.Unsupported_file_type_X, Path.GetExtension(this.FullFilename).ToLowerInvariant()));
+            throw new Exception(string.Format(i18n.Unsupported_file_type_X, Path.GetExtension(this.Filename).ToLowerInvariant()));
         }
 
         #endregion
