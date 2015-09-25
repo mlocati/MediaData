@@ -12,6 +12,17 @@ namespace MLocati.MediaData
     public class Position
     {
 
+        #region Constants
+
+        private const double EARTH_SEMIAXIS_MAJOR = 6378137D;
+
+        private const double EARTH_SEMIAXIS_MINOR = 6356752D;
+
+        private const double EARTH_FLATTENING = (Position.EARTH_SEMIAXIS_MAJOR - Position.EARTH_SEMIAXIS_MINOR) / Position.EARTH_SEMIAXIS_MAJOR;
+
+        #endregion
+
+
         #region Instance properties
 
         private decimal _lat;
@@ -251,6 +262,84 @@ namespace MLocati.MediaData
             return elevation;
         }
 
+        public double DistanceTo(Position position)
+        {
+            double distance, initialBearing, finalBearing;
+            this.DistanceTo(position, out distance, out initialBearing, out finalBearing);
+            return distance;
+        }
+        /// <summary>
+        /// Vincenty Inverse Solution of Geodesics on the Ellipsoid(c) Chris Veness 2002-2015 MIT Licence
+        /// from: T Vincenty, "Direct and Inverse Solutions of Geodesics on the Ellipsoid with application of nested equations", Survey Review, vol XXIII no 176, 1975                              
+        /// http://www.ngs.noaa.gov/PUBS_LIB/inverse.pdf
+        /// </summary>
+        /// <param name="position"></param>
+        /// <param name="distance"></param>
+        /// <param name="initialBearing"></param>
+        /// <param name="finalBearing"></param>
+        public void DistanceTo(Position position, out double distance, out double initialBearing, out double finalBearing)
+        {
+            double phi1 = Position.Deg2Rad(Convert.ToDouble(this._lat));
+            double lambda1 = Position.Deg2Rad(Convert.ToDouble(this._lng));
+            double phi2 = Position.Deg2Rad(Convert.ToDouble(position._lat));
+            double lambda2 = Position.Deg2Rad(Convert.ToDouble(position._lng));
+
+            double L = lambda2 - lambda1;
+            double tanU1 = (1D - Position.EARTH_FLATTENING) * Math.Tan(phi1);
+            double cosU1 = 1D / Math.Sqrt(1D + tanU1 * tanU1);
+            double sinU1 = tanU1 * cosU1;
+            double tanU2 = (1D - Position.EARTH_FLATTENING) * Math.Tan(phi2);
+            double cosU2 = 1D / Math.Sqrt((1D + tanU2 * tanU2));
+            double sinU2 = tanU2 * cosU2;
+
+            double sinLambda, cosLambda, sinSqSigma, sinSigma, cosSigma, sigma, sinAlpha, cosSqAlpha, cos2SigmaM, C;
+
+            double lambda = L, lambdaPrime;
+            int iterations = 0;
+            do
+            {
+                sinLambda = Math.Sin(lambda);
+                cosLambda = Math.Cos(lambda);
+                sinSqSigma = (cosU2 * sinLambda) * (cosU2 * sinLambda) + (cosU1 * sinU2 - sinU1 * cosU2 * cosLambda) * (cosU1 * sinU2 - sinU1 * cosU2 * cosLambda);
+                sinSigma = Math.Sqrt(sinSqSigma);
+                if (sinSigma == 0D)
+                {
+                    // co-incident points
+                    finalBearing = initialBearing = distance = 0D;
+                    return;
+                }
+                cosSigma = sinU1 * sinU2 + cosU1 * cosU2 * cosLambda;
+                sigma = Math.Atan2(sinSigma, cosSigma);
+                sinAlpha = cosU1 * cosU2 * sinLambda / sinSigma;
+                cosSqAlpha = 1D - sinAlpha * sinAlpha;
+                cos2SigmaM = (cosSqAlpha == 0D) ? /* equatorial line */ 0D : (cosSigma - 2D * sinU1 * sinU2 / cosSqAlpha);
+                C = Position.EARTH_FLATTENING / 16D * cosSqAlpha * (4D + Position.EARTH_FLATTENING * (4D - 3D * cosSqAlpha));
+                lambdaPrime = lambda;
+                lambda = L + (1D - C) * Position.EARTH_FLATTENING * sinAlpha * (sigma + C * sinSigma * (cos2SigmaM + C * cosSigma * (-1D + 2D * cos2SigmaM * cos2SigmaM)));
+            } while (Math.Abs(lambda - lambdaPrime) > 1e-12D && ++iterations < 200);
+            if (iterations >= 200)
+            {
+                throw new Exception("Formula failed to converge");
+            }
+            double uSq = cosSqAlpha * (Position.EARTH_SEMIAXIS_MAJOR * Position.EARTH_SEMIAXIS_MAJOR - Position.EARTH_SEMIAXIS_MINOR * Position.EARTH_SEMIAXIS_MINOR) / (Position.EARTH_SEMIAXIS_MINOR * Position.EARTH_SEMIAXIS_MINOR);
+            double A = 1 + uSq / 16384 * (4096 + uSq * (-768 + uSq * (320 - 175 * uSq)));
+            double B = uSq / 1024 * (256 + uSq * (-128 + uSq * (74 - 47 * uSq)));
+            double deltaSigma = B * sinSigma * (cos2SigmaM + B / 4 * (cosSigma * (-1 + 2 * cos2SigmaM * cos2SigmaM) - B / 6 * cos2SigmaM * (-3 + 4 * sinSigma * sinSigma) * (-3 + 4 * cos2SigmaM * cos2SigmaM)));
+
+            distance = Position.EARTH_SEMIAXIS_MINOR * A * (sigma - deltaSigma);
+
+            initialBearing = Math.Atan2(cosU2 * sinLambda, cosU1 * sinU2 - sinU1 * cosU2 * cosLambda);
+            finalBearing = Math.Atan2(cosU1 * sinLambda, -sinU1 * cosU2 + cosU1 * sinU2 * cosLambda);
+
+            initialBearing = (initialBearing + 2 * Math.PI) % (2 * Math.PI); // normalise to 0...360
+            finalBearing = (finalBearing + 2 * Math.PI) % (2 * Math.PI); // normalise to 0...360
+
+            distance = Math.Round(distance, 3); // round to 1mm precision
+
+            initialBearing = Position.Rad2Deg(initialBearing);
+            finalBearing = Position.Rad2Deg(finalBearing);
+        }
+
         #endregion
 
 
@@ -313,6 +402,16 @@ namespace MLocati.MediaData
                 }
             }
             return result;
+        }
+
+        private static double Deg2Rad(double deg)
+        {
+            return deg * Math.PI / 180D;
+        }
+
+        private static double Rad2Deg(double rad)
+        {
+            return rad * 180D / Math.PI;
         }
 
         #endregion

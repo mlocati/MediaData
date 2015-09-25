@@ -4,6 +4,7 @@ This software is made by the following components:
   (see licenses/ffmpeg.txt)
 - exiv2 command line program (see licenses/exiv2.txt)
 - GMap.NET (see licenses/GMap.NET.txt)
+- The Vincenty Inverse Solution of Geodesics on the Ellipsoid algorith (see licenses/vincenty.txt)
 - The main MediaData program icon has been build starting from:
   - the "configure-toolbars" icon of the Oxygen Icons v4.3.1
     (see licenses/oxygen)
