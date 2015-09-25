@@ -82,7 +82,7 @@
             // 
             // colName
             // 
-            this.colName.DataPropertyName = "Nome";
+            this.colName.DataPropertyName = "Name";
             resources.ApplyResources(this.colName, "colName");
             this.colName.Name = "colName";
             this.colName.ReadOnly = true;
