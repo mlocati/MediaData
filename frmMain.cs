@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
@@ -10,6 +11,33 @@ namespace MLocati.MediaData
 {
     public partial class frmMain : Form
     {
+
+        #region Types
+
+        private enum SelectionOperations
+        {
+            [Localizer.Description("SelectionOperations_PleaseSelect")]
+            PleaseSelect,
+            [Localizer.Description("SelectionOperations_RenameFiles")]
+            RenameFiles,
+            [Localizer.Description("SelectionOperations_DeltaTimestamp")]
+            DeltaTimestamp,
+        }
+
+        private enum DeltaOperationUnit
+        {
+            [Localizer.Description("DeltaOperationUnit_seconds")]
+            Seconds,
+            [Localizer.Description("DeltaOperationUnit_minutes")]
+            Minutes,
+            [Localizer.Description("DeltaOperationUnit_hours")]
+            Hours,
+            [Localizer.Description("DeltaOperationUnit_days")]
+            Days,
+        }
+
+        #endregion
+
 
         #region Instance Properties
 
@@ -36,10 +64,46 @@ namespace MLocati.MediaData
             {
                 this._working = value;
                 this.tsTools.Enabled = !value;
+                this.chkSelection.Enabled = !value;
+                this.gbxSelection.Enabled = (!value) && this.SelectionEnabled;
                 if (!value)
                 {
                     this.ssStatusProgress.Visible = false;
                     this.ssStatusLabel.Text = "";
+                }
+            }
+        }
+
+
+        private bool SelectionEnabled
+        {
+            get
+            {
+                return this.chkSelection.Checked;
+            }
+            set
+            {
+                this.chkSelection.Checked = value;
+                this.gbxSelection.Enabled = value && !this._working;
+                if (value)
+                {
+                    this.dgvFiles.DefaultCellStyle.SelectionForeColor = SystemColors.HighlightText;
+                    this.dgvFiles.DefaultCellStyle.SelectionBackColor = SystemColors.Highlight;
+                }
+                else
+                {
+                    this.dgvFiles.DefaultCellStyle.SelectionForeColor = this.dgvFiles.DefaultCellStyle.ForeColor;
+                    this.dgvFiles.DefaultCellStyle.SelectionBackColor = this.dgvFiles.DefaultCellStyle.BackColor;
+                }
+                DataGridViewLinkColumn linkCol;
+                foreach (DataGridViewColumn col in this.dgvFiles.Columns)
+                {
+                    linkCol = col as DataGridViewLinkColumn;
+                    if (linkCol != null)
+                    {
+                        linkCol.ActiveLinkColor = value ? SystemColors.ControlText : Color.Red;
+                        linkCol.VisitedLinkColor = linkCol.LinkColor = value ? SystemColors.ControlText : Color.Blue;
+                    }
                 }
             }
         }
@@ -52,8 +116,9 @@ namespace MLocati.MediaData
         public frmMain()
         {
             InitializeComponent();
-            Localizer.CultureChanged += this.Localizer_CultureChanged;
             this.Icon = Program.Icon;
+            Localizer.CultureChanged += this.Localizer_CultureChanged;
+            this.SelectionEnabled = false;
             this.tstSrcDir.Text = "";
             this._processors = new List<Processor>();
             this.dgvFiles.AutoGenerateColumns = false;
@@ -65,6 +130,7 @@ namespace MLocati.MediaData
             ((ComboBox)this.tscbxTimeZone.Control).DataSource = TimeZoneInfo.GetSystemTimeZones();
             this.tscbxTimeZone.SelectedItem = TimeZoneHandler.ShootTimeZone;
             this.tscbxTimeZone.SelectedIndexChanged += this.tscbxTimeZone_SelectedIndexChanged;
+            this.UpdateSelectionOperation(true);
             this.UpdateSourceFolder();
             try
             {
@@ -168,6 +234,26 @@ namespace MLocati.MediaData
                 this.HandleGridClick(e);
             }
 
+        }
+
+        private void chkSelection_CheckedChanged(object sender, EventArgs e)
+        {
+            this.SelectionEnabled = this.chkSelection.Checked;
+        }
+
+        private void lnkSelectAll_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.dgvFiles.SelectAll();
+        }
+
+        private void lnkSelectNone_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.dgvFiles.ClearSelection();
+        }
+
+        private void cbxSelection_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.UpdateSelectionOperation(false);
         }
 
         private void frmMain_KeyDown(object sender, KeyEventArgs e)
@@ -355,6 +441,10 @@ namespace MLocati.MediaData
                     MessageBox.Show(string.Format(i18n.File_not_found_X, processor.FullFilename), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+            else if (this.SelectionEnabled)
+            {
+                return;
+            }
             else if (e.ColumnIndex == this.colFilename.DisplayIndex)
             {
                 if (File.Exists(processor.FullFilename))
@@ -486,9 +576,86 @@ namespace MLocati.MediaData
         private void Localizer_CultureChanged(object sender, Localizer.CultureChangedEventArgs e)
         {
             this.dgvFiles.Invalidate();
+            this.UpdateSelectionOperation(true);
+        }
+
+        private void UpdateSelectionOperation(bool repopulate)
+        {
+            if (repopulate || this.cbxSelection.Items.Count == 0)
+            {
+                UI.DescribedEnumToCombobox(typeof(SelectionOperations), this.cbxSelection, UI.GetDescribedEnumValueOfCombobox(this.cbxSelection));
+            }
+            if (this.cbxSelection.SelectedItem == null)
+            {
+                this.cbxSelection.SelectedIndex = 0;
+            }
+            if (repopulate || this.cbxSelectionDeltaTimeUnit.Items.Count == 0)
+            {
+                UI.DescribedEnumToCombobox(typeof(DeltaOperationUnit), this.cbxSelectionDeltaTimeUnit, UI.GetDescribedEnumValueOfCombobox(this.cbxSelectionDeltaTimeUnit));
+            }
+            if (this.cbxSelectionDeltaTimeUnit.SelectedItem == null)
+            {
+                this.cbxSelectionDeltaTimeUnit.SelectedIndex = 0;
+            }
+            SelectionOperations operation = (SelectionOperations)UI.GetDescribedEnumValueOfCombobox(this.cbxSelection);
+            this.lblSelectionDeltaTime.Visible = operation == SelectionOperations.DeltaTimestamp;
+            this.cbxSelectionDeltaTimeUnit.Visible = this.nudSelectionDeltaTimeValue.Visible = operation == SelectionOperations.DeltaTimestamp;
+            this.btnSelectionApply.Visible = (operation != SelectionOperations.PleaseSelect);
         }
 
         #endregion
 
+        private void btnSelectionApply_Click(object sender, EventArgs e)
+        {
+            List<Processor> processors = new List<Processor>(this.dgvFiles.SelectedRows.Count);
+            foreach (DataGridViewRow row in this.dgvFiles.SelectedRows)
+            {
+                Processor processor = row.DataBoundItem as Processor;
+                if (processor != null)
+                {
+                    processors.Add(processor);
+                }
+            }
+            if (processors.Count == 0)
+            {
+                MessageBox.Show(i18n.Please_select_at_least_one_file, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            switch ((SelectionOperations)UI.GetDescribedEnumValueOfCombobox(this.cbxSelection))
+            {
+                case SelectionOperations.DeltaTimestamp:
+                    TimeSpan? ts = null;
+                    int deltaValue = Convert.ToInt32(Math.Round(this.nudSelectionDeltaTimeValue.Value));
+                    if (deltaValue != 0)
+                    {
+                        switch ((DeltaOperationUnit)UI.GetDescribedEnumValueOfCombobox(this.cbxSelectionDeltaTimeUnit))
+                        {
+                            case DeltaOperationUnit.Days:
+                                ts = new TimeSpan(deltaValue, 0, 0, 0, 0);
+                                break;
+                            case DeltaOperationUnit.Hours:
+                                ts = new TimeSpan(0, deltaValue, 0, 0, 0);
+                                break;
+                            case DeltaOperationUnit.Minutes:
+                                ts = new TimeSpan(0, 0, deltaValue, 0, 0);
+                                break;
+                            case DeltaOperationUnit.Seconds:
+                                ts = new TimeSpan(0, 0, 0, deltaValue, 0);
+                                break;
+                        }
+                    }
+                    if (!ts.HasValue)
+                    {
+                        MessageBox.Show(i18n.Please_specify_delta_time, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show(ts.Value.ToString());
+                    }
+                    break;
+                case SelectionOperations.RenameFiles:
+                    break;
+            }
+        }
     }
 }

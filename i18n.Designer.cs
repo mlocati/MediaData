@@ -170,6 +170,42 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a days.
+        /// </summary>
+        internal static string DeltaOperationUnit_days {
+            get {
+                return ResourceManager.GetString("DeltaOperationUnit_days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a hours.
+        /// </summary>
+        internal static string DeltaOperationUnit_hours {
+            get {
+                return ResourceManager.GetString("DeltaOperationUnit_hours", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a minutes.
+        /// </summary>
+        internal static string DeltaOperationUnit_minutes {
+            get {
+                return ResourceManager.GetString("DeltaOperationUnit_minutes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a seconds.
+        /// </summary>
+        internal static string DeltaOperationUnit_seconds {
+            get {
+                return ResourceManager.GetString("DeltaOperationUnit_seconds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Failed to process file &quot;{0}&quot;..
         /// </summary>
         internal static string Failed_process_file_X {
@@ -1078,6 +1114,24 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Please select at least one file..
+        /// </summary>
+        internal static string Please_select_at_least_one_file {
+            get {
+                return ResourceManager.GetString("Please_select_at_least_one_file", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Please specify the time interval to add/substract to the metadata..
+        /// </summary>
+        internal static string Please_specify_delta_time {
+            get {
+                return ResourceManager.GetString("Please_specify_delta_time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Processing file {0}....
         /// </summary>
         internal static string Processing_file_X {
@@ -1119,6 +1173,33 @@ namespace MLocati.MediaData {
         internal static string Select_media_source_dir {
             get {
                 return ResourceManager.GetString("Select_media_source_dir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Change meta timestamp.
+        /// </summary>
+        internal static string SelectionOperations_DeltaTimestamp {
+            get {
+                return ResourceManager.GetString("SelectionOperations_DeltaTimestamp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a (select the operation).
+        /// </summary>
+        internal static string SelectionOperations_PleaseSelect {
+            get {
+                return ResourceManager.GetString("SelectionOperations_PleaseSelect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Rename files.
+        /// </summary>
+        internal static string SelectionOperations_RenameFiles {
+            get {
+                return ResourceManager.GetString("SelectionOperations_RenameFiles", resourceCulture);
             }
         }
         

@@ -532,4 +532,31 @@ Impostarlo come scrivibile?</value>
   <data name="_unsupported_type_" xml:space="preserve">
     <value>&lt;tipo non supportato&gt;</value>
   </data>
+  <data name="SelectionOperations_DeltaTimestamp" xml:space="preserve">
+    <value>Cambia data/ora dei metadati</value>
+  </data>
+  <data name="SelectionOperations_PleaseSelect" xml:space="preserve">
+    <value>(selezionare l’operazione)</value>
+  </data>
+  <data name="SelectionOperations_RenameFiles" xml:space="preserve">
+    <value>Rinomina i file</value>
+  </data>
+  <data name="DeltaOperationUnit_days" xml:space="preserve">
+    <value>giorni</value>
+  </data>
+  <data name="DeltaOperationUnit_hours" xml:space="preserve">
+    <value>ore</value>
+  </data>
+  <data name="DeltaOperationUnit_minutes" xml:space="preserve">
+    <value>minuti</value>
+  </data>
+  <data name="DeltaOperationUnit_seconds" xml:space="preserve">
+    <value>secondi</value>
+  </data>
+  <data name="Please_select_at_least_one_file" xml:space="preserve">
+    <value>Selezionare almeno un file.</value>
+  </data>
+  <data name="Please_specify_delta_time" xml:space="preserve">
+    <value>Specificare l’intervallo temporale da aggiungere/sottrarre ai metadati.</value>
+  </data>
 </root>
