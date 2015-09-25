@@ -123,6 +123,9 @@
   <data name="btnCancel.Text" xml:space="preserve">
     <value>Annulla</value>
   </data>
+  <data name="colName.HeaderText" xml:space="preserve">
+    <value>Nome</value>
+  </data>
   <data name="colTimestamp.HeaderText" xml:space="preserve">
     <value>Data/ora</value>
   </data>
