@@ -130,6 +130,7 @@
     <Compile Include="ShowProcessingOutput.cs" />
     <Compile Include="TimeZoneHandler.cs" />
     <Compile Include="Tool.cs" />
+    <Compile Include="UI.cs" />
     <Content Include="tools\avcodec-57.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
