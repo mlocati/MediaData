@@ -190,5 +190,17 @@ namespace MLocati.MediaData.Properties {
                 this["AppCulture"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string BatchRenameFormats {
+            get {
+                return ((string)(this["BatchRenameFormats"]));
+            }
+            set {
+                this["BatchRenameFormats"] = value;
+            }
+        }
     }
 }

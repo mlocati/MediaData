@@ -558,4 +558,16 @@ Do you want to set it as writable?</value>
   <data name="Please_specify_delta_time" xml:space="preserve">
     <value>Please specify the time interval to add/substract to the metadata.</value>
   </data>
+  <data name="ExtensionFormats_KeepCase" xml:space="preserve">
+    <value>Keep original case</value>
+  </data>
+  <data name="ExtensionFormats_LowerCase" xml:space="preserve">
+    <value>Lower case</value>
+  </data>
+  <data name="ExtensionFormats_UpperCase" xml:space="preserve">
+    <value>Upper case</value>
+  </data>
+  <data name="BatchFormat_Keep" xml:space="preserve">
+    <value>Keep original format</value>
+  </data>
 </root>

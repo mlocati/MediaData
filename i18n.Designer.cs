@@ -134,6 +134,15 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Keep original format.
+        /// </summary>
+        internal static string BatchFormat_Keep {
+            get {
+                return ResourceManager.GetString("BatchFormat_Keep", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Do you want to change the metadata date/time to {0}?.
         /// </summary>
         internal static string Confirm_new_metadata_timestamp {
@@ -202,6 +211,33 @@ namespace MLocati.MediaData {
         internal static string DeltaOperationUnit_seconds {
             get {
                 return ResourceManager.GetString("DeltaOperationUnit_seconds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Keep original case.
+        /// </summary>
+        internal static string ExtensionFormats_KeepCase {
+            get {
+                return ResourceManager.GetString("ExtensionFormats_KeepCase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Lower case.
+        /// </summary>
+        internal static string ExtensionFormats_LowerCase {
+            get {
+                return ResourceManager.GetString("ExtensionFormats_LowerCase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Upper case.
+        /// </summary>
+        internal static string ExtensionFormats_UpperCase {
+            get {
+                return ResourceManager.GetString("ExtensionFormats_UpperCase", resourceCulture);
             }
         }
         

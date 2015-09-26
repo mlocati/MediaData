@@ -559,4 +559,16 @@ Impostarlo come scrivibile?</value>
   <data name="Please_specify_delta_time" xml:space="preserve">
     <value>Specificare l’intervallo temporale da aggiungere/sottrarre ai metadati.</value>
   </data>
+  <data name="ExtensionFormats_KeepCase" xml:space="preserve">
+    <value>mantieni originale</value>
+  </data>
+  <data name="ExtensionFormats_LowerCase" xml:space="preserve">
+    <value>minuscole</value>
+  </data>
+  <data name="ExtensionFormats_UpperCase" xml:space="preserve">
+    <value>maiuscole</value>
+  </data>
+  <data name="BatchFormat_Keep" xml:space="preserve">
+    <value>mantieni il formato originario</value>
+  </data>
 </root>
