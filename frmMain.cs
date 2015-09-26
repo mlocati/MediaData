@@ -262,31 +262,52 @@ namespace MLocati.MediaData
             {
                 return;
             }
-            if (e.Modifiers == Keys.None)
+            switch (e.Modifiers)
             {
-                switch (e.KeyCode)
-                {
-                    case Keys.F5:
-                        e.SuppressKeyPress = true;
-                        this.UpdateSourceFolder();
-                        break;
-                    case Keys.F4:
-                        e.SuppressKeyPress = true;
-                        this.ShowOptions();
-                        break;
-                }
-            }
-            else if (e.Modifiers == Keys.Control)
-            {
-                switch (e.KeyCode)
-                {
-                    case Keys.L:
-                        e.SuppressKeyPress = true;
-                        this.tstSrcDir.Focus();
-                        this.tstSrcDir.SelectionStart = 0;
-                        this.tstSrcDir.SelectionLength = this.tstSrcDir.Text.Length;
-                        break;
-                }
+                case Keys.None:
+                    switch (e.KeyCode)
+                    {
+                        case Keys.F5:
+                            e.SuppressKeyPress = true;
+                            this.UpdateSourceFolder();
+                            break;
+                        case Keys.F4:
+                            e.SuppressKeyPress = true;
+                            this.ShowOptions();
+                            break;
+                    }
+                    break;
+                case Keys.Control:
+                    switch (e.KeyCode)
+                    {
+                        case Keys.L:
+                            e.SuppressKeyPress = true;
+                            this.tstSrcDir.Focus();
+                            this.tstSrcDir.SelectionStart = 0;
+                            this.tstSrcDir.SelectionLength = this.tstSrcDir.Text.Length;
+                            break;
+                        case Keys.S:
+                            this.SelectionEnabled = !this.SelectionEnabled;
+                            break;
+                        case Keys.A:
+                            if (this.SelectionEnabled)
+                            {
+                                this.dgvFiles.SelectAll();
+                            }
+                            break;
+                    }
+                    break;
+                case Keys.Control | Keys.Shift:
+                    switch(e.KeyCode)
+                    {
+                        case Keys.A:
+                            if (this.SelectionEnabled)
+                            {
+                                this.dgvFiles.ClearSelection();
+                            }
+                            break;
+                    }
+                    break;
             }
         }
 
