@@ -125,7 +125,7 @@
     <value>Cartella sorgente</value>
   </data>
   <data name="tstSrcDir.ToolTipText" xml:space="preserve">
-    <value>Cartella sorgente [F5: ricarica]</value>
+    <value>Cartella sorgente [CTRL-L: modifica, F5: ricarica]</value>
   </data>
   <data name="tsbSrcDir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -155,14 +155,14 @@
         HG2DCjMwXLp0SeP+vfv/t2/fXgMVwgAH9+wxOnbk6P89u3f/t7OysgSJzZgxQxcsCQIbN24U37Rp04fl
         S5Z4QoVQwL1799Z8+/bt/949e/53tbcvWbp06dfFCxb4QaXhgGvXrl2fsBny+PHjFzdv3Pi/fdt2sCs2
         rd74FCqFAThBhqxevhxuyMv99Twnjh/9v3zZsv/tLa3/bwANqq+vZ4JKYwUcYEOWgAzZz8LrsfpFZsuW
-        /6tXrvh/586d2ceOHQs7d+6cKlQtTsB+ZM+eZxPKZj7aoGP4Xyln2y+oOJHAYxt7WfKkJ8/KSv+fcHX9
+        /6tXrvh/586d2ceOHQs7d+6cKlQtTsB+ZM+eZxPKZj7aoGP4XzFn6y+oOJHAYxt7WfKkJ8/KSv+fcHX9
         v9HYeAlUhjDQql/Fppe1+12QrNf/bZpq/2/m5v7fp6f3f6GkZAFUCR5gPJPVs/7QGwataf91y679t7Lv
         vriYh+frQ6AhR83N/88RE3s3WVhYCqoaAzA6lB15xKA++b9i+tn/GunHXoEEeyQlRZZJSf1/Wlv7/wjQ
-        kLkSEv9nCgtrgHUgA52cA+cZddv+iUYd/W9Ssvsfg1YWD1SKYYKYWPFioCHPe3rAhswDGrJSRkYIKs3A
+        kLkSEv9nCgtrgHUgA52cA+cZdVv/iUYd/W9Ssusfg1YWD1SKYYKYWPFioCHPe3rAhswDGrJSRkYIKs3A
         oJl1aK2g25r/vL77/ptXXPzPbjHFAyoFB5MkJe8vAhnS1fX/iJnZfxD7P9DVDDLR25KkIw7d00g7+dSo
         +MJ/VsuZrVA9GGCKpOQdYGD+f1Jd/f+Iqen/w0ZGGxgEbftSRGOOPgqb8+glu/WC5VC1zDgwQ4eo6KpZ
-        QC/crq//dzI0VIJBipdBmEPCPZZb0ilHQkI0VkJCIkMSGGVAuhCIi6B0IVQsA4jjfcXE0nhYWKxFRUUl
-        ACgkHxS9pzPsAAAAAElFTkSuQmCC
+        QC/cqq//dzI0VIJBipdBmEPCPZZb0ilHQkI0VkJCIkMSGGVAuhCIi6B0IVQsA4jjfcXE0nhYWKxFRUUl
+        ACCvHw8pwOatAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="tsbOptions.Text" xml:space="preserve">
@@ -191,5 +191,50 @@
   </data>
   <data name="colMetadataPosition.ToolTipText" xml:space="preserve">
     <value>Cambia la posizione dei metadati</value>
+  </data>
+  <data name="lnkSelectAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
+  </data>
+  <data name="lnkSelectAll.Text" xml:space="preserve">
+    <value>Seleziona tutto</value>
+  </data>
+  <data name="lnkSelectNone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 6</value>
+  </data>
+  <data name="lnkSelectNone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 13</value>
+  </data>
+  <data name="lnkSelectNone.Text" xml:space="preserve">
+    <value>Seleziona nulla</value>
+  </data>
+  <data name="cbxSelection.Location" type="System.Drawing.Point, System.Drawing">
+    <value>170, 3</value>
+  </data>
+  <data name="lblSelectionDeltaTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>355, 6</value>
+  </data>
+  <data name="lblSelectionDeltaTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 13</value>
+  </data>
+  <data name="lblSelectionDeltaTime.Text" xml:space="preserve">
+    <value>Differenza temporale</value>
+  </data>
+  <data name="nudSelectionDeltaTimeValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>465, 3</value>
+  </data>
+  <data name="cbxSelectionDeltaTimeUnit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>528, 3</value>
+  </data>
+  <data name="btnSelectionApply.Location" type="System.Drawing.Point, System.Drawing">
+    <value>603, 2</value>
+  </data>
+  <data name="btnSelectionApply.Text" xml:space="preserve">
+    <value>Applica</value>
+  </data>
+  <data name="chkSelection.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 17</value>
+  </data>
+  <data name="chkSelection.Text" xml:space="preserve">
+    <value>Abilita selezione</value>
   </data>
 </root>

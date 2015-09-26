@@ -121,25 +121,13 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="ssStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>826, 17</value>
-  </data>
-  <data name="ssStatusLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="ssStatusProgress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 16</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ssStatusProgress.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="ssStatus.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 537</value>
   </data>
   <data name="ssStatus.Size" type="System.Drawing.Size, System.Drawing">
     <value>841, 22</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="ssStatus.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
@@ -155,6 +143,18 @@
   <data name="&gt;&gt;ssStatus.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="ssStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>826, 17</value>
+  </data>
+  <data name="ssStatusLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="ssStatusProgress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 16</value>
+  </data>
+  <data name="ssStatusProgress.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <metadata name="tsTools.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>112, 17</value>
   </metadata>
@@ -168,7 +168,7 @@
     <value>300, 25</value>
   </data>
   <data name="tstSrcDir.ToolTipText" xml:space="preserve">
-    <value>Source directory [F5: reload]</value>
+    <value>Source directory [CTRL-L: focus, F5: reload]</value>
   </data>
   <data name="tsbSrcDir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -219,11 +219,11 @@
         /6tXrvh/586d2ceOHQs7d+6cKlQtTsB+ZM+eZxPKZj7aoGP4XzJn0y+oOJHAYxt7WfKkJ8/KSv+fcHX9
         v9HYeAlUhjDQql/Fppe1+12QrNf/bZpq/2/m5v7fp6f3f6GkZAFUCR5gPJPVs/7QGwataf91y679t7Lv
         vriYh+frQ6AhR83N/88RE3s3WVhYCqoaAzA6lB15xKA++b9i+tn/GunHXoEEeyQlRZZJSf1/Wlv7/wjQ
-        kLkSEv9nCgtrgHUgA52cA+cZdev/iUYd/W9Ssvofg1YWD1SKYYKYWPFioCHPe3rAhswDGrJSRkYIKs3A
+        kLkSEv9nCgtrgHUgA52cA+cZdev/iUYd/W9SsvIfg1YWD1SKYYKYWPFioCHPe3rAhswDGrJSRkYIKs3A
         oJl1aK2g25r/vL77/ptXXPzPbjHFAyoFB5MkJe8vAhnS1fX/iJnZfxD7P9DVDDLR25KkIw7d00g7+dSo
         +MJ/VsuZrVA9GGCKpOQdYGD+f1Jd/f+Iqen/w0ZGGxgEbftSRGOOPgqb8+glu/WC5VC1zDgwQ4eo6KpZ
-        QC+crq//dzI0VIJBipdBmEPCPZZb0ilHQkI0VkJCIkMSGGVAuhCIi6B0IVQsA4jjfcXE0nhYWKxFRUUl
-        AOkSHuCvVY1wAAAAAElFTkSuQmCC
+        QC+crK//dzI0VIJBipdBmEPCPZZb0ilHQkI0VkJCIkMSGGVAuhCIi6B0IVQsA4jjfcXE0nhYWKxFRUUl
+        AOYkHtzm3Ne1AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="tsbOptions.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -337,6 +337,150 @@
   </data>
   <data name="gbxSelection.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;flpSelection.Name" xml:space="preserve">
+    <value>flpSelection</value>
+  </data>
+  <data name="&gt;&gt;flpSelection.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flpSelection.Parent" xml:space="preserve">
+    <value>gbxSelection</value>
+  </data>
+  <data name="&gt;&gt;flpSelection.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="gbxSelection.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 484</value>
+  </data>
+  <data name="gbxSelection.Size" type="System.Drawing.Size, System.Drawing">
+    <value>817, 50</value>
+  </data>
+  <data name="gbxSelection.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;gbxSelection.Name" xml:space="preserve">
+    <value>gbxSelection</value>
+  </data>
+  <data name="&gt;&gt;gbxSelection.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbxSelection.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbxSelection.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lnkSelectAll.Name" xml:space="preserve">
+    <value>lnkSelectAll</value>
+  </data>
+  <data name="&gt;&gt;lnkSelectAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lnkSelectAll.Parent" xml:space="preserve">
+    <value>flpSelection</value>
+  </data>
+  <data name="&gt;&gt;lnkSelectAll.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lnkSelectNone.Name" xml:space="preserve">
+    <value>lnkSelectNone</value>
+  </data>
+  <data name="&gt;&gt;lnkSelectNone.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lnkSelectNone.Parent" xml:space="preserve">
+    <value>flpSelection</value>
+  </data>
+  <data name="&gt;&gt;lnkSelectNone.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cbxSelection.Name" xml:space="preserve">
+    <value>cbxSelection</value>
+  </data>
+  <data name="&gt;&gt;cbxSelection.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbxSelection.Parent" xml:space="preserve">
+    <value>flpSelection</value>
+  </data>
+  <data name="&gt;&gt;cbxSelection.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblSelectionDeltaTime.Name" xml:space="preserve">
+    <value>lblSelectionDeltaTime</value>
+  </data>
+  <data name="&gt;&gt;lblSelectionDeltaTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblSelectionDeltaTime.Parent" xml:space="preserve">
+    <value>flpSelection</value>
+  </data>
+  <data name="&gt;&gt;lblSelectionDeltaTime.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;nudSelectionDeltaTimeValue.Name" xml:space="preserve">
+    <value>nudSelectionDeltaTimeValue</value>
+  </data>
+  <data name="&gt;&gt;nudSelectionDeltaTimeValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nudSelectionDeltaTimeValue.Parent" xml:space="preserve">
+    <value>flpSelection</value>
+  </data>
+  <data name="&gt;&gt;nudSelectionDeltaTimeValue.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;cbxSelectionDeltaTimeUnit.Name" xml:space="preserve">
+    <value>cbxSelectionDeltaTimeUnit</value>
+  </data>
+  <data name="&gt;&gt;cbxSelectionDeltaTimeUnit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbxSelectionDeltaTimeUnit.Parent" xml:space="preserve">
+    <value>flpSelection</value>
+  </data>
+  <data name="&gt;&gt;cbxSelectionDeltaTimeUnit.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;btnSelectionApply.Name" xml:space="preserve">
+    <value>btnSelectionApply</value>
+  </data>
+  <data name="&gt;&gt;btnSelectionApply.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSelectionApply.Parent" xml:space="preserve">
+    <value>flpSelection</value>
+  </data>
+  <data name="&gt;&gt;btnSelectionApply.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="flpSelection.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="flpSelection.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 16</value>
+  </data>
+  <data name="flpSelection.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="flpSelection.Size" type="System.Drawing.Size, System.Drawing">
+    <value>811, 31</value>
+  </data>
+  <data name="flpSelection.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;flpSelection.Name" xml:space="preserve">
+    <value>flpSelection</value>
+  </data>
+  <data name="&gt;&gt;flpSelection.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flpSelection.Parent" xml:space="preserve">
+    <value>gbxSelection</value>
+  </data>
+  <data name="&gt;&gt;flpSelection.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="lnkSelectAll.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -523,54 +667,6 @@
   </data>
   <data name="&gt;&gt;btnSelectionApply.ZOrder" xml:space="preserve">
     <value>6</value>
-  </data>
-  <data name="flpSelection.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="flpSelection.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 16</value>
-  </data>
-  <data name="flpSelection.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="flpSelection.Size" type="System.Drawing.Size, System.Drawing">
-    <value>811, 31</value>
-  </data>
-  <data name="flpSelection.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;flpSelection.Name" xml:space="preserve">
-    <value>flpSelection</value>
-  </data>
-  <data name="&gt;&gt;flpSelection.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;flpSelection.Parent" xml:space="preserve">
-    <value>gbxSelection</value>
-  </data>
-  <data name="&gt;&gt;flpSelection.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="gbxSelection.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 484</value>
-  </data>
-  <data name="gbxSelection.Size" type="System.Drawing.Size, System.Drawing">
-    <value>817, 50</value>
-  </data>
-  <data name="gbxSelection.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;gbxSelection.Name" xml:space="preserve">
-    <value>gbxSelection</value>
-  </data>
-  <data name="&gt;&gt;gbxSelection.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gbxSelection.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;gbxSelection.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="chkSelection.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
