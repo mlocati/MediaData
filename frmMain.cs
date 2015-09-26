@@ -603,8 +603,6 @@ namespace MLocati.MediaData
             this.btnSelectionApply.Visible = (operation != SelectionOperations.PleaseSelect);
         }
 
-        #endregion
-
         private void btnSelectionApply_Click(object sender, EventArgs e)
         {
             List<Processor> processors = new List<Processor>(this.dgvFiles.SelectedRows.Count);
@@ -654,8 +652,18 @@ namespace MLocati.MediaData
                     }
                     break;
                 case SelectionOperations.RenameFiles:
+                    using (frmBatchRename f = new frmBatchRename(processors))
+                    {
+                        if (f.ShowDialog(this) == DialogResult.OK)
+                        {
+                            this.dgvFiles.Invalidate();
+                        }
+                    }
                     break;
             }
         }
+
+        #endregion
+
     }
 }

@@ -66,6 +66,12 @@
     <Compile Include="ctxShowProcessingOutputOptions.Designer.cs">
       <DependentUpon>ctxShowProcessingOutputOptions.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBatchRename.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBatchRename.Designer.cs">
+      <DependentUpon>frmBatchRename.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmOptions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ctxShowProcessingOutputOptions.resx">
       <DependentUpon>ctxShowProcessingOutputOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBatchRename.resx">
+      <DependentUpon>frmBatchRename.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.it.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
