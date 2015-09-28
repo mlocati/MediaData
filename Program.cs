@@ -36,6 +36,17 @@ namespace MLocati.MediaData
             Application.SetCompatibleTextRenderingDefault(false);
             try
             {
+                if (MediaData.Properties.Settings.Default.DoUpgradeSettings)
+                {
+                    MediaData.Properties.Settings.Default.Upgrade();
+                    MediaData.Properties.Settings.Default.DoUpgradeSettings = true;
+                    MediaData.Properties.Settings.Default.Save();
+                }
+            }
+            catch
+            { }
+            try
+            {
                 if (string.IsNullOrEmpty(MediaData.Properties.Settings.Default.AppCulture))
                 {
                     Localizer.CurrentCulture = Localizer.DefaultCulture;
