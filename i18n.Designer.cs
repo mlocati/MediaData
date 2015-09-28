@@ -1375,6 +1375,42 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a d.
+        /// </summary>
+        internal static string ShortTime_days {
+            get {
+                return ResourceManager.GetString("ShortTime_days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a h.
+        /// </summary>
+        internal static string ShortTime_hours {
+            get {
+                return ResourceManager.GetString("ShortTime_hours", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a m.
+        /// </summary>
+        internal static string ShortTime_minutes {
+            get {
+                return ResourceManager.GetString("ShortTime_minutes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a s.
+        /// </summary>
+        internal static string ShortTime_seconds {
+            get {
+                return ResourceManager.GetString("ShortTime_seconds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a {0} B.
         /// </summary>
         internal static string Size_bytes_X {

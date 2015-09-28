@@ -74,13 +74,13 @@ namespace MLocati.MediaData
             { this._position = value; }
         }
 
-        public UInt32? TimestampMinMaxHalfDelta
+        public UInt64? TimestampMinMaxHalfDelta
         {
             get
             {
                 if (this._timestampMin.HasValue)
                 {
-                    return new UInt32?(Convert.ToUInt32(Math.Round((this._timestampMax.Value - this._timestampMin.Value).TotalSeconds)) >> 1);
+                    return Convert.ToUInt64(Math.Round((this._timestampMax.Value - this._timestampMin.Value).TotalSeconds)) >> 1;
                 }
                 else
                 {
@@ -93,7 +93,7 @@ namespace MLocati.MediaData
         {
             get
             {
-                UInt32? halfDelta = this.TimestampMinMaxHalfDelta;
+                UInt64? halfDelta = this.TimestampMinMaxHalfDelta;
                 if (halfDelta.HasValue)
                 {
                     if (halfDelta.Value == 0)
@@ -158,7 +158,7 @@ namespace MLocati.MediaData
                 }
                 else
                 {
-                    UInt32? d = this.TimestampMinMaxHalfDelta;
+                    UInt64? d = this.TimestampMinMaxHalfDelta;
                     getThem = (d.HasValue && d.Value > 0);
                 }
                 if (getThem)
@@ -276,19 +276,41 @@ namespace MLocati.MediaData
 
         public virtual void ShownTimeZoneChanged(TimeZoneInfo oldTZI, TimeZoneInfo newTZI)
         {
-            if (this._timestampMin.HasValue)
+            
+            if (this._alternativeMetadataTimestamps != null && this._alternativeMetadataTimestamps.Count > 0)
             {
-                this._timestampMin = TimeZoneHandler.Convert(oldTZI, newTZI, this._timestampMin.Value);
-            }
-            if (this._timestampMax.HasValue)
-            {
-                this._timestampMax = TimeZoneHandler.Convert(oldTZI, newTZI, this._timestampMax.Value);
-            }
-            if (this._alternativeMetadataTimestamps != null)
-            {
+                this._timestampMin = null;
+                this._timestampMax = null;
                 foreach (NameTimestamp nt in this._alternativeMetadataTimestamps)
                 {
                     nt.ShownTimeZoneChanged(oldTZI, newTZI);
+                    if (this._timestampMin.HasValue)
+                    {
+                        if (this._timestampMin.Value > nt.Timestamp)
+                        {
+                            this._timestampMin = new DateTime?(nt.Timestamp);
+                        }
+                        if (this._timestampMax.Value < nt.Timestamp)
+                        {
+                            this._timestampMax = new DateTime?(nt.Timestamp);
+                        }
+                    }
+                    else
+                    {
+                        this._timestampMin = new DateTime?(nt.Timestamp);
+                        this._timestampMax = new DateTime?(nt.Timestamp);
+                    }
+                }
+            }
+            else
+            {
+                if (this._timestampMin.HasValue)
+                {
+                    this._timestampMin = TimeZoneHandler.Convert(oldTZI, newTZI, this._timestampMin.Value);
+                }
+                if (this._timestampMax.HasValue)
+                {
+                    this._timestampMax = TimeZoneHandler.Convert(oldTZI, newTZI, this._timestampMax.Value);
                 }
             }
         }

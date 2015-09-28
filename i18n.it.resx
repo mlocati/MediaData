@@ -610,4 +610,16 @@ Impostarlo come scrivibile?</value>
   <data name="Year" xml:space="preserve">
     <value>Anno</value>
   </data>
+  <data name="ShortTime_days" xml:space="preserve">
+    <value>g</value>
+  </data>
+  <data name="ShortTime_hours" xml:space="preserve">
+    <value>o</value>
+  </data>
+  <data name="ShortTime_minutes" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="ShortTime_seconds" xml:space="preserve">
+    <value>s</value>
+  </data>
 </root>

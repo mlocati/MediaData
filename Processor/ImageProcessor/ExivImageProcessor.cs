@@ -79,19 +79,24 @@ namespace MLocati.MediaData
                             case "Exif.Photo.DateTimeOriginal":
                             case "Exif.Photo.DateTimeDigitized":
                             case "Xmp.xmp.CreateDate":
-                                if (chunks[0] == "Xmp.xmp.CreateDate")
+                            case "Xmp.xmp.MetadataDate":
+                            case "Xmp.xmp.ModifyDate":
+                                if (chunks[0].StartsWith("Xmp.xmp."))
                                 {
                                     result.HasXmp = true;
                                 }
-                                if (!DateTime.TryParseExact(chunks[1], @"yyyy\:MM\:dd HH\:mm\:ss", NumberFormatInfo.InvariantInfo, DateTimeStyles.AssumeLocal, out dt))
+                                if (DateTime.TryParseExact(chunks[1], @"yyyy\:MM\:dd HH\:mm\:ss", NumberFormatInfo.InvariantInfo, DateTimeStyles.AssumeLocal, out dt))
                                 {
-                                    if (!DateTime.TryParseExact(chunks[1], @"yyyy-MM-dd\THH\:mm\:sszzz", NumberFormatInfo.InvariantInfo, DateTimeStyles.AssumeLocal, out dt))
-                                    {
-                                        throw new Exception(string.Format(i18n.Invalid_tag_X_value_V, chunks[0], chunks[1]));
-                                    }
+                                    result.AddAlternativeMetadataTimestamp(string.Format(i18n.Tag_X, chunks[0]), TimeZoneHandler.ToShootZone(ExivImageProcessor.EXIF_IMAGEPHOTOXMP_TAGS_TIMEZONE, dt));
                                 }
-
-                                result.AddAlternativeMetadataTimestamp(string.Format(i18n.Tag_X, chunks[0]), TimeZoneHandler.ToShootZone(ExivImageProcessor.EXIF_IMAGEPHOTOXMP_TAGS_TIMEZONE, dt));
+                                else if (DateTime.TryParseExact(chunks[1], @"yyyy-MM-dd\THH\:mm\:sszzz", NumberFormatInfo.InvariantInfo, DateTimeStyles.AssumeLocal, out dt))
+                                {
+                                    result.AddAlternativeMetadataTimestamp(string.Format(i18n.Tag_X, chunks[0]), TimeZoneHandler.ToShootZone(TimeZoneHandler.Zone.Utc, dt.ToUniversalTime()));
+                                }
+                                else
+                                {
+                                    throw new Exception(string.Format(i18n.Invalid_tag_X_value_V, chunks[0], chunks[1]));
+                                }
                                 break;
                             case "Exif.GPSInfo.GPSDateStamp":
                                 result.HasGpsTimestamp = true;
@@ -248,6 +253,9 @@ namespace MLocati.MediaData
                 if (((ExivInfo)this.Info).HasXmp)
                 {
                     args.Add("-M\"set Xmp.xmp.CreateDate " + s + "\"");
+                    args.Add("-M\"set Xmp.xmp.MetadataDate " + s + "\"");
+                    args.Add("-M\"set Xmp.xmp.ModifyDate " + s + "\"");
+
                 }
                 if (((ExivInfo)this.Info).HasGpsTimestamp || newInfo.Position != null)
                 {
@@ -262,6 +270,8 @@ namespace MLocati.MediaData
                 args.Add("-M\"del Exif.Photo.DateTimeOriginal\"");
                 args.Add("-M\"del Exif.Photo.DateTimeDigitized\"");
                 args.Add("-M\"del Xmp.xmp.CreateDate\"");
+                args.Add("-M\"del Xmp.xmp.MetadataDate\"");
+                args.Add("-M\"del Xmp.xmp.ModifyDate\"");
                 args.Add("-M\"del Exif.GPSInfo.GPSDateStamp\"");
                 args.Add("-M\"del Exif.GPSInfo.GPSTimeStamp\"");
             }

@@ -106,15 +106,27 @@ namespace MLocati.MediaData
             {
                 if (this._info.TimestampMin.HasValue)
                 {
-                    UInt32? halfDelta = this._info.TimestampMinMaxHalfDelta;
-                    if (halfDelta.Value == 0)
+                    UInt64 halfDelta = this._info.TimestampMinMaxHalfDelta.Value;
+                    if (halfDelta == 0)
                     {
                         return this._info.TimestampMin.ToString();
                     }
-                    else
+                    if (halfDelta < 100)
                     {
-                        return string.Format("{0} ± {1:N0} s", this._info.TimestampMean.ToString(), halfDelta.Value);
+                        return string.Format("{0} ± {1:N0} {2}", this._info.TimestampMean.ToString(), halfDelta, i18n.ShortTime_seconds);
                     }
+                    halfDelta = halfDelta / 60;
+                    if (halfDelta < 100)
+                    {
+                        return string.Format("{0} ± {1:N0} {2}", this._info.TimestampMean.ToString(), halfDelta, i18n.ShortTime_minutes);
+                    }
+                    halfDelta = halfDelta / 60;
+                    if (halfDelta < 100)
+                    {
+                        return string.Format("{0} ± {1:N0} {2}", this._info.TimestampMean.ToString(), halfDelta, i18n.ShortTime_hours);
+                    }
+                    halfDelta = halfDelta / 24;
+                    return string.Format("{0} ± {1:N0} {2}", this._info.TimestampMean.ToString(), halfDelta, i18n.ShortTime_days);
                 }
                 else
                 {
