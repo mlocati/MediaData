@@ -179,6 +179,15 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Day.
+        /// </summary>
+        internal static string Day {
+            get {
+                return ResourceManager.GetString("Day", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a days.
         /// </summary>
         internal static string DeltaOperationUnit_days {
@@ -266,6 +275,15 @@ namespace MLocati.MediaData {
         internal static string File_not_found_X {
             get {
                 return ResourceManager.GetString("File_not_found_X", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a The file has not been found in the directory.
+        /// </summary>
+        internal static string File_not_in_directory {
+            get {
+                return ResourceManager.GetString("File_not_in_directory", resourceCulture);
             }
         }
         
@@ -947,11 +965,29 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Hours.
+        /// </summary>
+        internal static string Hours {
+            get {
+                return ResourceManager.GetString("Hours", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Immagini.
         /// </summary>
         internal static string Images {
             get {
                 return ResourceManager.GetString("Images", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Invalid char &apos;{0}&apos; in file name.
+        /// </summary>
+        internal static string Invalid_char_in_file_name_X {
+            get {
+                return ResourceManager.GetString("Invalid_char_in_file_name_X", resourceCulture);
             }
         }
         
@@ -997,6 +1033,15 @@ namespace MLocati.MediaData {
         internal static string Invalid_tag_X_value_V {
             get {
                 return ResourceManager.GetString("Invalid_tag_X_value_V", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Minutes.
+        /// </summary>
+        internal static string Minutes {
+            get {
+                return ResourceManager.GetString("Minutes", resourceCulture);
             }
         }
         
@@ -1069,6 +1114,24 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Month.
+        /// </summary>
+        internal static string Month {
+            get {
+                return ResourceManager.GetString("Month", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Multiple directories have been found.
+        /// </summary>
+        internal static string Multiple_directories_found {
+            get {
+                return ResourceManager.GetString("Multiple_directories_found", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Multiple GPS positions found..
         /// </summary>
         internal static string Multiple_GPS_positions_found {
@@ -1087,11 +1150,29 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a No format specified.
+        /// </summary>
+        internal static string No_format_specified {
+            get {
+                return ResourceManager.GetString("No_format_specified", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a No response from the server..
         /// </summary>
         internal static string No_server_response {
             get {
                 return ResourceManager.GetString("No_server_response", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a No date/time found in metadata.
+        /// </summary>
+        internal static string No_timestamp_in_metadata {
+            get {
+                return ResourceManager.GetString("No_timestamp_in_metadata", resourceCulture);
             }
         }
         
@@ -1150,6 +1231,15 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Overlapping file names.
+        /// </summary>
+        internal static string Overlapping_file_names {
+            get {
+                return ResourceManager.GetString("Overlapping_file_names", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Parsing folder {0}....
         /// </summary>
         internal static string Parsing_folder_X {
@@ -1200,6 +1290,15 @@ namespace MLocati.MediaData {
         internal static string Retrieved_elevation_wrong {
             get {
                 return ResourceManager.GetString("Retrieved_elevation_wrong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Seconds.
+        /// </summary>
+        internal static string Seconds {
+            get {
+                return ResourceManager.GetString("Seconds", resourceCulture);
             }
         }
         
@@ -1407,6 +1506,15 @@ namespace MLocati.MediaData {
         internal static string Videos_when_transcoding {
             get {
                 return ResourceManager.GetString("Videos_when_transcoding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Year.
+        /// </summary>
+        internal static string Year {
+            get {
+                return ResourceManager.GetString("Year", resourceCulture);
             }
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
@@ -26,12 +27,24 @@ namespace MLocati.MediaData
             private string _format;
             private ExtensionFormats _extensionFormat;
             private string _error;
+            public string Error
+            {
+                get
+                { return this._error; }
+            }
             private string _newFilename;
             public string OriginalFilename
             {
                 get
                 {
                     return this.Processor.Filename;
+                }
+            }
+            public string OriginalFullFilename
+            {
+                get
+                {
+                    return this.Processor.FullFilename;
                 }
             }
             public string NewFilename
@@ -41,12 +54,24 @@ namespace MLocati.MediaData
                     return (this._error.Length == 0) ? this._newFilename : "";
                 }
             }
+            public string NewFullFilename
+            {
+                get
+                {
+                    return (this._error.Length == 0 && this._newFilename.Length > 0) ? Path.Combine(Path.GetDirectoryName(this.Processor.FullFilename), this._newFilename) : "";
+                }
+            }
             public string NewFilenameShown
             {
                 get
                 {
                     return (this._error.Length > 0) ? this._error : this.NewFilename;
                 }
+            }
+            public bool HasError
+            {
+                get
+                { return this._error.Length > 0; }
             }
             public ProcessorNamer(Processor processor)
             {
@@ -72,7 +97,7 @@ namespace MLocati.MediaData
                 this._newFilename = "";
                 if (format.Length == 0)
                 {
-                    this._error = "i18n.No format specified";
+                    this._error = i18n.No_format_specified;
                 }
                 else
                 {
@@ -93,7 +118,7 @@ namespace MLocati.MediaData
                         }
                         else if (newFilename.Contains("<Y>") || newFilename.Contains("<M>") || newFilename.Contains("<D>") || newFilename.Contains("<h>") || newFilename.Contains("<m>") || newFilename.Contains("<s>"))
                         {
-                            this._error = "i18n.No date/time in metadata";
+                            this._error = i18n.No_timestamp_in_metadata;
                         }
                     }
                     if (this._error.Length == 0)
@@ -102,7 +127,7 @@ namespace MLocati.MediaData
                         int iBadChar = newFilename.IndexOfAny(badChars);
                         if (iBadChar >= 0)
                         {
-                            this._error = string.Format("i18n.Invalid char in file name: '{0}'", badChars[Array.IndexOf(badChars, newFilename[iBadChar])]);
+                            this._error = string.Format(i18n.Invalid_char_in_file_name_X, badChars[Array.IndexOf(badChars, newFilename[iBadChar])]);
                         }
                     }
                     if (this._error.Length == 0)
@@ -129,6 +154,34 @@ namespace MLocati.MediaData
             }
         }
 
+        private class FileNamer
+        {
+            private List<string[]> _reverts;
+            public FileNamer()
+            {
+                this._reverts = new List<string[]>();
+            }
+            public void Rename(string oldName, string newName)
+            {
+                if (string.Compare(oldName, newName, false) != 0)
+                {
+                    File.Move(oldName, newName);
+                    this._reverts.Add(new string[] { oldName, newName });
+                }
+            }
+            public void Revert()
+            {
+                int maxIndex = this._reverts.Count - 1;
+                while (maxIndex >= 0)
+                {
+                    string[] revert = this._reverts[maxIndex];
+                    File.Move(revert[1], revert[0]);
+                    this._reverts.RemoveAt(maxIndex);
+                    maxIndex--;
+                }
+            }
+        }
+
         #endregion
 
 
@@ -137,6 +190,8 @@ namespace MLocati.MediaData
         private List<ProcessorNamer> _processorNamers;
 
         private CurrencyManager _processorNamersManager;
+
+        private int[] _formatTextSelection = null;
 
         #endregion
 
@@ -147,6 +202,66 @@ namespace MLocati.MediaData
         {
             InitializeComponent();
             this.Icon = Program.Icon;
+
+            Dictionary<string, string> placeholders = new Dictionary<string, string>();
+            placeholders.Add("<Y>", i18n.Year);
+            placeholders.Add("<M>", i18n.Month);
+            placeholders.Add("<D>", i18n.Day);
+            placeholders.Add("<h>", i18n.Hours);
+            placeholders.Add("<m>", i18n.Minutes);
+            placeholders.Add("<s>", i18n.Seconds);
+            foreach (KeyValuePair<string, string> ph in placeholders)
+            {
+                LinkLabel lnk = new LinkLabel();
+                lnk.AutoSize = true;
+                lnk.Text = string.Format("{0}: {1}", ph.Key, ph.Value);
+                lnk.Click += delegate (object sender, EventArgs e)
+                {
+                    this.cbxFormat.SuspendLayout();
+                    switch (this.cbxFormat.SelectedIndex)
+                    {
+                        case 0:
+                            this.cbxFormat.SelectedIndex = -1;
+                            this.cbxFormat.Text = ph.Key;
+                            this._formatTextSelection = new int[] { this.cbxFormat.Text.Length, 0 };
+                            this.cbxFormat.Focus();
+                            break;
+                        case -1:
+                            string pre;
+                            string post;
+                            if (this._formatTextSelection != null)
+                            {
+                                pre = this.cbxFormat.Text.Substring(0, this._formatTextSelection[0]);
+                                post = this.cbxFormat.Text.Substring(this._formatTextSelection[0] + this._formatTextSelection[1]);
+                            }
+                            else
+                            {
+                                pre = this.cbxFormat.Text;
+                                post = "";
+                            }
+                            this.cbxFormat.Text = pre + ph.Key + post;
+                            if (this._formatTextSelection != null && this._formatTextSelection[1] > 0)
+                            {
+                                this._formatTextSelection = new int[] { pre.Length, ph.Key.Length };
+                            }
+                            else
+                            {
+                                this._formatTextSelection = new int[] { pre.Length + ph.Key.Length, 0 };
+                            }
+                            this.cbxFormat.Focus();
+                            break;
+                        default:
+                            string s = this.cbxFormat.Text;
+                            this.cbxFormat.SelectedIndex = -1;
+                            this.cbxFormat.Text = s;
+                            this._formatTextSelection = new int[] { s.Length, 0 };
+                            this.cbxFormat.Focus();
+                            break;
+                    }
+                    this.cbxFormat.ResumeLayout();
+                };
+                this.flpFormat.Controls.Add(lnk);
+            }
 
             List<string> formats = new List<string>();
             int selectedFormatIndex = 0;
@@ -187,6 +302,33 @@ namespace MLocati.MediaData
 
         #region GUI events
 
+        private void cbxFormat_Enter(object sender, EventArgs e)
+        {
+            Timer tmr = new Timer();
+            tmr.Enabled = false;
+            tmr.Interval = 10;
+            tmr.Tick += delegate (object s, EventArgs ea)
+            {
+                tmr.Stop();
+                if (this._formatTextSelection != null)
+                {
+                    this.cbxFormat.Select(this._formatTextSelection[0], this._formatTextSelection[1]);
+                }
+                tmr.Dispose();
+            };
+            tmr.Start();
+        }
+
+        private void cbxFormat_KeyUp(object sender, KeyEventArgs e)
+        {
+            this._formatTextSelection = new int[] { this.cbxFormat.SelectionStart, this.cbxFormat.SelectionLength };
+        }
+
+        private void cbxFormat_MouseUp(object sender, MouseEventArgs e)
+        {
+            this._formatTextSelection = new int[] { this.cbxFormat.SelectionStart, this.cbxFormat.SelectionLength };
+        }
+
         private void cbxFormat_TextChanged(object sender, EventArgs e)
         {
             if (this._processorNamers == null)
@@ -206,6 +348,87 @@ namespace MLocati.MediaData
             this.UpdateFormat();
         }
 
+        private void btnApply_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FileNamer fileNamer = new FileNamer();
+                try
+                {
+                    Dictionary<ProcessorNamer, string> tempFileNames = new Dictionary<ProcessorNamer, string>(this._processorNamers.Count);
+                    foreach (ProcessorNamer pn in this._processorNamers)
+                    {
+                        if (pn.HasError)
+                        {
+                            throw new Exception(pn.Error);
+                        }
+                        string tempFilename = pn.OriginalFullFilename;
+                        for (int i = 0; ; i++)
+                        {
+                            tempFilename += "-tmp-" + i.ToString();
+                            if (!File.Exists(tempFilename))
+                            {
+                                break;
+                            }
+                        }
+                        tempFileNames.Add(pn, tempFilename);
+                        fileNamer.Rename(pn.OriginalFullFilename, tempFilename);
+                    }
+                    foreach (KeyValuePair<ProcessorNamer, string> tfn in tempFileNames)
+                    {
+                        fileNamer.Rename(tfn.Value, tfn.Key.NewFullFilename);
+                    }
+                }
+                catch
+                {
+                    try
+                    {
+                        fileNamer.Revert();
+                    }
+                    catch
+                    { }
+                    throw;
+                }
+                foreach (ProcessorNamer pn in this._processorNamers)
+                {
+                    pn.Processor.SetFullFilename(pn.NewFullFilename);
+                }
+                if (this.cbxFormat.SelectedIndex == 0)
+                {
+                    MediaData.Properties.Settings.Default.BatchRenameLastFormat = "";
+                }
+                else
+                {
+                    List<string> rememberFormat = new List<string>();
+                    rememberFormat.Add(this.cbxFormat.Text);
+                    if (!string.IsNullOrEmpty(MediaData.Properties.Settings.Default.BatchRenameFormats))
+                    {
+                        foreach (string s in MediaData.Properties.Settings.Default.BatchRenameFormats.Split('|'))
+                        {
+                            string s2 = s.Trim();
+                            if (s2.Length > 0 && !rememberFormat.Contains(s2))
+                            {
+                                rememberFormat.Add(s2);
+                            }
+                        }
+                    }
+                    MediaData.Properties.Settings.Default.BatchRenameFormats = string.Join("|", rememberFormat);
+                    MediaData.Properties.Settings.Default.BatchRenameLastFormat = this.cbxFormat.Text;
+                }
+                try
+                {
+                    MediaData.Properties.Settings.Default.Save();
+                }
+                catch
+                { }
+                this.DialogResult = DialogResult.OK;
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show(x.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         #endregion
 
 
@@ -217,15 +440,38 @@ namespace MLocati.MediaData
             {
                 return;
             }
+            string commonDirectoryNameLC = null;
+            Dictionary<string, string> directoryContentsLC = new Dictionary<string, string>();
             ExtensionFormats extensionFormat = (ExtensionFormats)UI.GetDescribedEnumValueOfCombobox(this.cbxExtension);
             foreach (ProcessorNamer pn in this._processorNamers)
             {
+                string pnDirectoryNameLC = Path.GetDirectoryName(pn.Processor.FullFilename).ToLower();
+                if (commonDirectoryNameLC == null)
+                {
+                    commonDirectoryNameLC = pnDirectoryNameLC;
+                    DirectoryInfo di = new DirectoryInfo(commonDirectoryNameLC);
+                    foreach (FileSystemInfo fi in di.GetFileSystemInfos())
+                    {
+                        directoryContentsLC.Add(fi.Name.ToLower(), fi.Name.ToLower());
+                    }
+                }
+                else if (pnDirectoryNameLC != commonDirectoryNameLC)
+                {
+                    pn.SetError(i18n.Multiple_directories_found);
+                    continue;
+                }
+                string pnOriginalLC = pn.OriginalFilename.ToLower();
+                if (!directoryContentsLC.ContainsKey(pnOriginalLC))
+                {
+                    pn.SetError(i18n.File_not_in_directory);
+                    continue;
+                }
                 switch (this.cbxFormat.SelectedIndex)
                 {
                     case 0:
                         if (pn.Processor.FilenameTimeStamper == null)
                         {
-                            pn.SetError("FilenameTimeStamper is null");
+                            pn.SetError("FilenameTimeStamper is null??");
                         }
                         else
                         {
@@ -236,8 +482,33 @@ namespace MLocati.MediaData
                         pn.SetFormat(this.cbxFormat.Text, extensionFormat);
                         break;
                 }
+                if (!pn.HasError)
+                {
+                    string pnNewnameLC = pn.NewFilename;
+                    directoryContentsLC[pnOriginalLC] = "";
+                    if (directoryContentsLC.ContainsValue(pnNewnameLC))
+                    {
+                        pn.SetError(i18n.Overlapping_file_names);
+                    }
+                    directoryContentsLC[pnOriginalLC] = pnNewnameLC;
+                }
+            }
+            foreach (DataGridViewRow row in this.dgvRename.Rows)
+            {
+                ProcessorNamer pn = (ProcessorNamer)row.DataBoundItem;
+                row.DefaultCellStyle.ForeColor = pn.HasError ? Color.Red : SystemColors.WindowText;
+            }
+            bool someFailed = false;
+            foreach (ProcessorNamer pn in this._processorNamers)
+            {
+                if (pn.HasError)
+                {
+                    someFailed = true;
+                    break;
+                }
             }
             this.dgvRename.Invalidate();
+            this.btnApply.Enabled = !someFailed;
         }
 
         #endregion

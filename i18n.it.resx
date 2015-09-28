@@ -574,4 +574,40 @@ Impostarlo come scrivibile?</value>
   <data name="Format_not_set" xml:space="preserve">
     <value>formato non impostato</value>
   </data>
+  <data name="Day" xml:space="preserve">
+    <value>Giorno</value>
+  </data>
+  <data name="File_not_in_directory" xml:space="preserve">
+    <value>Il file non è stato trovato nella cartella</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Ore</value>
+  </data>
+  <data name="Invalid_char_in_file_name_X" xml:space="preserve">
+    <value>Carattere '{0}' non valido nel nome del file</value>
+  </data>
+  <data name="Minutes" xml:space="preserve">
+    <value>Minuti</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Mese</value>
+  </data>
+  <data name="Multiple_directories_found" xml:space="preserve">
+    <value>Sono state rilevate più cartelle</value>
+  </data>
+  <data name="No_format_specified" xml:space="preserve">
+    <value>Nessun formato specificato</value>
+  </data>
+  <data name="No_timestamp_in_metadata" xml:space="preserve">
+    <value>Data/ora non trovate nei metadati</value>
+  </data>
+  <data name="Overlapping_file_names" xml:space="preserve">
+    <value>I nomi dei file si sovrappongono</value>
+  </data>
+  <data name="Seconds" xml:space="preserve">
+    <value>Secondi</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Anno</value>
+  </data>
 </root>

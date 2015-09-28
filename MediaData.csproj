@@ -180,6 +180,9 @@
     <EmbeddedResource Include="ctxShowProcessingOutputOptions.resx">
       <DependentUpon>ctxShowProcessingOutputOptions.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBatchRename.it.resx">
+      <DependentUpon>frmBatchRename.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBatchRename.resx">
       <DependentUpon>frmBatchRename.cs</DependentUpon>
     </EmbeddedResource>

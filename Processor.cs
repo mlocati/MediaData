@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace MLocati.MediaData
@@ -274,7 +273,7 @@ namespace MLocati.MediaData
             }
         }
 
-        protected void SetFullFilename(string fullFilename)
+        internal void SetFullFilename(string fullFilename)
         {
             this._fullFilename = fullFilename;
             this._filename = Path.GetFileName(fullFilename);
