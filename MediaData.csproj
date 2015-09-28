@@ -67,6 +67,12 @@
       <DependentUpon>ctxShowProcessingOutputOptions.cs</DependentUpon>
     </Compile>
     <Compile Include="FilenameTimeStamper.cs" />
+    <Compile Include="frmBatchDeltaTimestamp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBatchDeltaTimestamp.Designer.cs">
+      <DependentUpon>frmBatchDeltaTimestamp.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBatchRename.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ctxShowProcessingOutputOptions.resx">
       <DependentUpon>ctxShowProcessingOutputOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBatchDeltaTimestamp.resx">
+      <DependentUpon>frmBatchDeltaTimestamp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBatchRename.it.resx">
       <DependentUpon>frmBatchRename.cs</DependentUpon>

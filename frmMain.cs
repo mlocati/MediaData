@@ -163,7 +163,7 @@ namespace MLocati.MediaData
                                 default:
                                     return string.Compare(a.Filename, b.Filename, true);
                             }
-                            
+
                         });
                         break;
                     case "FilenameTimestampStr":
@@ -834,7 +834,14 @@ namespace MLocati.MediaData
                     }
                     else
                     {
-                        MessageBox.Show(ts.Value.ToString());
+                        using (frmBatchDeltaTimestamp f = new frmBatchDeltaTimestamp(processors, ts.Value))
+                        {
+                            f.ShowDialog(this);
+                            if (f.SomeChanged)
+                            {
+                                this.dgvFiles.Invalidate();
+                            }
+                        }
                     }
                     break;
                 case SelectionOperations.RenameFiles:
