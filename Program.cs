@@ -39,7 +39,7 @@ namespace MLocati.MediaData
                 if (MediaData.Properties.Settings.Default.DoUpgradeSettings)
                 {
                     MediaData.Properties.Settings.Default.Upgrade();
-                    MediaData.Properties.Settings.Default.DoUpgradeSettings = true;
+                    MediaData.Properties.Settings.Default.DoUpgradeSettings = false;
                     MediaData.Properties.Settings.Default.Save();
                 }
             }
