@@ -253,8 +253,8 @@ namespace MLocati.MediaData
                         default:
                             string s = this.cbxFormat.Text;
                             this.cbxFormat.SelectedIndex = -1;
-                            this.cbxFormat.Text = s;
-                            this._formatTextSelection = new int[] { s.Length, 0 };
+                            this.cbxFormat.Text = s + ph.Key;
+                            this._formatTextSelection = new int[] { this.cbxFormat.Text.Length, 0 };
                             this.cbxFormat.Focus();
                             break;
                     }
