@@ -459,6 +459,11 @@ namespace MLocati.MediaData
             }
         }
 
+        private void frmPosition_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.gmcMap.Manager.CancelTileCaching();
+        }
+
         #endregion
 
 

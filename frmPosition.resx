@@ -117,574 +117,574 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="gmcMap.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="slHelp.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
+  <data name="gmcMap.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 45</value>
+  </data>
+  <data name="gmcMap.Size" type="System.Drawing.Size, System.Drawing">
+    <value>546, 335</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="gmcMap.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblLatLonProvider.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+  <data name="&gt;&gt;gmcMap.Name" xml:space="preserve">
+    <value>gmcMap</value>
   </data>
-  <data name="btnClipboardCopy.Location" type="System.Drawing.Point, System.Drawing">
-    <value>599, 234</value>
+  <data name="&gt;&gt;gmcMap.Type" xml:space="preserve">
+    <value>GMap.NET.WindowsForms.GMapControl, GMap.NET.WindowsForms, Version=1.7.0.0, Culture=neutral, PublicKeyToken=b85b9027b614afef</value>
   </data>
-  <data name="lblAlt.Text" xml:space="preserve">
-    <value>m.</value>
-  </data>
-  <data name="lblLatLonProvider.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 13</value>
-  </data>
-  <data name="&gt;&gt;lblLatLonProvider.Name" xml:space="preserve">
-    <value>lblLatLonProvider</value>
-  </data>
-  <data name="&gt;&gt;ssStatus.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblLatLonSearch.Name" xml:space="preserve">
-    <value>lblLatLonSearch</value>
-  </data>
-  <data name="cbxLatLonProvider.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="slCurrentPositionLabel.Text" xml:space="preserve">
-    <value>Selected position:</value>
-  </data>
-  <data name="slCurrentPosition.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 17</value>
-  </data>
-  <data name="&gt;&gt;tbxLatLonSearch.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="gmcMap.Size" type="System.Drawing.Size, System.Drawing">
-    <value>546, 335</value>
-  </data>
-  <data name="btnClipboardCopy.Text" xml:space="preserve">
-    <value>Copy position</value>
-  </data>
-  <data name="lblLatLonProvider.Location" type="System.Drawing.Point, System.Drawing">
-    <value>273, 22</value>
-  </data>
-  <data name="slCurrentPositionLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 17</value>
-  </data>
-  <data name="&gt;&gt;vsbZoom.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;lblAlt.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="vsbZoom.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;btnClipboardPaste.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;gbxLatLon.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lblLatLonSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 13</value>
+  <data name="&gt;&gt;gmcMap.Parent" xml:space="preserve">
+    <value>gbxLatLon</value>
   </data>
   <data name="&gt;&gt;gmcMap.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;gbxAltitude.Name" xml:space="preserve">
-    <value>gbxAltitude</value>
+  <data name="btnCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
   </data>
-  <data name="&gt;&gt;lnkAltAuto.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>599, 317</value>
   </data>
-  <data name="&gt;&gt;gbxLatLon.Name" xml:space="preserve">
-    <value>gbxLatLon</value>
+  <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 23</value>
   </data>
-  <data name="slCurrentPosition.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;gbxLatLon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnClipboardPaste.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="ssStatus.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;btnClipboardPaste.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;nudAlt.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="lblAlt.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="chkAltSet.Text" xml:space="preserve">
-    <value>set altitude</value>
-  </data>
-  <data name="&gt;&gt;lblAlt.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;slHelp.Name" xml:space="preserve">
-    <value>slHelp</value>
-  </data>
-  <data name="gbxAltitude.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;gmcMap.Name" xml:space="preserve">
-    <value>gmcMap</value>
-  </data>
-  <data name="&gt;&gt;lblLatLonSearch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="&gt;&gt;btnEmpty.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnAccept.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;vsbZoom.Parent" xml:space="preserve">
-    <value>gbxLatLon</value>
-  </data>
-  <data name="&gt;&gt;chkAltSet.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="chkAltSet.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 19</value>
-  </data>
-  <data name="lblLatLonProvider.Text" xml:space="preserve">
-    <value>Provider</value>
-  </data>
-  <data name="lblLatLonSearch.Text" xml:space="preserve">
-    <value>Search</value>
-  </data>
-  <data name="&gt;&gt;ssStatus.ZOrder" xml:space="preserve">
+  <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;tbxLatLonSearch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>Cancel</value>
   </data>
-  <data name="gbxAltitude.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
+    <value>btnCancel</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="btnEmpty.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
   </data>
   <data name="btnEmpty.Location" type="System.Drawing.Point, System.Drawing">
     <value>599, 346</value>
   </data>
-  <data name="lblAlt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>98, 44</value>
-  </data>
-  <data name="&gt;&gt;lblLatLonSearch.Parent" xml:space="preserve">
-    <value>gbxLatLon</value>
-  </data>
-  <data name="&gt;&gt;btnEmpty.Name" xml:space="preserve">
-    <value>btnEmpty</value>
-  </data>
-  <data name="btnAccept.Location" type="System.Drawing.Point, System.Drawing">
-    <value>599, 375</value>
-  </data>
-  <data name="chkAltSet.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;vsbZoom.Type" xml:space="preserve">
-    <value>System.Windows.Forms.VScrollBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnClipboardPaste.Name" xml:space="preserve">
-    <value>btnClipboardPaste</value>
+  <data name="btnEmpty.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 23</value>
   </data>
   <data name="btnEmpty.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;slCurrentPosition.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btnEmpty.Text" xml:space="preserve">
+    <value>Remove position</value>
   </data>
-  <data name="btnClipboardCopy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 23</value>
+  <data name="&gt;&gt;btnEmpty.Name" xml:space="preserve">
+    <value>btnEmpty</value>
   </data>
-  <data name="cbxLatLonProvider.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 21</value>
+  <data name="&gt;&gt;btnEmpty.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="btnClipboardPaste.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="&gt;&gt;btnEmpty.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnEmpty.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="btnAccept.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
-  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
+  <data name="btnAccept.Location" type="System.Drawing.Point, System.Drawing">
+    <value>599, 375</value>
+  </data>
+  <data name="btnAccept.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 23</value>
+  </data>
+  <data name="btnAccept.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btnAccept.Text" xml:space="preserve">
+    <value>Accept</value>
+  </data>
+  <data name="&gt;&gt;btnAccept.Name" xml:space="preserve">
+    <value>btnAccept</value>
+  </data>
+  <data name="&gt;&gt;btnAccept.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnAccept.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnClipboardCopy.Name" xml:space="preserve">
-    <value>btnClipboardCopy</value>
+  <data name="&gt;&gt;btnAccept.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
-  <data name="&gt;&gt;nudAlt.Parent" xml:space="preserve">
-    <value>gbxAltitude</value>
-  </data>
-  <data name="btnClipboardCopy.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btnEmpty.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="gbxLatLon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>581, 386</value>
-  </data>
-  <data name="tbxLatLonSearch.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
-    <value>btnCancel</value>
-  </data>
-  <data name="lblAltAutoPrecision.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;ssStatus.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;nudAlt.Name" xml:space="preserve">
-    <value>nudAlt</value>
-  </data>
-  <data name="lblLatLonSearch.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="btnAccept.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 23</value>
+  <metadata name="ssStatus.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="slHelp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>415, 17</value>
   </data>
   <data name="slHelp.Text" xml:space="preserve">
     <value>Right mouse: pan, left mouse: set new position</value>
   </data>
-  <data name="lblAltAutoPrecision.Text" xml:space="preserve">
-    <value>lblAltAutoPrecision</value>
+  <data name="slHelp.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
-  <data name="&gt;&gt;ssStatus.Name" xml:space="preserve">
-    <value>ssStatus</value>
+  <data name="slCurrentPositionLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 17</value>
   </data>
-  <data name="&gt;&gt;slCurrentPosition.Name" xml:space="preserve">
-    <value>slCurrentPosition</value>
-  </data>
-  <data name="btnClipboardPaste.Text" xml:space="preserve">
-    <value>Paste position</value>
-  </data>
-  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>639, 346</value>
-  </data>
-  <data name="&gt;&gt;gmcMap.Type" xml:space="preserve">
-    <value>GMap.NET.WindowsForms.GMapControl, GMap.NET.WindowsForms, Version=1.7.0.0, Culture=neutral, PublicKeyToken=b85b9027b614afef</value>
-  </data>
-  <data name="tbxLatLonSearch.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="gbxLatLon.Text" xml:space="preserve">
-    <value>Position</value>
-  </data>
-  <data name="btnClipboardPaste.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="btnEmpty.Text" xml:space="preserve">
-    <value>Remove position</value>
-  </data>
-  <data name="lnkAltAuto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 65</value>
-  </data>
-  <data name="&gt;&gt;lblAlt.Parent" xml:space="preserve">
-    <value>gbxAltitude</value>
-  </data>
-  <data name="btnAccept.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;lblAltAutoPrecision.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gbxAltitude.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lblLatLonProvider.Parent" xml:space="preserve">
-    <value>gbxLatLon</value>
-  </data>
-  <data name="btnCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="btnClipboardPaste.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 23</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterParent</value>
-  </data>
-  <data name="gbxLatLon.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="lnkAltAuto.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="nudAlt.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tbxLatLonSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>53, 19</value>
-  </data>
-  <data name="&gt;&gt;slCurrentPositionLabel.Name" xml:space="preserve">
-    <value>slCurrentPositionLabel</value>
-  </data>
-  <data name="gbxLatLon.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="btnClipboardCopy.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="gmcMap.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="lblLatLonProvider.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;lblAltAutoPrecision.Name" xml:space="preserve">
-    <value>lblAltAutoPrecision</value>
-  </data>
-  <data name="btnEmpty.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="&gt;&gt;gbxLatLon.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;cbxLatLonProvider.Name" xml:space="preserve">
-    <value>cbxLatLonProvider</value>
-  </data>
-  <data name="&gt;&gt;btnAccept.Name" xml:space="preserve">
-    <value>btnAccept</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>View/change position</value>
-  </data>
-  <data name="&gt;&gt;lblLatLonProvider.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblAltAutoPrecision.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;btnClipboardCopy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;cbxLatLonProvider.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tbxLatLonSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>214, 20</value>
-  </data>
-  <data name="&gt;&gt;btnAccept.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;btnClipboardCopy.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="cbxLatLonProvider.Location" type="System.Drawing.Point, System.Drawing">
-    <value>325, 19</value>
-  </data>
-  <data name="&gt;&gt;slHelp.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblAltAutoPrecision.Parent" xml:space="preserve">
-    <value>gbxAltitude</value>
-  </data>
-  <data name="&gt;&gt;lblAlt.Name" xml:space="preserve">
-    <value>lblAlt</value>
-  </data>
-  <data name="&gt;&gt;cbxLatLonProvider.Parent" xml:space="preserve">
-    <value>gbxLatLon</value>
-  </data>
-  <data name="&gt;&gt;gbxAltitude.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="gmcMap.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 45</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>frmPosition</value>
-  </data>
-  <data name="btnCancel.Text" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <data name="slHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>384, 17</value>
-  </data>
-  <data name="ssStatus.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 401</value>
-  </data>
-  <data name="chkAltSet.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblAltAutoPrecision.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 84</value>
-  </data>
-  <data name="vsbZoom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>555, 48</value>
-  </data>
-  <data name="&gt;&gt;nudAlt.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="slCurrentPositionLabel.Text" xml:space="preserve">
+    <value>Selected position:</value>
   </data>
   <data name="slCurrentPosition.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;lnkAltAuto.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="slCurrentPosition.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 17</value>
   </data>
-  <data name="gbxAltitude.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 174</value>
+  <data name="slCurrentPosition.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;slCurrentPositionLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gbxAltitude.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 23</value>
-  </data>
-  <data name="&gt;&gt;gmcMap.Parent" xml:space="preserve">
-    <value>gbxLatLon</value>
-  </data>
-  <data name="&gt;&gt;vsbZoom.Name" xml:space="preserve">
-    <value>vsbZoom</value>
-  </data>
-  <data name="nudAlt.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 20</value>
-  </data>
-  <data name="&gt;&gt;lblLatLonProvider.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="ssStatus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 401</value>
   </data>
   <data name="ssStatus.Size" type="System.Drawing.Size, System.Drawing">
     <value>730, 22</value>
   </data>
-  <data name="lblAlt.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="gbxAltitude.Location" type="System.Drawing.Point, System.Drawing">
-    <value>599, 12</value>
-  </data>
-  <data name="cbxLatLonProvider.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="&gt;&gt;tbxLatLonSearch.Name" xml:space="preserve">
-    <value>tbxLatLonSearch</value>
-  </data>
-  <data name="lblLatLonSearch.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;btnEmpty.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lnkAltAuto.Parent" xml:space="preserve">
-    <value>gbxAltitude</value>
-  </data>
-  <data name="nudAlt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 42</value>
-  </data>
-  <data name="&gt;&gt;tbxLatLonSearch.Parent" xml:space="preserve">
-    <value>gbxLatLon</value>
-  </data>
-  <data name="&gt;&gt;chkAltSet.Name" xml:space="preserve">
-    <value>chkAltSet</value>
-  </data>
-  <data name="&gt;&gt;chkAltSet.Parent" xml:space="preserve">
-    <value>gbxAltitude</value>
-  </data>
-  <data name="&gt;&gt;btnClipboardCopy.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lnkAltAuto.Name" xml:space="preserve">
-    <value>lnkAltAuto</value>
-  </data>
-  <data name="lblAltAutoPrecision.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblLatLonProvider.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;chkAltSet.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="lblAltAutoPrecision.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 34</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>730, 423</value>
-  </data>
-  <data name="lnkAltAuto.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 13</value>
-  </data>
-  <data name="btnAccept.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="chkAltSet.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 17</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="vsbZoom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 335</value>
-  </data>
-  <data name="gbxAltitude.Text" xml:space="preserve">
-    <value>Altitude</value>
-  </data>
-  <data name="btnClipboardPaste.Location" type="System.Drawing.Point, System.Drawing">
-    <value>599, 263</value>
-  </data>
-  <data name="gbxLatLon.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
-  </data>
-  <data name="lblAlt.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 13</value>
-  </data>
-  <data name="lnkAltAuto.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;lblLatLonSearch.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;cbxLatLonProvider.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnEmpty.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 23</value>
-  </data>
-  <data name="vsbZoom.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Right</value>
-  </data>
-  <data name="btnAccept.Text" xml:space="preserve">
-    <value>Accept</value>
-  </data>
-  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>599, 317</value>
-  </data>
-  <data name="&gt;&gt;lblAltAutoPrecision.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lnkAltAuto.Text" xml:space="preserve">
-    <value>Retrieve automatically</value>
+  <data name="ssStatus.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
   <data name="ssStatus.Text" xml:space="preserve">
     <value>statusStrip1</value>
   </data>
+  <data name="&gt;&gt;ssStatus.Name" xml:space="preserve">
+    <value>ssStatus</value>
+  </data>
+  <data name="&gt;&gt;ssStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ssStatus.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ssStatus.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="vsbZoom.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Right</value>
+  </data>
+  <data name="vsbZoom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>555, 48</value>
+  </data>
+  <data name="vsbZoom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 335</value>
+  </data>
+  <data name="vsbZoom.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;vsbZoom.Name" xml:space="preserve">
+    <value>vsbZoom</value>
+  </data>
+  <data name="&gt;&gt;vsbZoom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.VScrollBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;vsbZoom.Parent" xml:space="preserve">
+    <value>gbxLatLon</value>
+  </data>
+  <data name="&gt;&gt;vsbZoom.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnClipboardCopy.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnClipboardCopy.Location" type="System.Drawing.Point, System.Drawing">
+    <value>599, 234</value>
+  </data>
+  <data name="btnClipboardCopy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 23</value>
+  </data>
+  <data name="btnClipboardCopy.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnClipboardCopy.Text" xml:space="preserve">
+    <value>Copy position</value>
+  </data>
+  <data name="&gt;&gt;btnClipboardCopy.Name" xml:space="preserve">
+    <value>btnClipboardCopy</value>
+  </data>
+  <data name="&gt;&gt;btnClipboardCopy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnClipboardCopy.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnClipboardCopy.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnClipboardPaste.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnClipboardPaste.Location" type="System.Drawing.Point, System.Drawing">
+    <value>599, 263</value>
+  </data>
+  <data name="btnClipboardPaste.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 23</value>
+  </data>
+  <data name="btnClipboardPaste.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btnClipboardPaste.Text" xml:space="preserve">
+    <value>Paste position</value>
+  </data>
+  <data name="&gt;&gt;btnClipboardPaste.Name" xml:space="preserve">
+    <value>btnClipboardPaste</value>
+  </data>
+  <data name="&gt;&gt;btnClipboardPaste.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnClipboardPaste.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnClipboardPaste.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="gbxLatLon.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="cbxLatLonProvider.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="cbxLatLonProvider.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 19</value>
+  </data>
+  <data name="cbxLatLonProvider.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 21</value>
+  </data>
+  <data name="cbxLatLonProvider.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;cbxLatLonProvider.Name" xml:space="preserve">
+    <value>cbxLatLonProvider</value>
+  </data>
+  <data name="&gt;&gt;cbxLatLonProvider.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbxLatLonProvider.Parent" xml:space="preserve">
+    <value>gbxLatLon</value>
+  </data>
+  <data name="&gt;&gt;cbxLatLonProvider.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblLatLonProvider.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="lblLatLonProvider.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblLatLonProvider.Location" type="System.Drawing.Point, System.Drawing">
+    <value>273, 22</value>
+  </data>
+  <data name="lblLatLonProvider.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 13</value>
+  </data>
+  <data name="lblLatLonProvider.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblLatLonProvider.Text" xml:space="preserve">
+    <value>Provider</value>
+  </data>
+  <data name="&gt;&gt;lblLatLonProvider.Name" xml:space="preserve">
+    <value>lblLatLonProvider</value>
+  </data>
+  <data name="&gt;&gt;lblLatLonProvider.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblLatLonProvider.Parent" xml:space="preserve">
+    <value>gbxLatLon</value>
+  </data>
+  <data name="&gt;&gt;lblLatLonProvider.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tbxLatLonSearch.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="tbxLatLonSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>53, 19</value>
+  </data>
+  <data name="tbxLatLonSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>214, 20</value>
+  </data>
+  <data name="tbxLatLonSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tbxLatLonSearch.Name" xml:space="preserve">
+    <value>tbxLatLonSearch</value>
+  </data>
+  <data name="&gt;&gt;tbxLatLonSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbxLatLonSearch.Parent" xml:space="preserve">
+    <value>gbxLatLon</value>
+  </data>
+  <data name="&gt;&gt;tbxLatLonSearch.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblLatLonSearch.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="lblLatLonSearch.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 22</value>
+  </data>
+  <data name="lblLatLonSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 13</value>
+  </data>
+  <data name="lblLatLonSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblLatLonSearch.Text" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="&gt;&gt;lblLatLonSearch.Name" xml:space="preserve">
+    <value>lblLatLonSearch</value>
+  </data>
+  <data name="&gt;&gt;lblLatLonSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblLatLonSearch.Parent" xml:space="preserve">
+    <value>gbxLatLon</value>
+  </data>
+  <data name="&gt;&gt;lblLatLonSearch.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="gbxLatLon.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="gbxLatLon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>581, 386</value>
+  </data>
+  <data name="gbxLatLon.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gbxLatLon.Text" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="&gt;&gt;gbxLatLon.Name" xml:space="preserve">
+    <value>gbxLatLon</value>
+  </data>
+  <data name="&gt;&gt;gbxLatLon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbxLatLon.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbxLatLon.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="gbxAltitude.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="lblAltAutoPrecision.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="lblAltAutoPrecision.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 84</value>
+  </data>
+  <data name="lblAltAutoPrecision.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 34</value>
+  </data>
+  <data name="lblAltAutoPrecision.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lblAltAutoPrecision.Text" xml:space="preserve">
+    <value>lblAltAutoPrecision</value>
+  </data>
+  <data name="lblAltAutoPrecision.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lblAltAutoPrecision.Name" xml:space="preserve">
+    <value>lblAltAutoPrecision</value>
+  </data>
+  <data name="&gt;&gt;lblAltAutoPrecision.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblAltAutoPrecision.Parent" xml:space="preserve">
+    <value>gbxAltitude</value>
+  </data>
+  <data name="&gt;&gt;lblAltAutoPrecision.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lnkAltAuto.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lnkAltAuto.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 65</value>
+  </data>
+  <data name="lnkAltAuto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 13</value>
+  </data>
+  <data name="lnkAltAuto.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lnkAltAuto.Text" xml:space="preserve">
+    <value>Retrieve automatically</value>
+  </data>
+  <data name="&gt;&gt;lnkAltAuto.Name" xml:space="preserve">
+    <value>lnkAltAuto</value>
+  </data>
+  <data name="&gt;&gt;lnkAltAuto.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lnkAltAuto.Parent" xml:space="preserve">
+    <value>gbxAltitude</value>
+  </data>
+  <data name="&gt;&gt;lnkAltAuto.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblAlt.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblAlt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>98, 44</value>
+  </data>
+  <data name="lblAlt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 13</value>
+  </data>
+  <data name="lblAlt.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblAlt.Text" xml:space="preserve">
+    <value>m.</value>
+  </data>
+  <data name="&gt;&gt;lblAlt.Name" xml:space="preserve">
+    <value>lblAlt</value>
+  </data>
+  <data name="&gt;&gt;lblAlt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblAlt.Parent" xml:space="preserve">
+    <value>gbxAltitude</value>
+  </data>
+  <data name="&gt;&gt;lblAlt.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="nudAlt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 42</value>
+  </data>
+  <data name="nudAlt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 20</value>
+  </data>
+  <data name="nudAlt.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;nudAlt.Name" xml:space="preserve">
+    <value>nudAlt</value>
+  </data>
+  <data name="&gt;&gt;nudAlt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nudAlt.Parent" xml:space="preserve">
+    <value>gbxAltitude</value>
+  </data>
+  <data name="&gt;&gt;nudAlt.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="chkAltSet.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkAltSet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 19</value>
+  </data>
+  <data name="chkAltSet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 17</value>
+  </data>
+  <data name="chkAltSet.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="chkAltSet.Text" xml:space="preserve">
+    <value>set altitude</value>
+  </data>
+  <data name="&gt;&gt;chkAltSet.Name" xml:space="preserve">
+    <value>chkAltSet</value>
+  </data>
+  <data name="&gt;&gt;chkAltSet.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkAltSet.Parent" xml:space="preserve">
+    <value>gbxAltitude</value>
+  </data>
+  <data name="&gt;&gt;chkAltSet.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="gbxAltitude.Location" type="System.Drawing.Point, System.Drawing">
+    <value>599, 12</value>
+  </data>
+  <data name="gbxAltitude.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 174</value>
+  </data>
+  <data name="gbxAltitude.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="gbxAltitude.Text" xml:space="preserve">
+    <value>Altitude</value>
+  </data>
+  <data name="&gt;&gt;gbxAltitude.Name" xml:space="preserve">
+    <value>gbxAltitude</value>
+  </data>
+  <data name="&gt;&gt;gbxAltitude.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbxAltitude.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbxAltitude.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="ssStatus.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>730, 423</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>639, 346</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>View/change position</value>
+  </data>
+  <data name="&gt;&gt;slHelp.Name" xml:space="preserve">
+    <value>slHelp</value>
+  </data>
+  <data name="&gt;&gt;slHelp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;slCurrentPositionLabel.Name" xml:space="preserve">
+    <value>slCurrentPositionLabel</value>
+  </data>
+  <data name="&gt;&gt;slCurrentPositionLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;slCurrentPosition.Name" xml:space="preserve">
+    <value>slCurrentPosition</value>
+  </data>
+  <data name="&gt;&gt;slCurrentPosition.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmPosition</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

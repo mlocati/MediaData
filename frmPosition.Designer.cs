@@ -107,23 +107,23 @@
             // 
             // ssStatus
             // 
-            resources.ApplyResources(this.ssStatus, "ssStatus");
             this.ssStatus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.slHelp,
             this.slCurrentPositionLabel,
             this.slCurrentPosition});
+            resources.ApplyResources(this.ssStatus, "ssStatus");
             this.ssStatus.Name = "ssStatus";
             // 
             // slHelp
             // 
-            resources.ApplyResources(this.slHelp, "slHelp");
             this.slHelp.Name = "slHelp";
+            resources.ApplyResources(this.slHelp, "slHelp");
             this.slHelp.Spring = true;
             // 
             // slCurrentPositionLabel
             // 
-            resources.ApplyResources(this.slCurrentPositionLabel, "slCurrentPositionLabel");
             this.slCurrentPositionLabel.Name = "slCurrentPositionLabel";
+            resources.ApplyResources(this.slCurrentPositionLabel, "slCurrentPositionLabel");
             // 
             // slCurrentPosition
             // 
@@ -216,8 +216,8 @@
             // 
             // nudAlt
             // 
-            resources.ApplyResources(this.nudAlt, "nudAlt");
             this.nudAlt.DecimalPlaces = 1;
+            resources.ApplyResources(this.nudAlt, "nudAlt");
             this.nudAlt.Maximum = new decimal(new int[] {
             20000,
             0,
@@ -254,6 +254,7 @@
             this.Controls.Add(this.btnCancel);
             this.KeyPreview = true;
             this.Name = "frmPosition";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPosition_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmPosition_KeyDown);
             this.ssStatus.ResumeLayout(false);
             this.ssStatus.PerformLayout();
