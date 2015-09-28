@@ -202,5 +202,17 @@ namespace MLocati.MediaData.Properties {
                 this["BatchRenameFormats"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string BatchRenameLastFormat {
+            get {
+                return ((string)(this["BatchRenameLastFormat"]));
+            }
+            set {
+                this["BatchRenameLastFormat"] = value;
+            }
+        }
     }
 }

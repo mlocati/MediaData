@@ -66,6 +66,7 @@
     <Compile Include="ctxShowProcessingOutputOptions.Designer.cs">
       <DependentUpon>ctxShowProcessingOutputOptions.cs</DependentUpon>
     </Compile>
+    <Compile Include="FilenameTimeStamper.cs" />
     <Compile Include="frmBatchRename.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,4 +257,8 @@
     <Content Include="GMap.NET.WindowsForms.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>if exist "$(TargetPath).locked" del "$(TargetPath).locked"
+if exist "$(TargetPath)" if not exist "$(TargetPath).locked" move "$(TargetPath)" "$(TargetPath).locked"</PreBuildEvent>
+  </PropertyGroup>
 </Project>

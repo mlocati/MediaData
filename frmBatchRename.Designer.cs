@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.dgvRename = new System.Windows.Forms.DataGridView();
+            this.colOriginalFilename = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNewFilename = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblFormat = new System.Windows.Forms.Label();
             this.cbxFormat = new System.Windows.Forms.ComboBox();
             this.btnApply = new System.Windows.Forms.Button();
@@ -38,8 +40,6 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.lblExtension = new System.Windows.Forms.Label();
             this.cbxExtension = new System.Windows.Forms.ComboBox();
-            this.colOriginalFilename = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNewFilename = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRename)).BeginInit();
             this.flpFormat.SuspendLayout();
             this.SuspendLayout();
@@ -67,6 +67,24 @@
             this.dgvRename.Size = new System.Drawing.Size(411, 226);
             this.dgvRename.TabIndex = 5;
             // 
+            // colOriginalFilename
+            // 
+            this.colOriginalFilename.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colOriginalFilename.DataPropertyName = "OriginalFilename";
+            this.colOriginalFilename.HeaderText = "Original file name";
+            this.colOriginalFilename.Name = "colOriginalFilename";
+            this.colOriginalFilename.ReadOnly = true;
+            this.colOriginalFilename.Width = 204;
+            // 
+            // colNewFilename
+            // 
+            this.colNewFilename.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colNewFilename.DataPropertyName = "NewFilenameShown";
+            this.colNewFilename.HeaderText = "New file name";
+            this.colNewFilename.Name = "colNewFilename";
+            this.colNewFilename.ReadOnly = true;
+            this.colNewFilename.Width = 204;
+            // 
             // lblFormat
             // 
             this.lblFormat.AutoSize = true;
@@ -84,6 +102,7 @@
             this.cbxFormat.Name = "cbxFormat";
             this.cbxFormat.Size = new System.Drawing.Size(344, 21);
             this.cbxFormat.TabIndex = 1;
+            this.cbxFormat.TextChanged += new System.EventHandler(this.cbxFormat_TextChanged);
             // 
             // btnApply
             // 
@@ -127,6 +146,7 @@
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Location = new System.Drawing.Point(267, 330);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
@@ -152,29 +172,13 @@
             this.cbxExtension.Name = "cbxExtension";
             this.cbxExtension.Size = new System.Drawing.Size(344, 21);
             this.cbxExtension.TabIndex = 3;
-            // 
-            // colOriginalFilename
-            // 
-            this.colOriginalFilename.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colOriginalFilename.DataPropertyName = "OriginalFilename";
-            this.colOriginalFilename.HeaderText = "Original file name";
-            this.colOriginalFilename.Name = "colOriginalFilename";
-            this.colOriginalFilename.ReadOnly = true;
-            this.colOriginalFilename.Width = 204;
-            // 
-            // colNewFilename
-            // 
-            this.colNewFilename.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colNewFilename.DataPropertyName = "NewFilename";
-            this.colNewFilename.HeaderText = "New file name";
-            this.colNewFilename.Name = "colNewFilename";
-            this.colNewFilename.ReadOnly = true;
-            this.colNewFilename.Width = 204;
+            this.cbxExtension.SelectedIndexChanged += new System.EventHandler(this.cbxExtension_SelectedIndexChanged);
             // 
             // frmBatchRename
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(435, 365);
             this.Controls.Add(this.lblExtension);
             this.Controls.Add(this.flpFormat);

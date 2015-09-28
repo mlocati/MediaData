@@ -273,8 +273,6 @@ namespace MLocati.MediaData
             else
             {
                 args.Add("-M\"set Exif.GPSInfo.GPSVersionID 2 2 0 0\"");
-                args.Add("-M\"set Exif.GPSInfo.GPSProcessingMethod ASCII\"");
-                args.Add("-M\"set Exif.GPSInfo.GPSLatitudeRef " + ((newInfo.Position.Lat < 0) ? "S" : "N") + "\"");
                 args.Add("-M\"set Exif.GPSInfo.GPSLatitude " + ExivImageProcessor.degreesToRationalTriplet(Math.Abs(newInfo.Position.Lat)) + "\"");
                 args.Add("-M\"set Exif.GPSInfo.GPSLongitudeRef " + ((newInfo.Position.Lng < 0) ? "W" : "E") + "\"");
                 args.Add("-M\"set Exif.GPSInfo.GPSLongitude " + ExivImageProcessor.degreesToRationalTriplet(Math.Abs(newInfo.Position.Lng)) + "\"");

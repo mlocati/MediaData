@@ -134,11 +134,11 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
-        ///   Cerca una stringa localizzata simile a Keep original format.
+        ///   Cerca una stringa localizzata simile a Keep original pattern.
         /// </summary>
-        internal static string BatchFormat_Keep {
+        internal static string BatchRename_Format_Keep {
             get {
-                return ResourceManager.GetString("BatchFormat_Keep", resourceCulture);
+                return ResourceManager.GetString("BatchRename_Format_Keep", resourceCulture);
             }
         }
         
@@ -286,6 +286,15 @@ namespace MLocati.MediaData {
         internal static string Following_error_occurred_X {
             get {
                 return ResourceManager.GetString("Following_error_occurred_X", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Format not set.
+        /// </summary>
+        internal static string Format_not_set {
+            get {
+                return ResourceManager.GetString("Format_not_set", resourceCulture);
             }
         }
         

@@ -568,7 +568,10 @@ Impostarlo come scrivibile?</value>
   <data name="ExtensionFormats_UpperCase" xml:space="preserve">
     <value>maiuscole</value>
   </data>
-  <data name="BatchFormat_Keep" xml:space="preserve">
-    <value>mantieni il formato originario</value>
+  <data name="BatchRename_Format_Keep" xml:space="preserve">
+    <value>mantieni lo schema originario</value>
+  </data>
+  <data name="Format_not_set" xml:space="preserve">
+    <value>formato non impostato</value>
   </data>
 </root>

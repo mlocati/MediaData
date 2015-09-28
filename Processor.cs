@@ -58,12 +58,20 @@ namespace MLocati.MediaData
             { return this._filename; }
         }
 
-        private DateTime? _filenameTimestamp = null;
+        private FilenameTimeStamper _filenameTimeStamper = null;
+        public FilenameTimeStamper FilenameTimeStamper
+        {
+            get
+            {
+                return this._filenameTimeStamper;
+            }
+        }
+
         public DateTime? FilenameTimestamp
         {
             get
             {
-                return this._filenameTimestamp.HasValue ? (DateTime?)this._filenameTimestamp.Value : null;
+                return (this._filenameTimeStamper == null) ? null : (DateTime?)this._filenameTimeStamper.Timestamp;
             }
         }
 
@@ -72,9 +80,9 @@ namespace MLocati.MediaData
             get
             {
                 string result = "";
-                if (this.FilenameTimestamp.HasValue)
+                if (this._filenameTimeStamper != null)
                 {
-                    result = this._filenameTimestamp.Value.ToString();
+                    result = this._filenameTimeStamper.Timestamp.ToString();
                     if (result == this.MetadataTimestampStr)
                     {
                         result = "=";
@@ -269,36 +277,8 @@ namespace MLocati.MediaData
         protected void SetFullFilename(string fullFilename)
         {
             this._fullFilename = fullFilename;
-            this._filenameTimestamp = null;
             this._filename = Path.GetFileName(fullFilename);
-            Match match = Processor.FilenameTimestampRegex.Match(this.Filename);
-            if (match.Success)
-            {
-                int Y = int.Parse(match.Groups["Y"].Value);
-                int M = int.Parse(match.Groups["M"].Value);
-                int D = int.Parse(match.Groups["D"].Value);
-                if (Y > 1000 && Y <= DateTime.Now.Year + 1 && M >= 1 && M <= 12 && D >= 1 && D <= 31 && match.Groups["dateSep1"].Value == match.Groups["dateSep2"].Value)
-                {
-                    int h = int.Parse(match.Groups["h"].Value);
-                    int m = int.Parse(match.Groups["m"].Value);
-                    int s;
-                    bool ok;
-                    if (match.Groups["s"].Value == "")
-                    {
-                        ok = true;
-                        s = 0;
-                    }
-                    else
-                    {
-                        s = int.Parse(match.Groups["s"].Value);
-                        ok = (match.Groups["timeSep1"].Value == match.Groups["timeSep2"].Value) ? true : false;
-                    }
-                    if (ok && h >= 0 && h <= 23 && m >= 0 && m <= 59 && s >= 0 && s <= 59)
-                    {
-                        this._filenameTimestamp = new DateTime(Y, M, D, h, m, s);
-                    }
-                }
-            }
+            this._filenameTimeStamper = FilenameTimeStamper.Get(this._filename);
         }
 
         protected string GetNewTempFilename()
@@ -436,19 +416,6 @@ namespace MLocati.MediaData
                     Processor._processorsPerExtension = processorsPerExtension;
                 }
                 return Processor._processorsPerExtension;
-            }
-        }
-
-        private static Regex _filenameTimestampRegex = null;
-        private static Regex FilenameTimestampRegex
-        {
-            get
-            {
-                if (Processor._filenameTimestampRegex == null)
-                {
-                    Processor._filenameTimestampRegex = new Regex(@"(\D|^)(?<Y>\d{4})(?<dateSep1>.?)(?<M>\d{2})(?<dateSep2>.?)(?<D>\d{2}).?(?<h>\d{2})(?<timeSep>.?)(?<m>\d{2})((?<timeSep2>.?)(?<s>\d{2}))?(\D|$)", RegexOptions.ExplicitCapture);
-                }
-                return Processor._filenameTimestampRegex;
             }
         }
 
