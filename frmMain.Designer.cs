@@ -205,6 +205,7 @@
             this.colFilename.Name = "colFilename";
             this.colFilename.ReadOnly = true;
             this.colFilename.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colFilename.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.colFilename.VisitedLinkColor = System.Drawing.Color.Blue;
             // 
             // colFilenameDatetime
@@ -217,6 +218,7 @@
             this.colFilenameDatetime.Name = "colFilenameDatetime";
             this.colFilenameDatetime.ReadOnly = true;
             this.colFilenameDatetime.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colFilenameDatetime.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.colFilenameDatetime.VisitedLinkColor = System.Drawing.Color.Blue;
             // 
             // colMetadataDatetime
@@ -229,6 +231,7 @@
             this.colMetadataDatetime.Name = "colMetadataDatetime";
             this.colMetadataDatetime.ReadOnly = true;
             this.colMetadataDatetime.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colMetadataDatetime.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.colMetadataDatetime.VisitedLinkColor = System.Drawing.Color.Blue;
             // 
             // colMetadataPosition
@@ -240,6 +243,7 @@
             this.colMetadataPosition.LinkColor = System.Drawing.Color.Blue;
             this.colMetadataPosition.Name = "colMetadataPosition";
             this.colMetadataPosition.ReadOnly = true;
+            this.colMetadataPosition.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.colMetadataPosition.VisitedLinkColor = System.Drawing.Color.Blue;
             // 
             // gbxSelection

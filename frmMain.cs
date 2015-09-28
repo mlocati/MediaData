@@ -36,12 +36,176 @@ namespace MLocati.MediaData
             Days,
         }
 
+        private class ProcessorList : BindingList<Processor>
+        {
+            private PropertyDescriptor _sortProperty = null;
+
+            private ListSortDirection _sortDirection = ListSortDirection.Ascending;
+
+            protected override bool SupportsSortingCore
+            {
+                get
+                {
+                    return true;
+                }
+            }
+
+            protected override bool IsSortedCore
+            {
+                get
+                {
+                    return this._sortProperty != null;
+                }
+            }
+
+            protected override PropertyDescriptor SortPropertyCore
+            {
+                get
+                {
+                    return this._sortProperty;
+                }
+            }
+
+            protected override ListSortDirection SortDirectionCore
+            {
+                get
+                {
+                    return this._sortDirection;
+                }
+            }
+            private int CompareDateTimes(DateTime? a, DateTime? b)
+            {
+                if (a.HasValue)
+                {
+                    if (b.HasValue)
+                    {
+                        return this.CompareDateTimes(a.Value, b.Value);
+                    }
+                    else
+                    {
+                        return (this._sortDirection == ListSortDirection.Descending) ? -1 : 1;
+                    }
+                }
+                else if (b.HasValue)
+                {
+                    return (this._sortDirection == ListSortDirection.Descending) ? 1 : -1;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            private int CompareDateTimes(DateTime a, DateTime b)
+            {
+                if (a < b)
+                {
+                    return (this._sortDirection == ListSortDirection.Descending) ? 1 : -1;
+                }
+                if (a > b)
+                {
+                    return (this._sortDirection == ListSortDirection.Descending) ? -1 : 1;
+                }
+                return 0;
+            }
+            private int ComparePositions(Position a, Position b)
+            {
+                if (a != null)
+                {
+                    if (b != null)
+                    {
+                        if (a.Lat < b.Lat)
+                        {
+                            return (this._sortDirection == ListSortDirection.Descending) ? 1 : -1;
+                        }
+                        if (a.Lat > b.Lat)
+                        {
+                            return (this._sortDirection == ListSortDirection.Descending) ? -1 : 1;
+                        }
+                        if (a.Lng < b.Lng)
+                        {
+                            return (this._sortDirection == ListSortDirection.Descending) ? 1 : -1;
+                        }
+                        if (a.Lng > b.Lng)
+                        {
+                            return (this._sortDirection == ListSortDirection.Descending) ? -1 : 1;
+                        }
+                        return 0;
+                    }
+                    else
+                    {
+                        return (this._sortDirection == ListSortDirection.Descending) ? -1 : 1;
+                    }
+                }
+                else if (b != null)
+                {
+                    return (this._sortDirection == ListSortDirection.Descending) ? 1 : -1;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            protected override void ApplySortCore(PropertyDescriptor prop, ListSortDirection direction)
+            {
+                this._sortProperty = prop;
+                this._sortDirection = direction;
+                List<Processor> list = (List<Processor>)this.Items;
+                switch (prop.Name)
+                {
+                    case "Filename":
+                        list.Sort(delegate (Processor a, Processor b)
+                        {
+                            switch (direction)
+                            {
+                                case ListSortDirection.Descending:
+                                    return string.Compare(b.Filename, a.Filename, true);
+                                case ListSortDirection.Ascending:
+                                default:
+                                    return string.Compare(a.Filename, b.Filename, true);
+                            }
+                            
+                        });
+                        break;
+                    case "FilenameTimestampStr":
+                        list.Sort(delegate (Processor a, Processor b)
+                        {
+                            return this.CompareDateTimes(
+                                a.FilenameTimestamp,
+                                b.FilenameTimestamp
+                            );
+                        });
+                        break;
+                    case "MetadataTimestampStr":
+                        list.Sort(delegate (Processor a, Processor b)
+                        {
+                            return this.CompareDateTimes(
+                                (a.Info == null) ? null : a.Info.TimestampMean,
+                                (b.Info == null) ? null : b.Info.TimestampMean
+                            );
+                        });
+                        break;
+                    case "MetadataPositionStr":
+                        list.Sort(delegate (Processor a, Processor b)
+                        {
+                            return this.ComparePositions(
+                                (a.Info == null) ? null : a.Info.Position,
+                                (b.Info == null) ? null : b.Info.Position
+                            );
+                        });
+                        break;
+                    default:
+                        return;
+                }
+                this.OnListChanged(new ListChangedEventArgs(ListChangedType.Reset, -1));
+            }
+        }
+
         #endregion
 
 
         #region Instance Properties
 
-        private List<Processor> _processors;
+        private ProcessorList _processors;
 
         private CurrencyManager _processorsManager;
 
@@ -120,7 +284,7 @@ namespace MLocati.MediaData
             Localizer.CultureChanged += this.Localizer_CultureChanged;
             this.SelectionEnabled = false;
             this.tstSrcDir.Text = "";
-            this._processors = new List<Processor>();
+            this._processors = new ProcessorList();
             this.dgvFiles.AutoGenerateColumns = false;
             this.dgvFiles.DataSource = this._processors;
             this._processorsManager = (CurrencyManager)this.dgvFiles.BindingContext[this._processors];
@@ -298,7 +462,7 @@ namespace MLocati.MediaData
                     }
                     break;
                 case Keys.Control | Keys.Shift:
-                    switch(e.KeyCode)
+                    switch (e.KeyCode)
                     {
                         case Keys.A:
                             if (this.SelectionEnabled)
@@ -368,8 +532,7 @@ namespace MLocati.MediaData
                         return;
                     }
                     Processor processor = Processor.Get(fi.FullName);
-                    this._processors.Add(processor);
-                    bgw.ReportProgress(0, fi.Name);
+                    bgw.ReportProgress(0, processor);
                 }
             }
             catch (Exception x)
@@ -380,8 +543,10 @@ namespace MLocati.MediaData
 
         private void AnalysisInProgress(object sender, ProgressChangedEventArgs e)
         {
+            Processor processor = (Processor)e.UserState;
+            this._processors.Add(processor);
             this.ssStatusProgress.Value++;
-            this.ssStatusLabel.Text = string.Format(i18n.Processing_file_X, e.UserState);
+            this.ssStatusLabel.Text = string.Format(i18n.Processing_file_X, processor.Filename);
             this._processorsManager.Refresh();
             this.dgvFiles.Invalidate();
         }
