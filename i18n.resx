@@ -531,4 +531,82 @@ Do you want to set it as writable?</value>
   <data name="_unsupported_type_" xml:space="preserve">
     <value>&lt;unsupported type&gt;</value>
   </data>
+  <data name="SelectionOperations_DeltaTimestamp" xml:space="preserve">
+    <value>Change meta timestamp</value>
+  </data>
+  <data name="SelectionOperations_PleaseSelect" xml:space="preserve">
+    <value>(select the operation)</value>
+  </data>
+  <data name="SelectionOperations_RenameFiles" xml:space="preserve">
+    <value>Rename files</value>
+  </data>
+  <data name="DeltaOperationUnit_days" xml:space="preserve">
+    <value>days</value>
+  </data>
+  <data name="DeltaOperationUnit_hours" xml:space="preserve">
+    <value>hours</value>
+  </data>
+  <data name="DeltaOperationUnit_minutes" xml:space="preserve">
+    <value>minutes</value>
+  </data>
+  <data name="DeltaOperationUnit_seconds" xml:space="preserve">
+    <value>seconds</value>
+  </data>
+  <data name="Please_select_at_least_one_file" xml:space="preserve">
+    <value>Please select at least one file.</value>
+  </data>
+  <data name="Please_specify_delta_time" xml:space="preserve">
+    <value>Please specify the time interval to add/substract to the metadata.</value>
+  </data>
+  <data name="ExtensionFormats_KeepCase" xml:space="preserve">
+    <value>Keep original case</value>
+  </data>
+  <data name="ExtensionFormats_LowerCase" xml:space="preserve">
+    <value>Lower case</value>
+  </data>
+  <data name="ExtensionFormats_UpperCase" xml:space="preserve">
+    <value>Upper case</value>
+  </data>
+  <data name="BatchRename_Format_Keep" xml:space="preserve">
+    <value>Keep original pattern</value>
+  </data>
+  <data name="Format_not_set" xml:space="preserve">
+    <value>Format not set</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="File_not_in_directory" xml:space="preserve">
+    <value>The file has not been found in the directory</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Hours</value>
+  </data>
+  <data name="Invalid_char_in_file_name_X" xml:space="preserve">
+    <value>Invalid char '{0}' in file name</value>
+  </data>
+  <data name="Minutes" xml:space="preserve">
+    <value>Minutes</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="Multiple_directories_found" xml:space="preserve">
+    <value>Multiple directories have been found</value>
+  </data>
+  <data name="No_format_specified" xml:space="preserve">
+    <value>No format specified</value>
+  </data>
+  <data name="No_timestamp_in_metadata" xml:space="preserve">
+    <value>No date/time found in metadata</value>
+  </data>
+  <data name="Overlapping_file_names" xml:space="preserve">
+    <value>Overlapping file names</value>
+  </data>
+  <data name="Seconds" xml:space="preserve">
+    <value>Seconds</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Year</value>
+  </data>
 </root>

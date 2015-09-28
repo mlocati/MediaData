@@ -258,10 +258,7 @@ namespace MLocati.MediaData
                 {
                     return false;
                 }
-                decimal deltaLat = Math.Abs(newValues._position.Lat - this._position.Lat);
-                decimal deltaLng = Math.Abs(newValues._position.Lng - this._position.Lng);
-
-                if (deltaLat > 0.0001M || deltaLng > 0.0001M || this._position.Alt.HasValue != newValues._position.Alt.HasValue)
+                if (this._position.DistanceTo(newValues.Position) > 1D || this._position.Alt.HasValue != newValues._position.Alt.HasValue)
                 {
                     return false;
                 }

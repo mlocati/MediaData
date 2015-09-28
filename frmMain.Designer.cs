@@ -49,11 +49,22 @@
             this.colFilenameDatetime = new System.Windows.Forms.DataGridViewLinkColumn();
             this.colMetadataDatetime = new System.Windows.Forms.DataGridViewLinkColumn();
             this.colMetadataPosition = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.pnlMain = new System.Windows.Forms.Panel();
+            this.gbxSelection = new System.Windows.Forms.GroupBox();
+            this.flpSelection = new System.Windows.Forms.FlowLayoutPanel();
+            this.lnkSelectAll = new System.Windows.Forms.LinkLabel();
+            this.lnkSelectNone = new System.Windows.Forms.LinkLabel();
+            this.cbxSelection = new System.Windows.Forms.ComboBox();
+            this.lblSelectionDeltaTime = new System.Windows.Forms.Label();
+            this.nudSelectionDeltaTimeValue = new System.Windows.Forms.NumericUpDown();
+            this.cbxSelectionDeltaTimeUnit = new System.Windows.Forms.ComboBox();
+            this.btnSelectionApply = new System.Windows.Forms.Button();
+            this.chkSelection = new System.Windows.Forms.CheckBox();
             this.ssStatus.SuspendLayout();
             this.tsTools.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFiles)).BeginInit();
-            this.pnlMain.SuspendLayout();
+            this.gbxSelection.SuspendLayout();
+            this.flpSelection.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSelectionDeltaTimeValue)).BeginInit();
             this.SuspendLayout();
             // 
             // ssStatus
@@ -142,6 +153,7 @@
             this.dgvFiles.AllowUserToAddRows = false;
             this.dgvFiles.AllowUserToDeleteRows = false;
             this.dgvFiles.AllowUserToResizeRows = false;
+            resources.ApplyResources(this.dgvFiles, "dgvFiles");
             this.dgvFiles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -166,9 +178,9 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvFiles.DefaultCellStyle = dataGridViewCellStyle2;
-            resources.ApplyResources(this.dgvFiles, "dgvFiles");
             this.dgvFiles.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvFiles.Name = "dgvFiles";
+            this.dgvFiles.ReadOnly = true;
             this.dgvFiles.RowHeadersVisible = false;
             this.dgvFiles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvFiles.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFiles_CellClick);
@@ -194,6 +206,7 @@
             this.colFilename.Name = "colFilename";
             this.colFilename.ReadOnly = true;
             this.colFilename.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colFilename.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.colFilename.VisitedLinkColor = System.Drawing.Color.Blue;
             // 
             // colFilenameDatetime
@@ -206,6 +219,7 @@
             this.colFilenameDatetime.Name = "colFilenameDatetime";
             this.colFilenameDatetime.ReadOnly = true;
             this.colFilenameDatetime.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colFilenameDatetime.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.colFilenameDatetime.VisitedLinkColor = System.Drawing.Color.Blue;
             // 
             // colMetadataDatetime
@@ -218,6 +232,7 @@
             this.colMetadataDatetime.Name = "colMetadataDatetime";
             this.colMetadataDatetime.ReadOnly = true;
             this.colMetadataDatetime.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colMetadataDatetime.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.colMetadataDatetime.VisitedLinkColor = System.Drawing.Color.Blue;
             // 
             // colMetadataPosition
@@ -229,19 +244,98 @@
             this.colMetadataPosition.LinkColor = System.Drawing.Color.Blue;
             this.colMetadataPosition.Name = "colMetadataPosition";
             this.colMetadataPosition.ReadOnly = true;
+            this.colMetadataPosition.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.colMetadataPosition.VisitedLinkColor = System.Drawing.Color.Blue;
             // 
-            // pnlMain
+            // gbxSelection
             // 
-            this.pnlMain.Controls.Add(this.dgvFiles);
-            resources.ApplyResources(this.pnlMain, "pnlMain");
-            this.pnlMain.Name = "pnlMain";
+            resources.ApplyResources(this.gbxSelection, "gbxSelection");
+            this.gbxSelection.Controls.Add(this.flpSelection);
+            this.gbxSelection.Name = "gbxSelection";
+            this.gbxSelection.TabStop = false;
+            // 
+            // flpSelection
+            // 
+            this.flpSelection.Controls.Add(this.lnkSelectAll);
+            this.flpSelection.Controls.Add(this.lnkSelectNone);
+            this.flpSelection.Controls.Add(this.cbxSelection);
+            this.flpSelection.Controls.Add(this.lblSelectionDeltaTime);
+            this.flpSelection.Controls.Add(this.nudSelectionDeltaTimeValue);
+            this.flpSelection.Controls.Add(this.cbxSelectionDeltaTimeUnit);
+            this.flpSelection.Controls.Add(this.btnSelectionApply);
+            resources.ApplyResources(this.flpSelection, "flpSelection");
+            this.flpSelection.Name = "flpSelection";
+            // 
+            // lnkSelectAll
+            // 
+            resources.ApplyResources(this.lnkSelectAll, "lnkSelectAll");
+            this.lnkSelectAll.Name = "lnkSelectAll";
+            this.lnkSelectAll.TabStop = true;
+            this.lnkSelectAll.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkSelectAll_LinkClicked);
+            // 
+            // lnkSelectNone
+            // 
+            resources.ApplyResources(this.lnkSelectNone, "lnkSelectNone");
+            this.lnkSelectNone.Name = "lnkSelectNone";
+            this.lnkSelectNone.TabStop = true;
+            this.lnkSelectNone.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkSelectNone_LinkClicked);
+            // 
+            // cbxSelection
+            // 
+            this.cbxSelection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxSelection.FormattingEnabled = true;
+            resources.ApplyResources(this.cbxSelection, "cbxSelection");
+            this.cbxSelection.Name = "cbxSelection";
+            this.cbxSelection.SelectedIndexChanged += new System.EventHandler(this.cbxSelection_SelectedIndexChanged);
+            // 
+            // lblSelectionDeltaTime
+            // 
+            resources.ApplyResources(this.lblSelectionDeltaTime, "lblSelectionDeltaTime");
+            this.lblSelectionDeltaTime.Name = "lblSelectionDeltaTime";
+            // 
+            // nudSelectionDeltaTimeValue
+            // 
+            resources.ApplyResources(this.nudSelectionDeltaTimeValue, "nudSelectionDeltaTimeValue");
+            this.nudSelectionDeltaTimeValue.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.nudSelectionDeltaTimeValue.Minimum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            -2147483648});
+            this.nudSelectionDeltaTimeValue.Name = "nudSelectionDeltaTimeValue";
+            // 
+            // cbxSelectionDeltaTimeUnit
+            // 
+            this.cbxSelectionDeltaTimeUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxSelectionDeltaTimeUnit.FormattingEnabled = true;
+            resources.ApplyResources(this.cbxSelectionDeltaTimeUnit, "cbxSelectionDeltaTimeUnit");
+            this.cbxSelectionDeltaTimeUnit.Name = "cbxSelectionDeltaTimeUnit";
+            // 
+            // btnSelectionApply
+            // 
+            resources.ApplyResources(this.btnSelectionApply, "btnSelectionApply");
+            this.btnSelectionApply.Name = "btnSelectionApply";
+            this.btnSelectionApply.UseVisualStyleBackColor = true;
+            this.btnSelectionApply.Click += new System.EventHandler(this.btnSelectionApply_Click);
+            // 
+            // chkSelection
+            // 
+            resources.ApplyResources(this.chkSelection, "chkSelection");
+            this.chkSelection.Name = "chkSelection";
+            this.chkSelection.UseVisualStyleBackColor = true;
+            this.chkSelection.CheckedChanged += new System.EventHandler(this.chkSelection_CheckedChanged);
             // 
             // frmMain
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pnlMain);
+            this.Controls.Add(this.chkSelection);
+            this.Controls.Add(this.gbxSelection);
+            this.Controls.Add(this.dgvFiles);
             this.Controls.Add(this.tsTools);
             this.Controls.Add(this.ssStatus);
             this.KeyPreview = true;
@@ -252,7 +346,10 @@
             this.tsTools.ResumeLayout(false);
             this.tsTools.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFiles)).EndInit();
-            this.pnlMain.ResumeLayout(false);
+            this.gbxSelection.ResumeLayout(false);
+            this.flpSelection.ResumeLayout(false);
+            this.flpSelection.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSelectionDeltaTimeValue)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,7 +365,6 @@
         private System.Windows.Forms.ToolStripButton tsbSrcDir;
         private System.Windows.Forms.DataGridView dgvFiles;
         private System.Windows.Forms.ToolStripSeparator tsSep0;
-        private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.ToolStripButton tsbOptions;
         private System.Windows.Forms.ToolStripLabel tslTimeZone;
         private System.Windows.Forms.ToolStripComboBox tscbxTimeZone;
@@ -278,5 +374,15 @@
         private System.Windows.Forms.DataGridViewLinkColumn colFilenameDatetime;
         private System.Windows.Forms.DataGridViewLinkColumn colMetadataDatetime;
         private System.Windows.Forms.DataGridViewLinkColumn colMetadataPosition;
+        private System.Windows.Forms.GroupBox gbxSelection;
+        private System.Windows.Forms.CheckBox chkSelection;
+        private System.Windows.Forms.FlowLayoutPanel flpSelection;
+        private System.Windows.Forms.LinkLabel lnkSelectAll;
+        private System.Windows.Forms.LinkLabel lnkSelectNone;
+        private System.Windows.Forms.ComboBox cbxSelection;
+        private System.Windows.Forms.Label lblSelectionDeltaTime;
+        private System.Windows.Forms.NumericUpDown nudSelectionDeltaTimeValue;
+        private System.Windows.Forms.ComboBox cbxSelectionDeltaTimeUnit;
+        private System.Windows.Forms.Button btnSelectionApply;
     }
 }

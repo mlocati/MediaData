@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Globalization;
 using System.IO;
-using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
@@ -42,6 +40,7 @@ namespace MLocati.MediaData
 
         #endregion
 
+
         #region Constructors
 
         public frmOptions()
@@ -66,63 +65,9 @@ namespace MLocati.MediaData
 
             Type descriptionAttributeType = typeof(DescriptionAttribute);
 
-            this.cbxNormalizeVideo.DataSource = Enum.GetValues(typeof(VideoProcessor.NormalizeCase))
-                .Cast<Enum>()
-                .Select(value => new
-                {
-                    ((DescriptionAttribute)Attribute.GetCustomAttribute(value.GetType().GetField(value.ToString()), descriptionAttributeType)).Description,
-                    value
-                })
-                .OrderBy(item => item.value)
-                .ToList();
-            this.cbxNormalizeVideo.DisplayMember = "Description";
-            this.cbxNormalizeVideo.ValueMember = "value";
-            foreach (object item in this.cbxNormalizeVideo.Items)
-            {
-                try
-                {
-                    if (MediaData.Properties.Settings.Default.VideoNormalization == (VideoProcessor.NormalizeCase)item.GetType().GetProperty("value").GetValue(item, null))
-                    {
-                        this.cbxNormalizeVideo.SelectedItem = item;
-                        break;
-                    }
-                }
-                catch
-                { }
-            }
-            if (this.cbxNormalizeVideo.SelectedItem == null)
-            {
-                this.cbxNormalizeVideo.SelectedIndex = 0;
-            }
+            UI.DescribedEnumToCombobox(typeof(VideoProcessor.NormalizeCase), this.cbxNormalizeVideo, MediaData.Properties.Settings.Default.VideoNormalization);
 
-            this.cbxSetFiledateOnMetadata.DataSource = Enum.GetValues(typeof(Processor.SetFileDates))
-                .Cast<Enum>()
-                .Select(value => new
-                {
-                    ((DescriptionAttribute)Attribute.GetCustomAttribute(value.GetType().GetField(value.ToString()), descriptionAttributeType)).Description,
-                    value
-                })
-                .OrderBy(item => item.value)
-                .ToList();
-            this.cbxSetFiledateOnMetadata.DisplayMember = "Description";
-            this.cbxSetFiledateOnMetadata.ValueMember = "value";
-            foreach (object item in this.cbxSetFiledateOnMetadata.Items)
-            {
-                try
-                {
-                    if (MediaData.Properties.Settings.Default.SetFileDates == (Processor.SetFileDates)item.GetType().GetProperty("value").GetValue(item, null))
-                    {
-                        this.cbxSetFiledateOnMetadata.SelectedItem = item;
-                        break;
-                    }
-                }
-                catch
-                { }
-            }
-            if (this.cbxSetFiledateOnMetadata.SelectedItem == null)
-            {
-                this.cbxSetFiledateOnMetadata.SelectedIndex = 0;
-            }
+            UI.DescribedEnumToCombobox(typeof(Processor.SetFileDates), this.cbxSetFiledateOnMetadata, MediaData.Properties.Settings.Default.SetFileDates);
 
             this.chkDeleteToTrash.Checked = MediaData.Properties.Settings.Default.DeleteToTrash;
             this.chkMaps_Cache.Checked = MediaData.Properties.Settings.Default.Maps_EnableCache;
@@ -287,20 +232,12 @@ namespace MLocati.MediaData
                 object o;
                 Language selectedLanguage = (Language)this.cbxLanguage.SelectedItem;
                 MediaData.Properties.Settings.Default.AppCulture = selectedLanguage.Code;
-                VideoProcessor.NormalizeCase vn = VideoProcessor.NormalizeCase.Never;
-                o = this.cbxNormalizeVideo.SelectedItem;
-                if (o != null)
-                {
-                    vn = (VideoProcessor.NormalizeCase)o.GetType().GetProperty("value").GetValue(o, null);
-                }
-                MediaData.Properties.Settings.Default.VideoNormalization = vn;
-                Processor.SetFileDates sfd = Processor.SetFileDates.Never;
-                o = this.cbxSetFiledateOnMetadata.SelectedItem;
-                if (o != null)
-                {
-                    sfd = (Processor.SetFileDates)o.GetType().GetProperty("value").GetValue(o, null);
-                }
-                MediaData.Properties.Settings.Default.SetFileDates = sfd;
+                o = UI.GetDescribedEnumValueOfCombobox(this.cbxNormalizeVideo);
+                MediaData.Properties.Settings.Default.VideoNormalization = (o == null) ? VideoProcessor.NormalizeCase.Never : (VideoProcessor.NormalizeCase)o;
+
+                o = UI.GetDescribedEnumValueOfCombobox(this.cbxSetFiledateOnMetadata);
+                MediaData.Properties.Settings.Default.SetFileDates = (o == null) ? Processor.SetFileDates.Never : (Processor.SetFileDates)o;
+
                 MediaData.Properties.Settings.Default.DeleteToTrash = this.chkDeleteToTrash.Checked;
                 MediaData.Properties.Settings.Default.Maps_EnableCache = this.chkMaps_Cache.Checked;
                 MediaData.Properties.Settings.Default.ShowProgessingOutput_Images = this.ctxSPOOImages.SerializedValue;

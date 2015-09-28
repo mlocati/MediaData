@@ -532,4 +532,82 @@ Impostarlo come scrivibile?</value>
   <data name="_unsupported_type_" xml:space="preserve">
     <value>&lt;tipo non supportato&gt;</value>
   </data>
+  <data name="SelectionOperations_DeltaTimestamp" xml:space="preserve">
+    <value>Cambia data/ora dei metadati</value>
+  </data>
+  <data name="SelectionOperations_PleaseSelect" xml:space="preserve">
+    <value>(selezionare l’operazione)</value>
+  </data>
+  <data name="SelectionOperations_RenameFiles" xml:space="preserve">
+    <value>Rinomina i file</value>
+  </data>
+  <data name="DeltaOperationUnit_days" xml:space="preserve">
+    <value>giorni</value>
+  </data>
+  <data name="DeltaOperationUnit_hours" xml:space="preserve">
+    <value>ore</value>
+  </data>
+  <data name="DeltaOperationUnit_minutes" xml:space="preserve">
+    <value>minuti</value>
+  </data>
+  <data name="DeltaOperationUnit_seconds" xml:space="preserve">
+    <value>secondi</value>
+  </data>
+  <data name="Please_select_at_least_one_file" xml:space="preserve">
+    <value>Selezionare almeno un file.</value>
+  </data>
+  <data name="Please_specify_delta_time" xml:space="preserve">
+    <value>Specificare l’intervallo temporale da aggiungere/sottrarre ai metadati.</value>
+  </data>
+  <data name="ExtensionFormats_KeepCase" xml:space="preserve">
+    <value>mantieni originale</value>
+  </data>
+  <data name="ExtensionFormats_LowerCase" xml:space="preserve">
+    <value>minuscole</value>
+  </data>
+  <data name="ExtensionFormats_UpperCase" xml:space="preserve">
+    <value>maiuscole</value>
+  </data>
+  <data name="BatchRename_Format_Keep" xml:space="preserve">
+    <value>mantieni lo schema originario</value>
+  </data>
+  <data name="Format_not_set" xml:space="preserve">
+    <value>formato non impostato</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>Giorno</value>
+  </data>
+  <data name="File_not_in_directory" xml:space="preserve">
+    <value>Il file non è stato trovato nella cartella</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Ore</value>
+  </data>
+  <data name="Invalid_char_in_file_name_X" xml:space="preserve">
+    <value>Carattere '{0}' non valido nel nome del file</value>
+  </data>
+  <data name="Minutes" xml:space="preserve">
+    <value>Minuti</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Mese</value>
+  </data>
+  <data name="Multiple_directories_found" xml:space="preserve">
+    <value>Sono state rilevate più cartelle</value>
+  </data>
+  <data name="No_format_specified" xml:space="preserve">
+    <value>Nessun formato specificato</value>
+  </data>
+  <data name="No_timestamp_in_metadata" xml:space="preserve">
+    <value>Data/ora non trovate nei metadati</value>
+  </data>
+  <data name="Overlapping_file_names" xml:space="preserve">
+    <value>I nomi dei file si sovrappongono</value>
+  </data>
+  <data name="Seconds" xml:space="preserve">
+    <value>Secondi</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Anno</value>
+  </data>
 </root>

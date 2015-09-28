@@ -134,6 +134,15 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Keep original pattern.
+        /// </summary>
+        internal static string BatchRename_Format_Keep {
+            get {
+                return ResourceManager.GetString("BatchRename_Format_Keep", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Do you want to change the metadata date/time to {0}?.
         /// </summary>
         internal static string Confirm_new_metadata_timestamp {
@@ -170,6 +179,78 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Day.
+        /// </summary>
+        internal static string Day {
+            get {
+                return ResourceManager.GetString("Day", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a days.
+        /// </summary>
+        internal static string DeltaOperationUnit_days {
+            get {
+                return ResourceManager.GetString("DeltaOperationUnit_days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a hours.
+        /// </summary>
+        internal static string DeltaOperationUnit_hours {
+            get {
+                return ResourceManager.GetString("DeltaOperationUnit_hours", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a minutes.
+        /// </summary>
+        internal static string DeltaOperationUnit_minutes {
+            get {
+                return ResourceManager.GetString("DeltaOperationUnit_minutes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a seconds.
+        /// </summary>
+        internal static string DeltaOperationUnit_seconds {
+            get {
+                return ResourceManager.GetString("DeltaOperationUnit_seconds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Keep original case.
+        /// </summary>
+        internal static string ExtensionFormats_KeepCase {
+            get {
+                return ResourceManager.GetString("ExtensionFormats_KeepCase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Lower case.
+        /// </summary>
+        internal static string ExtensionFormats_LowerCase {
+            get {
+                return ResourceManager.GetString("ExtensionFormats_LowerCase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Upper case.
+        /// </summary>
+        internal static string ExtensionFormats_UpperCase {
+            get {
+                return ResourceManager.GetString("ExtensionFormats_UpperCase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Failed to process file &quot;{0}&quot;..
         /// </summary>
         internal static string Failed_process_file_X {
@@ -198,6 +279,15 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a The file has not been found in the directory.
+        /// </summary>
+        internal static string File_not_in_directory {
+            get {
+                return ResourceManager.GetString("File_not_in_directory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Altitude not supported
         ///for this kind of files.
         /// </summary>
@@ -214,6 +304,15 @@ namespace MLocati.MediaData {
         internal static string Following_error_occurred_X {
             get {
                 return ResourceManager.GetString("Following_error_occurred_X", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Format not set.
+        /// </summary>
+        internal static string Format_not_set {
+            get {
+                return ResourceManager.GetString("Format_not_set", resourceCulture);
             }
         }
         
@@ -866,11 +965,29 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Hours.
+        /// </summary>
+        internal static string Hours {
+            get {
+                return ResourceManager.GetString("Hours", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Immagini.
         /// </summary>
         internal static string Images {
             get {
                 return ResourceManager.GetString("Images", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Invalid char &apos;{0}&apos; in file name.
+        /// </summary>
+        internal static string Invalid_char_in_file_name_X {
+            get {
+                return ResourceManager.GetString("Invalid_char_in_file_name_X", resourceCulture);
             }
         }
         
@@ -916,6 +1033,15 @@ namespace MLocati.MediaData {
         internal static string Invalid_tag_X_value_V {
             get {
                 return ResourceManager.GetString("Invalid_tag_X_value_V", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Minutes.
+        /// </summary>
+        internal static string Minutes {
+            get {
+                return ResourceManager.GetString("Minutes", resourceCulture);
             }
         }
         
@@ -988,6 +1114,24 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Month.
+        /// </summary>
+        internal static string Month {
+            get {
+                return ResourceManager.GetString("Month", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Multiple directories have been found.
+        /// </summary>
+        internal static string Multiple_directories_found {
+            get {
+                return ResourceManager.GetString("Multiple_directories_found", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Multiple GPS positions found..
         /// </summary>
         internal static string Multiple_GPS_positions_found {
@@ -1006,11 +1150,29 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a No format specified.
+        /// </summary>
+        internal static string No_format_specified {
+            get {
+                return ResourceManager.GetString("No_format_specified", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a No response from the server..
         /// </summary>
         internal static string No_server_response {
             get {
                 return ResourceManager.GetString("No_server_response", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a No date/time found in metadata.
+        /// </summary>
+        internal static string No_timestamp_in_metadata {
+            get {
+                return ResourceManager.GetString("No_timestamp_in_metadata", resourceCulture);
             }
         }
         
@@ -1069,11 +1231,38 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Overlapping file names.
+        /// </summary>
+        internal static string Overlapping_file_names {
+            get {
+                return ResourceManager.GetString("Overlapping_file_names", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Parsing folder {0}....
         /// </summary>
         internal static string Parsing_folder_X {
             get {
                 return ResourceManager.GetString("Parsing_folder_X", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Please select at least one file..
+        /// </summary>
+        internal static string Please_select_at_least_one_file {
+            get {
+                return ResourceManager.GetString("Please_select_at_least_one_file", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Please specify the time interval to add/substract to the metadata..
+        /// </summary>
+        internal static string Please_specify_delta_time {
+            get {
+                return ResourceManager.GetString("Please_specify_delta_time", resourceCulture);
             }
         }
         
@@ -1105,6 +1294,15 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Seconds.
+        /// </summary>
+        internal static string Seconds {
+            get {
+                return ResourceManager.GetString("Seconds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Please select at least one map provider..
         /// </summary>
         internal static string Select_at_least_one_map_provider {
@@ -1119,6 +1317,33 @@ namespace MLocati.MediaData {
         internal static string Select_media_source_dir {
             get {
                 return ResourceManager.GetString("Select_media_source_dir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Change meta timestamp.
+        /// </summary>
+        internal static string SelectionOperations_DeltaTimestamp {
+            get {
+                return ResourceManager.GetString("SelectionOperations_DeltaTimestamp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a (select the operation).
+        /// </summary>
+        internal static string SelectionOperations_PleaseSelect {
+            get {
+                return ResourceManager.GetString("SelectionOperations_PleaseSelect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Rename files.
+        /// </summary>
+        internal static string SelectionOperations_RenameFiles {
+            get {
+                return ResourceManager.GetString("SelectionOperations_RenameFiles", resourceCulture);
             }
         }
         
@@ -1281,6 +1506,15 @@ namespace MLocati.MediaData {
         internal static string Videos_when_transcoding {
             get {
                 return ResourceManager.GetString("Videos_when_transcoding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Year.
+        /// </summary>
+        internal static string Year {
+            get {
+                return ResourceManager.GetString("Year", resourceCulture);
             }
         }
     }
