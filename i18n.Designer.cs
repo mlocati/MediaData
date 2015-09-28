@@ -911,6 +911,15 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Will set metadata date/time to {0}.
+        /// </summary>
+        internal static string Going_to_set_metadata_timestamp_to_X {
+            get {
+                return ResourceManager.GetString("Going_to_set_metadata_timestamp_to_X", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a The Google Elevation API did not complete the request (make sure you specified a valid API Key)..
         /// </summary>
         internal static string GoogleElevationRequest_denied {
@@ -1033,6 +1042,15 @@ namespace MLocati.MediaData {
         internal static string Invalid_tag_X_value_V {
             get {
                 return ResourceManager.GetString("Invalid_tag_X_value_V", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Metadata date/time set to {0}.
+        /// </summary>
+        internal static string Metadata_timestamp_set_to_X {
+            get {
+                return ResourceManager.GetString("Metadata_timestamp_set_to_X", resourceCulture);
             }
         }
         
@@ -1263,6 +1281,15 @@ namespace MLocati.MediaData {
         internal static string Please_specify_delta_time {
             get {
                 return ResourceManager.GetString("Please_specify_delta_time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Processing....
+        /// </summary>
+        internal static string Processing {
+            get {
+                return ResourceManager.GetString("Processing", resourceCulture);
             }
         }
         

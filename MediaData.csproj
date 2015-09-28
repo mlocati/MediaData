@@ -186,6 +186,9 @@
     <EmbeddedResource Include="ctxShowProcessingOutputOptions.resx">
       <DependentUpon>ctxShowProcessingOutputOptions.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBatchDeltaTimestamp.it.resx">
+      <DependentUpon>frmBatchDeltaTimestamp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBatchDeltaTimestamp.resx">
       <DependentUpon>frmBatchDeltaTimestamp.cs</DependentUpon>
     </EmbeddedResource>

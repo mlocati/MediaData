@@ -622,4 +622,13 @@ Impostarlo come scrivibile?</value>
   <data name="ShortTime_seconds" xml:space="preserve">
     <value>s</value>
   </data>
+  <data name="Metadata_timestamp_set_to_X" xml:space="preserve">
+    <value>Data/ora dei metadati impostata a {0}</value>
+  </data>
+  <data name="Processing" xml:space="preserve">
+    <value>Elaborazione in corso...</value>
+  </data>
+  <data name="Going_to_set_metadata_timestamp_to_X" xml:space="preserve">
+    <value>Verrà impostata la data/ora nei metadati a {0}</value>
+  </data>
 </root>

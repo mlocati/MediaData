@@ -847,7 +847,8 @@ namespace MLocati.MediaData
                 case SelectionOperations.RenameFiles:
                     using (frmBatchRename f = new frmBatchRename(processors))
                     {
-                        if (f.ShowDialog(this) == DialogResult.OK)
+                        f.ShowDialog(this);
+                        if (f.SomeChanged)
                         {
                             this.dgvFiles.Invalidate();
                         }

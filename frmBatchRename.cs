@@ -193,6 +193,13 @@ namespace MLocati.MediaData
 
         private int[] _formatTextSelection = null;
 
+        private bool _someChanged;
+        public bool SomeChanged
+        {
+            get
+            { return this._someChanged; }
+        }
+
         #endregion
 
 
@@ -202,7 +209,7 @@ namespace MLocati.MediaData
         {
             InitializeComponent();
             this.Icon = Program.Icon;
-
+            this._someChanged = false;
             Dictionary<string, string> placeholders = new Dictionary<string, string>();
             placeholders.Add("<Y>", i18n.Year);
             placeholders.Add("<M>", i18n.Month);
@@ -392,6 +399,7 @@ namespace MLocati.MediaData
                 foreach (ProcessorNamer pn in this._processorNamers)
                 {
                     pn.Processor.SetFullFilename(pn.NewFullFilename);
+                    this._someChanged = true;
                 }
                 if (this.cbxFormat.SelectedIndex == 0)
                 {

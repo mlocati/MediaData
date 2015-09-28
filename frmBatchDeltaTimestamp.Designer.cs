@@ -28,58 +28,76 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBatchDeltaTimestamp));
             this.dgvProcessing = new System.Windows.Forms.DataGridView();
-            this.btnCancel = new System.Windows.Forms.Button();
+            this.colFilename = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colState = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnStart = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProcessing)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvProcessing
             // 
-            this.dgvProcessing.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvProcessing.AllowUserToAddRows = false;
+            this.dgvProcessing.AllowUserToDeleteRows = false;
+            this.dgvProcessing.AllowUserToResizeRows = false;
+            resources.ApplyResources(this.dgvProcessing, "dgvProcessing");
+            this.dgvProcessing.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProcessing.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProcessing.Location = new System.Drawing.Point(13, 13);
+            this.dgvProcessing.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colFilename,
+            this.colState});
+            this.dgvProcessing.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvProcessing.MultiSelect = false;
             this.dgvProcessing.Name = "dgvProcessing";
-            this.dgvProcessing.Size = new System.Drawing.Size(364, 320);
-            this.dgvProcessing.TabIndex = 0;
+            this.dgvProcessing.ReadOnly = true;
+            this.dgvProcessing.RowHeadersVisible = false;
+            this.dgvProcessing.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             // 
-            // btnCancel
+            // colFilename
             // 
-            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(221, 342);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 1;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.colFilename.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colFilename.DataPropertyName = "Filename";
+            resources.ApplyResources(this.colFilename, "colFilename");
+            this.colFilename.Name = "colFilename";
+            this.colFilename.ReadOnly = true;
+            // 
+            // colState
+            // 
+            this.colState.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colState.DataPropertyName = "State";
+            this.colState.FillWeight = 167F;
+            resources.ApplyResources(this.colState, "colState");
+            this.colState.Name = "colState";
+            this.colState.ReadOnly = true;
+            // 
+            // btnStart
+            // 
+            resources.ApplyResources(this.btnStart, "btnStart");
+            this.btnStart.Name = "btnStart";
+            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // btnClose
             // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Enabled = false;
-            this.btnClose.Location = new System.Drawing.Point(302, 342);
+            resources.ApplyResources(this.btnClose, "btnClose");
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 2;
-            this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // frmBatchDeltaTimestamp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AcceptButton = this.btnStart;
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(389, 377);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnStart);
             this.Controls.Add(this.dgvProcessing);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmBatchDeltaTimestamp";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Change date/time of media files";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmBatchDeltaTimestamp_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProcessing)).EndInit();
             this.ResumeLayout(false);
 
@@ -88,7 +106,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvProcessing;
-        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFilename;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colState;
     }
 }
