@@ -119,6 +119,7 @@ namespace MLocati.MediaData
             }
             this.dgvProcessing.AutoGenerateColumns = false;
             this.dgvProcessing.DataSource = this._processors;
+            this._lastProcessedIndex = -1;
         }
 
         #endregion
