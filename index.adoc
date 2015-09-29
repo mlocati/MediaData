@@ -9,6 +9,10 @@
 MediaData is a free and link:https://github.com/mlocati/MediaData[open source] tool to manage the metadata of your images and videos.
 These metadata include date, time and GPS position.
 
+## Download
+
+You can download MediaData from link:https://github.com/mlocati/MediaData/releases[GitHub].
+
 
 ## Main window
 
