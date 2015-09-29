@@ -479,7 +479,7 @@ namespace MLocati.MediaData
                     case 0:
                         if (pn.Processor.FilenameTimeStamper == null)
                         {
-                            pn.SetError("FilenameTimeStamper is null??");
+                            pn.SetError(i18n.Original_filename_dont_contain_timestamp);
                         }
                         else
                         {
