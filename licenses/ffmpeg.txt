@@ -2,7 +2,7 @@ The version included in MediaData is a FFmpeg Win32 shared build by Kyle Schwarz
 
 Zeranoe's FFmpeg Builds Home Page: <http://ffmpeg.zeranoe.com/builds/>
 
-FFmpeg version: 2015-09-24 git-7179add
+FFmpeg version: 2015-09-28 git-1d0487f
   libavutil      54. 30.100 / 54. 30.100
   libavcodec     56. 57.100 / 56. 57.100
   libavformat    56. 40.101 / 56. 40.101
