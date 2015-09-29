@@ -300,124 +300,34 @@
   <data name="&gt;&gt;radUseNull.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="lblTime.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 33</value>
-  </data>
-  <data name="lblTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
-  </data>
-  <data name="lblTime.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="lblTime.Text" xml:space="preserve">
-    <value>Time</value>
-  </data>
-  <data name="&gt;&gt;lblTime.Name" xml:space="preserve">
-    <value>lblTime</value>
-  </data>
-  <data name="&gt;&gt;lblTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblTime.Parent" xml:space="preserve">
-    <value>pnlUseCustom</value>
-  </data>
-  <data name="&gt;&gt;lblTime.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lblDate.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 7</value>
-  </data>
-  <data name="lblDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
-  </data>
-  <data name="lblDate.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblDate.Text" xml:space="preserve">
-    <value>Date</value>
-  </data>
-  <data name="&gt;&gt;lblDate.Name" xml:space="preserve">
-    <value>lblDate</value>
-  </data>
-  <data name="&gt;&gt;lblDate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblDate.Parent" xml:space="preserve">
-    <value>pnlUseCustom</value>
-  </data>
-  <data name="&gt;&gt;lblDate.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="dtpCustomTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 29</value>
-  </data>
-  <data name="dtpCustomTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 20</value>
-  </data>
-  <data name="dtpCustomTime.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;dtpCustomTime.Name" xml:space="preserve">
-    <value>dtpCustomTime</value>
-  </data>
-  <data name="&gt;&gt;dtpCustomTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dtpCustomTime.Parent" xml:space="preserve">
-    <value>pnlUseCustom</value>
-  </data>
-  <data name="&gt;&gt;dtpCustomTime.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="dtpCustomDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 3</value>
-  </data>
-  <data name="dtpCustomDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 20</value>
-  </data>
-  <data name="dtpCustomDate.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;dtpCustomDate.Name" xml:space="preserve">
-    <value>dtpCustomDate</value>
-  </data>
-  <data name="&gt;&gt;dtpCustomDate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dtpCustomDate.Parent" xml:space="preserve">
-    <value>pnlUseCustom</value>
-  </data>
-  <data name="&gt;&gt;dtpCustomDate.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="pnlUseCustom.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="pnlUseCustom.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="dtpCustom.Location" type="System.Drawing.Point, System.Drawing">
     <value>28, 188</value>
   </data>
-  <data name="pnlUseCustom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>223, 52</value>
+  <data name="dtpCustom.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
-  <data name="pnlUseCustom.TabIndex" type="System.Int32, mscorlib">
+  <data name="dtpCustom.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>231, 49</value>
+  </data>
+  <data name="dtpCustom.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>231, 49</value>
+  </data>
+  <data name="dtpCustom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 49</value>
+  </data>
+  <data name="dtpCustom.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;pnlUseCustom.Name" xml:space="preserve">
-    <value>pnlUseCustom</value>
+  <data name="&gt;&gt;dtpCustom.Name" xml:space="preserve">
+    <value>dtpCustom</value>
   </data>
-  <data name="&gt;&gt;pnlUseCustom.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;dtpCustom.Type" xml:space="preserve">
+    <value>MLocati.MediaData.ctxDateTime, MediaData, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;pnlUseCustom.Parent" xml:space="preserve">
+  <data name="&gt;&gt;dtpCustom.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;pnlUseCustom.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;dtpCustom.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

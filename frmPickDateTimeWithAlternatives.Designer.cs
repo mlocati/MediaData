@@ -37,13 +37,8 @@
             this.radUseAlternatives = new System.Windows.Forms.RadioButton();
             this.radUseCustom = new System.Windows.Forms.RadioButton();
             this.radUseNull = new System.Windows.Forms.RadioButton();
-            this.lblTime = new System.Windows.Forms.Label();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.dtpCustomTime = new System.Windows.Forms.DateTimePicker();
-            this.dtpCustomDate = new System.Windows.Forms.DateTimePicker();
-            this.pnlUseCustom = new System.Windows.Forms.Panel();
+            this.dtpCustom = new MLocati.MediaData.ctxDateTime();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlternatives)).BeginInit();
-            this.pnlUseCustom.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAccept
@@ -62,11 +57,11 @@
             // 
             // dgvAlternatives
             // 
-            resources.ApplyResources(this.dgvAlternatives, "dgvAlternatives");
             this.dgvAlternatives.AllowUserToAddRows = false;
             this.dgvAlternatives.AllowUserToDeleteRows = false;
             this.dgvAlternatives.AllowUserToResizeColumns = false;
             this.dgvAlternatives.AllowUserToResizeRows = false;
+            resources.ApplyResources(this.dgvAlternatives, "dgvAlternatives");
             this.dgvAlternatives.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAlternatives.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAlternatives.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -119,36 +114,11 @@
             this.radUseNull.UseVisualStyleBackColor = true;
             this.radUseNull.CheckedChanged += new System.EventHandler(this.radUseNull_CheckedChanged);
             // 
-            // lblTime
+            // dtpCustom
             // 
-            resources.ApplyResources(this.lblTime, "lblTime");
-            this.lblTime.Name = "lblTime";
-            // 
-            // lblDate
-            // 
-            resources.ApplyResources(this.lblDate, "lblDate");
-            this.lblDate.Name = "lblDate";
-            // 
-            // dtpCustomTime
-            // 
-            resources.ApplyResources(this.dtpCustomTime, "dtpCustomTime");
-            this.dtpCustomTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpCustomTime.Name = "dtpCustomTime";
-            this.dtpCustomTime.ShowUpDown = true;
-            // 
-            // dtpCustomDate
-            // 
-            resources.ApplyResources(this.dtpCustomDate, "dtpCustomDate");
-            this.dtpCustomDate.Name = "dtpCustomDate";
-            // 
-            // pnlUseCustom
-            // 
-            resources.ApplyResources(this.pnlUseCustom, "pnlUseCustom");
-            this.pnlUseCustom.Controls.Add(this.dtpCustomDate);
-            this.pnlUseCustom.Controls.Add(this.lblTime);
-            this.pnlUseCustom.Controls.Add(this.dtpCustomTime);
-            this.pnlUseCustom.Controls.Add(this.lblDate);
-            this.pnlUseCustom.Name = "pnlUseCustom";
+            resources.ApplyResources(this.dtpCustom, "dtpCustom");
+            this.dtpCustom.Name = "dtpCustom";
+            this.dtpCustom.SelectedValue = new System.DateTime(2015, 9, 29, 16, 36, 33, 0);
             // 
             // frmPickDateTimeWithAlternatives
             // 
@@ -156,7 +126,7 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.Controls.Add(this.pnlUseCustom);
+            this.Controls.Add(this.dtpCustom);
             this.Controls.Add(this.radUseNull);
             this.Controls.Add(this.radUseCustom);
             this.Controls.Add(this.radUseAlternatives);
@@ -169,8 +139,6 @@
             this.Name = "frmPickDateTimeWithAlternatives";
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmPickDateTimeWithAlternatives_MouseClick);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlternatives)).EndInit();
-            this.pnlUseCustom.ResumeLayout(false);
-            this.pnlUseCustom.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,12 +152,8 @@
         private System.Windows.Forms.RadioButton radUseAlternatives;
         private System.Windows.Forms.RadioButton radUseCustom;
         private System.Windows.Forms.RadioButton radUseNull;
-        private System.Windows.Forms.Label lblTime;
-        private System.Windows.Forms.Label lblDate;
-        private System.Windows.Forms.DateTimePicker dtpCustomTime;
-        private System.Windows.Forms.DateTimePicker dtpCustomDate;
-        private System.Windows.Forms.Panel pnlUseCustom;
         private System.Windows.Forms.DataGridViewTextBoxColumn colName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTimestamp;
+        private ctxDateTime dtpCustom;
     }
 }

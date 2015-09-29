@@ -63,6 +63,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClipboardMonitor.cs" />
+    <Compile Include="ctxDateTime.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctxDateTime.Designer.cs">
+      <DependentUpon>ctxDateTime.cs</DependentUpon>
+    </Compile>
     <Compile Include="ctxShowProcessingOutputOptions.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -195,6 +201,12 @@
     <Content Include="tools\swscale-4.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="ctxDateTime.it.resx">
+      <DependentUpon>ctxDateTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctxDateTime.resx">
+      <DependentUpon>ctxDateTime.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ctxShowProcessingOutputOptions.it.resx">
       <DependentUpon>ctxShowProcessingOutputOptions.cs</DependentUpon>
     </EmbeddedResource>

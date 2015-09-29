@@ -37,9 +37,7 @@ namespace MLocati.MediaData
             this._result = null;
             this.dgvAlternatives.AutoGenerateColumns = false;
             this.dgvAlternatives.DataSource = alternatives;
-            DateTime dt = initialValue.HasValue ? initialValue.Value : DateTime.Now;
-            this.dtpCustomDate.Value = dt;
-            this.dtpCustomTime.Value = dt;
+            this.dtpCustom.SelectedValue = initialValue.HasValue ? initialValue.Value : DateTime.Now;
             this.UpdateState();
         }
 
@@ -76,10 +74,10 @@ namespace MLocati.MediaData
                 this.radUseAlternatives.Checked = true;
                 this.dgvAlternatives.Focus();
             }
-            else if (this.pnlUseCustom.Bounds.Contains(e.Location))
+            else if (this.dtpCustom.Bounds.Contains(e.Location))
             {
                 this.radUseCustom.Checked = true;
-                this.pnlUseCustom.Focus();
+                this.dtpCustom.Focus();
             }
         }
 
@@ -100,14 +98,7 @@ namespace MLocati.MediaData
             }
             else if (this.radUseCustom.Checked)
             {
-                this._result = new DateTime(
-                    this.dtpCustomDate.Value.Year,
-                    this.dtpCustomDate.Value.Month,
-                    this.dtpCustomDate.Value.Day,
-                    this.dtpCustomTime.Value.Hour,
-                    this.dtpCustomTime.Value.Minute,
-                    this.dtpCustomTime.Value.Second
-                );
+                this._result = this.dtpCustom.SelectedValue;
                 ok = true;
             }
             else if (this.radUseNull.Checked)
@@ -134,7 +125,7 @@ namespace MLocati.MediaData
             this.dgvAlternatives.Enabled = this.radUseAlternatives.Checked;
             this.dgvAlternatives.DefaultCellStyle.SelectionBackColor = this.dgvAlternatives.Enabled ? SystemColors.Highlight : this.dgvAlternatives.DefaultCellStyle.BackColor;
             this.dgvAlternatives.DefaultCellStyle.SelectionForeColor = this.dgvAlternatives.Enabled ? SystemColors.HighlightText : SystemColors.ControlText;
-            this.pnlUseCustom.Enabled = this.radUseCustom.Checked;
+            this.dtpCustom.Enabled = this.radUseCustom.Checked;
             if (this.radUseAlternatives.Checked)
             {
                 this.btnAccept.Enabled = this.dgvAlternatives.SelectedRows.Count == 1;

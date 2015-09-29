@@ -33,9 +33,7 @@ namespace MLocati.MediaData
             this.Icon = Program.Icon;
             this._result = null;
             this._initialValue = initialValue;
-            DateTime dt = initialValue.HasValue ? initialValue.Value : DateTime.Now;
-            this.dtpDate.Value = dt;
-            this.dtpTime.Value = dt;
+            this.myDateTimePicker.SelectedValue = initialValue.HasValue ? initialValue.Value : DateTime.Now;
         }
 
         #endregion
@@ -54,14 +52,7 @@ namespace MLocati.MediaData
 
         private void btnAccept_Click(object sender, EventArgs e)
         {
-            this._result = new DateTime(
-                this.dtpDate.Value.Year,
-                this.dtpDate.Value.Month,
-                this.dtpDate.Value.Day,
-                this.dtpTime.Value.Hour,
-                this.dtpTime.Value.Minute,
-                this.dtpTime.Value.Second
-            );
+            this._result = this.myDateTimePicker.SelectedValue;
             this.DialogResult = DialogResult.OK;
         }
 
