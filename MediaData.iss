@@ -2,7 +2,7 @@
 #define DotNetServicePackVersion 0
 
 #define MyAppName "MediaData"
-#define MyAppVersion "1.0.0.0"
+#define MyAppVersion "1.1.0.0"
 #define MyAppPublisher "Michele Locati"
 #define MyAppURL "https://github.com/mlocati/MediaData"
 #define MyAppExeName "MediaData.exe"
@@ -42,6 +42,7 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Source: "bin\Release\MediaData.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "bin\Release\GMap.NET.Core.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "bin\Release\GMap.NET.WindowsForms.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "bin\Release\LitJson.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "licenses\*"; DestDir: "{app}\licenses"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "LICENSE.txt"; DestDir: "{app}\licenses"; DestName: "MediaData.txt"; Flags: ignoreversion
 Source: "bin\Release\tools\*"; DestDir: "{app}\tools"; Flags: ignoreversion recursesubdirs createallsubdirs
