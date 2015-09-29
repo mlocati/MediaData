@@ -556,6 +556,7 @@ namespace MLocati.MediaData
             this._processors.Add(processor);
             this.ssStatusProgress.Value++;
             this.ssStatusLabel.Text = string.Format(i18n.Processing_file_X, processor.Filename);
+            this.ssStatus.Refresh();
             this._processorsManager.Refresh();
             this.dgvFiles.Invalidate();
         }
