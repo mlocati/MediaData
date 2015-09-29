@@ -37,6 +37,16 @@ namespace MLocati.MediaData
                     throw new Exception("Bad JSON: bad 'name' type");
                 }
                 this.Version = new Version(((string)json["name"]).TrimStart('v').Trim(' ', '.', '-', '_'));
+                int versionParts = this.Version.ToString().Split('.').Length;
+                if (versionParts < 4)
+                {
+                    StringBuilder fixVersion = new StringBuilder(this.Version.ToString());
+                    for (int i = versionParts; i < 4; i++)
+                    {
+                        fixVersion.Append(".0");
+                    }
+                    this.Version = new Version(fixVersion.ToString());
+                }
                 this.PreRelase = (json.Keys.Contains("prerelease") && json["prerelease"].IsBoolean) ? (bool)json["prerelease"] : false;
                 if (!json.Keys.Contains("published_at"))
                 {
