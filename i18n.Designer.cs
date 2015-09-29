@@ -1276,6 +1276,15 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Original file name does not contain date/time..
+        /// </summary>
+        internal static string Original_filename_dont_contain_timestamp {
+            get {
+                return ResourceManager.GetString("Original_filename_dont_contain_timestamp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Overlapping file names.
         /// </summary>
         internal static string Overlapping_file_names {

@@ -652,4 +652,7 @@ Impostarlo come scrivibile?</value>
   <data name="Your_version_of_X_is_the_latest_one" xml:space="preserve">
     <value>La versione di {0} installata è la più recente.</value>
   </data>
+  <data name="Original_filename_dont_contain_timestamp" xml:space="preserve">
+    <value>Il nome del file originale non contiene una data/ora.</value>
+  </data>
 </root>
