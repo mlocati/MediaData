@@ -47,6 +47,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>.\GMap.NET.WindowsForms.dll</HintPath>
     </Reference>
+    <Reference Include="LitJson">
+      <HintPath>.\LitJson.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -67,6 +70,12 @@
       <DependentUpon>ctxShowProcessingOutputOptions.cs</DependentUpon>
     </Compile>
     <Compile Include="FilenameTimeStamper.cs" />
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBatchDeltaTimestamp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +111,12 @@
     </Compile>
     <Compile Include="frmTool.Designer.cs">
       <DependentUpon>frmTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateAvailable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateAvailable.Designer.cs">
+      <DependentUpon>frmUpdateAvailable.cs</DependentUpon>
     </Compile>
     <Compile Include="i18n.it.Designer.cs">
       <DependentUpon>i18n.it.resx</DependentUpon>
@@ -186,6 +201,12 @@
     <EmbeddedResource Include="ctxShowProcessingOutputOptions.resx">
       <DependentUpon>ctxShowProcessingOutputOptions.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAbout.it.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBatchDeltaTimestamp.it.resx">
       <DependentUpon>frmBatchDeltaTimestamp.cs</DependentUpon>
     </EmbeddedResource>
@@ -233,6 +254,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTool.resx">
       <DependentUpon>frmTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateAvailable.it.resx">
+      <DependentUpon>frmUpdateAvailable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateAvailable.resx">
+      <DependentUpon>frmUpdateAvailable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="i18n.it.resx">
       <Generator>ResXFileCodeGenerator</Generator>

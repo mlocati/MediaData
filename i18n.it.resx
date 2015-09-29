@@ -631,4 +631,25 @@ Impostarlo come scrivibile?</value>
   <data name="Going_to_set_metadata_timestamp_to_X" xml:space="preserve">
     <value>Verrà impostata la data/ora nei metadati a {0}</value>
   </data>
+  <data name="About_X" xml:space="preserve">
+    <value>Informazioni su {0}</value>
+  </data>
+  <data name="Version_X" xml:space="preserve">
+    <value>Versione {0}</value>
+  </data>
+  <data name="Licenses_directory_not_found" xml:space="preserve">
+    <value>La cartella contenente le licenze non è stata trovata.</value>
+  </data>
+  <data name="Current_version_X" xml:space="preserve">
+    <value>Versione corrente: {0}</value>
+  </data>
+  <data name="Released_on_X" xml:space="preserve">
+    <value>Rilasciata il {0}</value>
+  </data>
+  <data name="Release_notes_" xml:space="preserve">
+    <value>Note di rilascio:</value>
+  </data>
+  <data name="Your_version_of_X_is_the_latest_one" xml:space="preserve">
+    <value>La versione di {0} installata è la più recente.</value>
+  </data>
 </root>

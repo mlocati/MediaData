@@ -106,6 +106,15 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a About {0}.
+        /// </summary>
+        internal static string About_X {
+            get {
+                return ResourceManager.GetString("About_X", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a The file {0} is write-protected.
         ///Do you want to set it as writable?.
         /// </summary>
@@ -175,6 +184,15 @@ namespace MLocati.MediaData {
         internal static string Confirm_video_normalization {
             get {
                 return ResourceManager.GetString("Confirm_video_normalization", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Current version: {0}.
+        /// </summary>
+        internal static string Current_version_X {
+            get {
+                return ResourceManager.GetString("Current_version_X", resourceCulture);
             }
         }
         
@@ -1046,6 +1064,15 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a The folder containing the licenses does not exist..
+        /// </summary>
+        internal static string Licenses_directory_not_found {
+            get {
+                return ResourceManager.GetString("Licenses_directory_not_found", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Metadata date/time set to {0}.
         /// </summary>
         internal static string Metadata_timestamp_set_to_X {
@@ -1312,6 +1339,24 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Release notes:.
+        /// </summary>
+        internal static string Release_notes_ {
+            get {
+                return ResourceManager.GetString("Release_notes_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Released on {0}.
+        /// </summary>
+        internal static string Released_on_X {
+            get {
+                return ResourceManager.GetString("Released_on_X", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a The retrieved elevation is wrong..
         /// </summary>
         internal static string Retrieved_elevation_wrong {
@@ -1555,6 +1600,15 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Version {0}.
+        /// </summary>
+        internal static string Version_X {
+            get {
+                return ResourceManager.GetString("Version_X", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Video.
         /// </summary>
         internal static string Videos {
@@ -1578,6 +1632,15 @@ namespace MLocati.MediaData {
         internal static string Year {
             get {
                 return ResourceManager.GetString("Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a You have installed the latest version of {0}..
+        /// </summary>
+        internal static string Your_version_of_X_is_the_latest_one {
+            get {
+                return ResourceManager.GetString("Your_version_of_X_is_the_latest_one", resourceCulture);
             }
         }
     }

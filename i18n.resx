@@ -630,4 +630,25 @@ Do you want to set it as writable?</value>
   <data name="Processing" xml:space="preserve">
     <value>Processing...</value>
   </data>
+  <data name="About_X" xml:space="preserve">
+    <value>About {0}</value>
+  </data>
+  <data name="Version_X" xml:space="preserve">
+    <value>Version {0}</value>
+  </data>
+  <data name="Licenses_directory_not_found" xml:space="preserve">
+    <value>The folder containing the licenses does not exist.</value>
+  </data>
+  <data name="Current_version_X" xml:space="preserve">
+    <value>Current version: {0}</value>
+  </data>
+  <data name="Released_on_X" xml:space="preserve">
+    <value>Released on {0}</value>
+  </data>
+  <data name="Release_notes_" xml:space="preserve">
+    <value>Release notes:</value>
+  </data>
+  <data name="Your_version_of_X_is_the_latest_one" xml:space="preserve">
+    <value>You have installed the latest version of {0}.</value>
+  </data>
 </root>

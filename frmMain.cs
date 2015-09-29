@@ -383,6 +383,11 @@ namespace MLocati.MediaData
             this.ShowOptions();
         }
 
+        private void tsbAbout_Click(object sender, EventArgs e)
+        {
+            this.ShowAbout();
+        }
+
         private void dgvFiles_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (this.IsFullColumnClick(e.ColumnIndex))
@@ -438,6 +443,10 @@ namespace MLocati.MediaData
                         case Keys.F4:
                             e.SuppressKeyPress = true;
                             this.ShowOptions();
+                            break;
+                        case Keys.F1:
+                            e.SuppressKeyPress = true;
+                            this.ShowAbout();
                             break;
                     }
                     break;
@@ -578,6 +587,14 @@ namespace MLocati.MediaData
         private void ShowOptions()
         {
             using (frmOptions f = new frmOptions())
+            {
+                f.ShowDialog(this);
+            }
+        }
+
+        private void ShowAbout()
+        {
+            using (frmAbout f = new frmAbout())
             {
                 f.ShowDialog(this);
             }

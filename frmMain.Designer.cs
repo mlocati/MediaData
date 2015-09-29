@@ -43,6 +43,7 @@
             this.tscbxTimeZone = new System.Windows.Forms.ToolStripComboBox();
             this.tsSep1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbOptions = new System.Windows.Forms.ToolStripButton();
+            this.tsbAbout = new System.Windows.Forms.ToolStripButton();
             this.dgvFiles = new System.Windows.Forms.DataGridView();
             this.colBrowseTo = new System.Windows.Forms.DataGridViewButtonColumn();
             this.colFilename = new System.Windows.Forms.DataGridViewLinkColumn();
@@ -96,7 +97,8 @@
             this.tslTimeZone,
             this.tscbxTimeZone,
             this.tsSep1,
-            this.tsbOptions});
+            this.tsbOptions,
+            this.tsbAbout});
             resources.ApplyResources(this.tsTools, "tsTools");
             this.tsTools.Name = "tsTools";
             // 
@@ -147,6 +149,13 @@
             resources.ApplyResources(this.tsbOptions, "tsbOptions");
             this.tsbOptions.Name = "tsbOptions";
             this.tsbOptions.Click += new System.EventHandler(this.tsbOptions_Click);
+            // 
+            // tsbAbout
+            // 
+            this.tsbAbout.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.tsbAbout, "tsbAbout");
+            this.tsbAbout.Name = "tsbAbout";
+            this.tsbAbout.Click += new System.EventHandler(this.tsbAbout_Click);
             // 
             // dgvFiles
             // 
@@ -384,5 +393,6 @@
         private System.Windows.Forms.NumericUpDown nudSelectionDeltaTimeValue;
         private System.Windows.Forms.ComboBox cbxSelectionDeltaTimeUnit;
         private System.Windows.Forms.Button btnSelectionApply;
+        private System.Windows.Forms.ToolStripButton tsbAbout;
     }
 }

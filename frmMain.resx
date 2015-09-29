@@ -240,11 +240,11 @@
         /6tXrvh/586d2ceOHQs7d+6cKlQtTsB+ZM+eZxPKZj7aoGP4XzJn0y+oOJHAYxt7WfKkJ8/KSv+fcHX9
         v9HYeAlUhjDQql/Fppe1+12QrNf/bZpq/2/m5v7fp6f3f6GkZAFUCR5gPJPVs/7QGwataf91y679t7Lv
         vriYh+frQ6AhR83N/88RE3s3WVhYCqoaAzA6lB15xKA++b9i+tn/GunHXoEEeyQlRZZJSf1/Wlv7/wjQ
-        kLkSEv9nCgtrgHUgA52cA+cZdev/iUYd/W9Ssugfg1YWD1SKYYKYWPFioCHPe3rAhswDGrJSRkYIKs3A
+        kLkSEv9nCgtrgHUgA52cA+cZdev/iUYd/W9SsuAfg1YWD1SKYYKYWPFioCHPe3rAhswDGrJSRkYIKs3A
         oJl1aK2g25r/vL77/ptXXPzPbjHFAyoFB5MkJe8vAhnS1fX/iJnZfxD7P9DVDDLR25KkIw7d00g7+dSo
         +MJ/VsuZrVA9GGCKpOQdYGD+f1Jd/f+Iqen/w0ZGGxgEbftSRGOOPgqb8+glu/WC5VC1zDgwQ4eo6KpZ
-        QC8cqq//dzI0VIJBipdBmEPCPZZb0ilHQkI0VkJCIkMSGGVAuhCIi6B0IVQsA4jjfcXE0nhYWKxFRUUl
-        ANvjHs5LQJ/zAAAAAElFTkSuQmCC
+        QC8cqK//dzI0VIJBipdBmEPCPZZb0ilHQkI0VkJCIkMSGGVAuhCIi6B0IVQsA4jjfcXE0nhYWKxFRUUl
+        ANj1HspYUITwAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="tsbOptions.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -258,6 +258,34 @@
   </data>
   <data name="tsbOptions.ToolTipText" xml:space="preserve">
     <value>Options [F4]</value>
+  </data>
+  <data name="tsbAbout.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAL/SURBVDhPbVJrSJNRGP6iLKULggSJ3Z1aZkGZRf2xgn5G
+        pGAXzCyVSBJkJFaShYo3vESpGWIuLySSZOhEvGVu5sy0+W2t2ab75je34RRBcV66PJ1znArRAw8cznnf
+        572ch/sXJSUlwTzPF1osliGHwzFFSc68Wq0uzMvLO+oK+y/ce3t7S+fm5mC322GxiBDHzIwWcYzdOZ1O
+        9PX1vSSxHsspa/AgVXSTk5MQBAF6o4CU6n5cymzHxYxWJL3qge7HKHujMUTsO8lxX04loJXpg5kESF9/
+        QUazBWmNAh7XaZH9TouHdTqkvtUjuVwJq2gGGQsajaaOpK5jM9O2qfq9qq9IbLAhod6KwZFJrGBh8Sek
+        VTxulKqRVNYNs1nAzMwMoqOj/Ti6MDqf3mhCmGwMETV2hMtE3K7UI6Zcg4oOAxPJadDhbFY/Qh50gNcZ
+        YbPZoFQqizi6bYsoIqWWx+kXNpwoEnEsfwRB2cPYlzqEGoXABC7k9mCvtBs+d9twObOZdTw9PT3LsW8i
+        mw5JVcAvfxz7cwTsSTfA55EOobmDLLmpX4TbrVa4x7TCLUqOnderYDKZsLCwgFWB40TAnwj4ugS87vMY
+        GJ3Cr99/sD2hC1vvdMHDJbArqpoJzM/Pg47A039OfsOzDlYEdqRoEV7wCVcLlfBMUGCLS2B9ZBPC0uRr
+        I1CH0SXqDAIk2SNMIDDXgKAcDeS8AwPmGRxJ78PuJAU2x7WBi6iH3jAKq9VKl1jMUXtSh1FFaZUakiwj
+        zpUZceb5EJuf4nyBCqdyP8MrvhVxTztXvzE2NtafGYnakxppXBSQUDGIAxlDCC74htCMD4gs6sGhJyr4
+        JLYjvvgjHDYRExMT0Gq1tcxILnhQe1KHUTdqh0cR+awHgdIWHEyU40peJ2nbxCrTZNI+T3I2LacuYwOh
+        t0KhaJmdnWUmoSPRTVPSM52ZvqlUqvck1pNwtTo9bCP0JTwpkUhuymQyOelmfmlpCYuLi9T7zsrKysaA
+        gIBrJOYwoTfhRo7juL8x+ZTgIg333QAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="tsbAbout.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="tsbAbout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="tsbAbout.Text" xml:space="preserve">
+    <value>toolStripButton1</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dgvFiles.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -774,6 +802,12 @@
     <value>tsbOptions</value>
   </data>
   <data name="&gt;&gt;tsbOptions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbAbout.Name" xml:space="preserve">
+    <value>tsbAbout</value>
+  </data>
+  <data name="&gt;&gt;tsbAbout.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;colBrowseTo.Name" xml:space="preserve">
