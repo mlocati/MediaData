@@ -1,0 +1,143 @@
+# MediaData
+:author: Michele Locati
+:email: michele@locati.it
+:description: MediaData is an free and open source Windows application allowing you to edit metadata like date and GPS position of your images and videos.
+:icons: font
+:imagesdir: images
+:toc: left
+
+MediaData is a free and link:https://github.com/mlocati/MediaData[open source] tool to manage the metadata of your images and videos.
+These metadata include date, time and GPS position.
+
+
+## Main window
+
+Here's the main window of MediaData:
+
+image::main.png[MediaData main window]
+
+### Setting date/time
+
+By clicking on the `Date from metadata` column you can set, change or remove the date/time of the file:
+
+image::metadata-datetime-single.png[Simple date/time setting]
+
+In case your file contain multiple and different dates, you can choose the one you prefer:
+
+image::metadata-datetime-alternatives.png[Complex date/time setting]
+
+### Setting GPS position
+
+By clicking on the `Position` column you can set, change or remove the GPS position.
+
+image::metadata-position.png[Location setting]
+
+In this window you can:
+
+- search for place name
+- view different kind of maps
+- set the position (latitude and longitude) with a simple left-click of your mouse on a map
+- set the altitude (it can be automatically retrieved using Google services)
+- copy and paste the position
+- remove the position stored in your media files
+
+
+## Rename multiple files
+
+You can rename many media files at once by checking the `Enable selection` option and choosing `Rename files`:
+
+image::batchrename-main.png[Activating batch rename]
+
+By clicking on the `Apply` button you'll be able to specify the pattern to be used to rename the selected files:
+
+image::batchrename-window.png[Batch-rename dialog]
+
+MediaData will show the new names that will be used as you type in the pattern, as well as potential problems.
+Once you are happy with the results, click on the `Apply` button.
+
+NOTE: If a media file contains multiple and different dates, MediaData will use the mean date/time.
+
+NOTE: If MediaData detected that your media files contain date and time in the file names, you can use the special format called `Keep original pattern`.
+It will allows you to work with different name formats at once, so that you can automatically rename your files by simply updating the date/time.
+
+
+## Add/substract time to many files
+
+You can add or subtract a specified amount of time to many media files at once by checking the `Enable selection` option and choosing `Change meta timestamp`:
+
+image::batchdeltatime-main.png[Activating batch delta time]
+
+You can specify to add (or subtract in case of negative numbers) a specified amount of seconds, minutes, hours or days to all the selected files.
+
+By clicking on the `Apply` button you'll be able to preview the operations that will be done:
+
+image::batchdeltatime-ready.png[Preview batch delta time]
+
+If you're happy with the shown values, you can start the update process by clicking the `Start button`: MediaData will show you the results of the batch operation.
+
+image::batchdeltatime-done.png[Batch delta time completed]
+
+
+## Options
+
+You can customize the behavior of MediaData by clicking on the `Options` icon located in the main window.
+
+### General options
+
+image::options-general.png[General options]
+
+Here you can change the MediaData language (currently supported languages are English and Italian - you can submit a link:https://github.com/mlocati/MediaData[pull request] to add a new language)
+
+The `Convert videos to MP4` option is useful in case your video files don't support embedding date and/or position metadata: MediaData will convert those files to the MP4 format accordingly to this option.
+
+The `Set file dates to metadata value` is useful if you want to change the file dates reported by Windows. You can choose to don't touch the file dates (default), as well as setting these dates to the metadata values when reading and/or saving the metadata.
+
+### Processing output
+
+image::options-processingoutput.png[Processing output options]
+
+Here you can choose to view the output of the processing, just in case you are curious about what's done behind the scenes.
+
+You can choose to view the output when processing images and videos, as well as when converting the videos to the MP4 format.
+
+### Maps
+
+image::options-maps.png[Map options]
+
+Here you can specify if you want to use the cache of the maps, as well as clearing the map cache.
+
+NOTE: The cache this will speed up the view of the maps, but will eat some of your disk space.
+
+MediaData offers a lot of kind of maps: it's unlikely that you'll use all of them; furthermore some of the map provider could violate their Terms of Service.
+So, in this section of the options you can choose which of the map provider you want to use.
+
+
+### The About window
+
+By clicking on the `About` icon located in the main window, you can view the About form.
+
+image::about.png[Processing output options]
+
+Here you can view the currently installed version, as well as accessing the MediaData website and checking for new program versions.
+
+
+## Shotcut keys
+
+### Main window
+
+- `F5`: reload the list of the files in the selected directory
+- `F4`: open the options window
+- `F1`: open the about window
+- `CTRL`+`L`: move the focus to the working directory field
+- `CTRL`+`S`: activate/deactivate the selection mode (to perform the batch operations)
+- `CTRL`+`A`: select all the files (when the selection mode is activated)
+- `CTRL`+`SHIFT`+`A`: unselect all the files (when the selection mode is activated)
+
+### Position window
+
+- `F3`: move the focus to the search place field
+
+
+## Licenses
+
+See the link:https://github.com/mlocati/MediaData/blob/master/LICENSE.txt[MediaData license] (MIT) and the link:https://github.com/mlocati/MediaData/tree/master/licenses[licenses of its components].
