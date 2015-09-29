@@ -145,9 +145,6 @@
   <data name="&gt;&gt;dtpTime.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>284, 114</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lblTime.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -294,6 +291,9 @@
   <data name="dtpTime.Location" type="System.Drawing.Point, System.Drawing">
     <value>70, 38</value>
   </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
   <data name="btnNone.Text" xml:space="preserve">
     <value>No date/time</value>
   </data>
@@ -306,8 +306,8 @@
   <data name="&gt;&gt;btnAccept.Name" xml:space="preserve">
     <value>btnAccept</value>
   </data>
-  <data name="btnCancel.Text" xml:space="preserve">
-    <value>Cancel</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>284, 114</value>
   </data>
   <data name="&gt;&gt;lblDate.Name" xml:space="preserve">
     <value>lblDate</value>
