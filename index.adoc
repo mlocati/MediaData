@@ -140,6 +140,8 @@ Here you can view the currently installed version, as well as accessing the Medi
 ### Position window
 
 - `F3`: move the focus to the search place field
+- `CTRL`+`C`: copy the current position to the clipboard
+- `CTRL`+`V`: paste the position from the clipboard
 
 
 ## Licenses
