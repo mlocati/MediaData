@@ -654,4 +654,13 @@ Do you want to set it as writable?</value>
   <data name="Original_filename_dont_contain_timestamp" xml:space="preserve">
     <value>Original file name does not contain date/time.</value>
   </data>
+  <data name="URL" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="Downloaded_bytes" xml:space="preserve">
+    <value>Downloaded bytes</value>
+  </data>
+  <data name="Total_size" xml:space="preserve">
+    <value>Total size</value>
+  </data>
 </root>

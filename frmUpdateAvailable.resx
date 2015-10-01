@@ -130,10 +130,10 @@
     <value>True</value>
   </data>
   <data name="tbxUpdateInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>460, 251</value>
+    <value>442, 16</value>
   </data>
   <data name="tbxUpdateInfo.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;tbxUpdateInfo.Name" xml:space="preserve">
     <value>tbxUpdateInfo</value>
@@ -142,10 +142,10 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tbxUpdateInfo.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>pnlMain</value>
   </data>
   <data name="&gt;&gt;tbxUpdateInfo.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>0</value>
   </data>
   <data name="btnWebsite.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -157,13 +157,13 @@
     <value>GrowAndShrink</value>
   </data>
   <data name="btnWebsite.Location" type="System.Drawing.Point, System.Drawing">
-    <value>147, 269</value>
+    <value>129, 50</value>
   </data>
   <data name="btnWebsite.Size" type="System.Drawing.Size, System.Drawing">
     <value>119, 23</value>
   </data>
   <data name="btnWebsite.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="btnWebsite.Text" xml:space="preserve">
     <value>Go to download page</value>
@@ -175,22 +175,22 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnWebsite.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>pnlMain</value>
   </data>
   <data name="&gt;&gt;btnWebsite.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="btnClose.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
   <data name="btnClose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>397, 269</value>
+    <value>379, 50</value>
   </data>
   <data name="btnClose.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
   <data name="btnClose.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="btnClose.Text" xml:space="preserve">
     <value>Close</value>
@@ -202,10 +202,10 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnClose.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>pnlMain</value>
   </data>
   <data name="&gt;&gt;btnClose.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="btnInstall.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -214,13 +214,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnInstall.Location" type="System.Drawing.Point, System.Drawing">
-    <value>272, 269</value>
+    <value>254, 50</value>
   </data>
   <data name="btnInstall.Size" type="System.Drawing.Size, System.Drawing">
     <value>119, 23</value>
   </data>
   <data name="btnInstall.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>0</value>
   </data>
   <data name="btnInstall.Text" xml:space="preserve">
     <value>Install update</value>
@@ -232,10 +232,169 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnInstall.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>pnlMain</value>
   </data>
   <data name="&gt;&gt;btnInstall.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pnlMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 9</value>
+  </data>
+  <data name="pnlMain.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="pnlMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>466, 85</value>
+  </data>
+  <data name="pnlMain.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pnlMain.Name" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;pnlMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlMain.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="lblDownloadWarning.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="lblDownloadWarning.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblDownloadWarning.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 152</value>
+  </data>
+  <data name="lblDownloadWarning.Size" type="System.Drawing.Size, System.Drawing">
+    <value>366, 13</value>
+  </data>
+  <data name="lblDownloadWarning.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblDownloadWarning.Text" xml:space="preserve">
+    <value>At the end of the download the program will be closed and it will be updated.</value>
+  </data>
+  <data name="lblDownloadWarning.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomCenter</value>
+  </data>
+  <data name="&gt;&gt;lblDownloadWarning.Name" xml:space="preserve">
+    <value>lblDownloadWarning</value>
+  </data>
+  <data name="&gt;&gt;lblDownloadWarning.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblDownloadWarning.Parent" xml:space="preserve">
+    <value>pnlDownloading</value>
+  </data>
+  <data name="&gt;&gt;lblDownloadWarning.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pgDownload.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="pgDownload.HelpVisible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="pgDownload.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 48</value>
+  </data>
+  <data name="pgDownload.Size" type="System.Drawing.Size, System.Drawing">
+    <value>445, 96</value>
+  </data>
+  <data name="pgDownload.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pgDownload.Name" xml:space="preserve">
+    <value>pgDownload</value>
+  </data>
+  <data name="&gt;&gt;pgDownload.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PropertyGrid, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pgDownload.Parent" xml:space="preserve">
+    <value>pnlDownloading</value>
+  </data>
+  <data name="&gt;&gt;pgDownload.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pbDownload.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="pbDownload.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 19</value>
+  </data>
+  <data name="pbDownload.Size" type="System.Drawing.Size, System.Drawing">
+    <value>445, 23</value>
+  </data>
+  <data name="pbDownload.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pbDownload.Name" xml:space="preserve">
+    <value>pbDownload</value>
+  </data>
+  <data name="&gt;&gt;pbDownload.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbDownload.Parent" xml:space="preserve">
+    <value>pnlDownloading</value>
+  </data>
+  <data name="&gt;&gt;pbDownload.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnCancelDownload.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="btnCancelDownload.Location" type="System.Drawing.Point, System.Drawing">
+    <value>196, 168</value>
+  </data>
+  <data name="btnCancelDownload.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btnCancelDownload.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnCancelDownload.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;btnCancelDownload.Name" xml:space="preserve">
+    <value>btnCancelDownload</value>
+  </data>
+  <data name="&gt;&gt;btnCancelDownload.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCancelDownload.Parent" xml:space="preserve">
+    <value>pnlDownloading</value>
+  </data>
+  <data name="&gt;&gt;btnCancelDownload.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="pnlDownloading.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 94</value>
+  </data>
+  <data name="pnlDownloading.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="pnlDownloading.Size" type="System.Drawing.Size, System.Drawing">
+    <value>466, 203</value>
+  </data>
+  <data name="pnlDownloading.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pnlDownloading.Name" xml:space="preserve">
+    <value>pnlDownloading</value>
+  </data>
+  <data name="&gt;&gt;pnlDownloading.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlDownloading.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlDownloading.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

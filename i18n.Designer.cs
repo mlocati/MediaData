@@ -242,6 +242,15 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Downloaded bytes.
+        /// </summary>
+        internal static string Downloaded_bytes {
+            get {
+                return ResourceManager.GetString("Downloaded_bytes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Keep original case.
         /// </summary>
         internal static string ExtensionFormats_KeepCase {
@@ -1573,6 +1582,15 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Total size.
+        /// </summary>
+        internal static string Total_size {
+            get {
+                return ResourceManager.GetString("Total_size", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a It was not possible to set the new metadata..
         /// </summary>
         internal static string Unable_to_set_new_metadata {
@@ -1605,6 +1623,15 @@ namespace MLocati.MediaData {
         internal static string Unsupported_stream_type_X {
             get {
                 return ResourceManager.GetString("Unsupported_stream_type_X", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a URL.
+        /// </summary>
+        internal static string URL {
+            get {
+                return ResourceManager.GetString("URL", resourceCulture);
             }
         }
         
