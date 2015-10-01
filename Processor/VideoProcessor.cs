@@ -91,7 +91,7 @@ namespace MLocati.MediaData
                         normalizes.Add(true);
                         break;
                     case NormalizeCase.AskOnError:
-                        normalizes.Add(true);
+                        normalizes.Add(false);
                         normalizes.Add(null);
                         break;
                 }

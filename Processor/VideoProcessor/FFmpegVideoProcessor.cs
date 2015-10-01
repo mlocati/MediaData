@@ -212,7 +212,7 @@ namespace MLocati.MediaData
             }
             else if (normalize)
             {
-                args.Add("-acodec libfdk_aac");
+                args.Add("-acodec libvo_aacenc");
             }
             else
             {
