@@ -1,8 +1,10 @@
+#define SIGN false
+
 #define DotNetVersion "v4\Client"
 #define DotNetServicePackVersion 0
 
 #define MyAppName "MediaData"
-#define MyAppVersion "1.1.1.0"
+#define MyAppVersion "1.1.2.0"
 #define MyAppPublisher "Michele Locati"
 #define MyAppURL "https://github.com/mlocati/MediaData"
 #define MyAppExeName "MediaData.exe"
@@ -24,6 +26,10 @@ OutputDir=temp
 OutputBaseFilename=MediaData-setup
 Compression=lzma2/max
 SolidCompression=yes
+#if SIGN
+SignTool=MediaDataSigner
+SignedUninstaller=yes
+#endif
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
