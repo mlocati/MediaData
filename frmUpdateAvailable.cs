@@ -7,11 +7,15 @@ namespace MLocati.MediaData
 {
     public partial class frmUpdateAvailable : Form
     {
-        public frmUpdateAvailable(string updateInfo)
+        private Uri _setupUrl;
+
+        public frmUpdateAvailable(string updateInfo, Uri setupUrl)
         {
             InitializeComponent();
             this.Icon = Program.Icon;
             this.tbxUpdateInfo.Text = updateInfo;
+            this._setupUrl = setupUrl;
+            this.btnInstall.Enabled = setupUrl != null;
         }
 
         private void btnWebsite_Click(object sender, EventArgs e)
@@ -29,6 +33,11 @@ namespace MLocati.MediaData
                 };
                 bgw.RunWorkerAsync();
             }
+        }
+
+        private void btnInstall_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(string.Format("Download and install\n{0}", this._setupUrl));
         }
     }
 }

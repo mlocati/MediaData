@@ -32,6 +32,7 @@
             this.tbxUpdateInfo = new System.Windows.Forms.TextBox();
             this.btnWebsite = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.btnInstall = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbxUpdateInfo
@@ -54,12 +55,20 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.UseVisualStyleBackColor = true;
             // 
+            // btnInstall
+            // 
+            resources.ApplyResources(this.btnInstall, "btnInstall");
+            this.btnInstall.Name = "btnInstall";
+            this.btnInstall.UseVisualStyleBackColor = true;
+            this.btnInstall.Click += new System.EventHandler(this.btnInstall_Click);
+            // 
             // frmUpdateAvailable
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnClose;
             this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnInstall);
             this.Controls.Add(this.btnWebsite);
             this.Controls.Add(this.tbxUpdateInfo);
             this.MaximizeBox = false;
@@ -76,5 +85,6 @@
         private System.Windows.Forms.TextBox tbxUpdateInfo;
         private System.Windows.Forms.Button btnWebsite;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnInstall;
     }
 }
