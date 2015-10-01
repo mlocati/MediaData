@@ -1,10 +1,16 @@
 ﻿using System;
+using System.IO;
 using System.Runtime.InteropServices;
 
 namespace MLocati.MediaData
 {
     public class MyIO
     {
+        /// <summary>
+        /// GUID of the current user Downloads folder (default is %USERPROFILE%\Downloads, but may be different)
+        /// </summary>
+        private static readonly Guid FOLDERID_DOWNLOADS = new Guid("{374DE290-123F-4565-9164-39C4925E467B}");
+
         /// <summary>
         /// Possible values of SHFILEOPSTRUCT.wFunc
         /// </summary>
@@ -106,6 +112,87 @@ namespace MLocati.MediaData
         }
 
         /// <summary>
+        /// Specify special retrieval options for known folders.
+        /// </summary>
+        [Flags]
+        public enum KnownFolderFlag : UInt32
+        {
+            None = 0x00000000,
+            /// <summary>
+            /// Build a simple IDList (PIDL).
+            /// This value can be used when you want to retrieve the file system path but do not specify this value if you are retrieving the localized display name of the folder because it might not resolve correctly.
+            /// </summary>
+            SimpleIDList = 0x00000100,
+            /// <summary>
+            /// Gets the folder's default path independent of the current location of its parent.
+            /// KnownFolderFlag.DefaultPath must also be set.
+            /// </summary>
+            NotParentRelative = 0x00000200,
+            /// <summary>
+            /// Gets the default path for a known folder.
+            /// If this flag is not set, the function retrieves the current—and possibly redirected—path of the folder.
+            /// The execution of this flag includes a verification of the folder's existence unless KnownFolderFlag.DontVerify is set.
+            /// </summary>
+            DefaultPath = 0x00000400,
+            /// <summary>
+            /// Initializes the folder using its Desktop.ini settings.
+            /// If the folder cannot be initialized, the function returns a failure code and no path is returned.
+            /// This flag should always be combined with KnownFolderFlag.Create.
+            /// If the folder is located on a network, the function might take a longer time to execute.
+            /// </summary>
+            Init = 0x00000800,
+            /// <summary>
+            /// Gets the true system path for the folder, free of any aliased placeholders such as %USERPROFILE%, returned by SHGetKnownFolderIDList and IKnownFolder::GetIDList.
+            /// This flag has no effect on paths returned by SHGetKnownFolderPath and IKnownFolder::GetPath.
+            /// By default, known folder retrieval functions and methods return the aliased path if an alias exists.
+            /// </summary>
+            NoAlias = 0x00001000,
+            /// <summary>
+            /// Stores the full path in the registry without using environment strings.
+            /// If this flag is not set, portions of the path may be represented by environment strings such as %USERPROFILE%.
+            /// This flag can only be used with SHSetKnownFolderPath and IKnownFolder::SetPath.
+            /// </summary>
+            DontUnexpand = 0x00002000,
+            /// <summary>
+            /// Do not verify the folder's existence before attempting to retrieve the path or IDList.
+            /// If this flag is not set, an attempt is made to verify that the folder is truly present at the path.
+            /// If that verification fails due to the folder being absent or inaccessible, the function returns a failure code and no path is returned.
+            /// If the folder is located on a network, the function might take a longer time to execute.
+            /// Setting this flag can reduce that lag time.
+            /// </summary>
+            DontVerify = 0x00004000,
+            /// <summary>
+            /// Forces the creation of the specified folder if that folder does not already exist.
+            /// The security provisions predefined for that folder are applied.
+            /// If the folder does not exist and cannot be created, the function returns a failure code and no path is returned.
+            /// This value can be used only with the following functions and methods:
+            /// - SHGetKnownFolderPath
+            /// - SHGetKnownFolderIDList
+            /// - IKnownFolder::GetIDList
+            /// - IKnownFolder::GetPath
+            /// - IKnownFolder::GetShellItem
+            /// </summary>
+            Create = 0x00008000,
+            /// <summary>
+            /// When running inside an app container, or when providing an app container token, this flag prevents redirection to app container folders.
+            /// Instead, it retrieves the path that would be returned where it not running inside an app container.
+            /// </summary>
+            /// <remarks>
+            /// Introduced in Windows 7
+            /// </remarks>
+            NoAppcontainerRedirection = 0x00010000,
+            /// <summary>
+            /// Return only aliased PIDLs.
+            /// Do not use the file system path.
+            /// </summary>
+            /// <remarks>
+            /// Introduced in Windows 7
+            /// </remarks>
+            AliasOnly = 0x80000000,
+        }
+
+
+        /// <summary>
         /// Contains information that the SHFileOperation function uses to perform file operations.
         /// </summary>
         [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Auto)]
@@ -166,6 +253,10 @@ namespace MLocati.MediaData
         [DllImport("shell32.dll", CharSet = CharSet.Auto)]
         private static extern Int32 SHFileOperation(ref SHFILEOPSTRUCT lpFileOp);
 
+
+        [DllImport("shell32.dll")]
+        private static extern Int32 SHGetKnownFolderPath([MarshalAs(UnmanagedType.LPStruct)] Guid rfid, KnownFolderFlag dwFlags, IntPtr hToken, out IntPtr ppszPath);
+
         private static void CallSHFileOperation(string pFrom, FileOperation operation, FileOperationFlags flags)
         {
             SHFILEOPSTRUCT sfos = new SHFILEOPSTRUCT();
@@ -189,6 +280,56 @@ namespace MLocati.MediaData
                 FileOperation.Delete,
                 FileOperationFlags.AllowUndo | FileOperationFlags.NoConfirmation | FileOperationFlags.WantNukeWarning | FileOperationFlags.Silent
             );
+        }
+
+        public static string GetDownloadsFolder()
+        {
+            string path = null;
+            try
+            {
+                IntPtr pPath = IntPtr.Zero;
+                try
+                {
+                    int hr = MyIO.SHGetKnownFolderPath(
+                        MyIO.FOLDERID_DOWNLOADS,
+                        KnownFolderFlag.NoAlias,
+                        IntPtr.Zero,
+                        out pPath
+                    );
+                    if (hr != 0)
+                    {
+                        throw Marshal.GetExceptionForHR(hr);
+                    }
+                    path = Marshal.PtrToStringUni(pPath);
+                }
+                finally
+                {
+                    if (pPath != IntPtr.Zero)
+                    {
+                        Marshal.FreeCoTaskMem(pPath);
+                        pPath = IntPtr.Zero;
+                    }
+                }
+            }
+            catch
+            { }
+            if (string.IsNullOrEmpty(path) || !Directory.Exists(path))
+            {
+                path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
+                if (!Directory.Exists(path))
+                {
+                    path = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+                    if (!Directory.Exists(path))
+                    {
+                        path = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+                        if (!Directory.Exists(path))
+                        {
+                            throw new DirectoryNotFoundException("Unable to find the Downloads folder");
+                        }
+                    }
+                }
+            }
+            return path;
         }
     }
 }
