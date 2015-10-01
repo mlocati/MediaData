@@ -22,6 +22,14 @@ namespace MLocati.MediaData
             { }
         }
 
+        [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Event)]
+        public class DisplayNameAttribute: System.ComponentModel.DisplayNameAttribute
+        {
+            public DisplayNameAttribute(string key)
+            : base(Localizer.GetString(key))
+            { }
+        }
+
         public class CultureChangedEventArgs : EventArgs
         {
             public readonly CultureInfo NewCulture;
