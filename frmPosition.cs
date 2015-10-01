@@ -225,18 +225,54 @@ namespace MLocati.MediaData
 
         private void frmPosition_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Modifiers == Keys.None)
+            switch (e.Modifiers)
             {
-                switch (e.KeyCode)
-                {
-                    case Keys.F3:
-                        if (this.tbxLatLonSearch.Enabled)
-                        {
-                            this.tbxLatLonSearch.Focus();
-                        }
-                        break;
-                }
+                case Keys.None:
+                    switch (e.KeyCode)
+                    {
+                        case Keys.F3:
+                            if (this.tbxLatLonSearch.Enabled)
+                            {
+                                this.tbxLatLonSearch.Focus();
+                            }
+                            break;
+                    }
+                    break;
+                case Keys.Control:
+                    bool enableClipboardShortcurs;
+                    if (
+                        this.ActiveControl is TextBox
+                        || this.ActiveControl is NumericUpDown
+                        || (this.ActiveControl is ComboBox && ((ComboBox)this.ActiveControl).DropDownStyle != ComboBoxStyle.DropDownList)
+                    )
+                    {
+                        enableClipboardShortcurs = false;
+                    } else
+                    {
+                        enableClipboardShortcurs = true;
+                    }
+                    switch (e.KeyCode)
+                    {
+                        case Keys.C:
+                            if (enableClipboardShortcurs)
+                            {
+                                this.CopyPositionToClipboard();
+                            }
+                            break;
+                        case Keys.V:
+                            if (enableClipboardShortcurs)
+                            {
+                                this.PastePositionFromClipboard();
+                            }
+                            break;
+                    }
+                    break;
             }
+        }
+
+        private void tbxLatLonSearch_Enter(object sender, EventArgs e)
+        {
+            this.AcceptButton = null;
         }
 
         private void tbxLatLonSearch_KeyUp(object sender, KeyEventArgs e)
@@ -248,6 +284,11 @@ namespace MLocati.MediaData
                     this.SearchPlace(this.tbxLatLonSearch.Text);
                 }
             }
+        }
+
+        private void tbxLatLonSearch_Leave(object sender, EventArgs e)
+        {
+            this.AcceptButton = this.btnAccept;
         }
 
         private void cbxLatLonProvider_SelectedIndexChanged(object sender, EventArgs e)
@@ -329,6 +370,11 @@ namespace MLocati.MediaData
             this.lblAltAutoPrecision.Visible = false;
         }
 
+        private void nudAlt_Enter(object sender, EventArgs e)
+        {
+            this.AcceptButton = null;
+        }
+
         private void nudAlt_ValueChanged(object sender, EventArgs e)
         {
             this.lblAltAutoPrecision.Visible = false;
@@ -337,6 +383,7 @@ namespace MLocati.MediaData
         private void nudAlt_Leave(object sender, EventArgs e)
         {
             this.SetAltValue(this.nudAlt.Value);
+            this.AcceptButton = this.btnAccept;
         }
 
         private void lnkAltAuto_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -384,47 +431,12 @@ namespace MLocati.MediaData
 
         private void btnClipboardCopy_Click(object sender, EventArgs e)
         {
-            Position p = this.MarkerPositionMD;
-            if (p != null)
-            {
-                try
-                {
-                    if (this._supportAltitude && this.chkAltSet.Checked)
-                    {
-                        p = new Position(p.Lat, p.Lng, this.nudAlt.Value);
-                    }
-                    Clipboard.SetText(p.Serialize(), TextDataFormat.Text);
-                }
-                catch (Exception x)
-                {
-                    MessageBox.Show(x.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            this.CopyPositionToClipboard();
         }
 
         private void btnClipboardPaste_Click(object sender, EventArgs e)
         {
-            Position found = this.CheckClipboard();
-            if (found != null)
-            {
-                this.MarkerPositionMD = found;
-                if (this.gmcMap.Zoom < 15D)
-                {
-                    this.SetZoom(15D);
-                }
-                if (!this.gmcMap.ViewArea.Contains(this.MarkerPosition.Value))
-                {
-                    this.gmcMap.Position = this.MarkerPosition.Value;
-                }
-                if (this._supportAltitude)
-                {
-                    this.chkAltSet.Checked = found.Alt.HasValue;
-                    if (found.Alt.HasValue)
-                    {
-                        this.SetAltValue(found.Alt.Value);
-                    }
-                }
-            }
+            this.PastePositionFromClipboard();
         }
 
         private void btnAccept_Click(object sender, EventArgs e)
@@ -580,6 +592,57 @@ namespace MLocati.MediaData
                     this.nudAlt.Maximum = value + 1000M;
                 }
                 this.nudAlt.Value = value;
+            }
+        }
+
+        private void CopyPositionToClipboard()
+        {
+            if (this.btnClipboardCopy.Enabled)
+            {
+                Position p = this.MarkerPositionMD;
+                if (p != null)
+                {
+                    try
+                    {
+                        if (this._supportAltitude && this.chkAltSet.Checked)
+                        {
+                            p = new Position(p.Lat, p.Lng, this.nudAlt.Value);
+                        }
+                        Clipboard.SetText(p.Serialize(), TextDataFormat.Text);
+                    }
+                    catch (Exception x)
+                    {
+                        MessageBox.Show(x.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void PastePositionFromClipboard()
+        {
+            if (this.btnClipboardPaste.Enabled)
+            {
+                Position found = this.CheckClipboard();
+                if (found != null)
+                {
+                    this.MarkerPositionMD = found;
+                    if (this.gmcMap.Zoom < 15D)
+                    {
+                        this.SetZoom(15D);
+                    }
+                    if (!this.gmcMap.ViewArea.Contains(this.MarkerPosition.Value))
+                    {
+                        this.gmcMap.Position = this.MarkerPosition.Value;
+                    }
+                    if (this._supportAltitude)
+                    {
+                        this.chkAltSet.Checked = found.Alt.HasValue;
+                        if (found.Alt.HasValue)
+                        {
+                            this.SetAltValue(found.Alt.Value);
+                        }
+                    }
+                }
             }
         }
 

@@ -179,7 +179,9 @@
             // 
             resources.ApplyResources(this.tbxLatLonSearch, "tbxLatLonSearch");
             this.tbxLatLonSearch.Name = "tbxLatLonSearch";
+            this.tbxLatLonSearch.Enter += new System.EventHandler(this.tbxLatLonSearch_Enter);
             this.tbxLatLonSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbxLatLonSearch_KeyUp);
+            this.tbxLatLonSearch.Leave += new System.EventHandler(this.tbxLatLonSearch_Leave);
             // 
             // lblLatLonSearch
             // 
@@ -230,6 +232,7 @@
             -2147483648});
             this.nudAlt.Name = "nudAlt";
             this.nudAlt.ValueChanged += new System.EventHandler(this.nudAlt_ValueChanged);
+            this.nudAlt.Enter += new System.EventHandler(this.nudAlt_Enter);
             this.nudAlt.Leave += new System.EventHandler(this.nudAlt_Leave);
             // 
             // chkAltSet
@@ -241,6 +244,7 @@
             // 
             // frmPosition
             // 
+            this.AcceptButton = this.btnAccept;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
