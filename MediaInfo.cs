@@ -258,7 +258,7 @@ namespace MLocati.MediaData
                 {
                     return false;
                 }
-                if (this._position.DistanceTo(newValues.Position) > 1D || this._position.Alt.HasValue != newValues._position.Alt.HasValue)
+                if (this._position.DistanceTo(newValues.Position) > 5D || this._position.Alt.HasValue != newValues._position.Alt.HasValue)
                 {
                     return false;
                 }
