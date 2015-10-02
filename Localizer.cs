@@ -226,27 +226,52 @@ namespace MLocati.MediaData
 
         public static string FormatSize(decimal size)
         {
-            if (Math.Abs(size) < 1000)
+            if (Math.Abs(size) < 1000M)
             {
                 return string.Format(i18n.Size_bytes_X, size.ToString("0"));
             }
             size /= 1024M;
-            if (Math.Abs(size) < 1000)
+            if (Math.Abs(size) < 1000M)
             {
                 return string.Format(i18n.Size_KB_X, size.ToString("0.0"));
             }
             size /= 1024M;
-            if (Math.Abs(size) < 1000)
+            if (Math.Abs(size) < 1000M)
             {
                 return string.Format(i18n.Size_MB_X, size.ToString("0.0"));
             }
             size /= 1024M;
-            if (Math.Abs(size) < 1000)
+            if (Math.Abs(size) < 1000M)
             {
                 return string.Format(i18n.Size_GB_X, size.ToString("0.0"));
             }
             size /= 1024M;
             return string.Format(i18n.Size_TB_X, size.ToString("0.0"));
+        }
+
+        public static string FormatDownloadSpeed(double size)
+        {
+            if (Math.Abs(size) < 1000D)
+            {
+                return string.Format(i18n.SpeedPerSec_bytes_X, size.ToString("0"));
+            }
+            size /= 1024D;
+            if (Math.Abs(size) < 1000D)
+            {
+                return string.Format(i18n.SpeedPerSec_KB_X, size.ToString("0.0"));
+            }
+            size /= 1024D;
+            if (Math.Abs(size) < 1000D)
+            {
+                return string.Format(i18n.SpeedPerSec_MB_X, size.ToString("0.0"));
+            }
+            size /= 1024D;
+            if (Math.Abs(size) < 1000D)
+            {
+                return string.Format(i18n.SpeedPerSec_GB_X, size.ToString("0.0"));
+            }
+            size /= 1024D;
+            return string.Format(i18n.SpeedPerSec_TB_X, size.ToString("0.0"));
         }
 
         public static string FormatMeters(decimal meters)
