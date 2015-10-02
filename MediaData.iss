@@ -4,7 +4,7 @@
 #define DotNetServicePackVersion 0
 
 #define MyAppName "MediaData"
-#define MyAppVersion "1.1.4.0"
+#define MyAppVersion "1.1.5.0"
 #define MyAppPublisher "Michele Locati"
 #define MyAppURL "https://github.com/mlocati/MediaData"
 #define MyAppExeName "MediaData.exe"
