@@ -242,6 +242,15 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Download speed.
+        /// </summary>
+        internal static string Download_speed {
+            get {
+                return ResourceManager.GetString("Download_speed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Downloaded bytes.
         /// </summary>
         internal static string Downloaded_bytes {
@@ -1082,6 +1091,15 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Local file name.
+        /// </summary>
+        internal static string Local_file_name {
+            get {
+                return ResourceManager.GetString("Local_file_name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Metadata date/time set to {0}.
         /// </summary>
         internal static string Metadata_timestamp_set_to_X {
@@ -1546,6 +1564,51 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a {0} B/s.
+        /// </summary>
+        internal static string SpeedPerSec_bytes_X {
+            get {
+                return ResourceManager.GetString("SpeedPerSec_bytes_X", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a {0} GB/s.
+        /// </summary>
+        internal static string SpeedPerSec_GB_X {
+            get {
+                return ResourceManager.GetString("SpeedPerSec_GB_X", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a {0} KB/s.
+        /// </summary>
+        internal static string SpeedPerSec_KB_X {
+            get {
+                return ResourceManager.GetString("SpeedPerSec_KB_X", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a {0} MB/s.
+        /// </summary>
+        internal static string SpeedPerSec_MB_X {
+            get {
+                return ResourceManager.GetString("SpeedPerSec_MB_X", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a {0} TB/s.
+        /// </summary>
+        internal static string SpeedPerSec_TB_X {
+            get {
+                return ResourceManager.GetString("SpeedPerSec_TB_X", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Stream tag {0}.
         /// </summary>
         internal static string StreamTag_X {
@@ -1582,11 +1645,51 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Time elapsed.
+        /// </summary>
+        internal static string Time_elapsed {
+            get {
+                return ResourceManager.GetString("Time_elapsed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Remaining time.
+        /// </summary>
+        internal static string Time_remaining {
+            get {
+                return ResourceManager.GetString("Time_remaining", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Total time.
+        /// </summary>
+        internal static string Time_total {
+            get {
+                return ResourceManager.GetString("Time_total", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Total size.
         /// </summary>
         internal static string Total_size {
             get {
                 return ResourceManager.GetString("Total_size", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a An error occurred while executing the downloaded setup
+        ///{0}
+        ///
+        ///Error message:
+        ///{1}.
+        /// </summary>
+        internal static string Unable_to_launch_updater_X_error_Y {
+            get {
+                return ResourceManager.GetString("Unable_to_launch_updater_X_error_Y", resourceCulture);
             }
         }
         

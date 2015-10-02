@@ -20,31 +20,40 @@ namespace MLocati.MediaData
 
         private class DownloadInfo
         {
-            private Uri _downloadingFile;
-            [Browsable(true), Localizer.DisplayName("URL")]
-            public string DownloadingFileShown
+            private Uri _remoteURL;
+            private string _localFile;
+            private long _totalSize;
+            private DateTime? _realDownloadStarted;
+            private long _downloadedBytes;
+
+            [Browsable(false)]
+            public string LocalFile
             {
                 get
-                { return this._downloadingFile.AbsoluteUri; }
+                { return this._localFile; }
+                set
+                {
+                    this._localFile = value;
+                }
             }
 
-            private long _totalSize;
+            
             [Browsable(false)]
             public long TotalSize
             {
                 get
                 { return this._totalSize; }
                 set
-                { this._totalSize = value; }
-            }
-            [Browsable(true), Localizer.DisplayName("Total_size")]
-            public string TotalSizeShown
-            {
-                get
-                { return (this._totalSize > 0L) ? Localizer.FormatSize(this._totalSize) : "?"; }
+                {
+                    this._totalSize = value;
+                    if (value > 0L && !this._realDownloadStarted.HasValue)
+                    {
+                        this._realDownloadStarted = DateTime.UtcNow;
+                    }
+                }
             }
 
-            private long _downloadedBytes;
+            
             [Browsable(false)]
             public long DownloadedBytes
             {
@@ -53,19 +62,164 @@ namespace MLocati.MediaData
                 set
                 { this._downloadedBytes = value; }
             }
+
+            [Browsable(false)]
+            public TimeSpan? ElapsedTime
+            {
+                get
+                {
+                    return this._realDownloadStarted.HasValue ? (DateTime.UtcNow - this._realDownloadStarted.Value) : (TimeSpan?)null;
+                }
+            }
+
+            [Browsable(false)]
+            public TimeSpan? TotalTime
+            {
+                get
+                {
+                    TimeSpan? result = null;
+                    if (this._totalSize > 0 && this._downloadedBytes > 0)
+                    {
+                        TimeSpan? elapsed = this.ElapsedTime;
+                        if (elapsed.HasValue)
+                        {
+                            double totalTicks = Math.Floor(Convert.ToDouble(elapsed.Value.Ticks) * Convert.ToDouble(this._totalSize) / Convert.ToDouble(this._downloadedBytes));
+                            if (totalTicks < long.MaxValue)
+                            {
+                                result = new TimeSpan(Convert.ToInt64(totalTicks));
+                            }
+                        }
+                    }
+                    return result;
+                }
+            }
+
+            [Browsable(false)]
+            public TimeSpan? RemainingTime
+            {
+                get
+                {
+                    TimeSpan? result = null;
+                    TimeSpan? elapsed = this.ElapsedTime;
+                    if (elapsed.HasValue)
+                    {
+                        TimeSpan? total = this.TotalTime;
+                        if (total.HasValue && total.Value >= elapsed.Value)
+                        {
+                            result = total.Value - elapsed.Value;
+                        }
+                    }
+                    return result;
+                }
+            }
+
+
+            [Browsable(true), Localizer.DisplayName("URL")]
+            public string Showtime_RemoteURL
+            {
+                get
+                { return this._remoteURL.AbsoluteUri; }
+            }
+
+            [Browsable(true), Localizer.DisplayName("Local_file_name")]
+            public string Showtime_LocalFile
+            {
+                get
+                { return this._localFile; }
+            }
+
+            [Browsable(true), Localizer.DisplayName("Total_size")]
+            public string Showtime_TotalSize
+            {
+                get
+                { return (this._totalSize > 0L) ? Localizer.FormatSize(this._totalSize) : ""; }
+            }
+
             [Browsable(true), Localizer.DisplayName("Downloaded_bytes")]
-            public string DownloadedBytesShown
+            public string Showtime_DownloadedSize
             {
                 get
                 { return Localizer.FormatSize(this._downloadedBytes); }
             }
 
-
-            public DownloadInfo(Uri downloadingFile)
+            [Browsable(true), Localizer.DisplayName("Time_elapsed")]
+            public string Showtime_ElapsedTime
             {
-                this._downloadingFile = downloadingFile;
+                get
+                {
+                    return DownloadInfo.Show(this.ElapsedTime);
+                }
+            }
+
+            [Browsable(true), Localizer.DisplayName("Time_remaining")]
+            public string Showtime_RemainingTime
+            {
+                get
+                {
+                    return DownloadInfo.Show(this.RemainingTime);
+                }
+            }
+
+            [Browsable(true), Localizer.DisplayName("Time_total")]
+            public string Showtime_TotalTime
+            {
+                get
+                {
+                    return DownloadInfo.Show(this.TotalTime);
+                }
+            }
+
+            [Browsable(true), Localizer.DisplayName("Download_speed")]
+            public string Showtime_DownloadSpeed
+            {
+                get
+                {
+                    string result = "";
+                    if (this._downloadedBytes > 0L)
+                    {
+                        TimeSpan? elapsed = this.ElapsedTime;
+                        if (elapsed.HasValue)
+                        {
+                            double bytesPerSecond = Convert.ToDouble(this._downloadedBytes) / elapsed.Value.TotalSeconds;
+                            result = Localizer.FormatDownloadSpeed(bytesPerSecond);
+                        }
+                    }
+                    return result;
+                }
+            }
+
+            public DownloadInfo(Uri remoteURL)
+            {
+                this._remoteURL = remoteURL;
+                this._localFile = "";
                 this._totalSize = -1L;
                 this._downloadedBytes = 0L;
+                this._realDownloadStarted = null;
+            }
+
+            private static string Show(TimeSpan? ts)
+            {
+                if (ts.HasValue)
+                {
+                    string format;
+                    if (ts.Value.TotalDays >= 1D)
+                    {
+                        format = @"d\:hh\:mm\:ss";
+                    }
+                    else if(ts.Value.TotalHours >= 1D)
+                    {
+                        format = @"hh\:mm\:ss";
+                    }
+                    else
+                    {
+                        format = @"mm\:ss";
+                    }
+                    return ts.Value.ToString(format);
+                }
+                else
+                {
+                    return "";
+                }
             }
         }
 
@@ -120,6 +274,7 @@ namespace MLocati.MediaData
 
         #endregion
 
+
         #region GUI events
 
         private void btnWebsite_Click(object sender, EventArgs e)
@@ -151,6 +306,8 @@ namespace MLocati.MediaData
             this._bgwDownloader.ProgressChanged += this.DownloadProgress;
             this._bgwDownloader.RunWorkerCompleted += this.DownloadCompleted;
             this._bgwDownloader.RunWorkerAsync();
+            //this.DownloadUpdate(this._bgwDownloader, new DoWorkEventArgs(null));
+            //this.DownloadCompleted(null, new RunWorkerCompletedEventArgs(@"J:\Download\MediaData-setup (3).exe", null, false));
         }
 
         private void btnCancelDownload_Click(object sender, EventArgs e)
@@ -196,6 +353,7 @@ namespace MLocati.MediaData
                         break;
                     }
                 }
+                this._bgwDownloader.ReportProgress(0, saveFileName);
                 using (FileStream fileStream = new FileStream(saveFileName, FileMode.CreateNew, FileAccess.Write, FileShare.Read))
                 {
                     HttpWebRequest request = (HttpWebRequest)WebRequest.Create(this._setupUrl);
@@ -242,7 +400,7 @@ namespace MLocati.MediaData
                     int readBytes;
                     using (Stream responseStream = response.GetResponseStream())
                     {
-                        for(;;)
+                        for (;;)
                         {
                             if (this._bgwDownloader.CancellationPending)
                             {
@@ -288,23 +446,31 @@ namespace MLocati.MediaData
         private void DownloadProgress(object sender, ProgressChangedEventArgs e)
         {
             DownloadInfo di = (DownloadInfo)this.pgDownload.SelectedObject;
-            long[] progress = (long[])e.UserState;
-            if (progress[0] > 0L && di.TotalSize < 0)
+            if (e.UserState is string)
             {
-                di.TotalSize = progress[0];
-                this.pbDownload.Minimum = this.pbDownload.Value = 0;
-                this.pbDownload.Maximum = Int32.MaxValue;
-                this.pbDownload.Maximum = Convert.ToInt32(di.TotalSize);
-                this.pbDownload.Style = ProgressBarStyle.Continuous;
+                di.LocalFile = (string)e.UserState;
             }
-            di.DownloadedBytes = progress[1];
-            if (this.pbDownload.Style != ProgressBarStyle.Marquee)
+            else if (e.UserState is long[])
             {
-                this.pbDownload.Value = Convert.ToInt32(progress[1]);
+                long[] progress = (long[])e.UserState;
+                if (progress[0] > 0L && di.TotalSize < 0)
+                {
+                    di.TotalSize = progress[0];
+                    this.pbDownload.Minimum = this.pbDownload.Value = 0;
+                    this.pbDownload.Maximum = Int32.MaxValue;
+                    this.pbDownload.Maximum = Convert.ToInt32(di.TotalSize >> 7);
+                    this.pbDownload.Style = ProgressBarStyle.Continuous;
+                }
+                if (this.pbDownload.Style != ProgressBarStyle.Marquee)
+                {
+                    this.pbDownload.Value = Convert.ToInt32(progress[1] >> 7);
+                }
+                di.DownloadedBytes = progress[1];
             }
-            this.pgDownload.SelectedObject = di;
+            this.pgDownload.Refresh();
             this.pbDownload.Refresh();
         }
+
         private void DownloadCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             this._bgwDownloader.Dispose();
@@ -331,7 +497,31 @@ namespace MLocati.MediaData
                 return;
             }
             string downloadedFile = (string)e.Result;
-            MessageBox.Show(string.Format("Close all and launch {0}", downloadedFile));
+            try
+            {
+                
+                using (Process process = new Process())
+                {
+                    process.StartInfo.CreateNoWindow = false;
+                    process.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
+                    process.StartInfo.UseShellExecute = false;
+                    process.StartInfo.WorkingDirectory = Path.GetDirectoryName(downloadedFile);
+                    process.StartInfo.FileName = downloadedFile;
+                    process.StartInfo.Arguments = new System.Text.StringBuilder()
+                        .Append("/DIR=").Append(Tool.Escape(Path.GetDirectoryName(Application.ExecutablePath)))
+                        .Append(' ')
+                        .Append("/SILENT")
+                        .ToString();
+                    process.Start();
+                }
+            }
+            catch(Exception x)
+            {
+                this.State = States.Info;
+                MessageBox.Show(string.Format(i18n.Unable_to_launch_updater_X_error_Y, downloadedFile, x.Message), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            Environment.Exit(0);
         }
 
         #endregion

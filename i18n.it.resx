@@ -664,4 +664,41 @@ Impostarlo come scrivibile?</value>
   <data name="Total_size" xml:space="preserve">
     <value>Dimensione totale</value>
   </data>
+  <data name="Unable_to_launch_updater_X_error_Y" xml:space="preserve">
+    <value>Si è verificato un errore durante l’esecuzione del file di installazione scaricato
+{0}
+
+Messaggio d’errore:
+{1}</value>
+  </data>
+  <data name="SpeedPerSec_bytes_X" xml:space="preserve">
+    <value>{0} B/s</value>
+  </data>
+  <data name="SpeedPerSec_GB_X" xml:space="preserve">
+    <value>{0} GB/s</value>
+  </data>
+  <data name="SpeedPerSec_KB_X" xml:space="preserve">
+    <value>{0} KB/s</value>
+  </data>
+  <data name="SpeedPerSec_MB_X" xml:space="preserve">
+    <value>{0} MB/s</value>
+  </data>
+  <data name="SpeedPerSec_TB_X" xml:space="preserve">
+    <value>{0} TB/s</value>
+  </data>
+  <data name="Download_speed" xml:space="preserve">
+    <value>Velocità download</value>
+  </data>
+  <data name="Local_file_name" xml:space="preserve">
+    <value>Nome file locale</value>
+  </data>
+  <data name="Time_elapsed" xml:space="preserve">
+    <value>Tempo trascorso</value>
+  </data>
+  <data name="Time_remaining" xml:space="preserve">
+    <value>Tempo dimamente</value>
+  </data>
+  <data name="Time_total" xml:space="preserve">
+    <value>Tempo totale</value>
+  </data>
 </root>

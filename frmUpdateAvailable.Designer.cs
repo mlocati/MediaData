@@ -35,10 +35,10 @@
             this.btnInstall = new System.Windows.Forms.Button();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlDownloading = new System.Windows.Forms.Panel();
+            this.lblDownloadWarning = new System.Windows.Forms.Label();
             this.pgDownload = new System.Windows.Forms.PropertyGrid();
             this.pbDownload = new System.Windows.Forms.ProgressBar();
             this.btnCancelDownload = new System.Windows.Forms.Button();
-            this.lblDownloadWarning = new System.Windows.Forms.Label();
             this.pnlMain.SuspendLayout();
             this.pnlDownloading.SuspendLayout();
             this.SuspendLayout();
@@ -88,6 +88,12 @@
             resources.ApplyResources(this.pnlDownloading, "pnlDownloading");
             this.pnlDownloading.Name = "pnlDownloading";
             // 
+            // lblDownloadWarning
+            // 
+            resources.ApplyResources(this.lblDownloadWarning, "lblDownloadWarning");
+            this.lblDownloadWarning.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.lblDownloadWarning.Name = "lblDownloadWarning";
+            // 
             // pgDownload
             // 
             resources.ApplyResources(this.pgDownload, "pgDownload");
@@ -109,12 +115,6 @@
             this.btnCancelDownload.UseVisualStyleBackColor = true;
             this.btnCancelDownload.Click += new System.EventHandler(this.btnCancelDownload_Click);
             // 
-            // lblDownloadWarning
-            // 
-            resources.ApplyResources(this.lblDownloadWarning, "lblDownloadWarning");
-            this.lblDownloadWarning.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lblDownloadWarning.Name = "lblDownloadWarning";
-            // 
             // frmUpdateAvailable
             // 
             resources.ApplyResources(this, "$this");
@@ -130,7 +130,6 @@
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
             this.pnlDownloading.ResumeLayout(false);
-            this.pnlDownloading.PerformLayout();
             this.ResumeLayout(false);
 
         }

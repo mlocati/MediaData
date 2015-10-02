@@ -117,12 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnWebsite.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 50</value>
+  </data>
+  <data name="btnWebsite.Size" type="System.Drawing.Size, System.Drawing">
+    <value>146, 23</value>
+  </data>
   <data name="btnWebsite.Text" xml:space="preserve">
     <value>Vai alla pagina di download</value>
   </data>
   <data name="btnClose.Text" xml:space="preserve">
     <value>Chiudi</value>
+  </data>
+  <data name="btnInstall.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 50</value>
+  </data>
+  <data name="btnInstall.Size" type="System.Drawing.Size, System.Drawing">
+    <value>146, 23</value>
+  </data>
+  <data name="btnInstall.Text" xml:space="preserve">
+    <value>Installa aggiornamento</value>
+  </data>
+  <data name="lblDownloadWarning.Text" xml:space="preserve">
+    <value>Al termine del download il programma vrrà chiuso e aggiornato.</value>
+  </data>
+  <data name="btnCancelDownload.Text" xml:space="preserve">
+    <value>Annulla</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>È disponibile una nuova versione!</value>

@@ -262,19 +262,16 @@
     <value>1</value>
   </data>
   <data name="lblDownloadWarning.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="lblDownloadWarning.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>Bottom, Left, Right</value>
   </data>
   <data name="lblDownloadWarning.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 152</value>
+    <value>12, 181</value>
   </data>
   <data name="lblDownloadWarning.Size" type="System.Drawing.Size, System.Drawing">
-    <value>366, 13</value>
+    <value>445, 13</value>
   </data>
   <data name="lblDownloadWarning.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="lblDownloadWarning.Text" xml:space="preserve">
     <value>At the end of the download the program will be closed and it will be updated.</value>
@@ -301,13 +298,13 @@
     <value>False</value>
   </data>
   <data name="pgDownload.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 48</value>
+    <value>12, 30</value>
   </data>
   <data name="pgDownload.Size" type="System.Drawing.Size, System.Drawing">
-    <value>445, 96</value>
+    <value>445, 140</value>
   </data>
   <data name="pgDownload.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;pgDownload.Name" xml:space="preserve">
     <value>pgDownload</value>
@@ -349,13 +346,13 @@
     <value>Bottom</value>
   </data>
   <data name="btnCancelDownload.Location" type="System.Drawing.Point, System.Drawing">
-    <value>196, 168</value>
+    <value>196, 197</value>
   </data>
   <data name="btnCancelDownload.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
   <data name="btnCancelDownload.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="btnCancelDownload.Text" xml:space="preserve">
     <value>Cancel</value>
@@ -379,7 +376,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="pnlDownloading.Size" type="System.Drawing.Size, System.Drawing">
-    <value>466, 203</value>
+    <value>466, 232</value>
   </data>
   <data name="pnlDownloading.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -403,10 +400,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>484, 304</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+    <value>484, 337</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>
