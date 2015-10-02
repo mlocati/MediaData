@@ -405,6 +405,147 @@ namespace MLocati.MediaData
 
         }
 
+        private void dgvFiles_MouseDown(object sender, MouseEventArgs e)
+        {
+            switch (e.Button)
+            {
+                case MouseButtons.Right:
+                    DataGridView.HitTestInfo hit = this.dgvFiles.HitTest(e.X, e.Y);
+                    if (hit.Type == DataGridViewHitTestType.Cell && hit.RowIndex >= 0)
+                    {
+                        Processor processor = this.dgvFiles.Rows[hit.RowIndex].DataBoundItem as Processor;
+                        if (processor != null)
+                        {
+                            this.ctxProcessor.Tag = processor;
+                            if (hit.ColumnIndex == this.colMetadataDatetime.Index)
+                            {
+                                if (processor.Info != null && processor.Info.TimestampMean.HasValue)
+                                {
+                                    this.ctxProcessorCopy.Tag = processor.Info.TimestampMean;
+                                    this.ctxProcessorCopy.Enabled = true;
+                                }
+                                else
+                                {
+                                    this.ctxProcessorCopy.Enabled = false;
+                                }
+                                DateTime? paste = null;
+                                try
+                                {
+                                    DateTime dt;
+                                    if (DateTime.TryParse(Clipboard.GetText(TextDataFormat.Text), out dt))
+                                    {
+                                        paste = dt;
+                                    }
+                                }
+                                catch
+                                { }
+                                if (paste != null)
+                                {
+                                    this.ctxProcessorPaste.Tag = paste;
+                                    this.ctxProcessorPaste.Enabled = true;
+                                }
+                                else
+                                {
+                                    this.ctxProcessorPaste.Enabled = false;
+                                }
+                                this.ctxProcessor.Show(this.dgvFiles, e.Location);
+                            }
+                            else if (hit.ColumnIndex == this.colMetadataPosition.Index)
+                            {
+                                if (processor.Info != null && processor.Info.Position != null)
+                                {
+                                    this.ctxProcessorCopy.Tag = processor.Info.Position;
+                                    this.ctxProcessorCopy.Enabled = true;
+                                }
+                                else
+                                {
+                                    this.ctxProcessorCopy.Enabled = false;
+                                }
+                                Position paste = null;
+                                try
+                                {
+                                    paste = Position.Unserialize(Clipboard.GetText(TextDataFormat.Text));
+                                }
+                                catch
+                                { }
+                                if (paste != null)
+                                {
+                                    this.ctxProcessorPaste.Tag = paste;
+                                    this.ctxProcessorPaste.Enabled = true;
+                                }
+                                else
+                                {
+                                    this.ctxProcessorPaste.Enabled = false;
+                                }
+                                this.ctxProcessor.Show(this.dgvFiles, e.Location);
+                            }
+                        }
+                    }
+                    break;
+            }
+        }
+
+        private void ctxProcessorCopy_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (this.ctxProcessorCopy.Tag is DateTime?)
+                {
+                    DateTime? copy = (DateTime?)this.ctxProcessorCopy.Tag;
+                    if (copy.HasValue)
+                    {
+                        Clipboard.SetText(copy.Value.ToString());
+                    }
+                }
+                else if (this.ctxProcessorCopy.Tag is Position)
+                {
+                    Position copy = (Position)this.ctxProcessorCopy.Tag;
+                    if (copy != null)
+                    {
+                        Clipboard.SetText(copy.Serialize());
+                    }
+                }
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show(this, x.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void ctxProcessorPaste_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Processor processor = this.ctxProcessor.Tag as Processor;
+                if (processor != null)
+                {
+                    if (this.ctxProcessorPaste.Tag is DateTime?)
+                    {
+                        DateTime? paste = (DateTime?)this.ctxProcessorPaste.Tag;
+                        if (paste.HasValue)
+                        {
+                            processor.ChangeMetadataTimestamp(paste, this);
+                        }
+                    }
+                    else if (this.ctxProcessorPaste.Tag is Position)
+                    {
+                        Position paste = (Position)this.ctxProcessorPaste.Tag;
+                        if (paste != null)
+                        {
+                            processor.ChangeMetadataPosition(paste, this);
+                        }
+                    }
+                }
+            }
+            catch(OperationCanceledException)
+            {
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show(this, x.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
         private void chkSelection_CheckedChanged(object sender, EventArgs e)
         {
             this.SelectionEnabled = this.chkSelection.Checked;

@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ssStatus = new System.Windows.Forms.StatusStrip();
             this.ssStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.ssStatusProgress = new System.Windows.Forms.ToolStripProgressBar();
@@ -60,12 +61,16 @@
             this.cbxSelectionDeltaTimeUnit = new System.Windows.Forms.ComboBox();
             this.btnSelectionApply = new System.Windows.Forms.Button();
             this.chkSelection = new System.Windows.Forms.CheckBox();
+            this.ctxProcessor = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ctxProcessorCopy = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxProcessorPaste = new System.Windows.Forms.ToolStripMenuItem();
             this.ssStatus.SuspendLayout();
             this.tsTools.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFiles)).BeginInit();
             this.gbxSelection.SuspendLayout();
             this.flpSelection.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSelectionDeltaTimeValue)).BeginInit();
+            this.ctxProcessor.SuspendLayout();
             this.SuspendLayout();
             // 
             // ssStatus
@@ -164,14 +169,14 @@
             this.dgvFiles.AllowUserToResizeRows = false;
             resources.ApplyResources(this.dgvFiles, "dgvFiles");
             this.dgvFiles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFiles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFiles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvFiles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFiles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colBrowseTo,
@@ -179,14 +184,14 @@
             this.colFilenameDatetime,
             this.colMetadataDatetime,
             this.colMetadataPosition});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvFiles.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFiles.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvFiles.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvFiles.Name = "dgvFiles";
             this.dgvFiles.ReadOnly = true;
@@ -194,6 +199,7 @@
             this.dgvFiles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvFiles.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFiles_CellClick);
             this.dgvFiles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFiles_CellContentClick);
+            this.dgvFiles.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dgvFiles_MouseDown);
             // 
             // colBrowseTo
             // 
@@ -338,6 +344,27 @@
             this.chkSelection.UseVisualStyleBackColor = true;
             this.chkSelection.CheckedChanged += new System.EventHandler(this.chkSelection_CheckedChanged);
             // 
+            // ctxProcessor
+            // 
+            this.ctxProcessor.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ctxProcessorCopy,
+            this.ctxProcessorPaste});
+            this.ctxProcessor.Name = "ctxProcessor";
+            this.ctxProcessor.ShowImageMargin = false;
+            resources.ApplyResources(this.ctxProcessor, "ctxProcessor");
+            // 
+            // ctxProcessorCopy
+            // 
+            this.ctxProcessorCopy.Name = "ctxProcessorCopy";
+            resources.ApplyResources(this.ctxProcessorCopy, "ctxProcessorCopy");
+            this.ctxProcessorCopy.Click += new System.EventHandler(this.ctxProcessorCopy_Click);
+            // 
+            // ctxProcessorPaste
+            // 
+            this.ctxProcessorPaste.Name = "ctxProcessorPaste";
+            resources.ApplyResources(this.ctxProcessorPaste, "ctxProcessorPaste");
+            this.ctxProcessorPaste.Click += new System.EventHandler(this.ctxProcessorPaste_Click);
+            // 
             // frmMain
             // 
             resources.ApplyResources(this, "$this");
@@ -359,6 +386,7 @@
             this.flpSelection.ResumeLayout(false);
             this.flpSelection.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSelectionDeltaTimeValue)).EndInit();
+            this.ctxProcessor.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -394,5 +422,8 @@
         private System.Windows.Forms.ComboBox cbxSelectionDeltaTimeUnit;
         private System.Windows.Forms.Button btnSelectionApply;
         private System.Windows.Forms.ToolStripButton tsbAbout;
+        private System.Windows.Forms.ContextMenuStrip ctxProcessor;
+        private System.Windows.Forms.ToolStripMenuItem ctxProcessorCopy;
+        private System.Windows.Forms.ToolStripMenuItem ctxProcessorPaste;
     }
 }

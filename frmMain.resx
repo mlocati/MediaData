@@ -121,13 +121,25 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ssStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>826, 17</value>
+  </data>
+  <data name="ssStatusLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="ssStatusProgress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 16</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ssStatusProgress.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="ssStatus.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 537</value>
   </data>
   <data name="ssStatus.Size" type="System.Drawing.Size, System.Drawing">
     <value>841, 22</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="ssStatus.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
@@ -141,44 +153,11 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ssStatus.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="ssStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>826, 17</value>
-  </data>
-  <data name="ssStatusLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="ssStatusProgress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 16</value>
-  </data>
-  <data name="ssStatusProgress.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+    <value>5</value>
   </data>
   <metadata name="tsTools.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>112, 17</value>
   </metadata>
-  <data name="tsTools.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="tsTools.Size" type="System.Drawing.Size, System.Drawing">
-    <value>841, 25</value>
-  </data>
-  <data name="tsTools.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tsTools.Name" xml:space="preserve">
-    <value>tsTools</value>
-  </data>
-  <data name="&gt;&gt;tsTools.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsTools.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tsTools.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="tslSrcDir.Size" type="System.Drawing.Size, System.Drawing">
     <value>93, 22</value>
   </data>
@@ -240,11 +219,11 @@
         /6tXrvh/586d2ceOHQs7d+6cKlQtTsB+ZM+eZxPKZj7aoGP4XzJn0y+oOJHAYxt7WfKkJ8/KSv+fcHX9
         v9HYeAlUhjDQql/Fppe1+12QrNf/bZpq/2/m5v7fp6f3f6GkZAFUCR5gPJPVs/7QGwataf91y679t7Lv
         vriYh+frQ6AhR83N/88RE3s3WVhYCqoaAzA6lB15xKA++b9i+tn/GunHXoEEeyQlRZZJSf1/Wlv7/wjQ
-        kLkSEv9nCgtrgHUgA52cA+cZdev/iUYd/W9SsuAfg1YWD1SKYYKYWPFioCHPe3rAhswDGrJSRkYIKs3A
+        kLkSEv9nCgtrgHUgA52cA+cZdev/iUYd/W9SMvcfg1YWD1SKYYKYWPFioCHPe3rAhswDGrJSRkYIKs3A
         oJl1aK2g25r/vL77/ptXXPzPbjHFAyoFB5MkJe8vAhnS1fX/iJnZfxD7P9DVDDLR25KkIw7d00g7+dSo
         +MJ/VsuZrVA9GGCKpOQdYGD+f1Jd/f+Iqen/w0ZGGxgEbftSRGOOPgqb8+glu/WC5VC1zDgwQ4eo6KpZ
-        QC8cqK//dzI0VIJBipdBmEPCPZZb0ilHQkI0VkJCIkMSGGVAuhCIi6B0IVQsA4jjfcXE0nhYWKxFRUUl
-        ANj1HspYUITwAAAAAElFTkSuQmCC
+        QC/sra//dzI0VIJBipdBmEPCPZZb0ilHQkI0VkJCIkMSGGVAuhCIi6B0IVQsA4jjfcXE0nhYWKxFRUUl
+        ANSQHsS9aaxkAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="tsbOptions.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -262,20 +241,20 @@
   <data name="tsbAbout.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAL/SURBVDhPbVJrSJNRGP6iLKULggSJ3Z1aZkGZRf2xgn5G
-        pGAXzCyVSBJkJFaShYo3vESpGWIuLySSZOhEvGVu5sy0+W2t2ab75je34RRBcV66PJ1znArRAw8cznnf
-        572ch/sXJSUlwTzPF1osliGHwzFFSc68Wq0uzMvLO+oK+y/ce3t7S+fm5mC322GxiBDHzIwWcYzdOZ1O
-        9PX1vSSxHsspa/AgVXSTk5MQBAF6o4CU6n5cymzHxYxWJL3qge7HKHujMUTsO8lxX04loJXpg5kESF9/
-        QUazBWmNAh7XaZH9TouHdTqkvtUjuVwJq2gGGQsajaaOpK5jM9O2qfq9qq9IbLAhod6KwZFJrGBh8Sek
-        VTxulKqRVNYNs1nAzMwMoqOj/Ti6MDqf3mhCmGwMETV2hMtE3K7UI6Zcg4oOAxPJadDhbFY/Qh50gNcZ
-        YbPZoFQqizi6bYsoIqWWx+kXNpwoEnEsfwRB2cPYlzqEGoXABC7k9mCvtBs+d9twObOZdTw9PT3LsW8i
-        mw5JVcAvfxz7cwTsSTfA55EOobmDLLmpX4TbrVa4x7TCLUqOnderYDKZsLCwgFWB40TAnwj4ugS87vMY
-        GJ3Cr99/sD2hC1vvdMHDJbArqpoJzM/Pg47A039OfsOzDlYEdqRoEV7wCVcLlfBMUGCLS2B9ZBPC0uRr
-        I1CH0SXqDAIk2SNMIDDXgKAcDeS8AwPmGRxJ78PuJAU2x7WBi6iH3jAKq9VKl1jMUXtSh1FFaZUakiwj
-        zpUZceb5EJuf4nyBCqdyP8MrvhVxTztXvzE2NtafGYnakxppXBSQUDGIAxlDCC74htCMD4gs6sGhJyr4
-        JLYjvvgjHDYRExMT0Gq1tcxILnhQe1KHUTdqh0cR+awHgdIWHEyU40peJ2nbxCrTZNI+T3I2LacuYwOh
-        t0KhaJmdnWUmoSPRTVPSM52ZvqlUqvck1pNwtTo9bCP0JTwpkUhuymQyOelmfmlpCYuLi9T7zsrKysaA
-        gIBrJOYwoTfhRo7juL8x+ZTgIg333QAAAABJRU5ErkJggg==
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMDSURBVDhPbVJpSFRRGH1RltKCIEFiu6OWWVBmUX+soJ8R
+        KdiCmaUSSYIMiZVkoeKGS5SaIebkQiJJho6IW+aMOWba+GaaxmZ03vhmUUcRFNeW073XUSE6cODx7nfO
+        /b7vHu5fFBUVBfI8n2+xWAbGxsYmKck3r1ar83Nyco46y/4L1+7u7uLZ2VmMjo7CYhEhjpgZLeII+zc3
+        N4eenp6XpNZtWbIGN1EUdRMTExAEAXqjgKTKXlxKb8XFtGYkvOqC7scwO6M1xOw70bguSwnozfTATAqk
+        r78grdGClHoBj2u0yHynxcMaHZLf6pFYqoRNNMPhcECj0dQQ6To2M22but+r+Ir4Ojviam3oH5rAChYW
+        f0JaweNGsRoJJZ0wmwVMT08jMjLSh6MLo/PpjSaEyEYQVjWKUJmI2+V6RJVqUNZmYCZZdTqczehF0IM2
+        8Doj7HY7lEplAUe3bRFFJFXzOP3CjhMFIo7lDiEgcxD7kgdQpRCYwYXsLuyVdsLrbgsupzeyjqempmY4
+        9kxk00HJCvjkWrE/S8CeVAO8HukQnN3PxA29IlxuNcM1qhkuEXLsvF4Bk8mEhYUFrBocJwa+xMDbaeBx
+        n0ff8CR+/f6D7XEd2HqnA25Og10Rlcxgfn4edASevnPiG551sGKwI0mL0LxPuJqvhHucAlucBuvDGxCS
+        Il8bgSaMLlFnECDJHGIG/tkGBGRpIOcd6DNP40hqD3YnKLA5pgVcWC30hmHYbDa6xEKOxpMmjDpKK9SQ
+        ZBhxrsSIM88H2PwU5/NUOJX9GR6xzYh52r76jNHR0b4sSDSeNEhWUUBcWT8OpA0gMO8bgtM+ILygC4ee
+        qOAV34rYwo9w2EWMj49Dq9VWsyA54UbjSRNG06gdHEb4sy74S5twMF6OKzntpG0Tu5mKrVYrTzSblqXL
+        2EDoqVAommZmZlhI6Eh005T0m85Mz1Qq1XtS6064ejv92EboTXhSIpHclMlkctLN/NLSEhYXF2n258rL
+        y+v9/PyukZrDhJ6EGzmO4/4C3KmUwv816mQAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="tsbAbout.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -286,6 +265,27 @@
   </data>
   <data name="tsbAbout.Text" xml:space="preserve">
     <value>toolStripButton1</value>
+  </data>
+  <data name="tsTools.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tsTools.Size" type="System.Drawing.Size, System.Drawing">
+    <value>841, 25</value>
+  </data>
+  <data name="tsTools.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tsTools.Name" xml:space="preserve">
+    <value>tsTools</value>
+  </data>
+  <data name="&gt;&gt;tsTools.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsTools.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tsTools.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dgvFiles.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -361,154 +361,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dgvFiles.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="gbxSelection.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;flpSelection.Name" xml:space="preserve">
-    <value>flpSelection</value>
-  </data>
-  <data name="&gt;&gt;flpSelection.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;flpSelection.Parent" xml:space="preserve">
-    <value>gbxSelection</value>
-  </data>
-  <data name="&gt;&gt;flpSelection.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="gbxSelection.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 484</value>
-  </data>
-  <data name="gbxSelection.Size" type="System.Drawing.Size, System.Drawing">
-    <value>817, 50</value>
-  </data>
-  <data name="gbxSelection.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;gbxSelection.Name" xml:space="preserve">
-    <value>gbxSelection</value>
-  </data>
-  <data name="&gt;&gt;gbxSelection.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gbxSelection.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;gbxSelection.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;lnkSelectAll.Name" xml:space="preserve">
-    <value>lnkSelectAll</value>
-  </data>
-  <data name="&gt;&gt;lnkSelectAll.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lnkSelectAll.Parent" xml:space="preserve">
-    <value>flpSelection</value>
-  </data>
-  <data name="&gt;&gt;lnkSelectAll.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lnkSelectNone.Name" xml:space="preserve">
-    <value>lnkSelectNone</value>
-  </data>
-  <data name="&gt;&gt;lnkSelectNone.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lnkSelectNone.Parent" xml:space="preserve">
-    <value>flpSelection</value>
-  </data>
-  <data name="&gt;&gt;lnkSelectNone.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;cbxSelection.Name" xml:space="preserve">
-    <value>cbxSelection</value>
-  </data>
-  <data name="&gt;&gt;cbxSelection.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbxSelection.Parent" xml:space="preserve">
-    <value>flpSelection</value>
-  </data>
-  <data name="&gt;&gt;cbxSelection.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;lblSelectionDeltaTime.Name" xml:space="preserve">
-    <value>lblSelectionDeltaTime</value>
-  </data>
-  <data name="&gt;&gt;lblSelectionDeltaTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblSelectionDeltaTime.Parent" xml:space="preserve">
-    <value>flpSelection</value>
-  </data>
-  <data name="&gt;&gt;lblSelectionDeltaTime.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;nudSelectionDeltaTimeValue.Name" xml:space="preserve">
-    <value>nudSelectionDeltaTimeValue</value>
-  </data>
-  <data name="&gt;&gt;nudSelectionDeltaTimeValue.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;nudSelectionDeltaTimeValue.Parent" xml:space="preserve">
-    <value>flpSelection</value>
-  </data>
-  <data name="&gt;&gt;nudSelectionDeltaTimeValue.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;cbxSelectionDeltaTimeUnit.Name" xml:space="preserve">
-    <value>cbxSelectionDeltaTimeUnit</value>
-  </data>
-  <data name="&gt;&gt;cbxSelectionDeltaTimeUnit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbxSelectionDeltaTimeUnit.Parent" xml:space="preserve">
-    <value>flpSelection</value>
-  </data>
-  <data name="&gt;&gt;cbxSelectionDeltaTimeUnit.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;btnSelectionApply.Name" xml:space="preserve">
-    <value>btnSelectionApply</value>
-  </data>
-  <data name="&gt;&gt;btnSelectionApply.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnSelectionApply.Parent" xml:space="preserve">
-    <value>flpSelection</value>
-  </data>
-  <data name="&gt;&gt;btnSelectionApply.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="flpSelection.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="flpSelection.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 16</value>
-  </data>
-  <data name="flpSelection.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="flpSelection.Size" type="System.Drawing.Size, System.Drawing">
-    <value>811, 31</value>
-  </data>
-  <data name="flpSelection.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;flpSelection.Name" xml:space="preserve">
-    <value>flpSelection</value>
-  </data>
-  <data name="&gt;&gt;flpSelection.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;flpSelection.Parent" xml:space="preserve">
-    <value>gbxSelection</value>
-  </data>
-  <data name="&gt;&gt;flpSelection.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="lnkSelectAll.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -696,6 +552,54 @@
   <data name="&gt;&gt;btnSelectionApply.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="flpSelection.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="flpSelection.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 16</value>
+  </data>
+  <data name="flpSelection.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="flpSelection.Size" type="System.Drawing.Size, System.Drawing">
+    <value>811, 31</value>
+  </data>
+  <data name="flpSelection.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;flpSelection.Name" xml:space="preserve">
+    <value>flpSelection</value>
+  </data>
+  <data name="&gt;&gt;flpSelection.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flpSelection.Parent" xml:space="preserve">
+    <value>gbxSelection</value>
+  </data>
+  <data name="&gt;&gt;flpSelection.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="gbxSelection.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 484</value>
+  </data>
+  <data name="gbxSelection.Size" type="System.Drawing.Size, System.Drawing">
+    <value>817, 50</value>
+  </data>
+  <data name="gbxSelection.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;gbxSelection.Name" xml:space="preserve">
+    <value>gbxSelection</value>
+  </data>
+  <data name="&gt;&gt;gbxSelection.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbxSelection.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbxSelection.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="chkSelection.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
@@ -724,7 +628,31 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;chkSelection.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
+  </data>
+  <metadata name="ctxProcessor.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>202, 17</value>
+  </metadata>
+  <data name="ctxProcessorCopy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 22</value>
+  </data>
+  <data name="ctxProcessorCopy.Text" xml:space="preserve">
+    <value>&amp;Copy</value>
+  </data>
+  <data name="ctxProcessorPaste.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 22</value>
+  </data>
+  <data name="ctxProcessorPaste.Text" xml:space="preserve">
+    <value>&amp;Paste</value>
+  </data>
+  <data name="ctxProcessor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 48</value>
+  </data>
+  <data name="&gt;&gt;ctxProcessor.Name" xml:space="preserve">
+    <value>ctxProcessor</value>
+  </data>
+  <data name="&gt;&gt;ctxProcessor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -839,6 +767,18 @@
   </data>
   <data name="&gt;&gt;colMetadataPosition.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewLinkColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ctxProcessorCopy.Name" xml:space="preserve">
+    <value>ctxProcessorCopy</value>
+  </data>
+  <data name="&gt;&gt;ctxProcessorCopy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ctxProcessorPaste.Name" xml:space="preserve">
+    <value>ctxProcessorPaste</value>
+  </data>
+  <data name="&gt;&gt;ctxProcessorPaste.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmMain</value>

@@ -155,14 +155,14 @@
         HG2DCjMwXLp0SeP+vfv/t2/fXgMVwgAH9+wxOnbk6P89u3f/t7OysgSJzZgxQxcsCQIbN24U37Rp04fl
         S5Z4QoVQwL1799Z8+/bt/949e/53tbcvWbp06dfFCxb4QaXhgGvXrl2fsBny+PHjFzdv3Pi/fdt2sCs2
         rd74FCqFAThBhqxevhxuyMv99Twnjh/9v3zZsv/tLa3/bwANqq+vZ4JKYwUcYEOWgAzZz8LrsfpFZsuW
-        /6tXrvh/586d2ceOHQs7d+6cKlQtTsB+ZM+eZxPKZj7aoGP4XzFn6y+oOJHAYxt7WfKkJ8/KSv+fcHX9
+        /6tXrvh/586d2ceOHQs7d+6cKlQtTsB+ZM+eZxPKZj7aoGP4XyFnyy+oOJHAYxt7WfKkJ8/KSv+fcHX9
         v9HYeAlUhjDQql/Fppe1+12QrNf/bZpq/2/m5v7fp6f3f6GkZAFUCR5gPJPVs/7QGwataf91y679t7Lv
         vriYh+frQ6AhR83N/88RE3s3WVhYCqoaAzA6lB15xKA++b9i+tn/GunHXoEEeyQlRZZJSf1/Wlv7/wjQ
-        kLkSEv9nCgtrgHUgA52cA+cZdVv/iUYd/W9Ssusfg1YWD1SKYYKYWPFioCHPe3rAhswDGrJSRkYIKs3A
+        kLkSEv9nCgtrgHUgA52cA+cZdVv+iUYd/W9SsvMfg1YWD1SKYYKYWPFioCHPe3rAhswDGrJSRkYIKs3A
         oJl1aK2g25r/vL77/ptXXPzPbjHFAyoFB5MkJe8vAhnS1fX/iJnZfxD7P9DVDDLR25KkIw7d00g7+dSo
         +MJ/VsuZrVA9GGCKpOQdYGD+f1Jd/f+Iqen/w0ZGGxgEbftSRGOOPgqb8+glu/WC5VC1zDgwQ4eo6KpZ
-        QC/cqq//dzI0VIJBipdBmEPCPZZb0ilHQkI0VkJCIkMSGGVAuhCIi6B0IVQsA4jjfcXE0nhYWKxFRUUl
-        ACCvHw8pwOatAAAAAElFTkSuQmCC
+        QC/crK//dzI0VIJBipdBmEPCPZZb0ilHQkI0VkJCIkMSGGVAuhCIi6B0IVQsA4jjfcXE0nhYWKxFRUUl
+        ABk6HwoB68XCAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="tsbOptions.Text" xml:space="preserve">
@@ -170,6 +170,25 @@
   </data>
   <data name="tsbOptions.ToolTipText" xml:space="preserve">
     <value>Opzioni [F4]</value>
+  </data>
+  <data name="tsbAbout.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMDSURBVDhPbVJpSFRRGH1RltKCIEFiu6OWWVBmUX+soJ8R
+        KdiCmaUSSYIMiZVkoeKGS5SaIebkQiJJho6IW+aMOWba+GaaxmZ03vhmUUcRFNeW073XUSE6cODx7nfO
+        /b7vHu5fFBUVBfI8n2+xWAbGxsYmKck3r1ar83Nyco46y/4L1+7u7uLZ2VmMjo7CYhEhjpgZLeII+zc3
+        N4eenp6XpNZtWbIGN1EUdRMTExAEAXqjgKTKXlxKb8XFtGYkvOqC7scwO6M1xOw70bguSwnozfTATAqk
+        r78grdGClHoBj2u0yHynxcMaHZLf6pFYqoRNNMPhcECj0dQQ6To2M22but+r+Ir4Ojviam3oH5rAChYW
+        f0JaweNGsRoJJZ0wmwVMT08jMjLSh6MLo/PpjSaEyEYQVjWKUJmI2+V6RJVqUNZmYCZZdTqczehF0IM2
+        8Doj7HY7lEplAUe3bRFFJFXzOP3CjhMFIo7lDiEgcxD7kgdQpRCYwYXsLuyVdsLrbgsupzeyjqempmY4
+        9kxk00HJCvjkWrE/S8CeVAO8HukQnN3PxA29IlxuNcM1qhkuEXLsvF4Bk8mEhYUFrBocJwa+xMDbaeBx
+        n0ff8CR+/f6D7XEd2HqnA25Og10Rlcxgfn4edASevnPiG551sGKwI0mL0LxPuJqvhHucAlucBuvDGxCS
+        Il8bgSaMLlFnECDJHGIG/tkGBGRpIOcd6DNP40hqD3YnKLA5pgVcWC30hmHYbDa6xEKOxpMmjDpKK9SQ
+        ZBhxrsSIM88H2PwU5/NUOJX9GR6xzYh52r76jNHR0b4sSDSeNEhWUUBcWT8OpA0gMO8bgtM+ILygC4ee
+        qOAV34rYwo9w2EWMj49Dq9VWsyA54UbjSRNG06gdHEb4sy74S5twMF6OKzntpG0Tu5mKrVYrTzSblqXL
+        2EDoqVAommZmZlhI6Eh005T0m85Mz1Qq1XtS6064ejv92EboTXhSIpHclMlkctLN/NLSEhYXF2n258rL
+        y+v9/PyukZrDhJ6EGzmO4/4C3KmUwv816mQAAAAASUVORK5CYII=
+</value>
   </data>
   <data name="colFilename.HeaderText" xml:space="preserve">
     <value>Nome del file</value>
@@ -236,5 +255,20 @@
   </data>
   <data name="chkSelection.Text" xml:space="preserve">
     <value>Abilita selezione</value>
+  </data>
+  <data name="ctxProcessorCopy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 22</value>
+  </data>
+  <data name="ctxProcessorCopy.Text" xml:space="preserve">
+    <value>&amp;Copia</value>
+  </data>
+  <data name="ctxProcessorPaste.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 22</value>
+  </data>
+  <data name="ctxProcessorPaste.Text" xml:space="preserve">
+    <value>I&amp;ncolla</value>
+  </data>
+  <data name="ctxProcessor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 48</value>
   </data>
 </root>
