@@ -253,7 +253,14 @@ namespace MLocati.MediaData
         [DllImport("shell32.dll", CharSet = CharSet.Auto)]
         private static extern Int32 SHFileOperation(ref SHFILEOPSTRUCT lpFileOp);
 
-
+        /// <summary>
+        /// Retrieves the full path of a known folder identified by the folder's KNOWNFOLDERID.
+        /// </summary>
+        /// <param name="rfid">A reference to the KNOWNFOLDERID that identifies the folder.</param>
+        /// <param name="dwFlags">Flags that specify special retrieval options. This value can be one or more of the KnownFolderFlag values.</param>
+        /// <param name="hToken">An access token that represents a particular user. If this parameter is IntPtr.Zero, which is the most common usage, the function requests the known folder for the current user.</param>
+        /// <param name="ppszPath">When this method returns, contains the address of a pointer to a null-terminated Unicode string that specifies the path of the known folder. The calling process is responsible for freeing this resource once it is no longer needed by calling CoTaskMemFree. The returned path does not include a trailing backslash. For example, "C:\Users" is returned rather than "C:\Users\".</param>
+        /// <returns></returns>
         [DllImport("shell32.dll")]
         private static extern Int32 SHGetKnownFolderPath([MarshalAs(UnmanagedType.LPStruct)] Guid rfid, KnownFolderFlag dwFlags, IntPtr hToken, out IntPtr ppszPath);
 
