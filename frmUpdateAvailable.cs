@@ -306,8 +306,6 @@ namespace MLocati.MediaData
             this._bgwDownloader.ProgressChanged += this.DownloadProgress;
             this._bgwDownloader.RunWorkerCompleted += this.DownloadCompleted;
             this._bgwDownloader.RunWorkerAsync();
-            //this.DownloadUpdate(this._bgwDownloader, new DoWorkEventArgs(null));
-            //this.DownloadCompleted(null, new RunWorkerCompletedEventArgs(@"J:\Download\MediaData-setup (3).exe", null, false));
         }
 
         private void btnCancelDownload_Click(object sender, EventArgs e)
