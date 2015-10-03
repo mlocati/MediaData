@@ -117,353 +117,842 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="tpMaps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>410, 304</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblNormalizeVideo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lnkEnabledMapProviders_All.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="&gt;&gt;tpMaps.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lnkGoogleAPI_Elevation_Get.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 13</value>
-  </data>
-  <data name="lnkEnabledMapProviders_None.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="&gt;&gt;chkMaps_Cache.Parent" xml:space="preserve">
-    <value>tpMaps</value>
-  </data>
-  <data name="&gt;&gt;ctxSPOOVideos.Type" xml:space="preserve">
-    <value>MLocati.MediaData.ctxShowProcessingOutputOptions, MediaData, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lnkGoogleAPI_Elevation_Check.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lnkMaps_ClearCache.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="tpGeneral.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lnkEnabledMapProviders_All.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ctxSPOOImages.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;tpGeneral.Parent" xml:space="preserve">
-    <value>tcPages</value>
-  </data>
-  <data name="&gt;&gt;lnkMaps_ClearCache.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="tpGeneral.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>15, 15, 15, 15</value>
-  </data>
-  <data name="lnkGoogleAPI_Elevation_Get.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lblNormalizeVideo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;lblLanguage.Type" xml:space="preserve">
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblNormalizeVideo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 56</value>
+  </data>
+  <data name="lblNormalizeVideo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 13</value>
+  </data>
+  <data name="lblNormalizeVideo.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblNormalizeVideo.Text" xml:space="preserve">
+    <value>Convert videos to MP4</value>
+  </data>
+  <data name="&gt;&gt;lblNormalizeVideo.Name" xml:space="preserve">
+    <value>lblNormalizeVideo</value>
+  </data>
+  <data name="&gt;&gt;lblNormalizeVideo.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lnkEnabledMapProviders_Default.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;lblNormalizeVideo.Parent" xml:space="preserve">
+    <value>tpGeneral</value>
   </data>
-  <data name="&gt;&gt;ctxSPOOVideosTranscoding.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblNormalizeVideo.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="cbxNormalizeVideo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 53</value>
+  </data>
+  <data name="cbxNormalizeVideo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 21</value>
+  </data>
+  <data name="cbxNormalizeVideo.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;cbxNormalizeVideo.Name" xml:space="preserve">
+    <value>cbxNormalizeVideo</value>
+  </data>
+  <data name="&gt;&gt;cbxNormalizeVideo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbxNormalizeVideo.Parent" xml:space="preserve">
+    <value>tpGeneral</value>
+  </data>
+  <data name="&gt;&gt;cbxNormalizeVideo.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="lblSetFiledateOnMetadata.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblSetFiledateOnMetadata.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblSetFiledateOnMetadata.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 91</value>
+  </data>
+  <data name="lblSetFiledateOnMetadata.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 13</value>
+  </data>
+  <data name="lblSetFiledateOnMetadata.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lblSetFiledateOnMetadata.Text" xml:space="preserve">
+    <value>Set file dates to metadata value</value>
+  </data>
+  <data name="&gt;&gt;lblSetFiledateOnMetadata.Name" xml:space="preserve">
+    <value>lblSetFiledateOnMetadata</value>
+  </data>
+  <data name="&gt;&gt;lblSetFiledateOnMetadata.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblSetFiledateOnMetadata.Parent" xml:space="preserve">
+    <value>tpGeneral</value>
+  </data>
+  <data name="&gt;&gt;lblSetFiledateOnMetadata.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="cbxSetFiledateOnMetadata.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 88</value>
+  </data>
+  <data name="cbxSetFiledateOnMetadata.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 21</value>
+  </data>
+  <data name="cbxSetFiledateOnMetadata.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;cbxSetFiledateOnMetadata.Name" xml:space="preserve">
+    <value>cbxSetFiledateOnMetadata</value>
+  </data>
+  <data name="&gt;&gt;cbxSetFiledateOnMetadata.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbxSetFiledateOnMetadata.Parent" xml:space="preserve">
+    <value>tpGeneral</value>
+  </data>
+  <data name="&gt;&gt;cbxSetFiledateOnMetadata.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="btnCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnCancel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>274, 356</value>
+  </data>
+  <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="lnkMaps_ClearCache.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 13</value>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
+    <value>btnCancel</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnAccept.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnAccept.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnAccept.Location" type="System.Drawing.Point, System.Drawing">
+    <value>355, 356</value>
+  </data>
+  <data name="btnAccept.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btnAccept.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnAccept.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="&gt;&gt;btnAccept.Name" xml:space="preserve">
+    <value>btnAccept</value>
+  </data>
+  <data name="&gt;&gt;btnAccept.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAccept.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnAccept.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblProcessingOutput.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblProcessingOutput.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblProcessingOutput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 15</value>
+  </data>
+  <data name="lblProcessingOutput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 13</value>
+  </data>
+  <data name="lblProcessingOutput.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblProcessingOutput.Text" xml:space="preserve">
+    <value>Show processing output for:</value>
+  </data>
+  <data name="&gt;&gt;lblProcessingOutput.Name" xml:space="preserve">
+    <value>lblProcessingOutput</value>
+  </data>
+  <data name="&gt;&gt;lblProcessingOutput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblProcessingOutput.Parent" xml:space="preserve">
+    <value>tpProcessingOutput</value>
+  </data>
+  <data name="&gt;&gt;lblProcessingOutput.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="chkDeleteToTrash.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkDeleteToTrash.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkDeleteToTrash.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 191</value>
+  </data>
+  <data name="chkDeleteToTrash.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 17</value>
+  </data>
+  <data name="chkDeleteToTrash.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="chkDeleteToTrash.Text" xml:space="preserve">
+    <value>Move files to trash instead of deleting them</value>
+  </data>
+  <data name="&gt;&gt;chkDeleteToTrash.Name" xml:space="preserve">
+    <value>chkDeleteToTrash</value>
+  </data>
+  <data name="&gt;&gt;chkDeleteToTrash.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkDeleteToTrash.Parent" xml:space="preserve">
+    <value>tpGeneral</value>
+  </data>
+  <data name="&gt;&gt;chkDeleteToTrash.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="tcPages.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="nudMaxErrVertical.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 157</value>
+  </data>
+  <data name="nudMaxErrVertical.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 20</value>
+  </data>
+  <data name="nudMaxErrVertical.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="nudMaxErrVertical.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;nudMaxErrVertical.Name" xml:space="preserve">
+    <value>nudMaxErrVertical</value>
+  </data>
+  <data name="&gt;&gt;nudMaxErrVertical.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nudMaxErrVertical.Parent" xml:space="preserve">
+    <value>tpGeneral</value>
+  </data>
+  <data name="&gt;&gt;nudMaxErrVertical.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="nudMaxErrHorizontal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 123</value>
+  </data>
+  <data name="nudMaxErrHorizontal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 20</value>
+  </data>
+  <data name="nudMaxErrHorizontal.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="nudMaxErrHorizontal.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;nudMaxErrHorizontal.Name" xml:space="preserve">
+    <value>nudMaxErrHorizontal</value>
+  </data>
+  <data name="&gt;&gt;nudMaxErrHorizontal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nudMaxErrHorizontal.Parent" xml:space="preserve">
+    <value>tpGeneral</value>
+  </data>
+  <data name="&gt;&gt;nudMaxErrHorizontal.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cbxLanguage.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="cbxLanguage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 18</value>
+  </data>
+  <data name="cbxLanguage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 21</value>
   </data>
   <data name="cbxLanguage.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
+  <data name="&gt;&gt;cbxLanguage.Name" xml:space="preserve">
+    <value>cbxLanguage</value>
+  </data>
+  <data name="&gt;&gt;cbxLanguage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbxLanguage.Parent" xml:space="preserve">
+    <value>tpGeneral</value>
+  </data>
+  <data name="&gt;&gt;cbxLanguage.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblLanguage.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblLanguage.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblLanguage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 21</value>
+  </data>
+  <data name="lblLanguage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="lblLanguage.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblLanguage.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="&gt;&gt;lblLanguage.Name" xml:space="preserve">
+    <value>lblLanguage</value>
+  </data>
+  <data name="&gt;&gt;lblLanguage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblLanguage.Parent" xml:space="preserve">
+    <value>tpGeneral</value>
+  </data>
+  <data name="&gt;&gt;lblLanguage.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblMaxErrVertical.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblMaxErrVertical.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblMaxErrVertical.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 159</value>
+  </data>
+  <data name="lblMaxErrVertical.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 13</value>
+  </data>
+  <data name="lblMaxErrVertical.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="lblMaxErrVertical.Text" xml:space="preserve">
+    <value>Max vertical distance error</value>
+  </data>
+  <data name="&gt;&gt;lblMaxErrVertical.Name" xml:space="preserve">
+    <value>lblMaxErrVertical</value>
+  </data>
+  <data name="&gt;&gt;lblMaxErrVertical.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMaxErrVertical.Parent" xml:space="preserve">
+    <value>tpGeneral</value>
+  </data>
+  <data name="&gt;&gt;lblMaxErrVertical.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblMaxErrDefVertical.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblMaxErrDefVertical.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblMaxErrDefVertical.Location" type="System.Drawing.Point, System.Drawing">
+    <value>318, 159</value>
+  </data>
+  <data name="lblMaxErrDefVertical.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 13</value>
+  </data>
+  <data name="lblMaxErrDefVertical.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="lblMaxErrDefVertical.Text" xml:space="preserve">
+    <value>XX.XX</value>
+  </data>
+  <data name="&gt;&gt;lblMaxErrDefVertical.Name" xml:space="preserve">
+    <value>lblMaxErrDefVertical</value>
+  </data>
+  <data name="&gt;&gt;lblMaxErrDefVertical.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMaxErrDefVertical.Parent" xml:space="preserve">
+    <value>tpGeneral</value>
+  </data>
+  <data name="&gt;&gt;lblMaxErrDefVertical.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lblMaxErrDefHorizontal.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblMaxErrDefHorizontal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblMaxErrDefHorizontal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>318, 125</value>
+  </data>
+  <data name="lblMaxErrDefHorizontal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 13</value>
+  </data>
+  <data name="lblMaxErrDefHorizontal.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="lblMaxErrDefHorizontal.Text" xml:space="preserve">
+    <value>XX.XX</value>
+  </data>
+  <data name="&gt;&gt;lblMaxErrDefHorizontal.Name" xml:space="preserve">
+    <value>lblMaxErrDefHorizontal</value>
+  </data>
+  <data name="&gt;&gt;lblMaxErrDefHorizontal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMaxErrDefHorizontal.Parent" xml:space="preserve">
+    <value>tpGeneral</value>
+  </data>
+  <data name="&gt;&gt;lblMaxErrDefHorizontal.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lblMaxErrDefLabelVertical.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblMaxErrDefLabelVertical.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblMaxErrDefLabelVertical.Location" type="System.Drawing.Point, System.Drawing">
+    <value>254, 159</value>
+  </data>
+  <data name="lblMaxErrDefLabelVertical.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 13</value>
+  </data>
+  <data name="lblMaxErrDefLabelVertical.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="lblMaxErrDefLabelVertical.Text" xml:space="preserve">
+    <value>m. - Default:</value>
+  </data>
+  <data name="&gt;&gt;lblMaxErrDefLabelVertical.Name" xml:space="preserve">
+    <value>lblMaxErrDefLabelVertical</value>
+  </data>
+  <data name="&gt;&gt;lblMaxErrDefLabelVertical.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMaxErrDefLabelVertical.Parent" xml:space="preserve">
+    <value>tpGeneral</value>
+  </data>
+  <data name="&gt;&gt;lblMaxErrDefLabelVertical.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lblMaxErrDefLabelHorizontal.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblMaxErrDefLabelHorizontal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblMaxErrDefLabelHorizontal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>254, 125</value>
+  </data>
+  <data name="lblMaxErrDefLabelHorizontal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 13</value>
+  </data>
+  <data name="lblMaxErrDefLabelHorizontal.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lblMaxErrDefLabelHorizontal.Text" xml:space="preserve">
+    <value>m. - Default:</value>
+  </data>
+  <data name="&gt;&gt;lblMaxErrDefLabelHorizontal.Name" xml:space="preserve">
+    <value>lblMaxErrDefLabelHorizontal</value>
+  </data>
+  <data name="&gt;&gt;lblMaxErrDefLabelHorizontal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMaxErrDefLabelHorizontal.Parent" xml:space="preserve">
+    <value>tpGeneral</value>
+  </data>
+  <data name="&gt;&gt;lblMaxErrDefLabelHorizontal.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="lblMaxErrHorizontal.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblMaxErrHorizontal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblMaxErrHorizontal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 125</value>
+  </data>
+  <data name="lblMaxErrHorizontal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 13</value>
+  </data>
+  <data name="lblMaxErrHorizontal.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lblMaxErrHorizontal.Text" xml:space="preserve">
+    <value>Max horizontal distance error</value>
+  </data>
+  <data name="&gt;&gt;lblMaxErrHorizontal.Name" xml:space="preserve">
+    <value>lblMaxErrHorizontal</value>
+  </data>
+  <data name="&gt;&gt;lblMaxErrHorizontal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMaxErrHorizontal.Parent" xml:space="preserve">
+    <value>tpGeneral</value>
+  </data>
+  <data name="&gt;&gt;lblMaxErrHorizontal.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="tpGeneral.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tpGeneral.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>15, 15, 15, 15</value>
+  </data>
+  <data name="tpGeneral.Size" type="System.Drawing.Size, System.Drawing">
+    <value>410, 304</value>
+  </data>
+  <data name="tpGeneral.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tpGeneral.Text" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="&gt;&gt;tpGeneral.Name" xml:space="preserve">
+    <value>tpGeneral</value>
+  </data>
   <data name="&gt;&gt;tpGeneral.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lnkGoogleAPI_Elevation_Check.Text" xml:space="preserve">
-    <value>Check this key</value>
+  <data name="&gt;&gt;tpGeneral.Parent" xml:space="preserve">
+    <value>tcPages</value>
   </data>
-  <data name="&gt;&gt;lnkGoogleAPI_Elevation_Check.Parent" xml:space="preserve">
+  <data name="&gt;&gt;tpGeneral.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ctxSPOOVideosTranscoding.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 204</value>
+  </data>
+  <data name="ctxSPOOVideosTranscoding.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="ctxSPOOVideosTranscoding.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>223, 88</value>
+  </data>
+  <data name="ctxSPOOVideosTranscoding.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>223, 88</value>
+  </data>
+  <data name="ctxSPOOVideosTranscoding.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 88</value>
+  </data>
+  <data name="ctxSPOOVideosTranscoding.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;ctxSPOOVideosTranscoding.Name" xml:space="preserve">
+    <value>ctxSPOOVideosTranscoding</value>
+  </data>
+  <data name="&gt;&gt;ctxSPOOVideosTranscoding.Type" xml:space="preserve">
+    <value>MLocati.MediaData.ctxShowProcessingOutputOptions, MediaData, Version=1.1.6.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ctxSPOOVideosTranscoding.Parent" xml:space="preserve">
+    <value>tpProcessingOutput</value>
+  </data>
+  <data name="&gt;&gt;ctxSPOOVideosTranscoding.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ctxSPOOImages.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 28</value>
+  </data>
+  <data name="ctxSPOOImages.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="ctxSPOOImages.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>223, 88</value>
+  </data>
+  <data name="ctxSPOOImages.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>223, 88</value>
+  </data>
+  <data name="ctxSPOOImages.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 88</value>
+  </data>
+  <data name="ctxSPOOImages.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;ctxSPOOImages.Name" xml:space="preserve">
+    <value>ctxSPOOImages</value>
+  </data>
+  <data name="&gt;&gt;ctxSPOOImages.Type" xml:space="preserve">
+    <value>MLocati.MediaData.ctxShowProcessingOutputOptions, MediaData, Version=1.1.6.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ctxSPOOImages.Parent" xml:space="preserve">
+    <value>tpProcessingOutput</value>
+  </data>
+  <data name="&gt;&gt;ctxSPOOImages.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ctxSPOOVideos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 116</value>
+  </data>
+  <data name="ctxSPOOVideos.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="ctxSPOOVideos.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>223, 88</value>
+  </data>
+  <data name="ctxSPOOVideos.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>223, 88</value>
+  </data>
+  <data name="ctxSPOOVideos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 88</value>
+  </data>
+  <data name="ctxSPOOVideos.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;ctxSPOOVideos.Name" xml:space="preserve">
+    <value>ctxSPOOVideos</value>
+  </data>
+  <data name="&gt;&gt;ctxSPOOVideos.Type" xml:space="preserve">
+    <value>MLocati.MediaData.ctxShowProcessingOutputOptions, MediaData, Version=1.1.6.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ctxSPOOVideos.Parent" xml:space="preserve">
+    <value>tpProcessingOutput</value>
+  </data>
+  <data name="&gt;&gt;ctxSPOOVideos.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tpProcessingOutput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tpProcessingOutput.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>15, 15, 15, 15</value>
+  </data>
+  <data name="tpProcessingOutput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>410, 304</value>
+  </data>
+  <data name="tpProcessingOutput.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tpProcessingOutput.Text" xml:space="preserve">
+    <value>Processing output</value>
+  </data>
+  <data name="&gt;&gt;tpProcessingOutput.Name" xml:space="preserve">
+    <value>tpProcessingOutput</value>
+  </data>
+  <data name="&gt;&gt;tpProcessingOutput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tpProcessingOutput.Parent" xml:space="preserve">
+    <value>tcPages</value>
+  </data>
+  <data name="&gt;&gt;tpProcessingOutput.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lnkEnabledMapProviders_None.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="lnkEnabledMapProviders_None.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lnkEnabledMapProviders_None.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lnkEnabledMapProviders_None.Location" type="System.Drawing.Point, System.Drawing">
+    <value>330, 276</value>
+  </data>
+  <data name="lnkEnabledMapProviders_None.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 13</value>
+  </data>
+  <data name="lnkEnabledMapProviders_None.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="lnkEnabledMapProviders_None.Text" xml:space="preserve">
+    <value>select none</value>
+  </data>
+  <data name="&gt;&gt;lnkEnabledMapProviders_None.Name" xml:space="preserve">
+    <value>lnkEnabledMapProviders_None</value>
+  </data>
+  <data name="&gt;&gt;lnkEnabledMapProviders_None.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lnkEnabledMapProviders_None.Parent" xml:space="preserve">
+    <value>tpMaps</value>
+  </data>
+  <data name="&gt;&gt;lnkEnabledMapProviders_None.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lnkEnabledMapProviders_Default.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="lnkEnabledMapProviders_Default.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lnkEnabledMapProviders_Default.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lnkEnabledMapProviders_Default.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 276</value>
+  </data>
+  <data name="lnkEnabledMapProviders_Default.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 13</value>
+  </data>
+  <data name="lnkEnabledMapProviders_Default.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="lnkEnabledMapProviders_Default.Text" xml:space="preserve">
+    <value>revert to default list</value>
+  </data>
+  <data name="&gt;&gt;lnkEnabledMapProviders_Default.Name" xml:space="preserve">
+    <value>lnkEnabledMapProviders_Default</value>
+  </data>
+  <data name="&gt;&gt;lnkEnabledMapProviders_Default.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lnkEnabledMapProviders_Default.Parent" xml:space="preserve">
+    <value>tpMaps</value>
+  </data>
+  <data name="&gt;&gt;lnkEnabledMapProviders_Default.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lnkEnabledMapProviders_All.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="lnkEnabledMapProviders_All.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lnkEnabledMapProviders_All.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lnkEnabledMapProviders_All.Location" type="System.Drawing.Point, System.Drawing">
+    <value>276, 276</value>
+  </data>
+  <data name="lnkEnabledMapProviders_All.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
+  <data name="lnkEnabledMapProviders_All.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="lnkEnabledMapProviders_All.Text" xml:space="preserve">
+    <value>select all</value>
+  </data>
+  <data name="&gt;&gt;lnkEnabledMapProviders_All.Name" xml:space="preserve">
+    <value>lnkEnabledMapProviders_All</value>
+  </data>
+  <data name="&gt;&gt;lnkEnabledMapProviders_All.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lnkEnabledMapProviders_All.Parent" xml:space="preserve">
+    <value>tpMaps</value>
+  </data>
+  <data name="&gt;&gt;lnkEnabledMapProviders_All.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="clbEnabledMapProviders.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="clbEnabledMapProviders.IntegralHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="clbEnabledMapProviders.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 131</value>
+  </data>
+  <data name="clbEnabledMapProviders.Size" type="System.Drawing.Size, System.Drawing">
+    <value>374, 142</value>
+  </data>
+  <data name="clbEnabledMapProviders.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;clbEnabledMapProviders.Name" xml:space="preserve">
+    <value>clbEnabledMapProviders</value>
+  </data>
+  <data name="&gt;&gt;clbEnabledMapProviders.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckedListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clbEnabledMapProviders.Parent" xml:space="preserve">
+    <value>tpMaps</value>
+  </data>
+  <data name="&gt;&gt;clbEnabledMapProviders.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblEnabledMapProviders.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblEnabledMapProviders.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblEnabledMapProviders.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 115</value>
+  </data>
+  <data name="lblEnabledMapProviders.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 13</value>
+  </data>
+  <data name="lblEnabledMapProviders.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lblEnabledMapProviders.Text" xml:space="preserve">
+    <value>Enabled map providers</value>
+  </data>
+  <data name="&gt;&gt;lblEnabledMapProviders.Name" xml:space="preserve">
+    <value>lblEnabledMapProviders</value>
+  </data>
+  <data name="&gt;&gt;lblEnabledMapProviders.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblEnabledMapProviders.Parent" xml:space="preserve">
     <value>tpMaps</value>
   </data>
   <data name="&gt;&gt;lblEnabledMapProviders.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;lnkGoogleAPI_Elevation_Check.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ctxSPOOVideos.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="&gt;&gt;tpMaps.Parent" xml:space="preserve">
-    <value>tcPages</value>
-  </data>
-  <data name="clbEnabledMapProviders.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 131</value>
-  </data>
-  <data name="&gt;&gt;lblEnabledMapProviders.Name" xml:space="preserve">
-    <value>lblEnabledMapProviders</value>
-  </data>
-  <data name="lblNormalizeVideo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 58</value>
-  </data>
-  <data name="btnAccept.Text" xml:space="preserve">
-    <value>Save</value>
-  </data>
-  <data name="lnkEnabledMapProviders_Default.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 276</value>
-  </data>
-  <data name="&gt;&gt;cbxLanguage.Name" xml:space="preserve">
-    <value>cbxLanguage</value>
-  </data>
-  <data name="lnkGoogleAPI_Elevation_Check.Location" type="System.Drawing.Point, System.Drawing">
-    <value>315, 87</value>
-  </data>
-  <data name="lnkEnabledMapProviders_All.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="tbxGoogleAPI_Elevation.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="lnkEnabledMapProviders_None.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblNormalizeVideo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 13</value>
-  </data>
-  <data name="lblMapsCacheSize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 13</value>
-  </data>
-  <data name="cbxLanguage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>212, 21</value>
-  </data>
-  <data name="&gt;&gt;tbxGoogleAPI_Elevation.Parent" xml:space="preserve">
-    <value>tpMaps</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Options</value>
-  </data>
-  <data name="&gt;&gt;cbxSetFiledateOnMetadata.Name" xml:space="preserve">
-    <value>cbxSetFiledateOnMetadata</value>
-  </data>
-  <data name="lblGoogleAPI_Elevation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;chkDeleteToTrash.Parent" xml:space="preserve">
-    <value>tpGeneral</value>
-  </data>
-  <data name="&gt;&gt;lblGoogleAPI_Elevation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblLanguage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 21</value>
-  </data>
-  <data name="&gt;&gt;lblNormalizeVideo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="lnkGoogleAPI_Elevation_Get.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="&gt;&gt;ctxSPOOImages.Name" xml:space="preserve">
-    <value>ctxSPOOImages</value>
+  <data name="lnkGoogleAPI_Elevation_Get.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="cbxNormalizeVideo.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="lnkEnabledMapProviders_None.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="chkDeleteToTrash.Text" xml:space="preserve">
-    <value>Move files to trash instead of deleting them</value>
-  </data>
-  <data name="lnkGoogleAPI_Elevation_Check.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="tpMaps.Text" xml:space="preserve">
-    <value>Maps</value>
-  </data>
-  <data name="lblSetFiledateOnMetadata.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="lnkEnabledMapProviders_Default.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="cbxSetFiledateOnMetadata.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="ctxSPOOImages.Size" type="System.Drawing.Size, System.Drawing">
-    <value>223, 88</value>
-  </data>
-  <data name="lblLanguage.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="tpProcessingOutput.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>15, 15, 15, 15</value>
-  </data>
-  <data name="clbEnabledMapProviders.IntegralHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;btnAccept.Name" xml:space="preserve">
-    <value>btnAccept</value>
-  </data>
-  <data name="&gt;&gt;chkDeleteToTrash.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;lblMapsCacheSize.Parent" xml:space="preserve">
-    <value>tpMaps</value>
-  </data>
-  <data name="&gt;&gt;chkMaps_Cache.Name" xml:space="preserve">
-    <value>chkMaps_Cache</value>
-  </data>
-  <data name="cbxNormalizeVideo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>212, 21</value>
-  </data>
-  <data name="&gt;&gt;tpGeneral.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lnkEnabledMapProviders_Default.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lnkGoogleAPI_Elevation_Get.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
-  </data>
-  <data name="lnkMaps_ClearCache.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="clbEnabledMapProviders.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;cbxNormalizeVideo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblGoogleAPI_Elevation.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="chkMaps_Cache.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 17</value>
-  </data>
-  <data name="btnAccept.Location" type="System.Drawing.Point, System.Drawing">
-    <value>355, 356</value>
-  </data>
-  <data name="lblProcessingOutput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 15</value>
-  </data>
-  <data name="ctxSPOOVideosTranscoding.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="tpMaps.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>15, 15, 15, 15</value>
-  </data>
-  <data name="lblProcessingOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 13</value>
-  </data>
-  <data name="ctxSPOOVideosTranscoding.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 204</value>
-  </data>
-  <data name="&gt;&gt;btnAccept.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblProcessingOutput.Text" xml:space="preserve">
-    <value>Show processing output for:</value>
-  </data>
-  <data name="&gt;&gt;cbxSetFiledateOnMetadata.Parent" xml:space="preserve">
-    <value>tpGeneral</value>
-  </data>
-  <data name="&gt;&gt;clbEnabledMapProviders.Name" xml:space="preserve">
-    <value>clbEnabledMapProviders</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tpProcessingOutput.Name" xml:space="preserve">
-    <value>tpProcessingOutput</value>
-  </data>
-  <data name="&gt;&gt;btnAccept.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lnkGoogleAPI_Elevation_Get.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblNormalizeVideo.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
   </data>
   <data name="lnkGoogleAPI_Elevation_Get.Location" type="System.Drawing.Point, System.Drawing">
     <value>230, 87</value>
   </data>
-  <data name="chkDeleteToTrash.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="lnkGoogleAPI_Elevation_Get.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 13</value>
   </data>
-  <data name="&gt;&gt;lblProcessingOutput.Name" xml:space="preserve">
-    <value>lblProcessingOutput</value>
+  <data name="lnkGoogleAPI_Elevation_Get.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
-  <data name="lblEnabledMapProviders.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 115</value>
+  <data name="lnkGoogleAPI_Elevation_Get.Text" xml:space="preserve">
+    <value>Get an API key</value>
   </data>
-  <data name="lnkEnabledMapProviders_Default.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
+  <data name="&gt;&gt;lnkGoogleAPI_Elevation_Get.Name" xml:space="preserve">
+    <value>lnkGoogleAPI_Elevation_Get</value>
   </data>
-  <data name="btnCancel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblNormalizeVideo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
-    <value>btnCancel</value>
-  </data>
-  <data name="btnAccept.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="chkDeleteToTrash.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 17</value>
-  </data>
-  <data name="&gt;&gt;cbxLanguage.Parent" xml:space="preserve">
-    <value>tpGeneral</value>
-  </data>
-  <data name="&gt;&gt;lblGoogleAPI_Elevation.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;lnkGoogleAPI_Elevation_Check.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>frmOptions</value>
-  </data>
-  <data name="lblMapsCacheSize.Text" xml:space="preserve">
-    <value>lblMapsCacheSize</value>
-  </data>
-  <data name="&gt;&gt;cbxNormalizeVideo.Name" xml:space="preserve">
-    <value>cbxNormalizeVideo</value>
-  </data>
-  <data name="&gt;&gt;ctxSPOOVideos.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;lnkEnabledMapProviders_None.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="ctxSPOOVideosTranscoding.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>223, 88</value>
-  </data>
-  <data name="&gt;&gt;ctxSPOOVideos.Parent" xml:space="preserve">
-    <value>tpProcessingOutput</value>
-  </data>
-  <data name="lnkEnabledMapProviders_None.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;chkDeleteToTrash.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblGoogleAPI_Elevation.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;lnkGoogleAPI_Elevation_Get.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lnkGoogleAPI_Elevation_Get.Parent" xml:space="preserve">
     <value>tpMaps</value>
@@ -471,508 +960,247 @@
   <data name="&gt;&gt;lnkGoogleAPI_Elevation_Get.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;ctxSPOOImages.Parent" xml:space="preserve">
-    <value>tpProcessingOutput</value>
-  </data>
-  <data name="&gt;&gt;lnkEnabledMapProviders_All.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lblNormalizeVideo.Text" xml:space="preserve">
-    <value>Convert videos to MP4</value>
-  </data>
-  <data name="chkDeleteToTrash.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lnkGoogleAPI_Elevation_Check.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="cbxNormalizeVideo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>180, 55</value>
-  </data>
-  <data name="&gt;&gt;lblNormalizeVideo.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="ctxSPOOVideos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>223, 88</value>
-  </data>
-  <data name="&gt;&gt;cbxNormalizeVideo.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="chkMaps_Cache.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 18</value>
-  </data>
-  <data name="&gt;&gt;lnkEnabledMapProviders_None.Parent" xml:space="preserve">
-    <value>tpMaps</value>
-  </data>
-  <data name="&gt;&gt;tpProcessingOutput.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lnkEnabledMapProviders_Default.Text" xml:space="preserve">
-    <value>revert to default list</value>
-  </data>
-  <data name="lblGoogleAPI_Elevation.Text" xml:space="preserve">
-    <value>Google Key for Elevation API</value>
-  </data>
-  <data name="&gt;&gt;lblLanguage.Name" xml:space="preserve">
-    <value>lblLanguage</value>
-  </data>
-  <data name="lblLanguage.Text" xml:space="preserve">
-    <value>Language</value>
-  </data>
-  <data name="tpProcessingOutput.Text" xml:space="preserve">
-    <value>Processing output</value>
-  </data>
-  <data name="&gt;&gt;cbxSetFiledateOnMetadata.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterParent</value>
-  </data>
-  <data name="tbxGoogleAPI_Elevation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;lnkEnabledMapProviders_Default.Parent" xml:space="preserve">
-    <value>tpMaps</value>
-  </data>
-  <data name="lnkMaps_ClearCache.Location" type="System.Drawing.Point, System.Drawing">
-    <value>145, 18</value>
-  </data>
-  <data name="btnCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="tpGeneral.Text" xml:space="preserve">
-    <value>General</value>
-  </data>
-  <data name="tbxGoogleAPI_Elevation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 64</value>
-  </data>
-  <data name="&gt;&gt;lnkGoogleAPI_Elevation_Get.Name" xml:space="preserve">
-    <value>lnkGoogleAPI_Elevation_Get</value>
-  </data>
-  <data name="tpMaps.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="ctxSPOOVideos.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>223, 88</value>
-  </data>
-  <data name="&gt;&gt;lnkEnabledMapProviders_Default.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lnkGoogleAPI_Elevation_Get.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lnkEnabledMapProviders_All.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="btnAccept.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;lblMapsCacheSize.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblLanguage.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;lblSetFiledateOnMetadata.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="lnkEnabledMapProviders_None.Location" type="System.Drawing.Point, System.Drawing">
-    <value>330, 276</value>
-  </data>
-  <data name="tpProcessingOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>410, 304</value>
-  </data>
-  <data name="ctxSPOOImages.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>223, 88</value>
-  </data>
-  <data name="chkMaps_Cache.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;ctxSPOOVideosTranscoding.Name" xml:space="preserve">
-    <value>ctxSPOOVideosTranscoding</value>
-  </data>
-  <data name="ctxSPOOVideos.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;lblGoogleAPI_Elevation.Parent" xml:space="preserve">
-    <value>tpMaps</value>
-  </data>
-  <data name="&gt;&gt;tcPages.Name" xml:space="preserve">
-    <value>tcPages</value>
-  </data>
-  <data name="lnkMaps_ClearCache.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;chkMaps_Cache.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="chkDeleteToTrash.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblProcessingOutput.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lnkGoogleAPI_Elevation_Check.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 13</value>
-  </data>
-  <data name="&gt;&gt;ctxSPOOVideosTranscoding.Type" xml:space="preserve">
-    <value>MLocati.MediaData.ctxShowProcessingOutputOptions, MediaData, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="lblProcessingOutput.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblSetFiledateOnMetadata.Text" xml:space="preserve">
-    <value>Set file dates to metadata value</value>
-  </data>
-  <data name="&gt;&gt;lblEnabledMapProviders.Parent" xml:space="preserve">
-    <value>tpMaps</value>
-  </data>
-  <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="ctxSPOOVideosTranscoding.Size" type="System.Drawing.Size, System.Drawing">
-    <value>223, 88</value>
-  </data>
-  <data name="&gt;&gt;tpProcessingOutput.Parent" xml:space="preserve">
-    <value>tcPages</value>
-  </data>
-  <data name="&gt;&gt;btnAccept.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lnkEnabledMapProviders_All.Location" type="System.Drawing.Point, System.Drawing">
-    <value>276, 276</value>
-  </data>
-  <data name="&gt;&gt;lblProcessingOutput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblGoogleAPI_Elevation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 13</value>
-  </data>
-  <data name="lnkGoogleAPI_Elevation_Get.Text" xml:space="preserve">
-    <value>Get an API key</value>
-  </data>
-  <data name="&gt;&gt;tcPages.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tpGeneral.Name" xml:space="preserve">
-    <value>tpGeneral</value>
-  </data>
-  <data name="tcPages.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;clbEnabledMapProviders.Parent" xml:space="preserve">
-    <value>tpMaps</value>
-  </data>
-  <data name="lnkGoogleAPI_Elevation_Get.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="tbxGoogleAPI_Elevation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>374, 20</value>
-  </data>
-  <data name="&gt;&gt;ctxSPOOVideos.Name" xml:space="preserve">
-    <value>ctxSPOOVideos</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>442, 391</value>
-  </data>
-  <data name="lblMapsCacheSize.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;lblLanguage.Parent" xml:space="preserve">
-    <value>tpGeneral</value>
-  </data>
-  <data name="btnCancel.Text" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <data name="&gt;&gt;tcPages.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lnkEnabledMapProviders_None.Text" xml:space="preserve">
-    <value>select none</value>
-  </data>
-  <data name="btnAccept.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="&gt;&gt;lnkMaps_ClearCache.Name" xml:space="preserve">
-    <value>lnkMaps_ClearCache</value>
-  </data>
-  <data name="ctxSPOOImages.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>223, 88</value>
-  </data>
-  <data name="&gt;&gt;tpProcessingOutput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="chkMaps_Cache.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="chkMaps_Cache.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tpMaps.Name" xml:space="preserve">
-    <value>tpMaps</value>
-  </data>
-  <data name="lblLanguage.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="cbxLanguage.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblGoogleAPI_Elevation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 48</value>
-  </data>
-  <data name="lnkEnabledMapProviders_All.Text" xml:space="preserve">
-    <value>select all</value>
-  </data>
-  <data name="lblMapsCacheSize.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="clbEnabledMapProviders.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="tpProcessingOutput.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;lblMapsCacheSize.Name" xml:space="preserve">
-    <value>lblMapsCacheSize</value>
-  </data>
-  <data name="tcPages.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
-  </data>
-  <data name="lblMapsCacheSize.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="ctxSPOOVideos.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>223, 88</value>
-  </data>
-  <data name="lblSetFiledateOnMetadata.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 13</value>
-  </data>
-  <data name="&gt;&gt;lnkEnabledMapProviders_None.Name" xml:space="preserve">
-    <value>lnkEnabledMapProviders_None</value>
-  </data>
-  <data name="ctxSPOOVideosTranscoding.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>223, 88</value>
-  </data>
-  <data name="tcPages.Size" type="System.Drawing.Size, System.Drawing">
-    <value>418, 330</value>
-  </data>
-  <data name="&gt;&gt;tbxGoogleAPI_Elevation.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;cbxNormalizeVideo.Parent" xml:space="preserve">
-    <value>tpGeneral</value>
-  </data>
-  <data name="tcPages.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lblGoogleAPI_Elevation.Name" xml:space="preserve">
-    <value>lblGoogleAPI_Elevation</value>
-  </data>
-  <data name="&gt;&gt;lblNormalizeVideo.Parent" xml:space="preserve">
-    <value>tpGeneral</value>
-  </data>
-  <data name="tpGeneral.Size" type="System.Drawing.Size, System.Drawing">
-    <value>410, 304</value>
-  </data>
-  <data name="&gt;&gt;lnkEnabledMapProviders_None.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbxLanguage.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lblLanguage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
-  </data>
-  <data name="&gt;&gt;lnkGoogleAPI_Elevation_Check.Name" xml:space="preserve">
-    <value>lnkGoogleAPI_Elevation_Check</value>
-  </data>
-  <data name="&gt;&gt;lnkEnabledMapProviders_Default.Name" xml:space="preserve">
-    <value>lnkEnabledMapProviders_Default</value>
-  </data>
-  <data name="&gt;&gt;clbEnabledMapProviders.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckedListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lnkGoogleAPI_Elevation_Check.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="cbxSetFiledateOnMetadata.Location" type="System.Drawing.Point, System.Drawing">
-    <value>180, 92</value>
+  <data name="lnkGoogleAPI_Elevation_Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>315, 87</value>
   </data>
-  <data name="&gt;&gt;ctxSPOOVideosTranscoding.Parent" xml:space="preserve">
-    <value>tpProcessingOutput</value>
+  <data name="lnkGoogleAPI_Elevation_Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
   </data>
-  <data name="tpMaps.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="lnkGoogleAPI_Elevation_Check.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="lblEnabledMapProviders.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="lnkGoogleAPI_Elevation_Check.Text" xml:space="preserve">
+    <value>Check this key</value>
   </data>
-  <data name="lblSetFiledateOnMetadata.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 95</value>
+  <data name="&gt;&gt;lnkGoogleAPI_Elevation_Check.Name" xml:space="preserve">
+    <value>lnkGoogleAPI_Elevation_Check</value>
   </data>
-  <data name="cbxLanguage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>180, 18</value>
-  </data>
-  <data name="&gt;&gt;lnkMaps_ClearCache.Type" xml:space="preserve">
+  <data name="&gt;&gt;lnkGoogleAPI_Elevation_Check.Type" xml:space="preserve">
     <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ctxSPOOVideos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 116</value>
-  </data>
-  <data name="&gt;&gt;lnkMaps_ClearCache.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lnkGoogleAPI_Elevation_Check.Parent" xml:space="preserve">
     <value>tpMaps</value>
   </data>
-  <data name="&gt;&gt;tbxGoogleAPI_Elevation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;lnkGoogleAPI_Elevation_Check.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
-  <data name="clbEnabledMapProviders.Size" type="System.Drawing.Size, System.Drawing">
-    <value>374, 142</value>
+  <data name="tbxGoogleAPI_Elevation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
-  <data name="&gt;&gt;lblEnabledMapProviders.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="tbxGoogleAPI_Elevation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 64</value>
   </data>
-  <data name="ctxSPOOImages.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="tbxGoogleAPI_Elevation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>374, 20</value>
   </data>
-  <data name="&gt;&gt;lblSetFiledateOnMetadata.Parent" xml:space="preserve">
-    <value>tpGeneral</value>
-  </data>
-  <data name="&gt;&gt;chkMaps_Cache.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="lblSetFiledateOnMetadata.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;lblMapsCacheSize.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;cbxLanguage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="chkMaps_Cache.Text" xml:space="preserve">
-    <value>Use cache for maps</value>
-  </data>
-  <data name="btnAccept.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;lblLanguage.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;lblProcessingOutput.Parent" xml:space="preserve">
-    <value>tpProcessingOutput</value>
-  </data>
-  <data name="&gt;&gt;lnkEnabledMapProviders_All.Name" xml:space="preserve">
-    <value>lnkEnabledMapProviders_All</value>
-  </data>
-  <data name="lnkEnabledMapProviders_All.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="cbxSetFiledateOnMetadata.Size" type="System.Drawing.Size, System.Drawing">
-    <value>212, 21</value>
-  </data>
-  <data name="&gt;&gt;lnkEnabledMapProviders_All.Parent" xml:space="preserve">
-    <value>tpMaps</value>
-  </data>
-  <data name="lnkEnabledMapProviders_Default.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 13</value>
-  </data>
-  <data name="&gt;&gt;tpMaps.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="ctxSPOOImages.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 28</value>
-  </data>
-  <data name="ctxSPOOVideosTranscoding.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="lnkEnabledMapProviders_None.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 13</value>
-  </data>
-  <data name="&gt;&gt;lblNormalizeVideo.Name" xml:space="preserve">
-    <value>lblNormalizeVideo</value>
-  </data>
-  <data name="chkDeleteToTrash.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 129</value>
-  </data>
-  <data name="lblSetFiledateOnMetadata.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblEnabledMapProviders.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;clbEnabledMapProviders.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="lblEnabledMapProviders.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;lblSetFiledateOnMetadata.Name" xml:space="preserve">
-    <value>lblSetFiledateOnMetadata</value>
-  </data>
-  <data name="&gt;&gt;ctxSPOOImages.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lblMapsCacheSize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>244, 18</value>
-  </data>
-  <data name="lnkMaps_ClearCache.Text" xml:space="preserve">
-    <value>Clear maps cache</value>
-  </data>
-  <data name="&gt;&gt;chkDeleteToTrash.Name" xml:space="preserve">
-    <value>chkDeleteToTrash</value>
+  <data name="tbxGoogleAPI_Elevation.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
   <data name="&gt;&gt;tbxGoogleAPI_Elevation.Name" xml:space="preserve">
     <value>tbxGoogleAPI_Elevation</value>
   </data>
-  <data name="&gt;&gt;lblProcessingOutput.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;tbxGoogleAPI_Elevation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblProcessingOutput.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;tbxGoogleAPI_Elevation.Parent" xml:space="preserve">
+    <value>tpMaps</value>
   </data>
-  <data name="lnkEnabledMapProviders_All.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 13</value>
+  <data name="&gt;&gt;tbxGoogleAPI_Elevation.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
-  <data name="lblEnabledMapProviders.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 13</value>
-  </data>
-  <data name="&gt;&gt;lblSetFiledateOnMetadata.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lnkEnabledMapProviders_Default.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblGoogleAPI_Elevation.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>274, 356</value>
+  <data name="lblGoogleAPI_Elevation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;cbxSetFiledateOnMetadata.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lblGoogleAPI_Elevation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 48</value>
+  </data>
+  <data name="lblGoogleAPI_Elevation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 13</value>
+  </data>
+  <data name="lblGoogleAPI_Elevation.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblGoogleAPI_Elevation.Text" xml:space="preserve">
+    <value>Google Key for Elevation API</value>
+  </data>
+  <data name="&gt;&gt;lblGoogleAPI_Elevation.Name" xml:space="preserve">
+    <value>lblGoogleAPI_Elevation</value>
+  </data>
+  <data name="&gt;&gt;lblGoogleAPI_Elevation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblGoogleAPI_Elevation.Parent" xml:space="preserve">
+    <value>tpMaps</value>
+  </data>
+  <data name="&gt;&gt;lblGoogleAPI_Elevation.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lblMapsCacheSize.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblMapsCacheSize.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblMapsCacheSize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>244, 18</value>
+  </data>
+  <data name="lblMapsCacheSize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 13</value>
+  </data>
+  <data name="lblMapsCacheSize.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblMapsCacheSize.Text" xml:space="preserve">
+    <value>lblMapsCacheSize</value>
+  </data>
+  <data name="&gt;&gt;lblMapsCacheSize.Name" xml:space="preserve">
+    <value>lblMapsCacheSize</value>
+  </data>
+  <data name="&gt;&gt;lblMapsCacheSize.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMapsCacheSize.Parent" xml:space="preserve">
+    <value>tpMaps</value>
+  </data>
+  <data name="&gt;&gt;lblMapsCacheSize.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="lnkMaps_ClearCache.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lnkMaps_ClearCache.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lnkMaps_ClearCache.Location" type="System.Drawing.Point, System.Drawing">
+    <value>145, 18</value>
+  </data>
+  <data name="lnkMaps_ClearCache.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 13</value>
+  </data>
+  <data name="lnkMaps_ClearCache.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lnkMaps_ClearCache.Text" xml:space="preserve">
+    <value>Clear maps cache</value>
+  </data>
+  <data name="&gt;&gt;lnkMaps_ClearCache.Name" xml:space="preserve">
+    <value>lnkMaps_ClearCache</value>
+  </data>
+  <data name="&gt;&gt;lnkMaps_ClearCache.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lnkMaps_ClearCache.Parent" xml:space="preserve">
+    <value>tpMaps</value>
+  </data>
+  <data name="&gt;&gt;lnkMaps_ClearCache.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="chkMaps_Cache.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkMaps_Cache.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkMaps_Cache.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 18</value>
+  </data>
+  <data name="chkMaps_Cache.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 17</value>
+  </data>
+  <data name="chkMaps_Cache.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="chkMaps_Cache.Text" xml:space="preserve">
+    <value>Use cache for maps</value>
+  </data>
+  <data name="&gt;&gt;chkMaps_Cache.Name" xml:space="preserve">
+    <value>chkMaps_Cache</value>
+  </data>
+  <data name="&gt;&gt;chkMaps_Cache.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkMaps_Cache.Parent" xml:space="preserve">
+    <value>tpMaps</value>
+  </data>
+  <data name="&gt;&gt;chkMaps_Cache.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="tpMaps.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tpMaps.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>15, 15, 15, 15</value>
+  </data>
+  <data name="tpMaps.Size" type="System.Drawing.Size, System.Drawing">
+    <value>410, 304</value>
+  </data>
+  <data name="tpMaps.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tpMaps.Text" xml:space="preserve">
+    <value>Maps</value>
+  </data>
+  <data name="&gt;&gt;tpMaps.Name" xml:space="preserve">
+    <value>tpMaps</value>
+  </data>
+  <data name="&gt;&gt;tpMaps.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tpMaps.Parent" xml:space="preserve">
+    <value>tcPages</value>
+  </data>
+  <data name="&gt;&gt;tpMaps.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tcPages.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="tcPages.Size" type="System.Drawing.Size, System.Drawing">
+    <value>418, 330</value>
+  </data>
+  <data name="tcPages.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tcPages.Name" xml:space="preserve">
+    <value>tcPages</value>
   </data>
   <data name="&gt;&gt;tcPages.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="tpGeneral.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+  <data name="&gt;&gt;tcPages.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="&gt;&gt;ctxSPOOImages.Type" xml:space="preserve">
-    <value>MLocati.MediaData.ctxShowProcessingOutputOptions, MediaData, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="lblEnabledMapProviders.Text" xml:space="preserve">
-    <value>Enabled map providers</value>
-  </data>
-  <data name="tpProcessingOutput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="lblNormalizeVideo.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;tcPages.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>442, 391</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmOptions</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

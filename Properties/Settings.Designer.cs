@@ -226,5 +226,29 @@ namespace MLocati.MediaData.Properties {
                 this["DoUpgradeSettings"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("7")]
+        public double MaxAllowedDistanceError_Horizontal {
+            get {
+                return ((double)(this["MaxAllowedDistanceError_Horizontal"]));
+            }
+            set {
+                this["MaxAllowedDistanceError_Horizontal"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2")]
+        public double MaxAllowedDistanceError_Vertical {
+            get {
+                return ((double)(this["MaxAllowedDistanceError_Vertical"]));
+            }
+            set {
+                this["MaxAllowedDistanceError_Vertical"] = value;
+            }
+        }
     }
 }

@@ -157,6 +157,36 @@
   <data name="lblLanguage.Text" xml:space="preserve">
     <value>Lingua</value>
   </data>
+  <data name="lblMaxErrVertical.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 13</value>
+  </data>
+  <data name="lblMaxErrVertical.Text" xml:space="preserve">
+    <value>Errore max distanza verticale</value>
+  </data>
+  <data name="lblMaxErrDefVertical.Location" type="System.Drawing.Point, System.Drawing">
+    <value>334, 159</value>
+  </data>
+  <data name="lblMaxErrDefHorizontal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>334, 125</value>
+  </data>
+  <data name="lblMaxErrDefLabelVertical.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 13</value>
+  </data>
+  <data name="lblMaxErrDefLabelVertical.Text" xml:space="preserve">
+    <value>m. - Predefinito:</value>
+  </data>
+  <data name="lblMaxErrDefLabelHorizontal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 13</value>
+  </data>
+  <data name="lblMaxErrDefLabelHorizontal.Text" xml:space="preserve">
+    <value>m. - Predefinito:</value>
+  </data>
+  <data name="lblMaxErrHorizontal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 13</value>
+  </data>
+  <data name="lblMaxErrHorizontal.Text" xml:space="preserve">
+    <value>Errore max distanza orizzontale</value>
+  </data>
   <data name="tpProcessingOutput.Text" xml:space="preserve">
     <value>Output delle elaborazioni</value>
   </data>
@@ -234,6 +264,10 @@
   </data>
   <data name="chkMaps_Cache.Text" xml:space="preserve">
     <value>Usa la cache per le mappe</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Opzioni</value>

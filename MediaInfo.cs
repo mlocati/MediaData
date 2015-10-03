@@ -225,53 +225,67 @@ namespace MLocati.MediaData
             return clone;
         }
 
-        public virtual bool CheckUpdatedInfo(MediaInfo original, MediaInfo newValues)
+        public virtual string CheckUpdatedInfo(MediaInfo original, MediaInfo wantedValues)
         {
-            if (newValues._timestampMin.HasValue)
+            // "this" in this context represents the newly written data
+            if (wantedValues._timestampMin.HasValue)
             {
                 if (!this._timestampMin.HasValue)
                 {
-                    return false;
+                    return i18n.Unable_to_set_metadata_timestamp;
                 }
-                if (newValues._timestampMin.Value != this._timestampMin.Value || newValues._timestampMax.Value != this._timestampMax.Value)
+                if (wantedValues._timestampMin.Value != this._timestampMin.Value)
                 {
-                    return false;
+                    return string.Format(i18n.Written_timestamp_X_is_different_from_wanted_timestamp_Y, this._timestampMin.Value, wantedValues._timestampMin.Value);
+                }
+                if (wantedValues._timestampMax.Value != this._timestampMax.Value)
+                {
+                    return string.Format(i18n.Written_timestamp_X_is_different_from_wanted_timestamp_Y, this._timestampMax.Value, wantedValues._timestampMax.Value);
                 }
             }
             else
             {
                 if (this._timestampMin.HasValue)
                 {
-                    return false;
+                    return i18n.Unable_to_remove_metadata_timestamp;
                 }
             }
-            if (newValues._position == null)
+            if (wantedValues._position == null)
             {
                 if (this._position != null)
                 {
-                    return false;
+                    return i18n.Unable_to_remove_metadata_position;
                 }
             }
             else
             {
                 if (this._position == null)
                 {
-                    return false;
+                    return i18n.Unable_to_set_metadata_position;
                 }
-                if (this._position.DistanceTo(newValues.Position) > 5D || this._position.Alt.HasValue != newValues._position.Alt.HasValue)
+                double horizontalDistanceError = this._position.DistanceTo(wantedValues.Position);
+                if (horizontalDistanceError > MediaData.Properties.Settings.Default.MaxAllowedDistanceError_Horizontal)
                 {
-                    return false;
+                    return string.Format(i18n.Written_horizontal_position_more_distant_than_X_from_wanted__max_allowed_is_Y, horizontalDistanceError, MediaData.Properties.Settings.Default.MaxAllowedDistanceError_Horizontal);
                 }
                 if (this._position.Alt.HasValue)
                 {
-                    decimal deltaAlt = Math.Abs(newValues.Position.Alt.Value - this._position.Alt.Value);
-                    if (deltaAlt > 1M)
+                    if (!wantedValues._position.Alt.HasValue)
                     {
-                        return false;
+                        return i18n.Unable_to_remove_metadata_altitude;
+                    }
+                    decimal verticalDistanceError = Math.Abs(wantedValues.Position.Alt.Value - this._position.Alt.Value);
+                    if (verticalDistanceError > Convert.ToDecimal(MediaData.Properties.Settings.Default.MaxAllowedDistanceError_Vertical))
+                    {
+                        return string.Format(i18n.Written_vertical_position_more_distant_than_X_from_wanted__max_allowed_is_Y, verticalDistanceError, MediaData.Properties.Settings.Default.MaxAllowedDistanceError_Vertical);
                     }
                 }
+                else if (wantedValues._position.Alt.HasValue)
+                {
+                    return i18n.Unable_to_set_metadata_altitude;
+                }
             }
-            return true;
+            return null;
         }
 
         public virtual void ShownTimeZoneChanged(TimeZoneInfo oldTZI, TimeZoneInfo newTZI)

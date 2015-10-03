@@ -143,6 +143,24 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Bad number of audio tracks written (before: {0}, after: {1}).
+        /// </summary>
+        internal static string Bad_number_of_audio_tracks_written__before_X_after_Y {
+            get {
+                return ResourceManager.GetString("Bad_number_of_audio_tracks_written__before_X_after_Y", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Bad number of video tracks written (before: {0}, after: {1}).
+        /// </summary>
+        internal static string Bad_number_of_video_tracks_written__before_X_after_Y {
+            get {
+                return ResourceManager.GetString("Bad_number_of_video_tracks_written__before_X_after_Y", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Keep original pattern.
         /// </summary>
         internal static string BatchRename_Format_Keep {
@@ -1694,11 +1712,75 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Unable to remove the altitude from the metadata.
+        /// </summary>
+        internal static string Unable_to_remove_metadata_altitude {
+            get {
+                return ResourceManager.GetString("Unable_to_remove_metadata_altitude", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Unable to remove the position from the metadata.
+        /// </summary>
+        internal static string Unable_to_remove_metadata_position {
+            get {
+                return ResourceManager.GetString("Unable_to_remove_metadata_position", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Unable to remove the date/time from the metadata.
+        /// </summary>
+        internal static string Unable_to_remove_metadata_timestamp {
+            get {
+                return ResourceManager.GetString("Unable_to_remove_metadata_timestamp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Unable to set the altitude in the metadata.
+        /// </summary>
+        internal static string Unable_to_set_metadata_altitude {
+            get {
+                return ResourceManager.GetString("Unable_to_set_metadata_altitude", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Unable to set the position in the metadata.
+        /// </summary>
+        internal static string Unable_to_set_metadata_position {
+            get {
+                return ResourceManager.GetString("Unable_to_set_metadata_position", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Unable to set the date/time in the metadata.
+        /// </summary>
+        internal static string Unable_to_set_metadata_timestamp {
+            get {
+                return ResourceManager.GetString("Unable_to_set_metadata_timestamp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a It was not possible to set the new metadata..
         /// </summary>
         internal static string Unable_to_set_new_metadata {
             get {
                 return ResourceManager.GetString("Unable_to_set_new_metadata", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a It was not possible to update the metadata.
+        ///Reason: {0}.
+        /// </summary>
+        internal static string Unable_to_set_new_metadata_because_X {
+            get {
+                return ResourceManager.GetString("Unable_to_set_new_metadata_because_X", resourceCulture);
             }
         }
         
@@ -1762,6 +1844,33 @@ namespace MLocati.MediaData {
         internal static string Videos_when_transcoding {
             get {
                 return ResourceManager.GetString("Videos_when_transcoding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a The new horizontal position written in the metadata is distant {0} from the wanted position (max allowed error is {1}).
+        /// </summary>
+        internal static string Written_horizontal_position_more_distant_than_X_from_wanted__max_allowed_is_Y {
+            get {
+                return ResourceManager.GetString("Written_horizontal_position_more_distant_than_X_from_wanted__max_allowed_is_Y", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a The new date/time written ({0}) is different from the wanted one ({1}).
+        /// </summary>
+        internal static string Written_timestamp_X_is_different_from_wanted_timestamp_Y {
+            get {
+                return ResourceManager.GetString("Written_timestamp_X_is_different_from_wanted_timestamp_Y", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a The new vertical position written in the metadata is distant {0} from the wanted position (max allowed error is {1}).
+        /// </summary>
+        internal static string Written_vertical_position_more_distant_than_X_from_wanted__max_allowed_is_Y {
+            get {
+                return ResourceManager.GetString("Written_vertical_position_more_distant_than_X_from_wanted__max_allowed_is_Y", resourceCulture);
             }
         }
         

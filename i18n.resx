@@ -700,4 +700,41 @@ Error message:
   <data name="Time_total" xml:space="preserve">
     <value>Total time</value>
   </data>
+  <data name="Bad_number_of_audio_tracks_written__before_X_after_Y" xml:space="preserve">
+    <value>Bad number of audio tracks written (before: {0}, after: {1})</value>
+  </data>
+  <data name="Bad_number_of_video_tracks_written__before_X_after_Y" xml:space="preserve">
+    <value>Bad number of video tracks written (before: {0}, after: {1})</value>
+  </data>
+  <data name="Unable_to_remove_metadata_altitude" xml:space="preserve">
+    <value>Unable to remove the altitude from the metadata</value>
+  </data>
+  <data name="Unable_to_remove_metadata_position" xml:space="preserve">
+    <value>Unable to remove the position from the metadata</value>
+  </data>
+  <data name="Unable_to_remove_metadata_timestamp" xml:space="preserve">
+    <value>Unable to remove the date/time from the metadata</value>
+  </data>
+  <data name="Unable_to_set_metadata_altitude" xml:space="preserve">
+    <value>Unable to set the altitude in the metadata</value>
+  </data>
+  <data name="Unable_to_set_metadata_position" xml:space="preserve">
+    <value>Unable to set the position in the metadata</value>
+  </data>
+  <data name="Unable_to_set_metadata_timestamp" xml:space="preserve">
+    <value>Unable to set the date/time in the metadata</value>
+  </data>
+  <data name="Unable_to_set_new_metadata_because_X" xml:space="preserve">
+    <value>It was not possible to update the metadata.
+Reason: {0}</value>
+  </data>
+  <data name="Written_horizontal_position_more_distant_than_X_from_wanted__max_allowed_is_Y" xml:space="preserve">
+    <value>The new horizontal position written in the metadata is distant {0} from the wanted position (max allowed error is {1})</value>
+  </data>
+  <data name="Written_timestamp_X_is_different_from_wanted_timestamp_Y" xml:space="preserve">
+    <value>The new date/time written ({0}) is different from the wanted one ({1})</value>
+  </data>
+  <data name="Written_vertical_position_more_distant_than_X_from_wanted__max_allowed_is_Y" xml:space="preserve">
+    <value>The new vertical position written in the metadata is distant {0} from the wanted position (max allowed error is {1})</value>
+  </data>
 </root>

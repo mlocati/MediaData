@@ -13,8 +13,8 @@ namespace MLocati.MediaData
 
         public class UnableToSetNewMetadataException : Exception
         {
-            public UnableToSetNewMetadataException()
-                : base(i18n.Unable_to_set_new_metadata)
+            public UnableToSetNewMetadataException(string why)
+                : base(string.Format(i18n.Unable_to_set_new_metadata_because_X, why))
             { }
         }
 
@@ -249,9 +249,10 @@ namespace MLocati.MediaData
                 if (result == null)
                 {
                     MediaInfo updatedInfo = this.GetInfo(tempFilename);
-                    if (!updatedInfo.CheckUpdatedInfo(this.Info, newInfo))
+                    string updateError = updatedInfo.CheckUpdatedInfo(this.Info, newInfo);
+                    if (updateError != null)
                     {
-                        result = new UnableToSetNewMetadataException();
+                        result = new UnableToSetNewMetadataException(updateError);
                     }
                     else
                     {

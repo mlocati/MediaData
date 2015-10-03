@@ -15,18 +15,22 @@ namespace MLocati.MediaData
         {
             public int AudioTracks = 0;
             public int VideoTracks = 0;
-            public override bool CheckUpdatedInfo(MediaInfo original, MediaInfo newValues)
+            public override string CheckUpdatedInfo(MediaInfo original, MediaInfo newValues)
             {
-                if (!base.CheckUpdatedInfo(original, newValues))
+                string updateError = base.CheckUpdatedInfo(original, newValues);
+                if (updateError == null)
                 {
-                    return false;
+                    VideoInfo orig = (VideoInfo)original;
+                    if (this.VideoTracks != orig.VideoTracks)
+                    {
+                        updateError = string.Format(i18n.Bad_number_of_video_tracks_written__before_X_after_Y, orig.VideoTracks, this.VideoTracks);
+                    }
+                    else if (this.AudioTracks != orig.AudioTracks)
+                    {
+                        updateError = string.Format(i18n.Bad_number_of_audio_tracks_written__before_X_after_Y, orig.VideoTracks, this.VideoTracks);
+                    }
                 }
-                VideoInfo orig = (VideoInfo)original;
-                if (this.AudioTracks != orig.AudioTracks || this.VideoTracks != orig.VideoTracks)
-                {
-                    return false;
-                }
-                return true;
+                return updateError;
             }
         }
 

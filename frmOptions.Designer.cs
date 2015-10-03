@@ -39,8 +39,16 @@
             this.chkDeleteToTrash = new System.Windows.Forms.CheckBox();
             this.tcPages = new System.Windows.Forms.TabControl();
             this.tpGeneral = new System.Windows.Forms.TabPage();
+            this.nudMaxErrVertical = new System.Windows.Forms.NumericUpDown();
+            this.nudMaxErrHorizontal = new System.Windows.Forms.NumericUpDown();
             this.cbxLanguage = new System.Windows.Forms.ComboBox();
             this.lblLanguage = new System.Windows.Forms.Label();
+            this.lblMaxErrVertical = new System.Windows.Forms.Label();
+            this.lblMaxErrDefVertical = new System.Windows.Forms.Label();
+            this.lblMaxErrDefHorizontal = new System.Windows.Forms.Label();
+            this.lblMaxErrDefLabelVertical = new System.Windows.Forms.Label();
+            this.lblMaxErrDefLabelHorizontal = new System.Windows.Forms.Label();
+            this.lblMaxErrHorizontal = new System.Windows.Forms.Label();
             this.tpProcessingOutput = new System.Windows.Forms.TabPage();
             this.ctxSPOOVideosTranscoding = new MLocati.MediaData.ctxShowProcessingOutputOptions();
             this.ctxSPOOImages = new MLocati.MediaData.ctxShowProcessingOutputOptions();
@@ -60,6 +68,8 @@
             this.chkMaps_Cache = new System.Windows.Forms.CheckBox();
             this.tcPages.SuspendLayout();
             this.tpGeneral.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMaxErrVertical)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMaxErrHorizontal)).BeginInit();
             this.tpProcessingOutput.SuspendLayout();
             this.tpMaps.SuspendLayout();
             this.SuspendLayout();
@@ -71,9 +81,9 @@
             // 
             // cbxNormalizeVideo
             // 
-            resources.ApplyResources(this.cbxNormalizeVideo, "cbxNormalizeVideo");
             this.cbxNormalizeVideo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxNormalizeVideo.FormattingEnabled = true;
+            resources.ApplyResources(this.cbxNormalizeVideo, "cbxNormalizeVideo");
             this.cbxNormalizeVideo.Name = "cbxNormalizeVideo";
             // 
             // lblSetFiledateOnMetadata
@@ -83,9 +93,9 @@
             // 
             // cbxSetFiledateOnMetadata
             // 
-            resources.ApplyResources(this.cbxSetFiledateOnMetadata, "cbxSetFiledateOnMetadata");
             this.cbxSetFiledateOnMetadata.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxSetFiledateOnMetadata.FormattingEnabled = true;
+            resources.ApplyResources(this.cbxSetFiledateOnMetadata, "cbxSetFiledateOnMetadata");
             this.cbxSetFiledateOnMetadata.Name = "cbxSetFiledateOnMetadata";
             // 
             // btnCancel
@@ -124,16 +134,46 @@
             // 
             // tpGeneral
             // 
-            resources.ApplyResources(this.tpGeneral, "tpGeneral");
+            this.tpGeneral.Controls.Add(this.nudMaxErrVertical);
+            this.tpGeneral.Controls.Add(this.nudMaxErrHorizontal);
             this.tpGeneral.Controls.Add(this.cbxLanguage);
             this.tpGeneral.Controls.Add(this.lblLanguage);
             this.tpGeneral.Controls.Add(this.lblNormalizeVideo);
+            this.tpGeneral.Controls.Add(this.lblMaxErrVertical);
+            this.tpGeneral.Controls.Add(this.lblMaxErrDefVertical);
+            this.tpGeneral.Controls.Add(this.lblMaxErrDefHorizontal);
+            this.tpGeneral.Controls.Add(this.lblMaxErrDefLabelVertical);
+            this.tpGeneral.Controls.Add(this.lblMaxErrDefLabelHorizontal);
+            this.tpGeneral.Controls.Add(this.lblMaxErrHorizontal);
             this.tpGeneral.Controls.Add(this.lblSetFiledateOnMetadata);
             this.tpGeneral.Controls.Add(this.chkDeleteToTrash);
             this.tpGeneral.Controls.Add(this.cbxNormalizeVideo);
             this.tpGeneral.Controls.Add(this.cbxSetFiledateOnMetadata);
+            resources.ApplyResources(this.tpGeneral, "tpGeneral");
             this.tpGeneral.Name = "tpGeneral";
             this.tpGeneral.UseVisualStyleBackColor = true;
+            // 
+            // nudMaxErrVertical
+            // 
+            this.nudMaxErrVertical.DecimalPlaces = 2;
+            resources.ApplyResources(this.nudMaxErrVertical, "nudMaxErrVertical");
+            this.nudMaxErrVertical.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudMaxErrVertical.Name = "nudMaxErrVertical";
+            // 
+            // nudMaxErrHorizontal
+            // 
+            this.nudMaxErrHorizontal.DecimalPlaces = 2;
+            resources.ApplyResources(this.nudMaxErrHorizontal, "nudMaxErrHorizontal");
+            this.nudMaxErrHorizontal.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudMaxErrHorizontal.Name = "nudMaxErrHorizontal";
             // 
             // cbxLanguage
             // 
@@ -147,13 +187,43 @@
             resources.ApplyResources(this.lblLanguage, "lblLanguage");
             this.lblLanguage.Name = "lblLanguage";
             // 
+            // lblMaxErrVertical
+            // 
+            resources.ApplyResources(this.lblMaxErrVertical, "lblMaxErrVertical");
+            this.lblMaxErrVertical.Name = "lblMaxErrVertical";
+            // 
+            // lblMaxErrDefVertical
+            // 
+            resources.ApplyResources(this.lblMaxErrDefVertical, "lblMaxErrDefVertical");
+            this.lblMaxErrDefVertical.Name = "lblMaxErrDefVertical";
+            // 
+            // lblMaxErrDefHorizontal
+            // 
+            resources.ApplyResources(this.lblMaxErrDefHorizontal, "lblMaxErrDefHorizontal");
+            this.lblMaxErrDefHorizontal.Name = "lblMaxErrDefHorizontal";
+            // 
+            // lblMaxErrDefLabelVertical
+            // 
+            resources.ApplyResources(this.lblMaxErrDefLabelVertical, "lblMaxErrDefLabelVertical");
+            this.lblMaxErrDefLabelVertical.Name = "lblMaxErrDefLabelVertical";
+            // 
+            // lblMaxErrDefLabelHorizontal
+            // 
+            resources.ApplyResources(this.lblMaxErrDefLabelHorizontal, "lblMaxErrDefLabelHorizontal");
+            this.lblMaxErrDefLabelHorizontal.Name = "lblMaxErrDefLabelHorizontal";
+            // 
+            // lblMaxErrHorizontal
+            // 
+            resources.ApplyResources(this.lblMaxErrHorizontal, "lblMaxErrHorizontal");
+            this.lblMaxErrHorizontal.Name = "lblMaxErrHorizontal";
+            // 
             // tpProcessingOutput
             // 
-            resources.ApplyResources(this.tpProcessingOutput, "tpProcessingOutput");
             this.tpProcessingOutput.Controls.Add(this.lblProcessingOutput);
             this.tpProcessingOutput.Controls.Add(this.ctxSPOOVideosTranscoding);
             this.tpProcessingOutput.Controls.Add(this.ctxSPOOImages);
             this.tpProcessingOutput.Controls.Add(this.ctxSPOOVideos);
+            resources.ApplyResources(this.tpProcessingOutput, "tpProcessingOutput");
             this.tpProcessingOutput.Name = "tpProcessingOutput";
             this.tpProcessingOutput.UseVisualStyleBackColor = true;
             // 
@@ -174,7 +244,6 @@
             // 
             // tpMaps
             // 
-            resources.ApplyResources(this.tpMaps, "tpMaps");
             this.tpMaps.Controls.Add(this.lnkEnabledMapProviders_None);
             this.tpMaps.Controls.Add(this.lnkEnabledMapProviders_Default);
             this.tpMaps.Controls.Add(this.lnkEnabledMapProviders_All);
@@ -187,6 +256,7 @@
             this.tpMaps.Controls.Add(this.lblMapsCacheSize);
             this.tpMaps.Controls.Add(this.lnkMaps_ClearCache);
             this.tpMaps.Controls.Add(this.chkMaps_Cache);
+            resources.ApplyResources(this.tpMaps, "tpMaps");
             this.tpMaps.Name = "tpMaps";
             this.tpMaps.UseVisualStyleBackColor = true;
             // 
@@ -281,6 +351,8 @@
             this.tcPages.ResumeLayout(false);
             this.tpGeneral.ResumeLayout(false);
             this.tpGeneral.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMaxErrVertical)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMaxErrHorizontal)).EndInit();
             this.tpProcessingOutput.ResumeLayout(false);
             this.tpProcessingOutput.PerformLayout();
             this.tpMaps.ResumeLayout(false);
@@ -320,5 +392,13 @@
         private System.Windows.Forms.LinkLabel lnkEnabledMapProviders_Default;
         private System.Windows.Forms.ComboBox cbxLanguage;
         private System.Windows.Forms.Label lblLanguage;
+        private System.Windows.Forms.Label lblMaxErrVertical;
+        private System.Windows.Forms.Label lblMaxErrHorizontal;
+        private System.Windows.Forms.NumericUpDown nudMaxErrVertical;
+        private System.Windows.Forms.NumericUpDown nudMaxErrHorizontal;
+        private System.Windows.Forms.Label lblMaxErrDefVertical;
+        private System.Windows.Forms.Label lblMaxErrDefHorizontal;
+        private System.Windows.Forms.Label lblMaxErrDefLabelVertical;
+        private System.Windows.Forms.Label lblMaxErrDefLabelHorizontal;
     }
 }

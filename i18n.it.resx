@@ -701,4 +701,41 @@ Messaggio d’errore:
   <data name="Time_total" xml:space="preserve">
     <value>Tempo totale</value>
   </data>
+  <data name="Bad_number_of_audio_tracks_written__before_X_after_Y" xml:space="preserve">
+    <value>Numero di tracce audio scritte non corretto (prima: {0}, dopo: {1})</value>
+  </data>
+  <data name="Bad_number_of_video_tracks_written__before_X_after_Y" xml:space="preserve">
+    <value>Numero di tracce video scritte non corretto (prima: {0}, dopo: {1})</value>
+  </data>
+  <data name="Unable_to_remove_metadata_altitude" xml:space="preserve">
+    <value>Non è stato possibile rimuovere l’altitudine dai metadati</value>
+  </data>
+  <data name="Unable_to_remove_metadata_position" xml:space="preserve">
+    <value>Non è stato possibile rimuovere la posizione dai metadati</value>
+  </data>
+  <data name="Unable_to_remove_metadata_timestamp" xml:space="preserve">
+    <value>Non è stato possibile rimuovere la data/ora dai metadati</value>
+  </data>
+  <data name="Unable_to_set_metadata_altitude" xml:space="preserve">
+    <value>Non è stato possibile impostare l’altitudine nei metadati</value>
+  </data>
+  <data name="Unable_to_set_metadata_position" xml:space="preserve">
+    <value>Non è stato possibile impostare la posizione nei metadati</value>
+  </data>
+  <data name="Unable_to_set_metadata_timestamp" xml:space="preserve">
+    <value>Non è stato possibile impostare la data/ora nei metadati</value>
+  </data>
+  <data name="Unable_to_set_new_metadata_because_X" xml:space="preserve">
+    <value>Non è stato possibile aggiornare i metadati.
+Motivo: {0}</value>
+  </data>
+  <data name="Written_horizontal_position_more_distant_than_X_from_wanted__max_allowed_is_Y" xml:space="preserve">
+    <value>La nuova posizione orizzontale scritta nei metadati dista {0} dalla posizione desiderata (errore massimo consentito: {1})</value>
+  </data>
+  <data name="Written_timestamp_X_is_different_from_wanted_timestamp_Y" xml:space="preserve">
+    <value>La nuova data/ora scritta ({0}) è diversa da quella desiderata ({1})</value>
+  </data>
+  <data name="Written_vertical_position_more_distant_than_X_from_wanted__max_allowed_is_Y" xml:space="preserve">
+    <value>La nuova posizione verticale scritta nei metadati dista {0} dalla posizione desiderata (errore massimo consentito: {1})</value>
+  </data>
 </root>

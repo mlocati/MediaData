@@ -69,6 +69,54 @@ namespace MLocati.MediaData
 
             UI.DescribedEnumToCombobox(typeof(Processor.SetFileDates), this.cbxSetFiledateOnMetadata, MediaData.Properties.Settings.Default.SetFileDates);
 
+            double maxErr;
+
+            maxErr = MediaData.Properties.Settings.Default.MaxAllowedDistanceError_Horizontal;
+            if (maxErr < 0D)
+            {
+                maxErr = 0D;
+            }
+            if (this.nudMaxErrHorizontal.Maximum < Convert.ToDecimal(maxErr))
+            {
+                this.nudMaxErrHorizontal.Maximum = Convert.ToDecimal(maxErr);
+            }
+            this.nudMaxErrHorizontal.Value = Convert.ToDecimal(maxErr);
+            maxErr = -1D;
+            try
+            {
+                SettingsProperty prop = MediaData.Properties.Settings.Default.Properties["MaxAllowedDistanceError_Horizontal"];
+                if (prop != null)
+                {
+                    maxErr = Convert.ToDouble(prop.DefaultValue);
+                }
+            }
+            catch
+            { }
+            this.lblMaxErrDefHorizontal.Text = (maxErr < 0D) ? "?" : maxErr.ToString();
+            
+            maxErr = MediaData.Properties.Settings.Default.MaxAllowedDistanceError_Vertical;
+            if (maxErr < 0D)
+            {
+                maxErr = 0D;
+            }
+            if (this.nudMaxErrVertical.Maximum < Convert.ToDecimal(maxErr))
+            {
+                this.nudMaxErrVertical.Maximum = Convert.ToDecimal(maxErr);
+            }
+            this.nudMaxErrVertical.Value = Convert.ToDecimal(maxErr);
+            maxErr = -1D;
+            try
+            {
+                SettingsProperty prop = MediaData.Properties.Settings.Default.Properties["MaxAllowedDistanceError_Vertical"];
+                if (prop != null)
+                {
+                    maxErr = Convert.ToDouble(prop.DefaultValue);
+                }
+            }
+            catch
+            { }
+            this.lblMaxErrDefVertical.Text = (maxErr < 0D) ? "?" : maxErr.ToString();
+
             this.chkDeleteToTrash.Checked = MediaData.Properties.Settings.Default.DeleteToTrash;
             this.chkMaps_Cache.Checked = MediaData.Properties.Settings.Default.Maps_EnableCache;
 
@@ -237,6 +285,9 @@ namespace MLocati.MediaData
 
                 o = UI.GetDescribedEnumValueOfCombobox(this.cbxSetFiledateOnMetadata);
                 MediaData.Properties.Settings.Default.SetFileDates = (o == null) ? Processor.SetFileDates.Never : (Processor.SetFileDates)o;
+
+                MediaData.Properties.Settings.Default.MaxAllowedDistanceError_Horizontal = Convert.ToDouble(this.nudMaxErrHorizontal.Value);
+                MediaData.Properties.Settings.Default.MaxAllowedDistanceError_Vertical = Convert.ToDouble(this.nudMaxErrVertical.Value);
 
                 MediaData.Properties.Settings.Default.DeleteToTrash = this.chkDeleteToTrash.Checked;
                 MediaData.Properties.Settings.Default.Maps_EnableCache = this.chkMaps_Cache.Checked;
