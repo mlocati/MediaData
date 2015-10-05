@@ -41,14 +41,14 @@
   <ItemGroup>
     <Reference Include="GMap.NET.Core, Version=1.7.0.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>.\GMap.NET.Core.dll</HintPath>
+      <HintPath>.\ThirdParty\GMap.NET.Core.dll</HintPath>
     </Reference>
     <Reference Include="GMap.NET.WindowsForms, Version=1.7.0.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>.\GMap.NET.WindowsForms.dll</HintPath>
+      <HintPath>.\ThirdParty\GMap.NET.WindowsForms.dll</HintPath>
     </Reference>
     <Reference Include="LitJson">
-      <HintPath>.\LitJson.dll</HintPath>
+      <HintPath>.\ThirdParty\LitJson.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -62,66 +62,66 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClipboardMonitor.cs" />
-    <Compile Include="ctxDateTime.cs">
+    <Compile Include="classes\ClipboardMonitor.cs" />
+    <Compile Include="controls\ctxDateTime.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctxDateTime.Designer.cs">
+    <Compile Include="controls\ctxDateTime.Designer.cs">
       <DependentUpon>ctxDateTime.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctxShowProcessingOutputOptions.cs">
+    <Compile Include="controls\ctxShowProcessingOutputOptions.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctxShowProcessingOutputOptions.Designer.cs">
+    <Compile Include="controls\ctxShowProcessingOutputOptions.Designer.cs">
       <DependentUpon>ctxShowProcessingOutputOptions.cs</DependentUpon>
     </Compile>
-    <Compile Include="FilenameTimeStamper.cs" />
-    <Compile Include="frmAbout.cs">
+    <Compile Include="classes\FilenameTimeStamper.cs" />
+    <Compile Include="forms\frmAbout.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAbout.Designer.cs">
+    <Compile Include="forms\frmAbout.Designer.cs">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBatchDeltaTimestamp.cs">
+    <Compile Include="forms\frmBatchDeltaTimestamp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBatchDeltaTimestamp.Designer.cs">
+    <Compile Include="forms\frmBatchDeltaTimestamp.Designer.cs">
       <DependentUpon>frmBatchDeltaTimestamp.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBatchRename.cs">
+    <Compile Include="forms\frmBatchRename.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBatchRename.Designer.cs">
+    <Compile Include="forms\frmBatchRename.Designer.cs">
       <DependentUpon>frmBatchRename.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmOptions.cs">
+    <Compile Include="forms\frmOptions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmOptions.Designer.cs">
+    <Compile Include="forms\frmOptions.Designer.cs">
       <DependentUpon>frmOptions.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPickDateTimeWithAlternatives.cs">
+    <Compile Include="forms\frmPickDateTimeWithAlternatives.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPickDateTimeWithAlternatives.Designer.cs">
+    <Compile Include="forms\frmPickDateTimeWithAlternatives.Designer.cs">
       <DependentUpon>frmPickDateTimeWithAlternatives.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPosition.cs">
+    <Compile Include="forms\frmPosition.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPosition.Designer.cs">
+    <Compile Include="forms\frmPosition.Designer.cs">
       <DependentUpon>frmPosition.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTool.cs">
+    <Compile Include="forms\frmTool.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTool.Designer.cs">
+    <Compile Include="forms\frmTool.Designer.cs">
       <DependentUpon>frmTool.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUpdateAvailable.cs">
+    <Compile Include="forms\frmUpdateAvailable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmUpdateAvailable.Designer.cs">
+    <Compile Include="forms\frmUpdateAvailable.Designer.cs">
       <DependentUpon>frmUpdateAvailable.cs</DependentUpon>
     </Compile>
     <Compile Include="i18n.it.Designer.cs">
@@ -129,31 +129,31 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Localizer.cs" />
-    <Compile Include="MapProvider.cs" />
-    <Compile Include="MyIO.cs" />
-    <Compile Include="Position.cs" />
-    <Compile Include="MediaInfo.cs" />
-    <Compile Include="Processor.cs" />
-    <Compile Include="frmMain.cs">
+    <Compile Include="classes\Localizer.cs" />
+    <Compile Include="classes\MapProvider.cs" />
+    <Compile Include="classes\MyIO.cs" />
+    <Compile Include="classes\Position.cs" />
+    <Compile Include="classes\MediaInfo.cs" />
+    <Compile Include="classes\Processor.cs" />
+    <Compile Include="forms\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMain.Designer.cs">
+    <Compile Include="forms\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPickDateTime.cs">
+    <Compile Include="forms\frmPickDateTime.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPickDateTime.Designer.cs">
+    <Compile Include="forms\frmPickDateTime.Designer.cs">
       <DependentUpon>frmPickDateTime.cs</DependentUpon>
     </Compile>
-    <Compile Include="Processor\ImageProcessor.cs" />
-    <Compile Include="Processor\ImageProcessor\ExivImageProcessor.cs" />
-    <Compile Include="Processor\FailedProcessor.cs" />
-    <Compile Include="Processor\UnhandledFileTypeProcessor.cs" />
-    <Compile Include="Processor\VideoProcessor.cs" />
-    <Compile Include="Processor\VideoProcessor\FFmpegVideoProcessor.cs" />
-    <Compile Include="Processor\VideoProcessor\ffprobe.cs" />
+    <Compile Include="classes\Processor\ImageProcessor.cs" />
+    <Compile Include="classes\Processor\ImageProcessor\ExivImageProcessor.cs" />
+    <Compile Include="classes\Processor\FailedProcessor.cs" />
+    <Compile Include="classes\Processor\UnhandledFileTypeProcessor.cs" />
+    <Compile Include="classes\Processor\VideoProcessor.cs" />
+    <Compile Include="classes\Processor\VideoProcessor\FFmpegVideoProcessor.cs" />
+    <Compile Include="classes\Processor\VideoProcessor\ffprobe.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="i18n.Designer.cs">
@@ -161,10 +161,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>i18n.resx</DependentUpon>
     </Compile>
-    <Compile Include="ShowProcessingOutput.cs" />
-    <Compile Include="TimeZoneHandler.cs" />
-    <Compile Include="Tool.cs" />
-    <Compile Include="UI.cs" />
+    <Compile Include="classes\ShowProcessingOutput.cs" />
+    <Compile Include="classes\TimeZoneHandler.cs" />
+    <Compile Include="classes\Tool.cs" />
+    <Compile Include="classes\UI.cs" />
     <Content Include="tools\avcodec-57.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -201,76 +201,76 @@
     <Content Include="tools\swscale-4.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="ctxDateTime.it.resx">
+    <EmbeddedResource Include="controls\ctxDateTime.it.resx">
       <DependentUpon>ctxDateTime.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctxDateTime.resx">
+    <EmbeddedResource Include="controls\ctxDateTime.resx">
       <DependentUpon>ctxDateTime.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctxShowProcessingOutputOptions.it.resx">
+    <EmbeddedResource Include="controls\ctxShowProcessingOutputOptions.it.resx">
       <DependentUpon>ctxShowProcessingOutputOptions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctxShowProcessingOutputOptions.resx">
+    <EmbeddedResource Include="controls\ctxShowProcessingOutputOptions.resx">
       <DependentUpon>ctxShowProcessingOutputOptions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAbout.it.resx">
+    <EmbeddedResource Include="forms\frmAbout.it.resx">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAbout.resx">
+    <EmbeddedResource Include="forms\frmAbout.resx">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBatchDeltaTimestamp.it.resx">
+    <EmbeddedResource Include="forms\frmBatchDeltaTimestamp.it.resx">
       <DependentUpon>frmBatchDeltaTimestamp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBatchDeltaTimestamp.resx">
+    <EmbeddedResource Include="forms\frmBatchDeltaTimestamp.resx">
       <DependentUpon>frmBatchDeltaTimestamp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBatchRename.it.resx">
+    <EmbeddedResource Include="forms\frmBatchRename.it.resx">
       <DependentUpon>frmBatchRename.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBatchRename.resx">
+    <EmbeddedResource Include="forms\frmBatchRename.resx">
       <DependentUpon>frmBatchRename.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.it.resx">
+    <EmbeddedResource Include="forms\frmMain.it.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
+    <EmbeddedResource Include="forms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmOptions.it.resx">
+    <EmbeddedResource Include="forms\frmOptions.it.resx">
       <DependentUpon>frmOptions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmOptions.resx">
+    <EmbeddedResource Include="forms\frmOptions.resx">
       <DependentUpon>frmOptions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPickDateTime.it.resx">
+    <EmbeddedResource Include="forms\frmPickDateTime.it.resx">
       <DependentUpon>frmPickDateTime.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPickDateTime.resx">
+    <EmbeddedResource Include="forms\frmPickDateTime.resx">
       <DependentUpon>frmPickDateTime.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPickDateTimeWithAlternatives.it.resx">
+    <EmbeddedResource Include="forms\frmPickDateTimeWithAlternatives.it.resx">
       <DependentUpon>frmPickDateTimeWithAlternatives.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPickDateTimeWithAlternatives.resx">
+    <EmbeddedResource Include="forms\frmPickDateTimeWithAlternatives.resx">
       <DependentUpon>frmPickDateTimeWithAlternatives.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPosition.it.resx">
+    <EmbeddedResource Include="forms\frmPosition.it.resx">
       <DependentUpon>frmPosition.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPosition.resx">
+    <EmbeddedResource Include="forms\frmPosition.resx">
       <DependentUpon>frmPosition.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTool.it.resx">
+    <EmbeddedResource Include="forms\frmTool.it.resx">
       <DependentUpon>frmTool.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTool.resx">
+    <EmbeddedResource Include="forms\frmTool.resx">
       <DependentUpon>frmTool.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmUpdateAvailable.it.resx">
+    <EmbeddedResource Include="forms\frmUpdateAvailable.it.resx">
       <DependentUpon>frmUpdateAvailable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmUpdateAvailable.resx">
+    <EmbeddedResource Include="forms\frmUpdateAvailable.resx">
       <DependentUpon>frmUpdateAvailable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="i18n.it.resx">
@@ -302,13 +302,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <Content Include="GMap.NET.Core.dll" />
-    <Content Include="GMap.NET.Core.xml" />
-    <Content Include="GMap.NET.WindowsForms.dll" />
-    <Content Include="GMap.NET.WindowsForms.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
