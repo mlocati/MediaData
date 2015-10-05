@@ -78,6 +78,7 @@ namespace MLocati.MediaData
                             case "Exif.Image.DateTime":
                             case "Exif.Photo.DateTimeOriginal":
                             case "Exif.Photo.DateTimeDigitized":
+                            case "Exif.Thumbnail.DateTime":
                             case "Xmp.xmp.CreateDate":
                             case "Xmp.xmp.MetadataDate":
                             case "Xmp.xmp.ModifyDate":
@@ -244,6 +245,7 @@ namespace MLocati.MediaData
             DateTime? ts = newInfo.TimestampMean;
             List<string> args = new List<string>();
             args.Add("-M\"del Exif.Image.TimeZoneOffset\""); // Not supported by most software: let's remove it in order to avoid messing up data
+            args.Add("-M\"del Exif.Thumbnail.DateTime\"");
             if (ts.HasValue)
             {
                 string s = TimeZoneHandler.Convert(TimeZoneHandler.Zone.Shoot, ExivImageProcessor.EXIF_IMAGEPHOTOXMP_TAGS_TIMEZONE, ts.Value).ToString(@"yyyy\:MM\:dd HH\:mm\:ss", NumberFormatInfo.InvariantInfo);
