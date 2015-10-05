@@ -413,10 +413,11 @@ namespace MLocati.MediaData
                     DataGridView.HitTestInfo hit = this.dgvFiles.HitTest(e.X, e.Y);
                     if (hit.Type == DataGridViewHitTestType.Cell && hit.RowIndex >= 0)
                     {
-                        Processor processor = this.dgvFiles.Rows[hit.RowIndex].DataBoundItem as Processor;
+                        DataGridViewRow row = this.dgvFiles.Rows[hit.RowIndex];
+                        Processor processor = row.DataBoundItem as Processor;
                         if (processor != null)
                         {
-                            this.ctxProcessor.Tag = processor;
+                            this.ctxProcessor.Tag = row;
                             if (hit.ColumnIndex == this.colMetadataDatetime.Index)
                             {
                                 if (processor.Info != null && processor.Info.TimestampMean.HasValue)
@@ -516,23 +517,30 @@ namespace MLocati.MediaData
         {
             try
             {
-                Processor processor = this.ctxProcessor.Tag as Processor;
-                if (processor != null)
+                DataGridViewRow row = this.ctxProcessor.Tag as DataGridViewRow;
+                if (row != null)
                 {
-                    if (this.ctxProcessorPaste.Tag is DateTime?)
+
+                    Processor processor = row.DataBoundItem as Processor;
+                    if (processor != null)
                     {
-                        DateTime? paste = (DateTime?)this.ctxProcessorPaste.Tag;
-                        if (paste.HasValue)
+                        if (this.ctxProcessorPaste.Tag is DateTime?)
                         {
-                            processor.ChangeMetadataTimestamp(paste, this);
+                            DateTime? paste = (DateTime?)this.ctxProcessorPaste.Tag;
+                            if (paste.HasValue)
+                            {
+                                processor.ChangeMetadataTimestamp(paste, this);
+                                this.dgvFiles.InvalidateRow(row.Index);
+                            }
                         }
-                    }
-                    else if (this.ctxProcessorPaste.Tag is Position)
-                    {
-                        Position paste = (Position)this.ctxProcessorPaste.Tag;
-                        if (paste != null)
+                        else if (this.ctxProcessorPaste.Tag is Position)
                         {
-                            processor.ChangeMetadataPosition(paste, this);
+                            Position paste = (Position)this.ctxProcessorPaste.Tag;
+                            if (paste != null)
+                            {
+                                processor.ChangeMetadataPosition(paste, this);
+                                this.dgvFiles.InvalidateRow(row.Index);
+                            }
                         }
                     }
                 }
