@@ -266,6 +266,10 @@ namespace MLocati.MediaData
                         }
                         File.Move(tempFilename, finalFilename);
                         this._info = updatedInfo;
+                        if (!this.FullFilename.Equals(finalFilename, StringComparison.Ordinal))
+                        {
+                            this.SetFullFilename(finalFilename);
+                        }
                     }
                 }
             }
