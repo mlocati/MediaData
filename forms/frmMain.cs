@@ -538,6 +538,10 @@ namespace MLocati.MediaData
                             Position paste = (Position)this.ctxProcessorPaste.Tag;
                             if (paste != null)
                             {
+                                if (paste.Alt.HasValue && (!processor.SupportsAltitude))
+                                {
+                                    paste = new Position(paste.Lat, paste.Lng);
+                                }
                                 processor.ChangeMetadataPosition(paste, this);
                                 this.dgvFiles.InvalidateRow(row.Index);
                             }
