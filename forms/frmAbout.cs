@@ -123,6 +123,7 @@ namespace MLocati.MediaData
 
         #endregion
 
+
         #region Constructors
 
         public frmAbout()
@@ -191,8 +192,6 @@ namespace MLocati.MediaData
                 bgw.RunWorkerAsync();
             }
         }
-
-        #endregion
 
         private void lnkCheckUpdates_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -359,5 +358,8 @@ namespace MLocati.MediaData
                 e.Cancel = true;
             }
         }
+
+        #endregion
+
     }
 }
