@@ -509,6 +509,8 @@ namespace MLocati.MediaData
                         .Append("/DIR=").Append(Tool.Escape(Path.GetDirectoryName(Application.ExecutablePath)))
                         .Append(' ')
                         .Append("/SILENT")
+                        .Append(' ')
+                        .Append("/UPGRADING=").Append(Tool.Escape(Application.ProductVersion))
                         .ToString();
                     process.Start();
                 }

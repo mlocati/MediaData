@@ -63,6 +63,25 @@ Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChang
 
 [Code]
 
+function GetCommandlineArgument(argument: String): String;
+var
+	search: String;
+	value: String;
+	i: Integer;
+begin
+	search := '/' + argument + '=';
+	Result := '';
+	for i:= 1 to ParamCount do begin
+		if Length(ParamStr(i)) > Length(search) then begin
+			if CompareText(Copy(ParamStr(i), 1, Length(search)), search) = 0 then begin
+				value := Copy(ParamStr(i), Length(search) + 1, 2147483647);
+				Result := RemoveQuotes(value);
+				break;
+			end;
+     end;
+   end;
+end;
+
 function VerifyADotNet(frameworkVersion: string; servicePackVersion: cardinal): boolean;
 var
 	key: string;
@@ -110,5 +129,19 @@ begin
 		result := false;
 	end else begin
 		result := true;
+	end;
+end;
+
+function NextButtonClick(CurPageID: Integer): Boolean;
+var
+	ResultCode: Integer;
+begin
+	Result := True;
+	if (CurPageID = wpFinished) then begin
+		if ((not WizardForm.YesRadio.Visible) or (not WizardForm.YesRadio.Checked)) then begin
+			if Length(GetCommandlineArgument('upgrading')) > 0 then begin
+				ExecAsOriginalUser(ExpandConstant('{app}\{#MyAppExeName}'), '', '', SW_SHOWNORMAL, ewNoWait, ResultCode);
+			end;
+		end;
 	end;
 end;
