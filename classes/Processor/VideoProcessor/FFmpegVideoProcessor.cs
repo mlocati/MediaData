@@ -169,7 +169,7 @@ namespace MLocati.MediaData
             List<string> args = new List<string>();
             args.Add("-hide_banner");
             //args.Add("-nostats");
-            args.Add("-loglevel warning");
+            args.Add("-loglevel info");
             args.Add("-i " + Tool.Escape(this.FullFilename));
             VideoInfo videoInfo = (VideoInfo)this.Info;
             string ext = Path.GetExtension(this.Filename).ToLower();
