@@ -94,6 +94,10 @@ namespace MLocati.MediaData
                                 {
                                     result.AddAlternativeMetadataTimestamp(string.Format(i18n.Tag_X, chunks[0]), TimeZoneHandler.ToShootZone(TimeZoneHandler.Zone.Utc, dt.ToUniversalTime()));
                                 }
+                                else if (DateTime.TryParseExact(chunks[1], @"yyyy\.MM\.dd HH\.mm\.ss", NumberFormatInfo.InvariantInfo, DateTimeStyles.AssumeLocal, out dt))
+                                {
+                                    result.AddAlternativeMetadataTimestamp(string.Format(i18n.Tag_X, chunks[0]), TimeZoneHandler.ToShootZone(ExivImageProcessor.EXIF_IMAGEPHOTOXMP_TAGS_TIMEZONE, dt));
+                                }
                                 else
                                 {
                                     throw new Exception(string.Format(i18n.Invalid_tag_X_value_V, chunks[0], chunks[1]));
