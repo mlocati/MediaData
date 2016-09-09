@@ -115,6 +115,24 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Already without altitude.
+        /// </summary>
+        internal static string Already_without_altitude {
+            get {
+                return ResourceManager.GetString("Already_without_altitude", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Altitude has been removed.
+        /// </summary>
+        internal static string Altitude_removed {
+            get {
+                return ResourceManager.GetString("Altitude_removed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a The file {0} is write-protected.
         ///Do you want to set it as writable?.
         /// </summary>
@@ -965,6 +983,24 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Altitude will be removed.
+        /// </summary>
+        internal static string Going_to_remove_altitude {
+            get {
+                return ResourceManager.GetString("Going_to_remove_altitude", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Metadata date/time will be removed.
+        /// </summary>
+        internal static string Going_to_remove_metadata_timestamp {
+            get {
+                return ResourceManager.GetString("Going_to_remove_metadata_timestamp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Will set metadata date/time to {0}.
         /// </summary>
         internal static string Going_to_set_metadata_timestamp_to_X {
@@ -1114,6 +1150,15 @@ namespace MLocati.MediaData {
         internal static string Local_file_name {
             get {
                 return ResourceManager.GetString("Local_file_name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Metadata date/time removed.
+        /// </summary>
+        internal static string Metadata_timestamp_removed {
+            get {
+                return ResourceManager.GetString("Metadata_timestamp_removed", resourceCulture);
             }
         }
         
@@ -1465,11 +1510,29 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Remove zero altitudes.
+        /// </summary>
+        internal static string SelectionOperations_RemoveZeroAltitudes {
+            get {
+                return ResourceManager.GetString("SelectionOperations_RemoveZeroAltitudes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Rename files.
         /// </summary>
         internal static string SelectionOperations_RenameFiles {
             get {
                 return ResourceManager.GetString("SelectionOperations_RenameFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Set meta timestamp.
+        /// </summary>
+        internal static string SelectionOperations_SetTimestamp {
+            get {
+                return ResourceManager.GetString("SelectionOperations_SetTimestamp", resourceCulture);
             }
         }
         

@@ -737,4 +737,25 @@ Reason: {0}</value>
   <data name="Written_vertical_position_more_distant_than_X_from_wanted__max_allowed_is_Y" xml:space="preserve">
     <value>The new vertical position written in the metadata is distant {0} from the wanted position (max allowed error is {1})</value>
   </data>
+  <data name="SelectionOperations_RemoveZeroAltitudes" xml:space="preserve">
+    <value>Remove zero altitudes</value>
+  </data>
+  <data name="SelectionOperations_SetTimestamp" xml:space="preserve">
+    <value>Set meta timestamp</value>
+  </data>
+  <data name="Already_without_altitude" xml:space="preserve">
+    <value>Already without altitude</value>
+  </data>
+  <data name="Altitude_removed" xml:space="preserve">
+    <value>Altitude has been removed</value>
+  </data>
+  <data name="Going_to_remove_altitude" xml:space="preserve">
+    <value>Altitude will be removed</value>
+  </data>
+  <data name="Going_to_remove_metadata_timestamp" xml:space="preserve">
+    <value>Metadata date/time will be removed</value>
+  </data>
+  <data name="Metadata_timestamp_removed" xml:space="preserve">
+    <value>Metadata date/time removed</value>
+  </data>
 </root>

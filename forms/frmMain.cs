@@ -22,6 +22,10 @@ namespace MLocati.MediaData
             RenameFiles,
             [Localizer.Description("SelectionOperations_DeltaTimestamp")]
             DeltaTimestamp,
+            [Localizer.Description("SelectionOperations_SetTimestamp")]
+            SetTimestamp,
+            [Localizer.Description("SelectionOperations_RemoveZeroAltitudes")]
+            RemoveZeroRemoveZeroAltitudes,
         }
 
         private enum DeltaOperationUnit
@@ -549,7 +553,7 @@ namespace MLocati.MediaData
                     }
                 }
             }
-            catch(OperationCanceledException)
+            catch (OperationCanceledException)
             {
             }
             catch (Exception x)
@@ -957,7 +961,13 @@ namespace MLocati.MediaData
             SelectionOperations operation = (SelectionOperations)UI.GetDescribedEnumValueOfCombobox(this.cbxSelection);
             this.lblSelectionDeltaTime.Visible = operation == SelectionOperations.DeltaTimestamp;
             this.cbxSelectionDeltaTimeUnit.Visible = this.nudSelectionDeltaTimeValue.Visible = operation == SelectionOperations.DeltaTimestamp;
+            this.nudSelectionSetTimestampTime.Visible = this.nudSelectionSetTimestampDate.Visible = operation == SelectionOperations.SetTimestamp;
             this.btnSelectionApply.Visible = (operation != SelectionOperations.PleaseSelect);
+        }
+
+        private void nudSelectionSetTimestampDate_ValueChanged(object sender, EventArgs e)
+        {
+            this.nudSelectionSetTimestampTime.Enabled = this.nudSelectionSetTimestampDate.Checked;
         }
 
         private void btnSelectionApply_Click(object sender, EventArgs e)
@@ -976,8 +986,19 @@ namespace MLocati.MediaData
                 MessageBox.Show(i18n.Please_select_at_least_one_file, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            List<BatchOperation> operators = null;
             switch ((SelectionOperations)UI.GetDescribedEnumValueOfCombobox(this.cbxSelection))
             {
+                case SelectionOperations.RenameFiles:
+                    using (frmBatchRename f = new frmBatchRename(processors))
+                    {
+                        f.ShowDialog(this);
+                        if (f.SomeChanged)
+                        {
+                            this.dgvFiles.Invalidate();
+                        }
+                    }
+                    break;
                 case SelectionOperations.DeltaTimestamp:
                     TimeSpan? ts = null;
                     int deltaValue = Convert.ToInt32(Math.Round(this.nudSelectionDeltaTimeValue.Value));
@@ -1005,26 +1026,47 @@ namespace MLocati.MediaData
                     }
                     else
                     {
-                        using (frmBatchDeltaTimestamp f = new frmBatchDeltaTimestamp(processors, ts.Value))
+                        operators = new List<BatchOperation>(processors.Count);
+                        foreach (Processor processor in processors)
                         {
-                            f.ShowDialog(this);
-                            if (f.SomeChanged)
-                            {
-                                this.dgvFiles.Invalidate();
-                            }
+                            operators.Add(new BatchOperations.DeltaTimeStamp(processor, ts.Value));
                         }
                     }
                     break;
-                case SelectionOperations.RenameFiles:
-                    using (frmBatchRename f = new frmBatchRename(processors))
+                case SelectionOperations.SetTimestamp:
+                    DateTime? dt;
+                    if (this.nudSelectionSetTimestampDate.Checked)
                     {
-                        f.ShowDialog(this);
-                        if (f.SomeChanged)
-                        {
-                            this.dgvFiles.Invalidate();
-                        }
+                        dt = this.nudSelectionSetTimestampDate.Value.Date + this.nudSelectionSetTimestampTime.Value.TimeOfDay;
+                    }
+                    else
+                    {
+                        dt = null;
+                    }
+                    operators = new List<BatchOperation>(processors.Count);
+                    foreach (Processor processor in processors)
+                    {
+                        operators.Add(new BatchOperations.SetTimeStamp(processor, dt));
                     }
                     break;
+                case SelectionOperations.RemoveZeroRemoveZeroAltitudes:
+                    operators = new List<BatchOperation>(processors.Count);
+                    foreach (Processor processor in processors)
+                    {
+                        operators.Add(new BatchOperations.RemoveAltitude(processor));
+                    }
+                    break;
+            }
+            if (operators != null)
+            {
+                using (frmBatchDeltaTimestamp f = new frmBatchDeltaTimestamp(operators))
+                {
+                    f.ShowDialog(this);
+                    if (f.SomeChanged)
+                    {
+                        this.dgvFiles.Invalidate();
+                    }
+                }
             }
         }
 

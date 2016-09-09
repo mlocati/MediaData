@@ -738,4 +738,25 @@ Motivo: {0}</value>
   <data name="Written_vertical_position_more_distant_than_X_from_wanted__max_allowed_is_Y" xml:space="preserve">
     <value>La nuova posizione verticale scritta nei metadati dista {0} dalla posizione desiderata (errore massimo consentito: {1})</value>
   </data>
+  <data name="SelectionOperations_RemoveZeroAltitudes" xml:space="preserve">
+    <value>Rimuovi altitudini a zero</value>
+  </data>
+  <data name="SelectionOperations_SetTimestamp" xml:space="preserve">
+    <value>Imposta data/ora dei metadati</value>
+  </data>
+  <data name="Already_without_altitude" xml:space="preserve">
+    <value>Già senza altitudine</value>
+  </data>
+  <data name="Altitude_removed" xml:space="preserve">
+    <value>L'altitudine è stata rimossa</value>
+  </data>
+  <data name="Going_to_remove_altitude" xml:space="preserve">
+    <value>L'altitudine verrà rimossa</value>
+  </data>
+  <data name="Going_to_remove_metadata_timestamp" xml:space="preserve">
+    <value>Verrà rimossa data/ora dei metadati</value>
+  </data>
+  <data name="Metadata_timestamp_removed" xml:space="preserve">
+    <value>Data/ora dei metadati rimossa</value>
+  </data>
 </root>

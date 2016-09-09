@@ -122,7 +122,7 @@
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ssStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>826, 17</value>
+    <value>909, 17</value>
   </data>
   <data name="ssStatusLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -138,7 +138,7 @@
     <value>0, 537</value>
   </data>
   <data name="ssStatus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>841, 22</value>
+    <value>924, 22</value>
   </data>
   <data name="ssStatus.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -219,11 +219,11 @@
         /6tXrvh/586d2ceOHQs7d+6cKlQtTsB+ZM+eZxPKZj7aoGP4XzJn0y+oOJHAYxt7WfKkJ8/KSv+fcHX9
         v9HYeAlUhjDQql/Fppe1+12QrNf/bZpq/2/m5v7fp6f3f6GkZAFUCR5gPJPVs/7QGwataf91y679t7Lv
         vriYh+frQ6AhR83N/88RE3s3WVhYCqoaAzA6lB15xKA++b9i+tn/GunHXoEEeyQlRZZJSf1/Wlv7/wjQ
-        kLkSEv9nCgtrgHUgA52cA+cZdev/iUYd/W9SMvcfg1YWD1SKYYKYWPFioCHPe3rAhswDGrJSRkYIKs3A
+        kLkSEv9nCgtrgHUgA52cA+cZdev/iUYd/W9SMvsfg1YWD1SKYYKYWPFioCHPe3rAhswDGrJSRkYIKs3A
         oJl1aK2g25r/vL77/ptXXPzPbjHFAyoFB5MkJe8vAhnS1fX/iJnZfxD7P9DVDDLR25KkIw7d00g7+dSo
         +MJ/VsuZrVA9GGCKpOQdYGD+f1Jd/f+Iqen/w0ZGGxgEbftSRGOOPgqb8+glu/WC5VC1zDgwQ4eo6KpZ
-        QC/sra//dzI0VIJBipdBmEPCPZZb0ilHQkI0VkJCIkMSGGVAuhCIi6B0IVQsA4jjfcXE0nhYWKxFRUUl
-        ANSQHsS9aaxkAAAAAElFTkSuQmCC
+        QC/srq//dzI0VIJBipdBmEPCPZZb0ilHQkI0VkJCIkMSGGVAuhCIi6B0IVQsA4jjfcXE0nhYWKxFRUUl
+        ANGiHsC7Z9EcAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="tsbOptions.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -270,7 +270,7 @@
     <value>0, 0</value>
   </data>
   <data name="tsTools.Size" type="System.Drawing.Size, System.Drawing">
-    <value>841, 25</value>
+    <value>924, 25</value>
   </data>
   <data name="tsTools.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -346,7 +346,7 @@
     <value>12, 28</value>
   </data>
   <data name="dgvFiles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>817, 450</value>
+    <value>900, 450</value>
   </data>
   <data name="dgvFiles.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -487,7 +487,7 @@
     <value>57, 20</value>
   </data>
   <data name="nudSelectionDeltaTimeValue.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;nudSelectionDeltaTimeValue.Name" xml:space="preserve">
     <value>nudSelectionDeltaTimeValue</value>
@@ -508,7 +508,7 @@
     <value>69, 21</value>
   </data>
   <data name="cbxSelectionDeltaTimeUnit.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;cbxSelectionDeltaTimeUnit.Name" xml:space="preserve">
     <value>cbxSelectionDeltaTimeUnit</value>
@@ -522,11 +522,53 @@
   <data name="&gt;&gt;cbxSelectionDeltaTimeUnit.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="nudSelectionSetTimestampDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>547, 3</value>
+  </data>
+  <data name="nudSelectionSetTimestampDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 20</value>
+  </data>
+  <data name="nudSelectionSetTimestampDate.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;nudSelectionSetTimestampDate.Name" xml:space="preserve">
+    <value>nudSelectionSetTimestampDate</value>
+  </data>
+  <data name="&gt;&gt;nudSelectionSetTimestampDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nudSelectionSetTimestampDate.Parent" xml:space="preserve">
+    <value>flpSelection</value>
+  </data>
+  <data name="&gt;&gt;nudSelectionSetTimestampDate.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="nudSelectionSetTimestampTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>651, 3</value>
+  </data>
+  <data name="nudSelectionSetTimestampTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 20</value>
+  </data>
+  <data name="nudSelectionSetTimestampTime.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;nudSelectionSetTimestampTime.Name" xml:space="preserve">
+    <value>nudSelectionSetTimestampTime</value>
+  </data>
+  <data name="&gt;&gt;nudSelectionSetTimestampTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nudSelectionSetTimestampTime.Parent" xml:space="preserve">
+    <value>flpSelection</value>
+  </data>
+  <data name="&gt;&gt;nudSelectionSetTimestampTime.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
   <data name="btnSelectionApply.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="btnSelectionApply.Location" type="System.Drawing.Point, System.Drawing">
-    <value>547, 2</value>
+    <value>742, 2</value>
   </data>
   <data name="btnSelectionApply.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 3</value>
@@ -535,7 +577,7 @@
     <value>75, 23</value>
   </data>
   <data name="btnSelectionApply.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="btnSelectionApply.Text" xml:space="preserve">
     <value>Apply</value>
@@ -550,7 +592,7 @@
     <value>flpSelection</value>
   </data>
   <data name="&gt;&gt;btnSelectionApply.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="flpSelection.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -562,7 +604,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="flpSelection.Size" type="System.Drawing.Size, System.Drawing">
-    <value>811, 31</value>
+    <value>894, 31</value>
   </data>
   <data name="flpSelection.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -583,7 +625,7 @@
     <value>12, 484</value>
   </data>
   <data name="gbxSelection.Size" type="System.Drawing.Size, System.Drawing">
-    <value>817, 50</value>
+    <value>900, 50</value>
   </data>
   <data name="gbxSelection.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -664,7 +706,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>841, 559</value>
+    <value>924, 559</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>600, 200</value>

@@ -59,6 +59,8 @@
             this.lblSelectionDeltaTime = new System.Windows.Forms.Label();
             this.nudSelectionDeltaTimeValue = new System.Windows.Forms.NumericUpDown();
             this.cbxSelectionDeltaTimeUnit = new System.Windows.Forms.ComboBox();
+            this.nudSelectionSetTimestampDate = new System.Windows.Forms.DateTimePicker();
+            this.nudSelectionSetTimestampTime = new System.Windows.Forms.DateTimePicker();
             this.btnSelectionApply = new System.Windows.Forms.Button();
             this.chkSelection = new System.Windows.Forms.CheckBox();
             this.ctxProcessor = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -277,6 +279,8 @@
             this.flpSelection.Controls.Add(this.lblSelectionDeltaTime);
             this.flpSelection.Controls.Add(this.nudSelectionDeltaTimeValue);
             this.flpSelection.Controls.Add(this.cbxSelectionDeltaTimeUnit);
+            this.flpSelection.Controls.Add(this.nudSelectionSetTimestampDate);
+            this.flpSelection.Controls.Add(this.nudSelectionSetTimestampTime);
             this.flpSelection.Controls.Add(this.btnSelectionApply);
             resources.ApplyResources(this.flpSelection, "flpSelection");
             this.flpSelection.Name = "flpSelection";
@@ -329,6 +333,21 @@
             this.cbxSelectionDeltaTimeUnit.FormattingEnabled = true;
             resources.ApplyResources(this.cbxSelectionDeltaTimeUnit, "cbxSelectionDeltaTimeUnit");
             this.cbxSelectionDeltaTimeUnit.Name = "cbxSelectionDeltaTimeUnit";
+            // 
+            // nudSelectionSetTimestampDate
+            // 
+            this.nudSelectionSetTimestampDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            resources.ApplyResources(this.nudSelectionSetTimestampDate, "nudSelectionSetTimestampDate");
+            this.nudSelectionSetTimestampDate.Name = "nudSelectionSetTimestampDate";
+            this.nudSelectionSetTimestampDate.ShowCheckBox = true;
+            this.nudSelectionSetTimestampDate.ValueChanged += new System.EventHandler(this.nudSelectionSetTimestampDate_ValueChanged);
+            // 
+            // nudSelectionSetTimestampTime
+            // 
+            this.nudSelectionSetTimestampTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            resources.ApplyResources(this.nudSelectionSetTimestampTime, "nudSelectionSetTimestampTime");
+            this.nudSelectionSetTimestampTime.Name = "nudSelectionSetTimestampTime";
+            this.nudSelectionSetTimestampTime.ShowUpDown = true;
             // 
             // btnSelectionApply
             // 
@@ -425,5 +444,7 @@
         private System.Windows.Forms.ContextMenuStrip ctxProcessor;
         private System.Windows.Forms.ToolStripMenuItem ctxProcessorCopy;
         private System.Windows.Forms.ToolStripMenuItem ctxProcessorPaste;
+        private System.Windows.Forms.DateTimePicker nudSelectionSetTimestampDate;
+        private System.Windows.Forms.DateTimePicker nudSelectionSetTimestampTime;
     }
 }
