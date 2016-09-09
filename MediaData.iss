@@ -1,4 +1,8 @@
+#ifexist "sign.options.cmd"
+#define SIGN true
+#else
 #define SIGN false
+#endif
 
 #define DotNetVersion "v4\Client"
 #define DotNetServicePackVersion 0

@@ -1,39 +1,22 @@
 # Signing
 
-Let's assume you have in the directory `C:\Signing` the following files:
-- your PFX signature file named `signature.pfx`
-- the Signing Tool `signtool.exe`
+## Requirements
 
-Create a folder named `temp` in the MediaData source directory, and create a file named `sign.cmd` in it.
+In order to sign the executable, the installed and the uninstaller, you need to:
+1. Have a digital signature file in `pfx` format
+2. The Microsoft `signtool.exe` program
 
-Here's its content:
+Copy the file called `sign.options.sample.cmd` and save it as `sign.options.cmd`.
+Edit this new file and change the values of the variables you find in it.
 
-```bat
-@echo off
-setlocal
+## Signing the MediaData executable program
 
-set SIGNDIR=C:\Signing
+Signing the executable should be done automatically when compiling MediaData in Visual Studio - Take a look at the `<PostBuildEvent>` section of the [MediaData.csproj](https://github.com/mlocati/MediaData/blob/master/MediaData.csproj) file.
 
-SET SIGNCMD="%SIGNDIR%\signtool.exe" sign
-REM Select the best signing cert automatically
-SET SIGNCMD=%SIGNCMD% /a
-REM /v  Print verbose success and status messages
-SET SIGNCMD=%SIGNCMD% /v
-REM The signing cert in a file
-SET SIGNCMD=%SIGNCMD% /f "%SIGNDIR%\signature.pfx"
-REM The PFX password
-SET SIGNCMD=%SIGNCMD% /p YOUR_PASSWORD_HERE
-REM The timestamp server's URL
-SET SIGNCMD=%SIGNCMD% /t http://timestamp.verisign.com/scripts/timstamp.dll
-REM Description of the signed content
-SET SIGNCMD=%SIGNCMD% /d "MediaData - Manage metadata of your media files"
-REM URL with more information about the signed content
-SET SIGNCMD=%SIGNCMD% /du "http://mlocati.github.io/MediaData/"
+## Signing the installer/uninstaller
 
-REM SHA-1 signing
-%SIGNCMD% /fd sha1 "%~1"
-REM SHA-256 signing
-%SIGNCMD% /fd sha256 "%~1"
+Open the `MediaData.iss` file with the InnoSetup editor.
 
-endlocal
-```
+Choose the `Configure Sign Tools...` in the `Tools` menu and hit the `Add` button:
+- `Name of the Sign Tool` must be: `MediaDataSigner`
+- `Command of the Sign Tool` must be: `C:\path\to\MediaData\source\folder\sign.cmd $f`
