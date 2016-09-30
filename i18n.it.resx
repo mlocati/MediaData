@@ -759,4 +759,22 @@ Motivo: {0}</value>
   <data name="Metadata_timestamp_removed" xml:space="preserve">
     <value>Data/ora dei metadati rimossa</value>
   </data>
+  <data name="SelectionOperations_SetPosition" xml:space="preserve">
+    <value>Imposta posizione</value>
+  </data>
+  <data name="Already_without_position" xml:space="preserve">
+    <value>Già senza posizione</value>
+  </data>
+  <data name="Going_to_remove_position" xml:space="preserve">
+    <value>La posizione verrà rimossa</value>
+  </data>
+  <data name="Going_to_update_position" xml:space="preserve">
+    <value>La posizione verrà aggiornata</value>
+  </data>
+  <data name="Position_removed" xml:space="preserve">
+    <value>La posizione è stata rimossa</value>
+  </data>
+  <data name="Position_updated" xml:space="preserve">
+    <value>La posizione è stata aggiornata</value>
+  </data>
 </root>

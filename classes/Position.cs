@@ -75,7 +75,7 @@ namespace MLocati.MediaData
 
         public Position Clone()
         {
-            return new Position(this._lat, this._lng, this._alt);
+            return new Position(this._lat, this._lng, this._alt.HasValue ? this._alt.Value : (decimal?)null);
         }
 
         public string ToGridString()
@@ -363,7 +363,7 @@ namespace MLocati.MediaData
             seconds = value;
         }
 
-        public static Position Unserialize(string serialized)
+        public static Position TryUnserialize(string serialized)
         {
             Position result = null;
             if (!string.IsNullOrEmpty(serialized))
@@ -396,6 +396,20 @@ namespace MLocati.MediaData
                         result = new Position(lat, lng, alt);
                     }
                 }
+            }
+            return result;
+        }
+
+        public static Position Unserialize(string serialized)
+        {
+            Position result = null;
+            if (string.IsNullOrEmpty(serialized))
+            {
+                result = null;
+            }
+            else
+            {
+                result = Position.TryUnserialize(serialized);
                 if (result == null)
                 {
                     throw new Exception(string.Format(i18n.Unable_to_unserialize_position_from_X, serialized));

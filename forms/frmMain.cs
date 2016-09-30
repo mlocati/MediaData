@@ -24,6 +24,8 @@ namespace MLocati.MediaData
             DeltaTimestamp,
             [Localizer.Description("SelectionOperations_SetTimestamp")]
             SetTimestamp,
+            [Localizer.Description("SelectionOperations_SetPosition")]
+            SetPosition,
             [Localizer.Description("SelectionOperations_RemoveZeroAltitudes")]
             RemoveZeroRemoveZeroAltitudes,
         }
@@ -582,6 +584,25 @@ namespace MLocati.MediaData
             this.UpdateSelectionOperation(false);
         }
 
+        private void btnBatchSetPosition_Click(object sender, EventArgs e)
+        {
+            Position pos = Position.TryUnserialize(this.tbxBatchSetPosition.Text.Trim());
+            using (frmPosition f = new frmPosition(pos, true))
+            {
+                if (f.ShowDialog(this) == DialogResult.OK)
+                {
+                    if (f.SelectedPosition == null)
+                    {
+                        this.tbxBatchSetPosition.Text = "";
+                    }
+                    else
+                    {
+                        this.tbxBatchSetPosition.Text = f.SelectedPosition.Serialize();
+                    }
+                }
+            }
+        }
+
         private void frmMain_KeyDown(object sender, KeyEventArgs e)
         {
             if (this._working)
@@ -962,6 +983,7 @@ namespace MLocati.MediaData
             this.lblSelectionDeltaTime.Visible = operation == SelectionOperations.DeltaTimestamp;
             this.cbxSelectionDeltaTimeUnit.Visible = this.nudSelectionDeltaTimeValue.Visible = operation == SelectionOperations.DeltaTimestamp;
             this.nudSelectionSetTimestampTime.Visible = this.nudSelectionSetTimestampDate.Visible = operation == SelectionOperations.SetTimestamp;
+            this.btnBatchSetPosition.Visible = this.tbxBatchSetPosition.Visible = operation == SelectionOperations.SetPosition;
             this.btnSelectionApply.Visible = (operation != SelectionOperations.PleaseSelect);
         }
 
@@ -1047,6 +1069,31 @@ namespace MLocati.MediaData
                     foreach (Processor processor in processors)
                     {
                         operators.Add(new BatchOperations.SetTimeStamp(processor, dt));
+                    }
+                    break;
+                case SelectionOperations.SetPosition:
+                    Position position;
+                    try
+                    {
+                        position = Position.Unserialize(this.tbxBatchSetPosition.Text.Trim());
+                    }
+                    catch (Exception x)
+                    {
+                        MessageBox.Show(this, x.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return;
+                    }
+                    if (position == null)
+                    {
+                        if (MessageBox.Show(this, i18n.Confirm_remove_position, Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) != DialogResult.Yes)
+                        {
+                            return;
+                        }
+                        
+                    }
+                    operators = new List<BatchOperation>(processors.Count);
+                    foreach (Processor processor in processors)
+                    {
+                        operators.Add(new BatchOperations.SetPosition(processor, position));
                     }
                     break;
                 case SelectionOperations.RemoveZeroRemoveZeroAltitudes:

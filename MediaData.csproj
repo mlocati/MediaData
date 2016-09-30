@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="classes\BatchOperation.cs" />
     <Compile Include="classes\BatchOperations\RemoveAltitude.cs" />
+    <Compile Include="classes\BatchOperations\SetPosition.cs" />
     <Compile Include="classes\BatchOperations\SetTimeStamp.cs" />
     <Compile Include="classes\BatchOperations\DeltaTimeStamp.cs" />
     <Compile Include="classes\ClipboardMonitor.cs" />

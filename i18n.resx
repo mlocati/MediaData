@@ -758,4 +758,22 @@ Reason: {0}</value>
   <data name="Metadata_timestamp_removed" xml:space="preserve">
     <value>Metadata date/time removed</value>
   </data>
+  <data name="SelectionOperations_SetPosition" xml:space="preserve">
+    <value>Set position</value>
+  </data>
+  <data name="Already_without_position" xml:space="preserve">
+    <value>Already without position</value>
+  </data>
+  <data name="Going_to_remove_position" xml:space="preserve">
+    <value>The position will be removed</value>
+  </data>
+  <data name="Going_to_update_position" xml:space="preserve">
+    <value>The position will be updated</value>
+  </data>
+  <data name="Position_removed" xml:space="preserve">
+    <value>The position has been removed</value>
+  </data>
+  <data name="Position_updated" xml:space="preserve">
+    <value>The position has been updated</value>
+  </data>
 </root>

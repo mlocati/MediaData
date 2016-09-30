@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ssStatus = new System.Windows.Forms.StatusStrip();
             this.ssStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.ssStatusProgress = new System.Windows.Forms.ToolStripProgressBar();
@@ -61,6 +61,8 @@
             this.cbxSelectionDeltaTimeUnit = new System.Windows.Forms.ComboBox();
             this.nudSelectionSetTimestampDate = new System.Windows.Forms.DateTimePicker();
             this.nudSelectionSetTimestampTime = new System.Windows.Forms.DateTimePicker();
+            this.tbxBatchSetPosition = new System.Windows.Forms.TextBox();
+            this.btnBatchSetPosition = new System.Windows.Forms.Button();
             this.btnSelectionApply = new System.Windows.Forms.Button();
             this.chkSelection = new System.Windows.Forms.CheckBox();
             this.ctxProcessor = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -171,14 +173,14 @@
             this.dgvFiles.AllowUserToResizeRows = false;
             resources.ApplyResources(this.dgvFiles, "dgvFiles");
             this.dgvFiles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFiles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFiles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvFiles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFiles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colBrowseTo,
@@ -186,14 +188,14 @@
             this.colFilenameDatetime,
             this.colMetadataDatetime,
             this.colMetadataPosition});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvFiles.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFiles.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvFiles.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvFiles.Name = "dgvFiles";
             this.dgvFiles.ReadOnly = true;
@@ -281,6 +283,8 @@
             this.flpSelection.Controls.Add(this.cbxSelectionDeltaTimeUnit);
             this.flpSelection.Controls.Add(this.nudSelectionSetTimestampDate);
             this.flpSelection.Controls.Add(this.nudSelectionSetTimestampTime);
+            this.flpSelection.Controls.Add(this.tbxBatchSetPosition);
+            this.flpSelection.Controls.Add(this.btnBatchSetPosition);
             this.flpSelection.Controls.Add(this.btnSelectionApply);
             resources.ApplyResources(this.flpSelection, "flpSelection");
             this.flpSelection.Name = "flpSelection";
@@ -348,6 +352,18 @@
             resources.ApplyResources(this.nudSelectionSetTimestampTime, "nudSelectionSetTimestampTime");
             this.nudSelectionSetTimestampTime.Name = "nudSelectionSetTimestampTime";
             this.nudSelectionSetTimestampTime.ShowUpDown = true;
+            // 
+            // tbxBatchSetPosition
+            // 
+            resources.ApplyResources(this.tbxBatchSetPosition, "tbxBatchSetPosition");
+            this.tbxBatchSetPosition.Name = "tbxBatchSetPosition";
+            // 
+            // btnBatchSetPosition
+            // 
+            resources.ApplyResources(this.btnBatchSetPosition, "btnBatchSetPosition");
+            this.btnBatchSetPosition.Name = "btnBatchSetPosition";
+            this.btnBatchSetPosition.UseVisualStyleBackColor = true;
+            this.btnBatchSetPosition.Click += new System.EventHandler(this.btnBatchSetPosition_Click);
             // 
             // btnSelectionApply
             // 
@@ -446,5 +462,7 @@
         private System.Windows.Forms.ToolStripMenuItem ctxProcessorPaste;
         private System.Windows.Forms.DateTimePicker nudSelectionSetTimestampDate;
         private System.Windows.Forms.DateTimePicker nudSelectionSetTimestampTime;
+        private System.Windows.Forms.TextBox tbxBatchSetPosition;
+        private System.Windows.Forms.Button btnBatchSetPosition;
     }
 }

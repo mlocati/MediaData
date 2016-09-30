@@ -121,25 +121,13 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="ssStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>909, 17</value>
-  </data>
-  <data name="ssStatusLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="ssStatusProgress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 16</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ssStatusProgress.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="ssStatus.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 537</value>
   </data>
   <data name="ssStatus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>924, 22</value>
+    <value>1059, 22</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="ssStatus.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
@@ -155,9 +143,42 @@
   <data name="&gt;&gt;ssStatus.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="ssStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1044, 17</value>
+  </data>
+  <data name="ssStatusLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="ssStatusProgress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 16</value>
+  </data>
+  <data name="ssStatusProgress.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <metadata name="tsTools.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>112, 17</value>
   </metadata>
+  <data name="tsTools.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tsTools.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1059, 25</value>
+  </data>
+  <data name="tsTools.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tsTools.Name" xml:space="preserve">
+    <value>tsTools</value>
+  </data>
+  <data name="&gt;&gt;tsTools.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsTools.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tsTools.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="tslSrcDir.Size" type="System.Drawing.Size, System.Drawing">
     <value>93, 22</value>
   </data>
@@ -219,11 +240,11 @@
         /6tXrvh/586d2ceOHQs7d+6cKlQtTsB+ZM+eZxPKZj7aoGP4XzJn0y+oOJHAYxt7WfKkJ8/KSv+fcHX9
         v9HYeAlUhjDQql/Fppe1+12QrNf/bZpq/2/m5v7fp6f3f6GkZAFUCR5gPJPVs/7QGwataf91y679t7Lv
         vriYh+frQ6AhR83N/88RE3s3WVhYCqoaAzA6lB15xKA++b9i+tn/GunHXoEEeyQlRZZJSf1/Wlv7/wjQ
-        kLkSEv9nCgtrgHUgA52cA+cZdev/iUYd/W9SMvsfg1YWD1SKYYKYWPFioCHPe3rAhswDGrJSRkYIKs3A
+        kLkSEv9nCgtrgHUgA52cA+cZdev/iUYd/W9SMv0fg1YWD1SKYYKYWPFioCHPe3rAhswDGrJSRkYIKs3A
         oJl1aK2g25r/vL77/ptXXPzPbjHFAyoFB5MkJe8vAhnS1fX/iJnZfxD7P9DVDDLR25KkIw7d00g7+dSo
         +MJ/VsuZrVA9GGCKpOQdYGD+f1Jd/f+Iqen/w0ZGGxgEbftSRGOOPgqb8+glu/WC5VC1zDgwQ4eo6KpZ
-        QC/srq//dzI0VIJBipdBmEPCPZZb0ilHQkI0VkJCIkMSGGVAuhCIi6B0IVQsA4jjfcXE0nhYWKxFRUUl
-        ANGiHsC7Z9EcAAAAAElFTkSuQmCC
+        QC9sr6//dzI0VIJBipdBmEPCPZZb0ilHQkI0VkJCIkMSGGVAuhCIi6B0IVQsA4jjfcXE0nhYWKxFRUUl
+        AMvGHrhw0kNjAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="tsbOptions.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -265,27 +286,6 @@
   </data>
   <data name="tsbAbout.Text" xml:space="preserve">
     <value>toolStripButton1</value>
-  </data>
-  <data name="tsTools.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="tsTools.Size" type="System.Drawing.Size, System.Drawing">
-    <value>924, 25</value>
-  </data>
-  <data name="tsTools.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tsTools.Name" xml:space="preserve">
-    <value>tsTools</value>
-  </data>
-  <data name="&gt;&gt;tsTools.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsTools.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tsTools.ZOrder" xml:space="preserve">
-    <value>4</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dgvFiles.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -346,7 +346,7 @@
     <value>12, 28</value>
   </data>
   <data name="dgvFiles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>900, 450</value>
+    <value>1035, 450</value>
   </data>
   <data name="dgvFiles.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -564,11 +564,62 @@
   <data name="&gt;&gt;nudSelectionSetTimestampTime.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="tbxBatchSetPosition.Location" type="System.Drawing.Point, System.Drawing">
+    <value>742, 3</value>
+  </data>
+  <data name="tbxBatchSetPosition.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 0, 3</value>
+  </data>
+  <data name="tbxBatchSetPosition.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="tbxBatchSetPosition.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;tbxBatchSetPosition.Name" xml:space="preserve">
+    <value>tbxBatchSetPosition</value>
+  </data>
+  <data name="&gt;&gt;tbxBatchSetPosition.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbxBatchSetPosition.Parent" xml:space="preserve">
+    <value>flpSelection</value>
+  </data>
+  <data name="&gt;&gt;tbxBatchSetPosition.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="btnBatchSetPosition.Location" type="System.Drawing.Point, System.Drawing">
+    <value>842, 2</value>
+  </data>
+  <data name="btnBatchSetPosition.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 2, 3, 3</value>
+  </data>
+  <data name="btnBatchSetPosition.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 23</value>
+  </data>
+  <data name="btnBatchSetPosition.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="btnBatchSetPosition.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="&gt;&gt;btnBatchSetPosition.Name" xml:space="preserve">
+    <value>btnBatchSetPosition</value>
+  </data>
+  <data name="&gt;&gt;btnBatchSetPosition.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnBatchSetPosition.Parent" xml:space="preserve">
+    <value>flpSelection</value>
+  </data>
+  <data name="&gt;&gt;btnBatchSetPosition.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
   <data name="btnSelectionApply.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="btnSelectionApply.Location" type="System.Drawing.Point, System.Drawing">
-    <value>742, 2</value>
+    <value>883, 2</value>
   </data>
   <data name="btnSelectionApply.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 3</value>
@@ -577,7 +628,7 @@
     <value>75, 23</value>
   </data>
   <data name="btnSelectionApply.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="btnSelectionApply.Text" xml:space="preserve">
     <value>Apply</value>
@@ -592,7 +643,7 @@
     <value>flpSelection</value>
   </data>
   <data name="&gt;&gt;btnSelectionApply.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="flpSelection.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -604,7 +655,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="flpSelection.Size" type="System.Drawing.Size, System.Drawing">
-    <value>894, 31</value>
+    <value>1029, 31</value>
   </data>
   <data name="flpSelection.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -625,7 +676,7 @@
     <value>12, 484</value>
   </data>
   <data name="gbxSelection.Size" type="System.Drawing.Size, System.Drawing">
-    <value>900, 50</value>
+    <value>1035, 50</value>
   </data>
   <data name="gbxSelection.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -675,6 +726,15 @@
   <metadata name="ctxProcessor.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>202, 17</value>
   </metadata>
+  <data name="ctxProcessor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 48</value>
+  </data>
+  <data name="&gt;&gt;ctxProcessor.Name" xml:space="preserve">
+    <value>ctxProcessor</value>
+  </data>
+  <data name="&gt;&gt;ctxProcessor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="ctxProcessorCopy.Size" type="System.Drawing.Size, System.Drawing">
     <value>77, 22</value>
   </data>
@@ -687,15 +747,6 @@
   <data name="ctxProcessorPaste.Text" xml:space="preserve">
     <value>&amp;Paste</value>
   </data>
-  <data name="ctxProcessor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 48</value>
-  </data>
-  <data name="&gt;&gt;ctxProcessor.Name" xml:space="preserve">
-    <value>ctxProcessor</value>
-  </data>
-  <data name="&gt;&gt;ctxProcessor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -706,7 +757,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>924, 559</value>
+    <value>1059, 559</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>600, 200</value>

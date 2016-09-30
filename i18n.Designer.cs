@@ -124,6 +124,15 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Already without position.
+        /// </summary>
+        internal static string Already_without_position {
+            get {
+                return ResourceManager.GetString("Already_without_position", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Altitude has been removed.
         /// </summary>
         internal static string Altitude_removed {
@@ -1001,11 +1010,29 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a The position will be removed.
+        /// </summary>
+        internal static string Going_to_remove_position {
+            get {
+                return ResourceManager.GetString("Going_to_remove_position", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Will set metadata date/time to {0}.
         /// </summary>
         internal static string Going_to_set_metadata_timestamp_to_X {
             get {
                 return ResourceManager.GetString("Going_to_set_metadata_timestamp_to_X", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a The position will be updated.
+        /// </summary>
+        internal static string Going_to_update_position {
+            get {
+                return ResourceManager.GetString("Going_to_update_position", resourceCulture);
             }
         }
         
@@ -1411,6 +1438,24 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a The position has been removed.
+        /// </summary>
+        internal static string Position_removed {
+            get {
+                return ResourceManager.GetString("Position_removed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a The position has been updated.
+        /// </summary>
+        internal static string Position_updated {
+            get {
+                return ResourceManager.GetString("Position_updated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Processing....
         /// </summary>
         internal static string Processing {
@@ -1524,6 +1569,15 @@ namespace MLocati.MediaData {
         internal static string SelectionOperations_RenameFiles {
             get {
                 return ResourceManager.GetString("SelectionOperations_RenameFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Set position.
+        /// </summary>
+        internal static string SelectionOperations_SetPosition {
+            get {
+                return ResourceManager.GetString("SelectionOperations_SetPosition", resourceCulture);
             }
         }
         
