@@ -208,16 +208,8 @@ namespace MLocati.MediaData
                     }
                 }
             }
-            if (gpsDate.HasValue || gpsTime.HasValue)
+            if (gpsDate.HasValue && gpsTime.HasValue)
             {
-                if (!gpsTime.HasValue)
-                {
-                    throw new Exception(i18n.GPS_date_without_time);
-                }
-                if (!gpsDate.HasValue)
-                {
-                    throw new Exception(i18n.GPS_time_without_date);
-                }
                 result.AddAlternativeMetadataTimestamp(i18n.GPS_tag, TimeZoneHandler.ToShootZone(ExivImageProcessor.EXIF_GPS_TAGS_TIMEZONE, gpsDate.Value.Add(gpsTime.Value)));
             }
             if (lat.HasValue || latSign.HasValue || lng.HasValue || lngSign.HasValue || alt.HasValue || altSign.HasValue)
