@@ -696,7 +696,7 @@ Messaggio d’errore:
     <value>Tempo trascorso</value>
   </data>
   <data name="Time_remaining" xml:space="preserve">
-    <value>Tempo dimamente</value>
+    <value>Tempo rimanente</value>
   </data>
   <data name="Time_total" xml:space="preserve">
     <value>Tempo totale</value>
