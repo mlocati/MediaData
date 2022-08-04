@@ -119,6 +119,12 @@ namespace MLocati.MediaData
                         case "video":
                             result.VideoTracks++;
                             break;
+                        case "subtitle":
+                            result.SubtitleTracks++;
+                            break;
+                        case "data":
+                            result.DataTracks++;
+                            break;
                         default:
                             throw new Exception(string.Format(i18n.Unsupported_stream_type_X, stream.codec_type));
                     }
@@ -222,6 +228,8 @@ namespace MLocati.MediaData
             {
                 args.Add("-pix_fmt yuv420p");
             }
+            args.Add("-c:s copy");
+            args.Add("-c:d copy");
             List<string> streamSpecs = new List<string>();
             streamSpecs.Add("g");
             streamSpecs.Add("s");
@@ -337,7 +345,7 @@ namespace MLocati.MediaData
             {
                 if (FFmpegVideoProcessor._rxPositionTag == null)
                 {
-                    FFmpegVideoProcessor._rxPositionTag = new Regex(@"^\s*(?<lat>[+\-]\d+(\.\d*)?)(?<lng>[+\-]\d+(\.\d*)?)(?<alt>[+\-]\d+(\.\d*)?)?\s*\/\s*?$", RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.ExplicitCapture);
+                    FFmpegVideoProcessor._rxPositionTag = new Regex(@"^\s*(?<lat>[+\-]\d+(\.\d*)?)(?<lng>[+\-]\d+(\.\d*)?)(?<alt>[+\-]\d+(\.\d*)?)?\s*(\/\s*)?$", RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.ExplicitCapture);
                 }
                 return FFmpegVideoProcessor._rxPositionTag;
             }
