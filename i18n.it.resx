@@ -777,4 +777,10 @@ Motivo: {0}</value>
   <data name="Position_updated" xml:space="preserve">
     <value>La posizione è stata aggiornata</value>
   </data>
+  <data name="Bad_number_of_data_tracks_written__before_X_after_Y" xml:space="preserve">
+    <value>Numero di tracce di dati scritte non corretto (prima: {0}, dopo: {1})</value>
+  </data>
+  <data name="Bad_number_of_subtitle_tracks_written__before_X_after_Y" xml:space="preserve">
+    <value>Numero di tracce dei sottotitoli scritte non corretto (prima: {0}, dopo: {1})</value>
+  </data>
 </root>

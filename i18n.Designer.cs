@@ -179,6 +179,24 @@ namespace MLocati.MediaData {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Bad number of data tracks written (before: {0}, after: {1}).
+        /// </summary>
+        internal static string Bad_number_of_data_tracks_written__before_X_after_Y {
+            get {
+                return ResourceManager.GetString("Bad_number_of_data_tracks_written__before_X_after_Y", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Bad number of subtitle tracks written (before: {0}, after: {1}).
+        /// </summary>
+        internal static string Bad_number_of_subtitle_tracks_written__before_X_after_Y {
+            get {
+                return ResourceManager.GetString("Bad_number_of_subtitle_tracks_written__before_X_after_Y", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Bad number of video tracks written (before: {0}, after: {1}).
         /// </summary>
         internal static string Bad_number_of_video_tracks_written__before_X_after_Y {
